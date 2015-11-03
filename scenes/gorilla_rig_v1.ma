@@ -1,35 +1,39 @@
 //Maya ASCII 2016 scene
 //Name: gorilla_rig_v1.ma
-//Last modified: Mon, Nov 02, 2015 01:01:22 PM
+//Last modified: Tue, Nov 03, 2015 07:32:30 AM
 //Codeset: 1252
 file -rdi 1 -ns "final_gorilla_mesh_3_0_" -rfn "final_gorilla_mesh_3_0_RN" -op
 		 "v=0;" -typ "mayaAscii" "C:/DemoReel//scenes/final_gorilla_mesh_3.0..ma";
 file -rdi 1 -ns "hammer_rig" -rfn "hammer_rigRN" -op "v=0;" -typ "mayaAscii"
-		 "C:/Users/10629559/Documents/DemoReel//scenes/hammer_rig.ma";
+		 "C:/DemoReel//scenes/hammer_rig.ma";
+file -rdi 1 -ns "hammer_mesh" -rfn "hammer_meshRN" -op "v=0;" -typ "mayaAscii"
+		 "C:/DemoReel//scenes/hammer_mesh.ma";
 file -r -ns "final_gorilla_mesh_3_0_" -dr 1 -rfn "final_gorilla_mesh_3_0_RN" -op
 		 "v=0;" -typ "mayaAscii" "C:/DemoReel//scenes/final_gorilla_mesh_3.0..ma";
-file -r -ns "hammer_rig" -dr 1 -rfn "hammer_rigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/10629559/Documents/DemoReel//scenes/hammer_rig.ma";
+file -r -ns "hammer_rig" -dr 1 -rfn "hammer_rigRN" -op "v=0;" -typ "mayaAscii" "C:/DemoReel//scenes/hammer_rig.ma";
+file -r -ns "hammer_mesh" -dr 1 -rfn "hammer_meshRN" -op "v=0;" -typ "mayaAscii"
+		 "C:/DemoReel//scenes/hammer_mesh.ma";
 requires maya "2016";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
-		 -nodeType "mentalrayItemsList" -dataType "byteArray" "Mayatomr" "2016.0 - 3.13.1.2 ";
+		 -nodeType "mentalrayItemsList" -dataType "byteArray" "Mayatomr" "2016.0 - 3.13.1.8 ";
 requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2016";
 fileInfo "version" "2016";
-fileInfo "cutIdentifier" "201502261600-953408";
-fileInfo "osv" "Microsoft Windows 7 Enterprise Edition, 64-bit Windows 7 Service Pack 1 (Build 7601)\n";
+fileInfo "cutIdentifier" "201508242200-969261";
+fileInfo "osv" "Microsoft Windows 8 Home Premium Edition, 64-bit  (Build 9200)\n";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "CD9EF458-4C95-6BF9-F7AC-42A2591AA910";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.73848460352747125 26.627029765529635 30.620138796889918 ;
-	setAttr ".r" -type "double3" 688.46164916025646 -10803.399999994494 -2.3896221572780121e-015 ;
+	setAttr ".t" -type "double3" 9.5287519319805583 9.4499673014887637 28.583185353235578 ;
+	setAttr ".r" -type "double3" 711.26164918870563 -10784.599999997521 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "0830C9AB-486E-EF5B-8A00-43AC6BB0BB76";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 35.883729978685622;
+	setAttr ".coi" 29.067939769061852;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -54,13 +58,13 @@ createNode camera -s -n "topShape" -p "top";
 createNode transform -s -n "front";
 	rename -uid "996664AA-47F1-69F1-04BC-1091E686D724";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.84724050114093785 9.5291796271216729 100.1 ;
+	setAttr ".t" -type "double3" 1.8254540133039416 7.4452969398674194 100.1 ;
 createNode camera -s -n "frontShape" -p "front";
 	rename -uid "A96EFD68-416D-E2C6-3BAD-76BEBCF8E2D9";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 100.1;
-	setAttr ".ow" 10.233899411285;
+	setAttr ".ow" 12.460523753952895;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
@@ -2245,6 +2249,15 @@ createNode joint -n "holster_L_armpit_jnt" -p "shoulder_jnt";
 		 7.536168047467644e-017 0.99999999999999989 5.7522760663441791e-015 0 -1.9428902930940239e-016 -5.7859552849929538e-015 0.99999999999999978 0
 		 1.7809313741256227 7.8408750936569236 -0.44803191991832675 1;
 	setAttr ".radi" 0.60898249583375486;
+createNode joint -n "joint76" -p "holster_L_armpit_jnt";
+	rename -uid "48AD6491-44C4-D287-9C10-06BE62747EC0";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" 0.290864873338885 -0.011310951649349477 0.072724373615782795 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jo" -type "double3" -3.2958114119563668e-013 6.3611093629269673e-015 -1.1859517926198095e-014 ;
+	setAttr ".bps" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 2.0717962474645071 7.7869974582191714 0 1;
+	setAttr ".radi" 0.5;
 createNode orientConstraint -n "spine_mid_joint_orientConstraint1" -p "spine_mid_joint";
 	rename -uid "D5ED3A31-4896-4355-56DD-739EB370DFCF";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "nurbsCircle4W0" -dv 1 -min 0 -at "double";
@@ -2541,7 +2554,7 @@ createNode parentConstraint -n "L_arm_ikHandle_parentConstraint1" -p "L_arm_ikHa
 	setAttr ".rsrr" -type "double3" -0.0018559329398363665 0.0012825541759551458 -8.551256532802226e-005 ;
 	setAttr -k on ".w0";
 createNode fosterParent -n "final_gorilla_mesh_3_0_RNfosterParent1";
-	rename -uid "445A04B7-4E03-697C-5AD6-41A701309534";
+	rename -uid "E4ED54FD-4376-0C21-C801-9E8BE0C08F0F";
 createNode mesh -n "gorilla_spy_shirt1ShapeDeformed" -p "final_gorilla_mesh_3_0_RNfosterParent1";
 	rename -uid "5F7D316E-4109-0625-4E53-5E8D2AB1F8F2";
 	setAttr -k off ".v";
@@ -2619,6 +2632,163 @@ createNode mesh -n "gorilla_spy_baseShapeDeformed" -p "final_gorilla_mesh_3_0_RN
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr ".dr" 1;
+createNode fosterParent -n "hammer_meshRNfosterParent1";
+	rename -uid "85F7A717-4284-9B7C-F4D0-38BE428A90D0";
+createNode mesh -n "slideShapeDeformed" -p "hammer_meshRNfosterParent1";
+	rename -uid "AFBA87D6-4954-11F4-3C44-53BD5A6356F3";
+	setAttr -k off ".v";
+	setAttr -s 6 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".clst[0].clsn" -type "string" "Colors";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "sight_mountShapeDeformed" -p "hammer_meshRNfosterParent1";
+	rename -uid "08F62803-43FC-A4FE-2B66-DE829BC614E9";
+	setAttr -k off ".v";
+	setAttr -s 6 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "sightShapeDeformed" -p "hammer_meshRNfosterParent1";
+	rename -uid "DE85DAE6-40FB-D3A2-2561-758CFF27344F";
+	setAttr -k off ".v";
+	setAttr -s 4 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "clipShapeDeformed" -p "hammer_meshRNfosterParent1";
+	rename -uid "1864CBFF-411E-B9DF-C546-498E54F31BAA";
+	setAttr -k off ".v";
+	setAttr -s 4 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "bottom_cylinderShapeDeformed" -p "hammer_meshRNfosterParent1";
+	rename -uid "D5577FE5-4F19-C165-DAC7-B191868F7130";
+	setAttr -k off ".v";
+	setAttr -s 4 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "muzzel_flashShapeDeformed" -p "hammer_meshRNfosterParent1";
+	rename -uid "91DE52D7-4035-0BF9-ABC7-9083A5A0434C";
+	setAttr -k off ".v";
+	setAttr -s 4 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "pistol_handleShapeDeformed" -p "hammer_meshRNfosterParent1";
+	rename -uid "EBA2C648-42D2-89EC-FE24-C7AA045DC80E";
+	setAttr -k off ".v";
+	setAttr -s 6 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "slide_releaseShapeDeformed" -p "hammer_meshRNfosterParent1";
+	rename -uid "62D1C4CD-4BE3-5989-1E98-3E8989FAE576";
+	setAttr -k off ".v";
+	setAttr -s 4 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "clip_releaseShapeDeformed" -p "hammer_meshRNfosterParent1";
+	rename -uid "DDCD8CAB-4CB9-14BB-DC5B-5BA698057ACD";
+	setAttr -k off ".v";
+	setAttr -s 4 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "triggerShapeDeformed" -p "hammer_meshRNfosterParent1";
+	rename -uid "DC3581C6-4E7A-16D4-CC02-3C81536EE593";
+	setAttr -k off ".v";
+	setAttr -s 4 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "hammerShapeDeformed" -p "hammer_meshRNfosterParent1";
+	rename -uid "71FC3FD9-47BE-2E52-E9DC-3EAF04C5C72B";
+	setAttr -k off ".v";
+	setAttr -s 4 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "safteyShapeDeformed" -p "hammer_meshRNfosterParent1";
+	rename -uid "211F132C-495C-DF3C-4B17-21A4C78AA75B";
+	setAttr -k off ".v";
+	setAttr -s 4 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "pistol_gripShapeDeformed" -p "hammer_meshRNfosterParent1";
+	rename -uid "4FD22FCF-40C8-6D51-3969-73918F99D380";
+	setAttr -k off ".v";
+	setAttr -s 4 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "barellShapeDeformed" -p "hammer_meshRNfosterParent1";
+	rename -uid "BE351989-4A39-9780-D76F-65AB0AB59723";
+	setAttr -k off ".v";
+	setAttr -s 4 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
 createNode mentalrayItemsList -s -n "mentalrayItemsList";
 	rename -uid "7A982E77-4634-475A-AA0A-A0B8A7113D24";
 createNode mentalrayGlobals -s -n "mentalrayGlobals";
@@ -2882,18 +3052,18 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
 	rename -uid "7B0DC461-4F8D-0D7E-4ECA-B2A34EEABD85";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "9301B2C6-4EFD-1382-55CF-4EA93FAF9BB6";
-	setAttr -s 24 ".lnk";
-	setAttr -s 24 ".slnk";
+	rename -uid "A6CF4241-447F-0979-14FF-D58A3B967A4B";
+	setAttr -s 44 ".lnk";
+	setAttr -s 44 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "D801130D-439F-D61D-2728-5DB66A212BA3";
+	rename -uid "975BDBDE-4127-04A4-A761-FEA74C3AE7AD";
 	setAttr ".cdl" 1;
 	setAttr -s 2 ".dli[1]"  1;
 	setAttr -s 2 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "B52DAA93-4997-F442-D7F3-71849737CB29";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "ACFAEA19-4C5E-E839-9491-94878624F703";
+	rename -uid "872AFDEB-4E1E-1E38-881A-568F9D2149D2";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "DED1F975-420C-5617-B4BD-7CB81097346B";
 	setAttr ".g" yes;
@@ -3207,30 +3377,30 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"top\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n"
 		+ "                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 1\n                -jointXray 1\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n"
 		+ "                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n"
-		+ "                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 805\n                -height 343\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n"
+		+ "                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 810\n                -height 343\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n"
 		+ "                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 1\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n"
 		+ "            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n"
-		+ "            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 805\n            -height 343\n            -sceneRenderFilter 0\n            $editorName;\n"
+		+ "            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 810\n            -height 343\n            -sceneRenderFilter 0\n            $editorName;\n"
 		+ "        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"side\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n"
 		+ "                -xray 0\n                -jointXray 1\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n"
 		+ "                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n"
-		+ "                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 804\n                -height 343\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n"
+		+ "                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 810\n                -height 342\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n"
 		+ "            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n"
 		+ "            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n"
-		+ "            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 804\n            -height 343\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels `;\n"
+		+ "            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 810\n            -height 342\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels `;\n"
 		+ "\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"front\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 1\n                -jointXray 1\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n"
 		+ "                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n"
 		+ "                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n"
-		+ "                -width 805\n                -height 343\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 1\n            -jointXray 1\n            -activeComponentsXray 0\n"
+		+ "                -width 810\n                -height 342\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 1\n            -jointXray 1\n            -activeComponentsXray 0\n"
 		+ "            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n"
 		+ "            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n"
-		+ "            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 805\n            -height 343\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n"
-		+ "                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 1\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n"
-		+ "                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 0\n                -imagePlane 1\n                -joints 0\n"
-		+ "                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 1272\n                -height 731\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n"
-		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n"
+		+ "            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 810\n            -height 342\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n"
+		+ "                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n"
+		+ "                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 0\n                -imagePlane 1\n                -joints 1\n"
+		+ "                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 1296\n                -height 730\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n"
 		+ "            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n"
-		+ "            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 0\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1272\n            -height 731\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n"
+		+ "            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1296\n            -height 730\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n"
 		+ "            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            outlinerEditor -e \n                -docTag \"isolOutln_fromSeln\" \n                -showShapes 0\n                -showReferenceNodes 1\n                -showReferenceMembers 1\n                -showAttributes 0\n                -showConnected 0\n                -showAnimCurvesOnly 0\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 1\n                -showAssets 1\n                -showContainedOnly 1\n                -showPublishedAsConnected 0\n                -showContainerContents 1\n                -ignoreDagHierarchy 0\n"
 		+ "                -expandConnections 0\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 0\n                -highlightActive 1\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"defaultSetFilter\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n"
 		+ "                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 0\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n"
@@ -3272,8 +3442,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\t\t\t\t\"$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\\\"Outliner\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\noutlinerEditor -e \\n    -docTag \\\"isolOutln_fromSeln\\\" \\n    -showShapes 0\\n    -showReferenceNodes 1\\n    -showReferenceMembers 1\\n    -showAttributes 0\\n    -showConnected 0\\n    -showAnimCurvesOnly 0\\n    -showMuteInfo 0\\n    -organizeByLayer 1\\n    -showAnimLayerWeight 1\\n    -autoExpandLayers 1\\n    -autoExpand 0\\n    -showDagOnly 1\\n    -showAssets 1\\n    -showContainedOnly 1\\n    -showPublishedAsConnected 0\\n    -showContainerContents 1\\n    -ignoreDagHierarchy 0\\n    -expandConnections 0\\n    -showUpstreamCurves 1\\n    -showUnitlessCurves 1\\n    -showCompounds 1\\n    -showLeafs 1\\n    -showNumericAttrsOnly 0\\n    -highlightActive 1\\n    -autoSelectNewObjects 0\\n    -doNotSelectNewObjects 0\\n    -dropIsParent 1\\n    -transmitFilters 0\\n    -setFilter \\\"defaultSetFilter\\\" \\n    -showSetMembers 1\\n    -allowMultiSelection 1\\n    -alwaysToggleSelect 0\\n    -directSelect 0\\n    -displayMode \\\"DAG\\\" \\n    -expandObjects 0\\n    -setsIgnoreFilters 1\\n    -containersIgnoreFilters 0\\n    -editAttrName 0\\n    -showAttrValues 0\\n    -highlightSecondary 0\\n    -showUVAttrsOnly 0\\n    -showTextureNodesOnly 0\\n    -attrAlphaOrder \\\"default\\\" \\n    -animLayerFilterOptions \\\"allAffecting\\\" \\n    -sortOrder \\\"none\\\" \\n    -longNames 0\\n    -niceNames 1\\n    -showNamespace 1\\n    -showPinIcons 0\\n    -mapMotionTrails 0\\n    -ignoreHiddenAttribute 0\\n    -ignoreOutlinerColor 0\\n    $editorName\"\n"
 		+ "\t\t\t\t\t\"outlinerPanel -edit -l (localizedPanelLabel(\\\"Outliner\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\noutlinerEditor -e \\n    -docTag \\\"isolOutln_fromSeln\\\" \\n    -showShapes 0\\n    -showReferenceNodes 1\\n    -showReferenceMembers 1\\n    -showAttributes 0\\n    -showConnected 0\\n    -showAnimCurvesOnly 0\\n    -showMuteInfo 0\\n    -organizeByLayer 1\\n    -showAnimLayerWeight 1\\n    -autoExpandLayers 1\\n    -autoExpand 0\\n    -showDagOnly 1\\n    -showAssets 1\\n    -showContainedOnly 1\\n    -showPublishedAsConnected 0\\n    -showContainerContents 1\\n    -ignoreDagHierarchy 0\\n    -expandConnections 0\\n    -showUpstreamCurves 1\\n    -showUnitlessCurves 1\\n    -showCompounds 1\\n    -showLeafs 1\\n    -showNumericAttrsOnly 0\\n    -highlightActive 1\\n    -autoSelectNewObjects 0\\n    -doNotSelectNewObjects 0\\n    -dropIsParent 1\\n    -transmitFilters 0\\n    -setFilter \\\"defaultSetFilter\\\" \\n    -showSetMembers 1\\n    -allowMultiSelection 1\\n    -alwaysToggleSelect 0\\n    -directSelect 0\\n    -displayMode \\\"DAG\\\" \\n    -expandObjects 0\\n    -setsIgnoreFilters 1\\n    -containersIgnoreFilters 0\\n    -editAttrName 0\\n    -showAttrValues 0\\n    -highlightSecondary 0\\n    -showUVAttrsOnly 0\\n    -showTextureNodesOnly 0\\n    -attrAlphaOrder \\\"default\\\" \\n    -animLayerFilterOptions \\\"allAffecting\\\" \\n    -sortOrder \\\"none\\\" \\n    -longNames 0\\n    -niceNames 1\\n    -showNamespace 1\\n    -showPinIcons 0\\n    -mapMotionTrails 0\\n    -ignoreHiddenAttribute 0\\n    -ignoreOutlinerColor 0\\n    $editorName\"\n"
 		+ "\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1272\\n    -height 731\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1272\\n    -height 731\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1296\\n    -height 730\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1296\\n    -height 730\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -21045,21 +21215,3943 @@ createNode nodeGraphEditorInfo -n "MayaNodeEditorSavedTabsInfo";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" 200.44697901001933 -394.27108775184337 ;
 	setAttr ".tgi[0].vh" -type "double2" 2397.8958783204321 764.03711730765838 ;
+createNode vectorRenderGlobals -s -n "vectorRenderGlobals";
+	rename -uid "5F21CAF8-4254-9535-51BF-35A51C0B8B80";
 createNode reference -n "hammer_rigRN";
-	rename -uid "375A3C8D-451F-822B-319E-42A19DAAB79B";
+	rename -uid "30BEABC4-47B6-77C2-F1CA-1B9D8CECE040";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"hammer_rigRN"
 		"hammer_rigRN" 0
-		"hammer_rigRN" 3
-		2 "|hammer_rig:hammer_grp" "translate" " -type \"double3\" 2.1192392748951225 7.2651541889531632 0.16952297773170183"
+		"hammer_rigRN" 7
+		2 "|hammer_rig:hammer_gun_grp" "visibility" " 1"
+		2 "|hammer_rig:hammer_gun_grp|hammer_rig:gun_ctrl" "translate" " -type \"double3\" -6.233929698524463 5.0226889044873104 5.5470581652595206"
 		
-		2 "|hammer_rig:hammer_grp" "rotate" " -type \"double3\" 27.68664227913666 -173.62810270594625 5.9822459316108327"
+		2 "|hammer_rig:hammer_gun_grp|hammer_rig:gun_ctrl" "rotate" " -type \"double3\" 0 0 0"
 		
-		2 "|hammer_rig:hammer_grp" "scale" " -type \"double3\" 0.17294516983634167 0.17294516983634167 0.17294516983634167";
+		2 "|hammer_rig:hammer_gun_grp|hammer_rig:gun_ctrl" "scale" " -type \"double3\" 0.173 0.173 0.173"
+		
+		2 "|hammer_rig:hammer_gun_grp|hammer_rig:gun_ctrl" "trigger_pos" " -k 1 0"
+		
+		2 "|hammer_rig:hammer_gun_grp|hammer_rig:gun_ctrl" "hammer_pos" " -k 1 0"
+		
+		2 "|hammer_rig:hammer_gun_grp|hammer_rig:gun_ctrl" "slide_pos" " -k 1 0";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode vectorRenderGlobals -s -n "vectorRenderGlobals";
-	rename -uid "5F21CAF8-4254-9535-51BF-35A51C0B8B80";
+createNode reference -n "hammer_meshRN";
+	rename -uid "5907FC14-4238-8A1C-B48D-11BC64774FB4";
+	setAttr -s 48 ".phl";
+	setAttr ".phl[1]" 0;
+	setAttr ".phl[2]" 0;
+	setAttr ".phl[3]" 0;
+	setAttr ".phl[4]" 0;
+	setAttr ".phl[5]" 0;
+	setAttr ".phl[6]" 0;
+	setAttr ".phl[7]" 0;
+	setAttr ".phl[8]" 0;
+	setAttr ".phl[9]" 0;
+	setAttr ".phl[10]" 0;
+	setAttr ".phl[11]" 0;
+	setAttr ".phl[12]" 0;
+	setAttr ".phl[13]" 0;
+	setAttr ".phl[14]" 0;
+	setAttr ".phl[15]" 0;
+	setAttr ".phl[16]" 0;
+	setAttr ".phl[17]" 0;
+	setAttr ".phl[18]" 0;
+	setAttr ".phl[19]" 0;
+	setAttr ".phl[20]" 0;
+	setAttr ".phl[21]" 0;
+	setAttr ".phl[22]" 0;
+	setAttr ".phl[23]" 0;
+	setAttr ".phl[24]" 0;
+	setAttr ".phl[25]" 0;
+	setAttr ".phl[26]" 0;
+	setAttr ".phl[27]" 0;
+	setAttr ".phl[28]" 0;
+	setAttr ".phl[29]" 0;
+	setAttr ".phl[30]" 0;
+	setAttr ".phl[31]" 0;
+	setAttr ".phl[32]" 0;
+	setAttr ".phl[33]" 0;
+	setAttr ".phl[34]" 0;
+	setAttr ".phl[35]" 0;
+	setAttr ".phl[36]" 0;
+	setAttr ".phl[37]" 0;
+	setAttr ".phl[38]" 0;
+	setAttr ".phl[39]" 0;
+	setAttr ".phl[40]" 0;
+	setAttr ".phl[41]" 0;
+	setAttr ".phl[42]" 0;
+	setAttr ".phl[43]" 0;
+	setAttr ".phl[44]" 0;
+	setAttr ".phl[45]" 0;
+	setAttr ".phl[46]" 0;
+	setAttr ".phl[47]" 0;
+	setAttr ".phl[48]" 0;
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"hammer_meshRN"
+		"hammer_meshRN" 0
+		"hammer_meshRN" 235
+		0 "|hammer_meshRNfosterParent1|barellShapeDeformed" "|hammer_mesh:hammer_grp|hammer_mesh:barell" 
+		"-s -r "
+		0 "|hammer_meshRNfosterParent1|pistol_gripShapeDeformed" "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:pistol_grip" 
+		"-s -r "
+		0 "|hammer_meshRNfosterParent1|safteyShapeDeformed" "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:saftey" 
+		"-s -r "
+		0 "|hammer_meshRNfosterParent1|hammerShapeDeformed" "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:hammer" 
+		"-s -r "
+		0 "|hammer_meshRNfosterParent1|triggerShapeDeformed" "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:trigger" 
+		"-s -r "
+		0 "|hammer_meshRNfosterParent1|clip_releaseShapeDeformed" "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:clip_release" 
+		"-s -r "
+		0 "|hammer_meshRNfosterParent1|slide_releaseShapeDeformed" "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:slide_release" 
+		"-s -r "
+		0 "|hammer_meshRNfosterParent1|pistol_handleShapeDeformed" "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle" 
+		"-s -r "
+		0 "|hammer_meshRNfosterParent1|muzzel_flashShapeDeformed" "|hammer_mesh:hammer_grp|hammer_mesh:muzzel_flash" 
+		"-s -r "
+		0 "|hammer_meshRNfosterParent1|bottom_cylinderShapeDeformed" "|hammer_mesh:hammer_grp|hammer_mesh:bottom_cylinder" 
+		"-s -r "
+		0 "|hammer_meshRNfosterParent1|clipShapeDeformed" "|hammer_mesh:hammer_grp|hammer_mesh:clip" 
+		"-s -r "
+		0 "|hammer_meshRNfosterParent1|sightShapeDeformed" "|hammer_mesh:hammer_grp|hammer_mesh:slide|hammer_mesh:sight_grp|hammer_mesh:sight" 
+		"-s -r "
+		0 "|hammer_meshRNfosterParent1|sight_mountShapeDeformed" "|hammer_mesh:hammer_grp|hammer_mesh:slide|hammer_mesh:sight_grp|hammer_mesh:sight_mount" 
+		"-s -r "
+		0 "|hammer_meshRNfosterParent1|slideShapeDeformed" "|hammer_mesh:hammer_grp|hammer_mesh:slide" 
+		"-s -r "
+		2 "|hammer_mesh:hammer_grp" "translate" " -type \"double3\" 2.1925822276733524 7.3141104211557479 0.25508345385099579"
+		
+		2 "|hammer_mesh:hammer_grp" "rotate" " -type \"double3\" 208.76185115204825 -7.7616411965591769 -172.61191845220779"
+		
+		2 "|hammer_mesh:hammer_grp" "scale" " -type \"double3\" 0.173 0.173 0.173"
+		
+		2 "|hammer_mesh:hammer_grp|hammer_mesh:barell|hammer_mesh:barellShape" "intermediateObject" 
+		" 1"
+		2 "|hammer_mesh:hammer_grp|hammer_mesh:barell|hammer_mesh:barellShape" "vertexColorSource" 
+		" 2"
+		2 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:pistol_handleShape" 
+		"intermediateObject" " 1"
+		2 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:pistol_handleShape" 
+		"vertexColorSource" " 2"
+		2 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:pistol_grip|hammer_mesh:pistol_gripShape" 
+		"intermediateObject" " 1"
+		2 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:pistol_grip|hammer_mesh:pistol_gripShape" 
+		"vertexColorSource" " 2"
+		2 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:saftey|hammer_mesh:safteyShape" 
+		"intermediateObject" " 1"
+		2 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:saftey|hammer_mesh:safteyShape" 
+		"vertexColorSource" " 2"
+		2 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:hammer|hammer_mesh:hammerShape" 
+		"intermediateObject" " 1"
+		2 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:hammer|hammer_mesh:hammerShape" 
+		"vertexColorSource" " 2"
+		2 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:trigger|hammer_mesh:triggerShape" 
+		"intermediateObject" " 1"
+		2 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:trigger|hammer_mesh:triggerShape" 
+		"vertexColorSource" " 2"
+		2 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:clip_release|hammer_mesh:clip_releaseShape" 
+		"intermediateObject" " 1"
+		2 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:clip_release|hammer_mesh:clip_releaseShape" 
+		"vertexColorSource" " 2"
+		2 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:slide_release|hammer_mesh:slide_releaseShape" 
+		"intermediateObject" " 1"
+		2 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:slide_release|hammer_mesh:slide_releaseShape" 
+		"vertexColorSource" " 2"
+		2 "|hammer_mesh:hammer_grp|hammer_mesh:muzzel_flash|hammer_mesh:muzzel_flashShape" 
+		"intermediateObject" " 1"
+		2 "|hammer_mesh:hammer_grp|hammer_mesh:muzzel_flash|hammer_mesh:muzzel_flashShape" 
+		"vertexColorSource" " 2"
+		2 "|hammer_mesh:hammer_grp|hammer_mesh:bottom_cylinder|hammer_mesh:bottom_cylinderShape" 
+		"intermediateObject" " 1"
+		2 "|hammer_mesh:hammer_grp|hammer_mesh:bottom_cylinder|hammer_mesh:bottom_cylinderShape" 
+		"vertexColorSource" " 2"
+		2 "|hammer_mesh:hammer_grp|hammer_mesh:clip|hammer_mesh:clipShape" "intermediateObject" 
+		" 1"
+		2 "|hammer_mesh:hammer_grp|hammer_mesh:clip|hammer_mesh:clipShape" "vertexColorSource" 
+		" 2"
+		2 "|hammer_mesh:hammer_grp|hammer_mesh:slide|hammer_mesh:slideShape" "intermediateObject" 
+		" 1"
+		2 "|hammer_mesh:hammer_grp|hammer_mesh:slide|hammer_mesh:slideShape" "vertexColorSource" 
+		" 2"
+		2 "|hammer_mesh:hammer_grp|hammer_mesh:slide|hammer_mesh:sight_grp|hammer_mesh:sight|hammer_mesh:sightShape" 
+		"intermediateObject" " 1"
+		2 "|hammer_mesh:hammer_grp|hammer_mesh:slide|hammer_mesh:sight_grp|hammer_mesh:sight|hammer_mesh:sightShape" 
+		"vertexColorSource" " 2"
+		2 "|hammer_mesh:hammer_grp|hammer_mesh:slide|hammer_mesh:sight_grp|hammer_mesh:sight_mount|hammer_mesh:sight_mountShape" 
+		"intermediateObject" " 1"
+		2 "|hammer_mesh:hammer_grp|hammer_mesh:slide|hammer_mesh:sight_grp|hammer_mesh:sight_mount|hammer_mesh:sight_mountShape" 
+		"vertexColorSource" " 2"
+		2 "|hammer_mesh:pPlane2" "visibility" " 0"
+		2 "|hammer_mesh:directionalLight2" "visibility" " 0"
+		3 "hammer_mesh:polyTweakUV16.uvTweak[0]" "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:pistol_grip|hammer_mesh:pistol_gripShape.uvSet[0].uvSetTweakLocation" 
+		""
+		3 "hammer_mesh:polyTweakUV28.uvTweak[0]" "|hammer_mesh:hammer_grp|hammer_mesh:muzzel_flash|hammer_mesh:muzzel_flashShape.uvSet[0].uvSetTweakLocation" 
+		""
+		3 "hammer_mesh:polyTweakUV15.uvTweak[0]" "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:clip_release|hammer_mesh:clip_releaseShape.uvSet[0].uvSetTweakLocation" 
+		""
+		3 "hammer_mesh:polyTweakUV44.uvTweak[0]" "|hammer_mesh:hammer_grp|hammer_mesh:slide|hammer_mesh:slideShape.uvSet[0].uvSetTweakLocation" 
+		""
+		3 "hammer_mesh:polyTweakUV17.uvTweak[0]" "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:hammer|hammer_mesh:hammerShape.uvSet[0].uvSetTweakLocation" 
+		""
+		3 "hammer_mesh:polyTweakUV29.uvTweak[0]" "|hammer_mesh:hammer_grp|hammer_mesh:bottom_cylinder|hammer_mesh:bottom_cylinderShape.uvSet[0].uvSetTweakLocation" 
+		""
+		3 "hammer_mesh:polyTweakUV40.uvTweak[0]" "|hammer_mesh:hammer_grp|hammer_mesh:slide|hammer_mesh:sight_grp|hammer_mesh:sight|hammer_mesh:sightShape.uvSet[0].uvSetTweakLocation" 
+		""
+		3 "hammer_mesh:polyTweakUV11.uvTweak[0]" "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:saftey|hammer_mesh:safteyShape.uvSet[0].uvSetTweakLocation" 
+		""
+		3 "hammer_mesh:polyTweakUV35.uvTweak[0]" "|hammer_mesh:hammer_grp|hammer_mesh:slide|hammer_mesh:sight_grp|hammer_mesh:sight_mount|hammer_mesh:sight_mountShape.uvSet[0].uvSetTweakLocation" 
+		""
+		3 "hammer_mesh:polyTweakUV23.uvTweak[0]" "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:pistol_handleShape.uvSet[0].uvSetTweakLocation" 
+		""
+		3 "hammer_mesh:polyTweakUV12.uvTweak[0]" "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:trigger|hammer_mesh:triggerShape.uvSet[0].uvSetTweakLocation" 
+		""
+		3 "hammer_mesh:polyTweakUV7.uvTweak[0]" "|hammer_mesh:hammer_grp|hammer_mesh:barell|hammer_mesh:barellShape.uvSet[0].uvSetTweakLocation" 
+		""
+		3 "hammer_mesh:polyTweakUV8.uvTweak[0]" "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:slide_release|hammer_mesh:slide_releaseShape.uvSet[0].uvSetTweakLocation" 
+		""
+		3 "hammer_mesh:polyTweakUV34.uvTweak[0]" "|hammer_mesh:hammer_grp|hammer_mesh:clip|hammer_mesh:clipShape.uvSet[0].uvSetTweakLocation" 
+		""
+		5 3 "hammer_meshRN" "|hammer_mesh:hammer_grp|hammer_mesh:barell|hammer_mesh:barellShape.worldMesh" 
+		"hammer_meshRN.placeHolderList[1]" ""
+		5 3 "hammer_meshRN" "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:pistol_handleShape.worldMesh" 
+		"hammer_meshRN.placeHolderList[2]" ""
+		5 3 "hammer_meshRN" "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:pistol_grip|hammer_mesh:pistol_gripShape.worldMesh" 
+		"hammer_meshRN.placeHolderList[3]" ""
+		5 3 "hammer_meshRN" "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:saftey|hammer_mesh:safteyShape.worldMesh" 
+		"hammer_meshRN.placeHolderList[4]" ""
+		5 3 "hammer_meshRN" "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:hammer|hammer_mesh:hammerShape.worldMesh" 
+		"hammer_meshRN.placeHolderList[5]" ""
+		5 3 "hammer_meshRN" "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:trigger|hammer_mesh:triggerShape.worldMesh" 
+		"hammer_meshRN.placeHolderList[6]" ""
+		5 3 "hammer_meshRN" "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:clip_release|hammer_mesh:clip_releaseShape.worldMesh" 
+		"hammer_meshRN.placeHolderList[7]" ""
+		5 3 "hammer_meshRN" "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:slide_release|hammer_mesh:slide_releaseShape.worldMesh" 
+		"hammer_meshRN.placeHolderList[8]" ""
+		5 3 "hammer_meshRN" "|hammer_mesh:hammer_grp|hammer_mesh:muzzel_flash|hammer_mesh:muzzel_flashShape.worldMesh" 
+		"hammer_meshRN.placeHolderList[9]" ""
+		5 3 "hammer_meshRN" "|hammer_mesh:hammer_grp|hammer_mesh:bottom_cylinder|hammer_mesh:bottom_cylinderShape.worldMesh" 
+		"hammer_meshRN.placeHolderList[10]" ""
+		5 3 "hammer_meshRN" "|hammer_mesh:hammer_grp|hammer_mesh:clip|hammer_mesh:clipShape.worldMesh" 
+		"hammer_meshRN.placeHolderList[11]" ""
+		5 3 "hammer_meshRN" "|hammer_mesh:hammer_grp|hammer_mesh:slide|hammer_mesh:slideShape.worldMesh" 
+		"hammer_meshRN.placeHolderList[12]" ""
+		5 3 "hammer_meshRN" "|hammer_mesh:hammer_grp|hammer_mesh:slide|hammer_mesh:sight_grp|hammer_mesh:sight|hammer_mesh:sightShape.worldMesh" 
+		"hammer_meshRN.placeHolderList[13]" ""
+		5 3 "hammer_meshRN" "|hammer_mesh:hammer_grp|hammer_mesh:slide|hammer_mesh:sight_grp|hammer_mesh:sight_mount|hammer_mesh:sight_mountShape.worldMesh" 
+		"hammer_meshRN.placeHolderList[14]" ""
+		5 3 "hammer_meshRN" "hammer_mesh:polyTweakUV7.uvTweak[0]" "hammer_meshRN.placeHolderList[15]" 
+		"hammer_mesh:barellShape.uvst[0].uvtw"
+		5 3 "hammer_meshRN" "hammer_mesh:polyTweakUV8.uvTweak[0]" "hammer_meshRN.placeHolderList[16]" 
+		"hammer_mesh:slide_releaseShape.uvst[0].uvtw"
+		5 3 "hammer_meshRN" "hammer_mesh:polyTweakUV11.uvTweak[0]" "hammer_meshRN.placeHolderList[17]" 
+		"hammer_mesh:safteyShape.uvst[0].uvtw"
+		5 3 "hammer_meshRN" "hammer_mesh:polyTweakUV12.uvTweak[0]" "hammer_meshRN.placeHolderList[18]" 
+		"hammer_mesh:triggerShape.uvst[0].uvtw"
+		5 3 "hammer_meshRN" "hammer_mesh:polyTweakUV15.uvTweak[0]" "hammer_meshRN.placeHolderList[19]" 
+		"hammer_mesh:clip_releaseShape.uvst[0].uvtw"
+		5 3 "hammer_meshRN" "hammer_mesh:polyTweakUV16.uvTweak[0]" "hammer_meshRN.placeHolderList[20]" 
+		"hammer_mesh:pistol_gripShape.uvst[0].uvtw"
+		5 3 "hammer_meshRN" "hammer_mesh:polyTweakUV17.uvTweak[0]" "hammer_meshRN.placeHolderList[21]" 
+		"hammer_mesh:hammerShape.uvst[0].uvtw"
+		5 3 "hammer_meshRN" "hammer_mesh:polyTweakUV23.uvTweak[0]" "hammer_meshRN.placeHolderList[22]" 
+		"hammer_mesh:pistol_handleShape.uvst[0].uvtw"
+		5 3 "hammer_meshRN" "hammer_mesh:polyTweakUV28.uvTweak[0]" "hammer_meshRN.placeHolderList[23]" 
+		"hammer_mesh:muzzel_flashShape.uvst[0].uvtw"
+		5 3 "hammer_meshRN" "hammer_mesh:polyTweakUV29.uvTweak[0]" "hammer_meshRN.placeHolderList[24]" 
+		"hammer_mesh:bottom_cylinderShape.uvst[0].uvtw"
+		5 3 "hammer_meshRN" "hammer_mesh:polyTweakUV34.uvTweak[0]" "hammer_meshRN.placeHolderList[25]" 
+		"hammer_mesh:clipShape.uvst[0].uvtw"
+		5 3 "hammer_meshRN" "hammer_mesh:polyTweakUV35.uvTweak[0]" "hammer_meshRN.placeHolderList[26]" 
+		"hammer_mesh:sight_mountShape.uvst[0].uvtw"
+		5 3 "hammer_meshRN" "hammer_mesh:polyTweakUV40.uvTweak[0]" "hammer_meshRN.placeHolderList[27]" 
+		"hammer_mesh:sightShape.uvst[0].uvtw"
+		5 3 "hammer_meshRN" "hammer_mesh:polyTweakUV44.uvTweak[0]" "hammer_meshRN.placeHolderList[28]" 
+		"hammer_mesh:slideShape.uvst[0].uvtw"
+		5 4 "hammer_meshRN" "hammer_mesh:sight1_phongE1SG.dagSetMembers" "hammer_meshRN.placeHolderList[29]" 
+		""
+		5 4 "hammer_meshRN" "hammer_mesh:sight1_phongE1SG.dagSetMembers" "hammer_meshRN.placeHolderList[30]" 
+		""
+		5 4 "hammer_meshRN" "hammer_mesh:sight1_phongE1SG1.dagSetMembers" "hammer_meshRN.placeHolderList[31]" 
+		""
+		5 4 "hammer_meshRN" "hammer_mesh:sight1_phongE1SG1.dagSetMembers" "hammer_meshRN.placeHolderList[32]" 
+		""
+		5 3 "hammer_meshRN" "hammer_mesh:sight1_phongE1SG2.memberWireframeColor" 
+		"hammer_meshRN.placeHolderList[33]" ""
+		5 3 "hammer_meshRN" "hammer_mesh:sight1_phongE1SG2.memberWireframeColor" 
+		"hammer_meshRN.placeHolderList[34]" ""
+		5 4 "hammer_meshRN" "hammer_mesh:sight1_phongE1SG2.dagSetMembers" "hammer_meshRN.placeHolderList[35]" 
+		""
+		5 4 "hammer_meshRN" "hammer_mesh:sight1_phongE1SG2.dagSetMembers" "hammer_meshRN.placeHolderList[36]" 
+		""
+		5 4 "hammer_meshRN" "hammer_mesh:sight1_phongE1SG2.groupNodes" "hammer_meshRN.placeHolderList[37]" 
+		""
+		5 4 "hammer_meshRN" "hammer_mesh:sight1_phongE1SG2.groupNodes" "hammer_meshRN.placeHolderList[38]" 
+		""
+		5 4 "hammer_meshRN" "hammer_mesh:clip_phongESG.dagSetMembers" "hammer_meshRN.placeHolderList[39]" 
+		""
+		5 4 "hammer_meshRN" "hammer_mesh:gripSG.dagSetMembers" "hammer_meshRN.placeHolderList[40]" 
+		""
+		5 4 "hammer_meshRN" "hammer_mesh:parts_phongESG.dagSetMembers" "hammer_meshRN.placeHolderList[41]" 
+		""
+		5 4 "hammer_meshRN" "hammer_mesh:parts_phongESG.dagSetMembers" "hammer_meshRN.placeHolderList[42]" 
+		""
+		5 4 "hammer_meshRN" "hammer_mesh:parts_phongESG.dagSetMembers" "hammer_meshRN.placeHolderList[43]" 
+		""
+		5 4 "hammer_meshRN" "hammer_mesh:parts_phongESG.dagSetMembers" "hammer_meshRN.placeHolderList[44]" 
+		""
+		5 4 "hammer_meshRN" "hammer_mesh:parts_phongESG.dagSetMembers" "hammer_meshRN.placeHolderList[45]" 
+		""
+		5 3 "hammer_meshRN" "hammer_mesh:handle_phongESG.memberWireframeColor" 
+		"hammer_meshRN.placeHolderList[46]" ""
+		5 4 "hammer_meshRN" "hammer_mesh:handle_phongESG.dagSetMembers" "hammer_meshRN.placeHolderList[47]" 
+		""
+		5 4 "hammer_meshRN" "hammer_mesh:handle_phongESG.groupNodes" "hammer_meshRN.placeHolderList[48]" 
+		""
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:barell" "translateX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:barell" "translateY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:barell" "translateZ"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:barell" "rotateX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:barell" "rotateY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:barell" "rotateZ"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:barell" "scaleX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:barell" "scaleY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:barell" "scaleZ"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle" "translateX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle" "translateY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle" "translateZ"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle" "rotateX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle" "rotateY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle" "rotateZ"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle" "scaleX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle" "scaleY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle" "scaleZ"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:pistol_grip" 
+		"translateX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:pistol_grip" 
+		"translateY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:pistol_grip" 
+		"translateZ"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:pistol_grip" 
+		"rotateX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:pistol_grip" 
+		"rotateY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:pistol_grip" 
+		"rotateZ"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:pistol_grip" 
+		"scaleX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:pistol_grip" 
+		"scaleY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:pistol_grip" 
+		"scaleZ"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:saftey" 
+		"translateX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:saftey" 
+		"translateY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:saftey" 
+		"translateZ"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:saftey" 
+		"rotateX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:saftey" 
+		"rotateY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:saftey" 
+		"rotateZ"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:saftey" 
+		"scaleX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:saftey" 
+		"scaleY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:saftey" 
+		"scaleZ"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:hammer" 
+		"translateX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:hammer" 
+		"translateY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:hammer" 
+		"translateZ"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:hammer" 
+		"rotateX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:hammer" 
+		"rotateY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:hammer" 
+		"rotateZ"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:hammer" 
+		"scaleX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:hammer" 
+		"scaleY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:hammer" 
+		"scaleZ"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:trigger" 
+		"translateX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:trigger" 
+		"translateY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:trigger" 
+		"translateZ"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:trigger" 
+		"rotateX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:trigger" 
+		"rotateY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:trigger" 
+		"rotateZ"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:trigger" 
+		"scaleX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:trigger" 
+		"scaleY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:trigger" 
+		"scaleZ"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:clip_release" 
+		"translateX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:clip_release" 
+		"translateY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:clip_release" 
+		"translateZ"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:clip_release" 
+		"rotateX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:clip_release" 
+		"rotateY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:clip_release" 
+		"rotateZ"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:clip_release" 
+		"scaleX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:clip_release" 
+		"scaleY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:clip_release" 
+		"scaleZ"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:slide_release" 
+		"translateX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:slide_release" 
+		"translateY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:slide_release" 
+		"translateZ"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:slide_release" 
+		"rotateX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:slide_release" 
+		"rotateY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:slide_release" 
+		"rotateZ"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:slide_release" 
+		"scaleX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:slide_release" 
+		"scaleY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:pistol_handle|hammer_mesh:slide_release" 
+		"scaleZ"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:muzzel_flash" "translateX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:muzzel_flash" "translateY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:muzzel_flash" "translateZ"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:muzzel_flash" "rotateX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:muzzel_flash" "rotateY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:muzzel_flash" "rotateZ"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:muzzel_flash" "scaleX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:muzzel_flash" "scaleY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:muzzel_flash" "scaleZ"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:bottom_cylinder" "translateX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:bottom_cylinder" "translateY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:bottom_cylinder" "translateZ"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:bottom_cylinder" "rotateX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:bottom_cylinder" "rotateY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:bottom_cylinder" "rotateZ"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:bottom_cylinder" "scaleX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:bottom_cylinder" "scaleY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:bottom_cylinder" "scaleZ"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:clip" "translateX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:clip" "translateY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:clip" "translateZ"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:clip" "rotateX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:clip" "rotateY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:clip" "rotateZ"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:clip" "scaleX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:clip" "scaleY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:clip" "scaleZ"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:slide" "translateX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:slide" "translateY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:slide" "translateZ"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:slide" "rotateX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:slide" "rotateY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:slide" "rotateZ"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:slide" "scaleX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:slide" "scaleY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:slide" "scaleZ"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:slide|hammer_mesh:sight_grp|hammer_mesh:sight" 
+		"translateX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:slide|hammer_mesh:sight_grp|hammer_mesh:sight" 
+		"translateY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:slide|hammer_mesh:sight_grp|hammer_mesh:sight" 
+		"translateZ"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:slide|hammer_mesh:sight_grp|hammer_mesh:sight" 
+		"rotateX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:slide|hammer_mesh:sight_grp|hammer_mesh:sight" 
+		"rotateY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:slide|hammer_mesh:sight_grp|hammer_mesh:sight" 
+		"rotateZ"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:slide|hammer_mesh:sight_grp|hammer_mesh:sight" 
+		"scaleX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:slide|hammer_mesh:sight_grp|hammer_mesh:sight" 
+		"scaleY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:slide|hammer_mesh:sight_grp|hammer_mesh:sight" 
+		"scaleZ"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:slide|hammer_mesh:sight_grp|hammer_mesh:sight_mount" 
+		"translateX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:slide|hammer_mesh:sight_grp|hammer_mesh:sight_mount" 
+		"translateY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:slide|hammer_mesh:sight_grp|hammer_mesh:sight_mount" 
+		"translateZ"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:slide|hammer_mesh:sight_grp|hammer_mesh:sight_mount" 
+		"rotateX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:slide|hammer_mesh:sight_grp|hammer_mesh:sight_mount" 
+		"rotateY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:slide|hammer_mesh:sight_grp|hammer_mesh:sight_mount" 
+		"rotateZ"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:slide|hammer_mesh:sight_grp|hammer_mesh:sight_mount" 
+		"scaleX"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:slide|hammer_mesh:sight_grp|hammer_mesh:sight_mount" 
+		"scaleY"
+		8 "|hammer_mesh:hammer_grp|hammer_mesh:slide|hammer_mesh:sight_grp|hammer_mesh:sight_mount" 
+		"scaleZ";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode skinCluster -n "skinCluster10";
+	rename -uid "678F647D-436D-1CA0-D207-76A6203B82ED";
+	setAttr -s 135 ".wl";
+	setAttr ".wl[0].w[0]"  1;
+	setAttr ".wl[1].w[0]"  1;
+	setAttr ".wl[2].w[0]"  1;
+	setAttr ".wl[3].w[0]"  1;
+	setAttr ".wl[4].w[0]"  1;
+	setAttr ".wl[5].w[0]"  1;
+	setAttr ".wl[6].w[0]"  1;
+	setAttr ".wl[7].w[0]"  1;
+	setAttr ".wl[8].w[0]"  1;
+	setAttr ".wl[9].w[0]"  1;
+	setAttr ".wl[10].w[0]"  1;
+	setAttr ".wl[11].w[0]"  1;
+	setAttr ".wl[12].w[0]"  1;
+	setAttr ".wl[13].w[0]"  1;
+	setAttr ".wl[14].w[0]"  1;
+	setAttr ".wl[15].w[0]"  1;
+	setAttr ".wl[16].w[0]"  1;
+	setAttr ".wl[17].w[0]"  1;
+	setAttr ".wl[18].w[0]"  1;
+	setAttr ".wl[19].w[0]"  1;
+	setAttr ".wl[20].w[0]"  1;
+	setAttr ".wl[21].w[0]"  1;
+	setAttr ".wl[22].w[0]"  1;
+	setAttr ".wl[23].w[0]"  1;
+	setAttr ".wl[24].w[0]"  1;
+	setAttr ".wl[25].w[0]"  1;
+	setAttr ".wl[26].w[0]"  1;
+	setAttr ".wl[27].w[0]"  1;
+	setAttr ".wl[28].w[0]"  1;
+	setAttr ".wl[29].w[0]"  1;
+	setAttr ".wl[30].w[0]"  1;
+	setAttr ".wl[31].w[0]"  1;
+	setAttr ".wl[32].w[0]"  1;
+	setAttr ".wl[33].w[0]"  1;
+	setAttr ".wl[34].w[0]"  1;
+	setAttr ".wl[35].w[0]"  1;
+	setAttr ".wl[36].w[0]"  1;
+	setAttr ".wl[37].w[0]"  1;
+	setAttr ".wl[38].w[0]"  1;
+	setAttr ".wl[39].w[0]"  1;
+	setAttr ".wl[40].w[0]"  1;
+	setAttr ".wl[41].w[0]"  1;
+	setAttr ".wl[42].w[0]"  1;
+	setAttr ".wl[43].w[0]"  1;
+	setAttr ".wl[44].w[0]"  1;
+	setAttr ".wl[45].w[0]"  1;
+	setAttr ".wl[46].w[0]"  1;
+	setAttr ".wl[47].w[0]"  1;
+	setAttr ".wl[48].w[0]"  1;
+	setAttr ".wl[49].w[0]"  1;
+	setAttr ".wl[50].w[0]"  1;
+	setAttr ".wl[51].w[0]"  1;
+	setAttr ".wl[52].w[0]"  1;
+	setAttr ".wl[53].w[0]"  1;
+	setAttr ".wl[54].w[0]"  1;
+	setAttr ".wl[55].w[0]"  1;
+	setAttr ".wl[56].w[0]"  1;
+	setAttr ".wl[57].w[0]"  1;
+	setAttr ".wl[58].w[0]"  1;
+	setAttr ".wl[59].w[0]"  1;
+	setAttr ".wl[60].w[0]"  1;
+	setAttr ".wl[61].w[0]"  1;
+	setAttr ".wl[62].w[0]"  1;
+	setAttr ".wl[63].w[0]"  1;
+	setAttr ".wl[64].w[0]"  1;
+	setAttr ".wl[65].w[0]"  1;
+	setAttr ".wl[66].w[0]"  1;
+	setAttr ".wl[67].w[0]"  1;
+	setAttr ".wl[68].w[0]"  1;
+	setAttr ".wl[69].w[0]"  1;
+	setAttr ".wl[70].w[0]"  1;
+	setAttr ".wl[71].w[0]"  1;
+	setAttr ".wl[72].w[0]"  1;
+	setAttr ".wl[73].w[0]"  1;
+	setAttr ".wl[74].w[0]"  1;
+	setAttr ".wl[75].w[0]"  1;
+	setAttr ".wl[76].w[0]"  1;
+	setAttr ".wl[77].w[0]"  1;
+	setAttr ".wl[78].w[0]"  1;
+	setAttr ".wl[79].w[0]"  1;
+	setAttr ".wl[80].w[0]"  1;
+	setAttr ".wl[81].w[0]"  1;
+	setAttr ".wl[82].w[0]"  1;
+	setAttr ".wl[83].w[0]"  1;
+	setAttr ".wl[84].w[0]"  1;
+	setAttr ".wl[85].w[0]"  1;
+	setAttr ".wl[86].w[0]"  1;
+	setAttr ".wl[87].w[0]"  1;
+	setAttr ".wl[88].w[0]"  1;
+	setAttr ".wl[89].w[0]"  1;
+	setAttr ".wl[90].w[0]"  1;
+	setAttr ".wl[91].w[0]"  1;
+	setAttr ".wl[92].w[0]"  1;
+	setAttr ".wl[93].w[0]"  1;
+	setAttr ".wl[94].w[0]"  1;
+	setAttr ".wl[95].w[0]"  1;
+	setAttr ".wl[96].w[0]"  1;
+	setAttr ".wl[97].w[0]"  1;
+	setAttr ".wl[98].w[0]"  1;
+	setAttr ".wl[99].w[0]"  1;
+	setAttr ".wl[100].w[0]"  1;
+	setAttr ".wl[101].w[0]"  1;
+	setAttr ".wl[102].w[0]"  1;
+	setAttr ".wl[103].w[0]"  1;
+	setAttr ".wl[104].w[0]"  1;
+	setAttr ".wl[105].w[0]"  1;
+	setAttr ".wl[106].w[0]"  1;
+	setAttr ".wl[107].w[0]"  1;
+	setAttr ".wl[108].w[0]"  1;
+	setAttr ".wl[109].w[0]"  1;
+	setAttr ".wl[110].w[0]"  1;
+	setAttr ".wl[111].w[0]"  1;
+	setAttr ".wl[112].w[0]"  1;
+	setAttr ".wl[113].w[0]"  1;
+	setAttr ".wl[114].w[0]"  1;
+	setAttr ".wl[115].w[0]"  1;
+	setAttr ".wl[116].w[0]"  1;
+	setAttr ".wl[117].w[0]"  1;
+	setAttr ".wl[118].w[0]"  1;
+	setAttr ".wl[119].w[0]"  1;
+	setAttr ".wl[120].w[0]"  1;
+	setAttr ".wl[121].w[0]"  1;
+	setAttr ".wl[122].w[0]"  1;
+	setAttr ".wl[123].w[0]"  1;
+	setAttr ".wl[124].w[0]"  1;
+	setAttr ".wl[125].w[0]"  1;
+	setAttr ".wl[126].w[0]"  1;
+	setAttr ".wl[127].w[0]"  1;
+	setAttr ".wl[128].w[0]"  1;
+	setAttr ".wl[129].w[0]"  1;
+	setAttr ".wl[130].w[0]"  1;
+	setAttr ".wl[131].w[0]"  1;
+	setAttr ".wl[132].w[0]"  1;
+	setAttr ".wl[133].w[0]"  1;
+	setAttr ".wl[134].w[0]"  1;
+	setAttr ".pm[0]" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -2.0717962474645071 -7.7869974582191714 -0 1;
+	setAttr ".gm" -type "matrix" -0.040365962035462215 -0.0052340849358117093 0.0055479796099727344 0
+		 -0.0022813612308873006 -0.020227878057141272 -0.035682137746440704 0 0.0072781257066753561 -0.035369816483924156 0.019585494173180819 0
+		 1.9829848729036732 7.1584689039447804 -1.4253706724477309 1;
+	setAttr ".dpf[0]"  1;
+	setAttr ".mi" 1;
+	setAttr ".ucm" yes;
+createNode tweak -n "tweak10";
+	rename -uid "5BA65FB2-4979-D768-605A-5BA1F6BF7AA8";
+createNode objectSet -n "skinCluster10Set";
+	rename -uid "0E8E4E8B-4FF9-6124-1BD4-DA9E09095772";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "skinCluster10GroupId";
+	rename -uid "953A75BF-4D45-8C8B-CA7C-27AC28959233";
+	setAttr ".ihi" 0;
+createNode groupParts -n "skinCluster10GroupParts";
+	rename -uid "BF528A63-4BC4-3233-6BC4-938DF1EB17C2";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode objectSet -n "tweakSet10";
+	rename -uid "0AC5A9AC-4483-09C3-69DE-51BD5DFB6D78";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "groupId22";
+	rename -uid "50B18DDF-482A-729A-C338-6181E7E483A2";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts22";
+	rename -uid "B6399601-4FA0-3555-D594-59AD90403DBC";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode dagPose -n "bindPose3";
+	rename -uid "32A93660-452D-C49D-1CBB-28A7925DAC65";
+	setAttr ".xm[0]" -type "matrix" "xform" 1 1 1 0 0 0 0 2.0717962474645071 7.7869974582191714
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 yes;
+	setAttr ".bp" yes;
+createNode skinCluster -n "skinCluster11";
+	rename -uid "7648D4C6-4A7A-5B84-D295-9CB7D0612502";
+	setAttr -s 646 ".wl";
+	setAttr ".wl[0].w[0]"  1;
+	setAttr ".wl[1].w[0]"  1;
+	setAttr ".wl[2].w[0]"  1;
+	setAttr ".wl[3].w[0]"  1;
+	setAttr ".wl[4].w[0]"  1;
+	setAttr ".wl[5].w[0]"  1;
+	setAttr ".wl[6].w[0]"  1;
+	setAttr ".wl[7].w[0]"  1;
+	setAttr ".wl[8].w[0]"  1;
+	setAttr ".wl[9].w[0]"  1;
+	setAttr ".wl[10].w[0]"  1;
+	setAttr ".wl[11].w[0]"  1;
+	setAttr ".wl[12].w[0]"  1;
+	setAttr ".wl[13].w[0]"  1;
+	setAttr ".wl[14].w[0]"  1;
+	setAttr ".wl[15].w[0]"  1;
+	setAttr ".wl[16].w[0]"  1;
+	setAttr ".wl[17].w[0]"  1;
+	setAttr ".wl[18].w[0]"  1;
+	setAttr ".wl[19].w[0]"  1;
+	setAttr ".wl[20].w[0]"  1;
+	setAttr ".wl[21].w[0]"  1;
+	setAttr ".wl[22].w[0]"  1;
+	setAttr ".wl[23].w[0]"  1;
+	setAttr ".wl[24].w[0]"  1;
+	setAttr ".wl[25].w[0]"  1;
+	setAttr ".wl[26].w[0]"  1;
+	setAttr ".wl[27].w[0]"  1;
+	setAttr ".wl[28].w[0]"  1;
+	setAttr ".wl[29].w[0]"  1;
+	setAttr ".wl[30].w[0]"  1;
+	setAttr ".wl[31].w[0]"  1;
+	setAttr ".wl[32].w[0]"  1;
+	setAttr ".wl[33].w[0]"  1;
+	setAttr ".wl[34].w[0]"  1;
+	setAttr ".wl[35].w[0]"  1;
+	setAttr ".wl[36].w[0]"  1;
+	setAttr ".wl[37].w[0]"  1;
+	setAttr ".wl[38].w[0]"  1;
+	setAttr ".wl[39].w[0]"  1;
+	setAttr ".wl[40].w[0]"  1;
+	setAttr ".wl[41].w[0]"  1;
+	setAttr ".wl[42].w[0]"  1;
+	setAttr ".wl[43].w[0]"  1;
+	setAttr ".wl[44].w[0]"  1;
+	setAttr ".wl[45].w[0]"  1;
+	setAttr ".wl[46].w[0]"  1;
+	setAttr ".wl[47].w[0]"  1;
+	setAttr ".wl[48].w[0]"  1;
+	setAttr ".wl[49].w[0]"  1;
+	setAttr ".wl[50].w[0]"  1;
+	setAttr ".wl[51].w[0]"  1;
+	setAttr ".wl[52].w[0]"  1;
+	setAttr ".wl[53].w[0]"  1;
+	setAttr ".wl[54].w[0]"  1;
+	setAttr ".wl[55].w[0]"  1;
+	setAttr ".wl[56].w[0]"  1;
+	setAttr ".wl[57].w[0]"  1;
+	setAttr ".wl[58].w[0]"  1;
+	setAttr ".wl[59].w[0]"  1;
+	setAttr ".wl[60].w[0]"  1;
+	setAttr ".wl[61].w[0]"  1;
+	setAttr ".wl[62].w[0]"  1;
+	setAttr ".wl[63].w[0]"  1;
+	setAttr ".wl[64].w[0]"  1;
+	setAttr ".wl[65].w[0]"  1;
+	setAttr ".wl[66].w[0]"  1;
+	setAttr ".wl[67].w[0]"  1;
+	setAttr ".wl[68].w[0]"  1;
+	setAttr ".wl[69].w[0]"  1;
+	setAttr ".wl[70].w[0]"  1;
+	setAttr ".wl[71].w[0]"  1;
+	setAttr ".wl[72].w[0]"  1;
+	setAttr ".wl[73].w[0]"  1;
+	setAttr ".wl[74].w[0]"  1;
+	setAttr ".wl[75].w[0]"  1;
+	setAttr ".wl[76].w[0]"  1;
+	setAttr ".wl[77].w[0]"  1;
+	setAttr ".wl[78].w[0]"  1;
+	setAttr ".wl[79].w[0]"  1;
+	setAttr ".wl[80].w[0]"  1;
+	setAttr ".wl[81].w[0]"  1;
+	setAttr ".wl[82].w[0]"  1;
+	setAttr ".wl[83].w[0]"  1;
+	setAttr ".wl[84].w[0]"  1;
+	setAttr ".wl[85].w[0]"  1;
+	setAttr ".wl[86].w[0]"  1;
+	setAttr ".wl[87].w[0]"  1;
+	setAttr ".wl[88].w[0]"  1;
+	setAttr ".wl[89].w[0]"  1;
+	setAttr ".wl[90].w[0]"  1;
+	setAttr ".wl[91].w[0]"  1;
+	setAttr ".wl[92].w[0]"  1;
+	setAttr ".wl[93].w[0]"  1;
+	setAttr ".wl[94].w[0]"  1;
+	setAttr ".wl[95].w[0]"  1;
+	setAttr ".wl[96].w[0]"  1;
+	setAttr ".wl[97].w[0]"  1;
+	setAttr ".wl[98].w[0]"  1;
+	setAttr ".wl[99].w[0]"  1;
+	setAttr ".wl[100].w[0]"  1;
+	setAttr ".wl[101].w[0]"  1;
+	setAttr ".wl[102].w[0]"  1;
+	setAttr ".wl[103].w[0]"  1;
+	setAttr ".wl[104].w[0]"  1;
+	setAttr ".wl[105].w[0]"  1;
+	setAttr ".wl[106].w[0]"  1;
+	setAttr ".wl[107].w[0]"  1;
+	setAttr ".wl[108].w[0]"  1;
+	setAttr ".wl[109].w[0]"  1;
+	setAttr ".wl[110].w[0]"  1;
+	setAttr ".wl[111].w[0]"  1;
+	setAttr ".wl[112].w[0]"  1;
+	setAttr ".wl[113].w[0]"  1;
+	setAttr ".wl[114].w[0]"  1;
+	setAttr ".wl[115].w[0]"  1;
+	setAttr ".wl[116].w[0]"  1;
+	setAttr ".wl[117].w[0]"  1;
+	setAttr ".wl[118].w[0]"  1;
+	setAttr ".wl[119].w[0]"  1;
+	setAttr ".wl[120].w[0]"  1;
+	setAttr ".wl[121].w[0]"  1;
+	setAttr ".wl[122].w[0]"  1;
+	setAttr ".wl[123].w[0]"  1;
+	setAttr ".wl[124].w[0]"  1;
+	setAttr ".wl[125].w[0]"  1;
+	setAttr ".wl[126].w[0]"  1;
+	setAttr ".wl[127].w[0]"  1;
+	setAttr ".wl[128].w[0]"  1;
+	setAttr ".wl[129].w[0]"  1;
+	setAttr ".wl[130].w[0]"  1;
+	setAttr ".wl[131].w[0]"  1;
+	setAttr ".wl[132].w[0]"  1;
+	setAttr ".wl[133].w[0]"  1;
+	setAttr ".wl[134].w[0]"  1;
+	setAttr ".wl[135].w[0]"  1;
+	setAttr ".wl[136].w[0]"  1;
+	setAttr ".wl[137].w[0]"  1;
+	setAttr ".wl[138].w[0]"  1;
+	setAttr ".wl[139].w[0]"  1;
+	setAttr ".wl[140].w[0]"  1;
+	setAttr ".wl[141].w[0]"  1;
+	setAttr ".wl[142].w[0]"  1;
+	setAttr ".wl[143].w[0]"  1;
+	setAttr ".wl[144].w[0]"  1;
+	setAttr ".wl[145].w[0]"  1;
+	setAttr ".wl[146].w[0]"  1;
+	setAttr ".wl[147].w[0]"  1;
+	setAttr ".wl[148].w[0]"  1;
+	setAttr ".wl[149].w[0]"  1;
+	setAttr ".wl[150].w[0]"  1;
+	setAttr ".wl[151].w[0]"  1;
+	setAttr ".wl[152].w[0]"  1;
+	setAttr ".wl[153].w[0]"  1;
+	setAttr ".wl[154].w[0]"  1;
+	setAttr ".wl[155].w[0]"  1;
+	setAttr ".wl[156].w[0]"  1;
+	setAttr ".wl[157].w[0]"  1;
+	setAttr ".wl[158].w[0]"  1;
+	setAttr ".wl[159].w[0]"  1;
+	setAttr ".wl[160].w[0]"  1;
+	setAttr ".wl[161].w[0]"  1;
+	setAttr ".wl[162].w[0]"  1;
+	setAttr ".wl[163].w[0]"  1;
+	setAttr ".wl[164].w[0]"  1;
+	setAttr ".wl[165].w[0]"  1;
+	setAttr ".wl[166].w[0]"  1;
+	setAttr ".wl[167].w[0]"  1;
+	setAttr ".wl[168].w[0]"  1;
+	setAttr ".wl[169].w[0]"  1;
+	setAttr ".wl[170].w[0]"  1;
+	setAttr ".wl[171].w[0]"  1;
+	setAttr ".wl[172].w[0]"  1;
+	setAttr ".wl[173].w[0]"  1;
+	setAttr ".wl[174].w[0]"  1;
+	setAttr ".wl[175].w[0]"  1;
+	setAttr ".wl[176].w[0]"  1;
+	setAttr ".wl[177].w[0]"  1;
+	setAttr ".wl[178].w[0]"  1;
+	setAttr ".wl[179].w[0]"  1;
+	setAttr ".wl[180].w[0]"  1;
+	setAttr ".wl[181].w[0]"  1;
+	setAttr ".wl[182].w[0]"  1;
+	setAttr ".wl[183].w[0]"  1;
+	setAttr ".wl[184].w[0]"  1;
+	setAttr ".wl[185].w[0]"  1;
+	setAttr ".wl[186].w[0]"  1;
+	setAttr ".wl[187].w[0]"  1;
+	setAttr ".wl[188].w[0]"  1;
+	setAttr ".wl[189].w[0]"  1;
+	setAttr ".wl[190].w[0]"  1;
+	setAttr ".wl[191].w[0]"  1;
+	setAttr ".wl[192].w[0]"  1;
+	setAttr ".wl[193].w[0]"  1;
+	setAttr ".wl[194].w[0]"  1;
+	setAttr ".wl[195].w[0]"  1;
+	setAttr ".wl[196].w[0]"  1;
+	setAttr ".wl[197].w[0]"  1;
+	setAttr ".wl[198].w[0]"  1;
+	setAttr ".wl[199].w[0]"  1;
+	setAttr ".wl[200].w[0]"  1;
+	setAttr ".wl[201].w[0]"  1;
+	setAttr ".wl[202].w[0]"  1;
+	setAttr ".wl[203].w[0]"  1;
+	setAttr ".wl[204].w[0]"  1;
+	setAttr ".wl[205].w[0]"  1;
+	setAttr ".wl[206].w[0]"  1;
+	setAttr ".wl[207].w[0]"  1;
+	setAttr ".wl[208].w[0]"  1;
+	setAttr ".wl[209].w[0]"  1;
+	setAttr ".wl[210].w[0]"  1;
+	setAttr ".wl[211].w[0]"  1;
+	setAttr ".wl[212].w[0]"  1;
+	setAttr ".wl[213].w[0]"  1;
+	setAttr ".wl[214].w[0]"  1;
+	setAttr ".wl[215].w[0]"  1;
+	setAttr ".wl[216].w[0]"  1;
+	setAttr ".wl[217].w[0]"  1;
+	setAttr ".wl[218].w[0]"  1;
+	setAttr ".wl[219].w[0]"  1;
+	setAttr ".wl[220].w[0]"  1;
+	setAttr ".wl[221].w[0]"  1;
+	setAttr ".wl[222].w[0]"  1;
+	setAttr ".wl[223].w[0]"  1;
+	setAttr ".wl[224].w[0]"  1;
+	setAttr ".wl[225].w[0]"  1;
+	setAttr ".wl[226].w[0]"  1;
+	setAttr ".wl[227].w[0]"  1;
+	setAttr ".wl[228].w[0]"  1;
+	setAttr ".wl[229].w[0]"  1;
+	setAttr ".wl[230].w[0]"  1;
+	setAttr ".wl[231].w[0]"  1;
+	setAttr ".wl[232].w[0]"  1;
+	setAttr ".wl[233].w[0]"  1;
+	setAttr ".wl[234].w[0]"  1;
+	setAttr ".wl[235].w[0]"  1;
+	setAttr ".wl[236].w[0]"  1;
+	setAttr ".wl[237].w[0]"  1;
+	setAttr ".wl[238].w[0]"  1;
+	setAttr ".wl[239].w[0]"  1;
+	setAttr ".wl[240].w[0]"  1;
+	setAttr ".wl[241].w[0]"  1;
+	setAttr ".wl[242].w[0]"  1;
+	setAttr ".wl[243].w[0]"  1;
+	setAttr ".wl[244].w[0]"  1;
+	setAttr ".wl[245].w[0]"  1;
+	setAttr ".wl[246].w[0]"  1;
+	setAttr ".wl[247].w[0]"  1;
+	setAttr ".wl[248].w[0]"  1;
+	setAttr ".wl[249].w[0]"  1;
+	setAttr ".wl[250].w[0]"  1;
+	setAttr ".wl[251].w[0]"  1;
+	setAttr ".wl[252].w[0]"  1;
+	setAttr ".wl[253].w[0]"  1;
+	setAttr ".wl[254].w[0]"  1;
+	setAttr ".wl[255].w[0]"  1;
+	setAttr ".wl[256].w[0]"  1;
+	setAttr ".wl[257].w[0]"  1;
+	setAttr ".wl[258].w[0]"  1;
+	setAttr ".wl[259].w[0]"  1;
+	setAttr ".wl[260].w[0]"  1;
+	setAttr ".wl[261].w[0]"  1;
+	setAttr ".wl[262].w[0]"  1;
+	setAttr ".wl[263].w[0]"  1;
+	setAttr ".wl[264].w[0]"  1;
+	setAttr ".wl[265].w[0]"  1;
+	setAttr ".wl[266].w[0]"  1;
+	setAttr ".wl[267].w[0]"  1;
+	setAttr ".wl[268].w[0]"  1;
+	setAttr ".wl[269].w[0]"  1;
+	setAttr ".wl[270].w[0]"  1;
+	setAttr ".wl[271].w[0]"  1;
+	setAttr ".wl[272].w[0]"  1;
+	setAttr ".wl[273].w[0]"  1;
+	setAttr ".wl[274].w[0]"  1;
+	setAttr ".wl[275].w[0]"  1;
+	setAttr ".wl[276].w[0]"  1;
+	setAttr ".wl[277].w[0]"  1;
+	setAttr ".wl[278].w[0]"  1;
+	setAttr ".wl[279].w[0]"  1;
+	setAttr ".wl[280].w[0]"  1;
+	setAttr ".wl[281].w[0]"  1;
+	setAttr ".wl[282].w[0]"  1;
+	setAttr ".wl[283].w[0]"  1;
+	setAttr ".wl[284].w[0]"  1;
+	setAttr ".wl[285].w[0]"  1;
+	setAttr ".wl[286].w[0]"  1;
+	setAttr ".wl[287].w[0]"  1;
+	setAttr ".wl[288].w[0]"  1;
+	setAttr ".wl[289].w[0]"  1;
+	setAttr ".wl[290].w[0]"  1;
+	setAttr ".wl[291].w[0]"  1;
+	setAttr ".wl[292].w[0]"  1;
+	setAttr ".wl[293].w[0]"  1;
+	setAttr ".wl[294].w[0]"  1;
+	setAttr ".wl[295].w[0]"  1;
+	setAttr ".wl[296].w[0]"  1;
+	setAttr ".wl[297].w[0]"  1;
+	setAttr ".wl[298].w[0]"  1;
+	setAttr ".wl[299].w[0]"  1;
+	setAttr ".wl[300].w[0]"  1;
+	setAttr ".wl[301].w[0]"  1;
+	setAttr ".wl[302].w[0]"  1;
+	setAttr ".wl[303].w[0]"  1;
+	setAttr ".wl[304].w[0]"  1;
+	setAttr ".wl[305].w[0]"  1;
+	setAttr ".wl[306].w[0]"  1;
+	setAttr ".wl[307].w[0]"  1;
+	setAttr ".wl[308].w[0]"  1;
+	setAttr ".wl[309].w[0]"  1;
+	setAttr ".wl[310].w[0]"  1;
+	setAttr ".wl[311].w[0]"  1;
+	setAttr ".wl[312].w[0]"  1;
+	setAttr ".wl[313].w[0]"  1;
+	setAttr ".wl[314].w[0]"  1;
+	setAttr ".wl[315].w[0]"  1;
+	setAttr ".wl[316].w[0]"  1;
+	setAttr ".wl[317].w[0]"  1;
+	setAttr ".wl[318].w[0]"  1;
+	setAttr ".wl[319].w[0]"  1;
+	setAttr ".wl[320].w[0]"  1;
+	setAttr ".wl[321].w[0]"  1;
+	setAttr ".wl[322].w[0]"  1;
+	setAttr ".wl[323].w[0]"  1;
+	setAttr ".wl[324].w[0]"  1;
+	setAttr ".wl[325].w[0]"  1;
+	setAttr ".wl[326].w[0]"  1;
+	setAttr ".wl[327].w[0]"  1;
+	setAttr ".wl[328].w[0]"  1;
+	setAttr ".wl[329].w[0]"  1;
+	setAttr ".wl[330].w[0]"  1;
+	setAttr ".wl[331].w[0]"  1;
+	setAttr ".wl[332].w[0]"  1;
+	setAttr ".wl[333].w[0]"  1;
+	setAttr ".wl[334].w[0]"  1;
+	setAttr ".wl[335].w[0]"  1;
+	setAttr ".wl[336].w[0]"  1;
+	setAttr ".wl[337].w[0]"  1;
+	setAttr ".wl[338].w[0]"  1;
+	setAttr ".wl[339].w[0]"  1;
+	setAttr ".wl[340].w[0]"  1;
+	setAttr ".wl[341].w[0]"  1;
+	setAttr ".wl[342].w[0]"  1;
+	setAttr ".wl[343].w[0]"  1;
+	setAttr ".wl[344].w[0]"  1;
+	setAttr ".wl[345].w[0]"  1;
+	setAttr ".wl[346].w[0]"  1;
+	setAttr ".wl[347].w[0]"  1;
+	setAttr ".wl[348].w[0]"  1;
+	setAttr ".wl[349].w[0]"  1;
+	setAttr ".wl[350].w[0]"  1;
+	setAttr ".wl[351].w[0]"  1;
+	setAttr ".wl[352].w[0]"  1;
+	setAttr ".wl[353].w[0]"  1;
+	setAttr ".wl[354].w[0]"  1;
+	setAttr ".wl[355].w[0]"  1;
+	setAttr ".wl[356].w[0]"  1;
+	setAttr ".wl[357].w[0]"  1;
+	setAttr ".wl[358].w[0]"  1;
+	setAttr ".wl[359].w[0]"  1;
+	setAttr ".wl[360].w[0]"  1;
+	setAttr ".wl[361].w[0]"  1;
+	setAttr ".wl[362].w[0]"  1;
+	setAttr ".wl[363].w[0]"  1;
+	setAttr ".wl[364].w[0]"  1;
+	setAttr ".wl[365].w[0]"  1;
+	setAttr ".wl[366].w[0]"  1;
+	setAttr ".wl[367].w[0]"  1;
+	setAttr ".wl[368].w[0]"  1;
+	setAttr ".wl[369].w[0]"  1;
+	setAttr ".wl[370].w[0]"  1;
+	setAttr ".wl[371].w[0]"  1;
+	setAttr ".wl[372].w[0]"  1;
+	setAttr ".wl[373].w[0]"  1;
+	setAttr ".wl[374].w[0]"  1;
+	setAttr ".wl[375].w[0]"  1;
+	setAttr ".wl[376].w[0]"  1;
+	setAttr ".wl[377].w[0]"  1;
+	setAttr ".wl[378].w[0]"  1;
+	setAttr ".wl[379].w[0]"  1;
+	setAttr ".wl[380].w[0]"  1;
+	setAttr ".wl[381].w[0]"  1;
+	setAttr ".wl[382].w[0]"  1;
+	setAttr ".wl[383].w[0]"  1;
+	setAttr ".wl[384].w[0]"  1;
+	setAttr ".wl[385].w[0]"  1;
+	setAttr ".wl[386].w[0]"  1;
+	setAttr ".wl[387].w[0]"  1;
+	setAttr ".wl[388].w[0]"  1;
+	setAttr ".wl[389].w[0]"  1;
+	setAttr ".wl[390].w[0]"  1;
+	setAttr ".wl[391].w[0]"  1;
+	setAttr ".wl[392].w[0]"  1;
+	setAttr ".wl[393].w[0]"  1;
+	setAttr ".wl[394].w[0]"  1;
+	setAttr ".wl[395].w[0]"  1;
+	setAttr ".wl[396].w[0]"  1;
+	setAttr ".wl[397].w[0]"  1;
+	setAttr ".wl[398].w[0]"  1;
+	setAttr ".wl[399].w[0]"  1;
+	setAttr ".wl[400].w[0]"  1;
+	setAttr ".wl[401].w[0]"  1;
+	setAttr ".wl[402].w[0]"  1;
+	setAttr ".wl[403].w[0]"  1;
+	setAttr ".wl[404].w[0]"  1;
+	setAttr ".wl[405].w[0]"  1;
+	setAttr ".wl[406].w[0]"  1;
+	setAttr ".wl[407].w[0]"  1;
+	setAttr ".wl[408].w[0]"  1;
+	setAttr ".wl[409].w[0]"  1;
+	setAttr ".wl[410].w[0]"  1;
+	setAttr ".wl[411].w[0]"  1;
+	setAttr ".wl[412].w[0]"  1;
+	setAttr ".wl[413].w[0]"  1;
+	setAttr ".wl[414].w[0]"  1;
+	setAttr ".wl[415].w[0]"  1;
+	setAttr ".wl[416].w[0]"  1;
+	setAttr ".wl[417].w[0]"  1;
+	setAttr ".wl[418].w[0]"  1;
+	setAttr ".wl[419].w[0]"  1;
+	setAttr ".wl[420].w[0]"  1;
+	setAttr ".wl[421].w[0]"  1;
+	setAttr ".wl[422].w[0]"  1;
+	setAttr ".wl[423].w[0]"  1;
+	setAttr ".wl[424].w[0]"  1;
+	setAttr ".wl[425].w[0]"  1;
+	setAttr ".wl[426].w[0]"  1;
+	setAttr ".wl[427].w[0]"  1;
+	setAttr ".wl[428].w[0]"  1;
+	setAttr ".wl[429].w[0]"  1;
+	setAttr ".wl[430].w[0]"  1;
+	setAttr ".wl[431].w[0]"  1;
+	setAttr ".wl[432].w[0]"  1;
+	setAttr ".wl[433].w[0]"  1;
+	setAttr ".wl[434].w[0]"  1;
+	setAttr ".wl[435].w[0]"  1;
+	setAttr ".wl[436].w[0]"  1;
+	setAttr ".wl[437].w[0]"  1;
+	setAttr ".wl[438].w[0]"  1;
+	setAttr ".wl[439].w[0]"  1;
+	setAttr ".wl[440].w[0]"  1;
+	setAttr ".wl[441].w[0]"  1;
+	setAttr ".wl[442].w[0]"  1;
+	setAttr ".wl[443].w[0]"  1;
+	setAttr ".wl[444].w[0]"  1;
+	setAttr ".wl[445].w[0]"  1;
+	setAttr ".wl[446].w[0]"  1;
+	setAttr ".wl[447].w[0]"  1;
+	setAttr ".wl[448].w[0]"  1;
+	setAttr ".wl[449].w[0]"  1;
+	setAttr ".wl[450].w[0]"  1;
+	setAttr ".wl[451].w[0]"  1;
+	setAttr ".wl[452].w[0]"  1;
+	setAttr ".wl[453].w[0]"  1;
+	setAttr ".wl[454].w[0]"  1;
+	setAttr ".wl[455].w[0]"  1;
+	setAttr ".wl[456].w[0]"  1;
+	setAttr ".wl[457].w[0]"  1;
+	setAttr ".wl[458].w[0]"  1;
+	setAttr ".wl[459].w[0]"  1;
+	setAttr ".wl[460].w[0]"  1;
+	setAttr ".wl[461].w[0]"  1;
+	setAttr ".wl[462].w[0]"  1;
+	setAttr ".wl[463].w[0]"  1;
+	setAttr ".wl[464].w[0]"  1;
+	setAttr ".wl[465].w[0]"  1;
+	setAttr ".wl[466].w[0]"  1;
+	setAttr ".wl[467].w[0]"  1;
+	setAttr ".wl[468].w[0]"  1;
+	setAttr ".wl[469].w[0]"  1;
+	setAttr ".wl[470].w[0]"  1;
+	setAttr ".wl[471].w[0]"  1;
+	setAttr ".wl[472].w[0]"  1;
+	setAttr ".wl[473].w[0]"  1;
+	setAttr ".wl[474].w[0]"  1;
+	setAttr ".wl[475].w[0]"  1;
+	setAttr ".wl[476].w[0]"  1;
+	setAttr ".wl[477].w[0]"  1;
+	setAttr ".wl[478].w[0]"  1;
+	setAttr ".wl[479].w[0]"  1;
+	setAttr ".wl[480].w[0]"  1;
+	setAttr ".wl[481].w[0]"  1;
+	setAttr ".wl[482].w[0]"  1;
+	setAttr ".wl[483].w[0]"  1;
+	setAttr ".wl[484].w[0]"  1;
+	setAttr ".wl[485].w[0]"  1;
+	setAttr ".wl[486].w[0]"  1;
+	setAttr ".wl[487].w[0]"  1;
+	setAttr ".wl[488].w[0]"  1;
+	setAttr ".wl[489].w[0]"  1;
+	setAttr ".wl[490].w[0]"  1;
+	setAttr ".wl[491].w[0]"  1;
+	setAttr ".wl[492].w[0]"  1;
+	setAttr ".wl[493].w[0]"  1;
+	setAttr ".wl[494].w[0]"  1;
+	setAttr ".wl[495].w[0]"  1;
+	setAttr ".wl[496].w[0]"  1;
+	setAttr ".wl[497].w[0]"  1;
+	setAttr ".wl[498].w[0]"  1;
+	setAttr ".wl[499].w[0]"  1;
+	setAttr ".wl[500].w[0]"  1;
+	setAttr ".wl[501].w[0]"  1;
+	setAttr ".wl[502].w[0]"  1;
+	setAttr ".wl[503].w[0]"  1;
+	setAttr ".wl[504].w[0]"  1;
+	setAttr ".wl[505].w[0]"  1;
+	setAttr ".wl[506].w[0]"  1;
+	setAttr ".wl[507].w[0]"  1;
+	setAttr ".wl[508].w[0]"  1;
+	setAttr ".wl[509].w[0]"  1;
+	setAttr ".wl[510].w[0]"  1;
+	setAttr ".wl[511].w[0]"  1;
+	setAttr ".wl[512].w[0]"  1;
+	setAttr ".wl[513].w[0]"  1;
+	setAttr ".wl[514].w[0]"  1;
+	setAttr ".wl[515].w[0]"  1;
+	setAttr ".wl[516].w[0]"  1;
+	setAttr ".wl[517].w[0]"  1;
+	setAttr ".wl[518].w[0]"  1;
+	setAttr ".wl[519].w[0]"  1;
+	setAttr ".wl[520].w[0]"  1;
+	setAttr ".wl[521].w[0]"  1;
+	setAttr ".wl[522].w[0]"  1;
+	setAttr ".wl[523].w[0]"  1;
+	setAttr ".wl[524].w[0]"  1;
+	setAttr ".wl[525].w[0]"  1;
+	setAttr ".wl[526].w[0]"  1;
+	setAttr ".wl[527].w[0]"  1;
+	setAttr ".wl[528].w[0]"  1;
+	setAttr ".wl[529].w[0]"  1;
+	setAttr ".wl[530].w[0]"  1;
+	setAttr ".wl[531].w[0]"  1;
+	setAttr ".wl[532].w[0]"  1;
+	setAttr ".wl[533].w[0]"  1;
+	setAttr ".wl[534].w[0]"  1;
+	setAttr ".wl[535].w[0]"  1;
+	setAttr ".wl[536].w[0]"  1;
+	setAttr ".wl[537].w[0]"  1;
+	setAttr ".wl[538].w[0]"  1;
+	setAttr ".wl[539].w[0]"  1;
+	setAttr ".wl[540].w[0]"  1;
+	setAttr ".wl[541].w[0]"  1;
+	setAttr ".wl[542].w[0]"  1;
+	setAttr ".wl[543].w[0]"  1;
+	setAttr ".wl[544].w[0]"  1;
+	setAttr ".wl[545].w[0]"  1;
+	setAttr ".wl[546].w[0]"  1;
+	setAttr ".wl[547].w[0]"  1;
+	setAttr ".wl[548].w[0]"  1;
+	setAttr ".wl[549].w[0]"  1;
+	setAttr ".wl[550].w[0]"  1;
+	setAttr ".wl[551].w[0]"  1;
+	setAttr ".wl[552].w[0]"  1;
+	setAttr ".wl[553].w[0]"  1;
+	setAttr ".wl[554].w[0]"  1;
+	setAttr ".wl[555].w[0]"  1;
+	setAttr ".wl[556].w[0]"  1;
+	setAttr ".wl[557].w[0]"  1;
+	setAttr ".wl[558].w[0]"  1;
+	setAttr ".wl[559].w[0]"  1;
+	setAttr ".wl[560].w[0]"  1;
+	setAttr ".wl[561].w[0]"  1;
+	setAttr ".wl[562].w[0]"  1;
+	setAttr ".wl[563].w[0]"  1;
+	setAttr ".wl[564].w[0]"  1;
+	setAttr ".wl[565].w[0]"  1;
+	setAttr ".wl[566].w[0]"  1;
+	setAttr ".wl[567].w[0]"  1;
+	setAttr ".wl[568].w[0]"  1;
+	setAttr ".wl[569].w[0]"  1;
+	setAttr ".wl[570].w[0]"  1;
+	setAttr ".wl[571].w[0]"  1;
+	setAttr ".wl[572].w[0]"  1;
+	setAttr ".wl[573].w[0]"  1;
+	setAttr ".wl[574].w[0]"  1;
+	setAttr ".wl[575].w[0]"  1;
+	setAttr ".wl[576].w[0]"  1;
+	setAttr ".wl[577].w[0]"  1;
+	setAttr ".wl[578].w[0]"  1;
+	setAttr ".wl[579].w[0]"  1;
+	setAttr ".wl[580].w[0]"  1;
+	setAttr ".wl[581].w[0]"  1;
+	setAttr ".wl[582].w[0]"  1;
+	setAttr ".wl[583].w[0]"  1;
+	setAttr ".wl[584].w[0]"  1;
+	setAttr ".wl[585].w[0]"  1;
+	setAttr ".wl[586].w[0]"  1;
+	setAttr ".wl[587].w[0]"  1;
+	setAttr ".wl[588].w[0]"  1;
+	setAttr ".wl[589].w[0]"  1;
+	setAttr ".wl[590].w[0]"  1;
+	setAttr ".wl[591].w[0]"  1;
+	setAttr ".wl[592].w[0]"  1;
+	setAttr ".wl[593].w[0]"  1;
+	setAttr ".wl[594].w[0]"  1;
+	setAttr ".wl[595].w[0]"  1;
+	setAttr ".wl[596].w[0]"  1;
+	setAttr ".wl[597].w[0]"  1;
+	setAttr ".wl[598].w[0]"  1;
+	setAttr ".wl[599].w[0]"  1;
+	setAttr ".wl[600].w[0]"  1;
+	setAttr ".wl[601].w[0]"  1;
+	setAttr ".wl[602].w[0]"  1;
+	setAttr ".wl[603].w[0]"  1;
+	setAttr ".wl[604].w[0]"  1;
+	setAttr ".wl[605].w[0]"  1;
+	setAttr ".wl[606].w[0]"  1;
+	setAttr ".wl[607].w[0]"  1;
+	setAttr ".wl[608].w[0]"  1;
+	setAttr ".wl[609].w[0]"  1;
+	setAttr ".wl[610].w[0]"  1;
+	setAttr ".wl[611].w[0]"  1;
+	setAttr ".wl[612].w[0]"  1;
+	setAttr ".wl[613].w[0]"  1;
+	setAttr ".wl[614].w[0]"  1;
+	setAttr ".wl[615].w[0]"  1;
+	setAttr ".wl[616].w[0]"  1;
+	setAttr ".wl[617].w[0]"  1;
+	setAttr ".wl[618].w[0]"  1;
+	setAttr ".wl[619].w[0]"  1;
+	setAttr ".wl[620].w[0]"  1;
+	setAttr ".wl[621].w[0]"  1;
+	setAttr ".wl[622].w[0]"  1;
+	setAttr ".wl[623].w[0]"  1;
+	setAttr ".wl[624].w[0]"  1;
+	setAttr ".wl[625].w[0]"  1;
+	setAttr ".wl[626].w[0]"  1;
+	setAttr ".wl[627].w[0]"  1;
+	setAttr ".wl[628].w[0]"  1;
+	setAttr ".wl[629].w[0]"  1;
+	setAttr ".wl[630].w[0]"  1;
+	setAttr ".wl[631].w[0]"  1;
+	setAttr ".wl[632].w[0]"  1;
+	setAttr ".wl[633].w[0]"  1;
+	setAttr ".wl[634].w[0]"  1;
+	setAttr ".wl[635].w[0]"  1;
+	setAttr ".wl[636].w[0]"  1;
+	setAttr ".wl[637].w[0]"  1;
+	setAttr ".wl[638].w[0]"  1;
+	setAttr ".wl[639].w[0]"  1;
+	setAttr ".wl[640].w[0]"  1;
+	setAttr ".wl[641].w[0]"  1;
+	setAttr ".wl[642].w[0]"  1;
+	setAttr ".wl[643].w[0]"  1;
+	setAttr ".wl[644].w[0]"  1;
+	setAttr ".wl[645].w[0]"  1;
+	setAttr ".pm[0]" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -2.0717962474645071 -7.7869974582191714 -0 1;
+	setAttr ".gm" -type "matrix" -0.16999195737462339 -0.022042143886524968 0.023364039052140618 0
+		 -0.030650151080491669 0.14895184043430759 -0.082479800375459239 0 -0.0096074276831656178 -0.085185052234052774 -0.15026710953896213 0
+		 2.1925822276733524 7.3141104211557479 0.25508345385099579 1;
+	setAttr ".dpf[0]"  1;
+	setAttr ".mi" 1;
+	setAttr ".ucm" yes;
+createNode tweak -n "tweak11";
+	rename -uid "713EA6B7-471F-5C7D-57D2-3DA892814049";
+createNode objectSet -n "skinCluster11Set";
+	rename -uid "9A5322B3-4381-22E6-CE2C-4B9A1B8C009A";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "skinCluster11GroupId";
+	rename -uid "59FE9499-43A3-1876-1C70-E1BE5CA47A9B";
+	setAttr ".ihi" 0;
+createNode groupParts -n "skinCluster11GroupParts";
+	rename -uid "857B02D4-4DD8-3405-6F3A-339667660917";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode objectSet -n "tweakSet11";
+	rename -uid "27DB0293-4AAF-3360-4107-12A24F06CB86";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "groupId24";
+	rename -uid "78E76976-4D5C-565D-B60D-31B303B8210A";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts24";
+	rename -uid "AB7A4C7D-4AC7-7AFB-2350-E9ACE30FCF5A";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode groupId -n "groupId25";
+	rename -uid "1844F8EF-4270-A87C-8AD2-5CA06ED2E8B5";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts25";
+	rename -uid "389636F1-4F3E-683F-E442-5EA98AEBEF26";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:631]";
+createNode skinCluster -n "skinCluster12";
+	rename -uid "7BDCD50A-4CAC-D18E-CF3A-399590C02F16";
+	setAttr -s 252 ".wl";
+	setAttr ".wl[0].w[0]"  1;
+	setAttr ".wl[1].w[0]"  1;
+	setAttr ".wl[2].w[0]"  1;
+	setAttr ".wl[3].w[0]"  1;
+	setAttr ".wl[4].w[0]"  1;
+	setAttr ".wl[5].w[0]"  1;
+	setAttr ".wl[6].w[0]"  1;
+	setAttr ".wl[7].w[0]"  1;
+	setAttr ".wl[8].w[0]"  1;
+	setAttr ".wl[9].w[0]"  1;
+	setAttr ".wl[10].w[0]"  1;
+	setAttr ".wl[11].w[0]"  1;
+	setAttr ".wl[12].w[0]"  1;
+	setAttr ".wl[13].w[0]"  1;
+	setAttr ".wl[14].w[0]"  1;
+	setAttr ".wl[15].w[0]"  1;
+	setAttr ".wl[16].w[0]"  1;
+	setAttr ".wl[17].w[0]"  1;
+	setAttr ".wl[18].w[0]"  1;
+	setAttr ".wl[19].w[0]"  1;
+	setAttr ".wl[20].w[0]"  1;
+	setAttr ".wl[21].w[0]"  1;
+	setAttr ".wl[22].w[0]"  1;
+	setAttr ".wl[23].w[0]"  1;
+	setAttr ".wl[24].w[0]"  1;
+	setAttr ".wl[25].w[0]"  1;
+	setAttr ".wl[26].w[0]"  1;
+	setAttr ".wl[27].w[0]"  1;
+	setAttr ".wl[28].w[0]"  1;
+	setAttr ".wl[29].w[0]"  1;
+	setAttr ".wl[30].w[0]"  1;
+	setAttr ".wl[31].w[0]"  1;
+	setAttr ".wl[32].w[0]"  1;
+	setAttr ".wl[33].w[0]"  1;
+	setAttr ".wl[34].w[0]"  1;
+	setAttr ".wl[35].w[0]"  1;
+	setAttr ".wl[36].w[0]"  1;
+	setAttr ".wl[37].w[0]"  1;
+	setAttr ".wl[38].w[0]"  1;
+	setAttr ".wl[39].w[0]"  1;
+	setAttr ".wl[40].w[0]"  1;
+	setAttr ".wl[41].w[0]"  1;
+	setAttr ".wl[42].w[0]"  1;
+	setAttr ".wl[43].w[0]"  1;
+	setAttr ".wl[44].w[0]"  1;
+	setAttr ".wl[45].w[0]"  1;
+	setAttr ".wl[46].w[0]"  1;
+	setAttr ".wl[47].w[0]"  1;
+	setAttr ".wl[48].w[0]"  1;
+	setAttr ".wl[49].w[0]"  1;
+	setAttr ".wl[50].w[0]"  1;
+	setAttr ".wl[51].w[0]"  1;
+	setAttr ".wl[52].w[0]"  1;
+	setAttr ".wl[53].w[0]"  1;
+	setAttr ".wl[54].w[0]"  1;
+	setAttr ".wl[55].w[0]"  1;
+	setAttr ".wl[56].w[0]"  1;
+	setAttr ".wl[57].w[0]"  1;
+	setAttr ".wl[58].w[0]"  1;
+	setAttr ".wl[59].w[0]"  1;
+	setAttr ".wl[60].w[0]"  1;
+	setAttr ".wl[61].w[0]"  1;
+	setAttr ".wl[62].w[0]"  1;
+	setAttr ".wl[63].w[0]"  1;
+	setAttr ".wl[64].w[0]"  1;
+	setAttr ".wl[65].w[0]"  1;
+	setAttr ".wl[66].w[0]"  1;
+	setAttr ".wl[67].w[0]"  1;
+	setAttr ".wl[68].w[0]"  1;
+	setAttr ".wl[69].w[0]"  1;
+	setAttr ".wl[70].w[0]"  1;
+	setAttr ".wl[71].w[0]"  1;
+	setAttr ".wl[72].w[0]"  1;
+	setAttr ".wl[73].w[0]"  1;
+	setAttr ".wl[74].w[0]"  1;
+	setAttr ".wl[75].w[0]"  1;
+	setAttr ".wl[76].w[0]"  1;
+	setAttr ".wl[77].w[0]"  1;
+	setAttr ".wl[78].w[0]"  1;
+	setAttr ".wl[79].w[0]"  1;
+	setAttr ".wl[80].w[0]"  1;
+	setAttr ".wl[81].w[0]"  1;
+	setAttr ".wl[82].w[0]"  1;
+	setAttr ".wl[83].w[0]"  1;
+	setAttr ".wl[84].w[0]"  1;
+	setAttr ".wl[85].w[0]"  1;
+	setAttr ".wl[86].w[0]"  1;
+	setAttr ".wl[87].w[0]"  1;
+	setAttr ".wl[88].w[0]"  1;
+	setAttr ".wl[89].w[0]"  1;
+	setAttr ".wl[90].w[0]"  1;
+	setAttr ".wl[91].w[0]"  1;
+	setAttr ".wl[92].w[0]"  1;
+	setAttr ".wl[93].w[0]"  1;
+	setAttr ".wl[94].w[0]"  1;
+	setAttr ".wl[95].w[0]"  1;
+	setAttr ".wl[96].w[0]"  1;
+	setAttr ".wl[97].w[0]"  1;
+	setAttr ".wl[98].w[0]"  1;
+	setAttr ".wl[99].w[0]"  1;
+	setAttr ".wl[100].w[0]"  1;
+	setAttr ".wl[101].w[0]"  1;
+	setAttr ".wl[102].w[0]"  1;
+	setAttr ".wl[103].w[0]"  1;
+	setAttr ".wl[104].w[0]"  1;
+	setAttr ".wl[105].w[0]"  1;
+	setAttr ".wl[106].w[0]"  1;
+	setAttr ".wl[107].w[0]"  1;
+	setAttr ".wl[108].w[0]"  1;
+	setAttr ".wl[109].w[0]"  1;
+	setAttr ".wl[110].w[0]"  1;
+	setAttr ".wl[111].w[0]"  1;
+	setAttr ".wl[112].w[0]"  1;
+	setAttr ".wl[113].w[0]"  1;
+	setAttr ".wl[114].w[0]"  1;
+	setAttr ".wl[115].w[0]"  1;
+	setAttr ".wl[116].w[0]"  1;
+	setAttr ".wl[117].w[0]"  1;
+	setAttr ".wl[118].w[0]"  1;
+	setAttr ".wl[119].w[0]"  1;
+	setAttr ".wl[120].w[0]"  1;
+	setAttr ".wl[121].w[0]"  1;
+	setAttr ".wl[122].w[0]"  1;
+	setAttr ".wl[123].w[0]"  1;
+	setAttr ".wl[124].w[0]"  1;
+	setAttr ".wl[125].w[0]"  1;
+	setAttr ".wl[126].w[0]"  1;
+	setAttr ".wl[127].w[0]"  1;
+	setAttr ".wl[128].w[0]"  1;
+	setAttr ".wl[129].w[0]"  1;
+	setAttr ".wl[130].w[0]"  1;
+	setAttr ".wl[131].w[0]"  1;
+	setAttr ".wl[132].w[0]"  1;
+	setAttr ".wl[133].w[0]"  1;
+	setAttr ".wl[134].w[0]"  1;
+	setAttr ".wl[135].w[0]"  1;
+	setAttr ".wl[136].w[0]"  1;
+	setAttr ".wl[137].w[0]"  1;
+	setAttr ".wl[138].w[0]"  1;
+	setAttr ".wl[139].w[0]"  1;
+	setAttr ".wl[140].w[0]"  1;
+	setAttr ".wl[141].w[0]"  1;
+	setAttr ".wl[142].w[0]"  1;
+	setAttr ".wl[143].w[0]"  1;
+	setAttr ".wl[144].w[0]"  1;
+	setAttr ".wl[145].w[0]"  1;
+	setAttr ".wl[146].w[0]"  1;
+	setAttr ".wl[147].w[0]"  1;
+	setAttr ".wl[148].w[0]"  1;
+	setAttr ".wl[149].w[0]"  1;
+	setAttr ".wl[150].w[0]"  1;
+	setAttr ".wl[151].w[0]"  1;
+	setAttr ".wl[152].w[0]"  1;
+	setAttr ".wl[153].w[0]"  1;
+	setAttr ".wl[154].w[0]"  1;
+	setAttr ".wl[155].w[0]"  1;
+	setAttr ".wl[156].w[0]"  1;
+	setAttr ".wl[157].w[0]"  1;
+	setAttr ".wl[158].w[0]"  1;
+	setAttr ".wl[159].w[0]"  1;
+	setAttr ".wl[160].w[0]"  1;
+	setAttr ".wl[161].w[0]"  1;
+	setAttr ".wl[162].w[0]"  1;
+	setAttr ".wl[163].w[0]"  1;
+	setAttr ".wl[164].w[0]"  1;
+	setAttr ".wl[165].w[0]"  1;
+	setAttr ".wl[166].w[0]"  1;
+	setAttr ".wl[167].w[0]"  1;
+	setAttr ".wl[168].w[0]"  1;
+	setAttr ".wl[169].w[0]"  1;
+	setAttr ".wl[170].w[0]"  1;
+	setAttr ".wl[171].w[0]"  1;
+	setAttr ".wl[172].w[0]"  1;
+	setAttr ".wl[173].w[0]"  1;
+	setAttr ".wl[174].w[0]"  1;
+	setAttr ".wl[175].w[0]"  1;
+	setAttr ".wl[176].w[0]"  1;
+	setAttr ".wl[177].w[0]"  1;
+	setAttr ".wl[178].w[0]"  1;
+	setAttr ".wl[179].w[0]"  1;
+	setAttr ".wl[180].w[0]"  1;
+	setAttr ".wl[181].w[0]"  1;
+	setAttr ".wl[182].w[0]"  1;
+	setAttr ".wl[183].w[0]"  1;
+	setAttr ".wl[184].w[0]"  1;
+	setAttr ".wl[185].w[0]"  1;
+	setAttr ".wl[186].w[0]"  1;
+	setAttr ".wl[187].w[0]"  1;
+	setAttr ".wl[188].w[0]"  1;
+	setAttr ".wl[189].w[0]"  1;
+	setAttr ".wl[190].w[0]"  1;
+	setAttr ".wl[191].w[0]"  1;
+	setAttr ".wl[192].w[0]"  1;
+	setAttr ".wl[193].w[0]"  1;
+	setAttr ".wl[194].w[0]"  1;
+	setAttr ".wl[195].w[0]"  1;
+	setAttr ".wl[196].w[0]"  1;
+	setAttr ".wl[197].w[0]"  1;
+	setAttr ".wl[198].w[0]"  1;
+	setAttr ".wl[199].w[0]"  1;
+	setAttr ".wl[200].w[0]"  1;
+	setAttr ".wl[201].w[0]"  1;
+	setAttr ".wl[202].w[0]"  1;
+	setAttr ".wl[203].w[0]"  1;
+	setAttr ".wl[204].w[0]"  1;
+	setAttr ".wl[205].w[0]"  1;
+	setAttr ".wl[206].w[0]"  1;
+	setAttr ".wl[207].w[0]"  1;
+	setAttr ".wl[208].w[0]"  1;
+	setAttr ".wl[209].w[0]"  1;
+	setAttr ".wl[210].w[0]"  1;
+	setAttr ".wl[211].w[0]"  1;
+	setAttr ".wl[212].w[0]"  1;
+	setAttr ".wl[213].w[0]"  1;
+	setAttr ".wl[214].w[0]"  1;
+	setAttr ".wl[215].w[0]"  1;
+	setAttr ".wl[216].w[0]"  1;
+	setAttr ".wl[217].w[0]"  1;
+	setAttr ".wl[218].w[0]"  1;
+	setAttr ".wl[219].w[0]"  1;
+	setAttr ".wl[220].w[0]"  1;
+	setAttr ".wl[221].w[0]"  1;
+	setAttr ".wl[222].w[0]"  1;
+	setAttr ".wl[223].w[0]"  1;
+	setAttr ".wl[224].w[0]"  1;
+	setAttr ".wl[225].w[0]"  1;
+	setAttr ".wl[226].w[0]"  1;
+	setAttr ".wl[227].w[0]"  1;
+	setAttr ".wl[228].w[0]"  1;
+	setAttr ".wl[229].w[0]"  1;
+	setAttr ".wl[230].w[0]"  1;
+	setAttr ".wl[231].w[0]"  1;
+	setAttr ".wl[232].w[0]"  1;
+	setAttr ".wl[233].w[0]"  1;
+	setAttr ".wl[234].w[0]"  1;
+	setAttr ".wl[235].w[0]"  1;
+	setAttr ".wl[236].w[0]"  1;
+	setAttr ".wl[237].w[0]"  1;
+	setAttr ".wl[238].w[0]"  1;
+	setAttr ".wl[239].w[0]"  1;
+	setAttr ".wl[240].w[0]"  1;
+	setAttr ".wl[241].w[0]"  1;
+	setAttr ".wl[242].w[0]"  1;
+	setAttr ".wl[243].w[0]"  1;
+	setAttr ".wl[244].w[0]"  1;
+	setAttr ".wl[245].w[0]"  1;
+	setAttr ".wl[246].w[0]"  1;
+	setAttr ".wl[247].w[0]"  1;
+	setAttr ".wl[248].w[0]"  1;
+	setAttr ".wl[249].w[0]"  1;
+	setAttr ".wl[250].w[0]"  1;
+	setAttr ".wl[251].w[0]"  1;
+	setAttr ".pm[0]" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -2.0717962474645071 -7.7869974582191714 -0 1;
+	setAttr ".gm" -type "matrix" -0.22311951041592981 -0.028930970784933743 0.03066599758695689 0
+		 -0.028956271636293367 0.14072002258699629 -0.07792155731653698 0 -0.011123392151561988 -0.098626476586545275 -0.1739778889840001 0
+		 2.1833401589422907 7.242024702893338 0.13097344117943088 1;
+	setAttr ".dpf[0]"  1;
+	setAttr ".mi" 1;
+	setAttr ".ucm" yes;
+createNode tweak -n "tweak12";
+	rename -uid "6657CFCD-4DD3-3026-FD94-C88CA8EFEE71";
+createNode objectSet -n "skinCluster12Set";
+	rename -uid "61F0DB17-440A-B0F8-EBAD-69A6DFB1BD04";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "skinCluster12GroupId";
+	rename -uid "8FDE9394-4E41-DC0B-5439-1F8889B0323F";
+	setAttr ".ihi" 0;
+createNode groupParts -n "skinCluster12GroupParts";
+	rename -uid "BBD1CF33-43F5-BCD6-5367-B5A596E58F2C";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode objectSet -n "tweakSet12";
+	rename -uid "F0F8FBF9-4FEB-746D-3385-8BA0CFE1C361";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "groupId27";
+	rename -uid "0BC4BF72-4C13-D0C2-F6B3-4B8A60C096BB";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts27";
+	rename -uid "86B25127-4069-3C28-A4AB-A7BEDCAA8B4B";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode skinCluster -n "skinCluster13";
+	rename -uid "C6C9637F-4EA0-D962-9441-CA937F845779";
+	setAttr -s 102 ".wl";
+	setAttr ".wl[0].w[0]"  1;
+	setAttr ".wl[1].w[0]"  1;
+	setAttr ".wl[2].w[0]"  1;
+	setAttr ".wl[3].w[0]"  1;
+	setAttr ".wl[4].w[0]"  1;
+	setAttr ".wl[5].w[0]"  1;
+	setAttr ".wl[6].w[0]"  1;
+	setAttr ".wl[7].w[0]"  1;
+	setAttr ".wl[8].w[0]"  1;
+	setAttr ".wl[9].w[0]"  1;
+	setAttr ".wl[10].w[0]"  1;
+	setAttr ".wl[11].w[0]"  1;
+	setAttr ".wl[12].w[0]"  1;
+	setAttr ".wl[13].w[0]"  1;
+	setAttr ".wl[14].w[0]"  1;
+	setAttr ".wl[15].w[0]"  1;
+	setAttr ".wl[16].w[0]"  1;
+	setAttr ".wl[17].w[0]"  1;
+	setAttr ".wl[18].w[0]"  1;
+	setAttr ".wl[19].w[0]"  1;
+	setAttr ".wl[20].w[0]"  1;
+	setAttr ".wl[21].w[0]"  1;
+	setAttr ".wl[22].w[0]"  1;
+	setAttr ".wl[23].w[0]"  1;
+	setAttr ".wl[24].w[0]"  1;
+	setAttr ".wl[25].w[0]"  1;
+	setAttr ".wl[26].w[0]"  1;
+	setAttr ".wl[27].w[0]"  1;
+	setAttr ".wl[28].w[0]"  1;
+	setAttr ".wl[29].w[0]"  1;
+	setAttr ".wl[30].w[0]"  1;
+	setAttr ".wl[31].w[0]"  1;
+	setAttr ".wl[32].w[0]"  1;
+	setAttr ".wl[33].w[0]"  1;
+	setAttr ".wl[34].w[0]"  1;
+	setAttr ".wl[35].w[0]"  1;
+	setAttr ".wl[36].w[0]"  1;
+	setAttr ".wl[37].w[0]"  1;
+	setAttr ".wl[38].w[0]"  1;
+	setAttr ".wl[39].w[0]"  1;
+	setAttr ".wl[40].w[0]"  1;
+	setAttr ".wl[41].w[0]"  1;
+	setAttr ".wl[42].w[0]"  1;
+	setAttr ".wl[43].w[0]"  1;
+	setAttr ".wl[44].w[0]"  1;
+	setAttr ".wl[45].w[0]"  1;
+	setAttr ".wl[46].w[0]"  1;
+	setAttr ".wl[47].w[0]"  1;
+	setAttr ".wl[48].w[0]"  1;
+	setAttr ".wl[49].w[0]"  1;
+	setAttr ".wl[50].w[0]"  1;
+	setAttr ".wl[51].w[0]"  1;
+	setAttr ".wl[52].w[0]"  1;
+	setAttr ".wl[53].w[0]"  1;
+	setAttr ".wl[54].w[0]"  1;
+	setAttr ".wl[55].w[0]"  1;
+	setAttr ".wl[56].w[0]"  1;
+	setAttr ".wl[57].w[0]"  1;
+	setAttr ".wl[58].w[0]"  1;
+	setAttr ".wl[59].w[0]"  1;
+	setAttr ".wl[60].w[0]"  1;
+	setAttr ".wl[61].w[0]"  1;
+	setAttr ".wl[62].w[0]"  1;
+	setAttr ".wl[63].w[0]"  1;
+	setAttr ".wl[64].w[0]"  1;
+	setAttr ".wl[65].w[0]"  1;
+	setAttr ".wl[66].w[0]"  1;
+	setAttr ".wl[67].w[0]"  1;
+	setAttr ".wl[68].w[0]"  1;
+	setAttr ".wl[69].w[0]"  1;
+	setAttr ".wl[70].w[0]"  1;
+	setAttr ".wl[71].w[0]"  1;
+	setAttr ".wl[72].w[0]"  1;
+	setAttr ".wl[73].w[0]"  1;
+	setAttr ".wl[74].w[0]"  1;
+	setAttr ".wl[75].w[0]"  1;
+	setAttr ".wl[76].w[0]"  1;
+	setAttr ".wl[77].w[0]"  1;
+	setAttr ".wl[78].w[0]"  1;
+	setAttr ".wl[79].w[0]"  1;
+	setAttr ".wl[80].w[0]"  1;
+	setAttr ".wl[81].w[0]"  1;
+	setAttr ".wl[82].w[0]"  1;
+	setAttr ".wl[83].w[0]"  1;
+	setAttr ".wl[84].w[0]"  1;
+	setAttr ".wl[85].w[0]"  1;
+	setAttr ".wl[86].w[0]"  1;
+	setAttr ".wl[87].w[0]"  1;
+	setAttr ".wl[88].w[0]"  1;
+	setAttr ".wl[89].w[0]"  1;
+	setAttr ".wl[90].w[0]"  1;
+	setAttr ".wl[91].w[0]"  1;
+	setAttr ".wl[92].w[0]"  1;
+	setAttr ".wl[93].w[0]"  1;
+	setAttr ".wl[94].w[0]"  1;
+	setAttr ".wl[95].w[0]"  1;
+	setAttr ".wl[96].w[0]"  1;
+	setAttr ".wl[97].w[0]"  1;
+	setAttr ".wl[98].w[0]"  1;
+	setAttr ".wl[99].w[0]"  1;
+	setAttr ".wl[100].w[0]"  1;
+	setAttr ".wl[101].w[0]"  1;
+	setAttr ".pm[0]" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -2.0717962474645071 -7.7869974582191714 -0 1;
+	setAttr ".gm" -type "matrix" 0.0072580808014389804 -0.035272403406956178 0.019531553173735297 0
+		 -0.04029609772203626 -0.0056767827109612309 0.0047225411412031345 0 -0.0013596028308323791 -0.02004832771956799 -0.035700417143121943 0
+		 1.9875279886738964 7.7536599015211882 0.19934285379200703 1;
+	setAttr ".dpf[0]"  1;
+	setAttr ".mi" 1;
+	setAttr ".ucm" yes;
+createNode tweak -n "tweak13";
+	rename -uid "B02978D9-475D-CF62-41F8-0685289398A3";
+createNode objectSet -n "skinCluster13Set";
+	rename -uid "EDC236CE-48AB-95E6-2EBB-3FAC1C169B7B";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "skinCluster13GroupId";
+	rename -uid "36A81D7A-4485-1735-63D3-75BF4B49F50D";
+	setAttr ".ihi" 0;
+createNode groupParts -n "skinCluster13GroupParts";
+	rename -uid "932A45D4-41A9-8202-D942-A981D9AEBB93";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode objectSet -n "tweakSet13";
+	rename -uid "FAED85E5-4277-7B2B-A712-D488CD32541E";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "groupId29";
+	rename -uid "1C82E961-4AD6-189A-7385-23AEF920A5CD";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts29";
+	rename -uid "0F9F6ED5-4E4B-5E3D-F2BA-B7B7A971952A";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode skinCluster -n "skinCluster14";
+	rename -uid "0756EF51-46CC-2CE9-D9D6-DE80D1BCD932";
+	setAttr -s 173 ".wl";
+	setAttr ".wl[0].w[0]"  1;
+	setAttr ".wl[1].w[0]"  1;
+	setAttr ".wl[2].w[0]"  1;
+	setAttr ".wl[3].w[0]"  1;
+	setAttr ".wl[4].w[0]"  1;
+	setAttr ".wl[5].w[0]"  1;
+	setAttr ".wl[6].w[0]"  1;
+	setAttr ".wl[7].w[0]"  1;
+	setAttr ".wl[8].w[0]"  1;
+	setAttr ".wl[9].w[0]"  1;
+	setAttr ".wl[10].w[0]"  1;
+	setAttr ".wl[11].w[0]"  1;
+	setAttr ".wl[12].w[0]"  1;
+	setAttr ".wl[13].w[0]"  1;
+	setAttr ".wl[14].w[0]"  1;
+	setAttr ".wl[15].w[0]"  1;
+	setAttr ".wl[16].w[0]"  1;
+	setAttr ".wl[17].w[0]"  1;
+	setAttr ".wl[18].w[0]"  1;
+	setAttr ".wl[19].w[0]"  1;
+	setAttr ".wl[20].w[0]"  1;
+	setAttr ".wl[21].w[0]"  1;
+	setAttr ".wl[22].w[0]"  1;
+	setAttr ".wl[23].w[0]"  1;
+	setAttr ".wl[24].w[0]"  1;
+	setAttr ".wl[25].w[0]"  1;
+	setAttr ".wl[26].w[0]"  1;
+	setAttr ".wl[27].w[0]"  1;
+	setAttr ".wl[28].w[0]"  1;
+	setAttr ".wl[29].w[0]"  1;
+	setAttr ".wl[30].w[0]"  1;
+	setAttr ".wl[31].w[0]"  1;
+	setAttr ".wl[32].w[0]"  1;
+	setAttr ".wl[33].w[0]"  1;
+	setAttr ".wl[34].w[0]"  1;
+	setAttr ".wl[35].w[0]"  1;
+	setAttr ".wl[36].w[0]"  1;
+	setAttr ".wl[37].w[0]"  1;
+	setAttr ".wl[38].w[0]"  1;
+	setAttr ".wl[39].w[0]"  1;
+	setAttr ".wl[40].w[0]"  1;
+	setAttr ".wl[41].w[0]"  1;
+	setAttr ".wl[42].w[0]"  1;
+	setAttr ".wl[43].w[0]"  1;
+	setAttr ".wl[44].w[0]"  1;
+	setAttr ".wl[45].w[0]"  1;
+	setAttr ".wl[46].w[0]"  1;
+	setAttr ".wl[47].w[0]"  1;
+	setAttr ".wl[48].w[0]"  1;
+	setAttr ".wl[49].w[0]"  1;
+	setAttr ".wl[50].w[0]"  1;
+	setAttr ".wl[51].w[0]"  1;
+	setAttr ".wl[52].w[0]"  1;
+	setAttr ".wl[53].w[0]"  1;
+	setAttr ".wl[54].w[0]"  1;
+	setAttr ".wl[55].w[0]"  1;
+	setAttr ".wl[56].w[0]"  1;
+	setAttr ".wl[57].w[0]"  1;
+	setAttr ".wl[58].w[0]"  1;
+	setAttr ".wl[59].w[0]"  1;
+	setAttr ".wl[60].w[0]"  1;
+	setAttr ".wl[61].w[0]"  1;
+	setAttr ".wl[62].w[0]"  1;
+	setAttr ".wl[63].w[0]"  1;
+	setAttr ".wl[64].w[0]"  1;
+	setAttr ".wl[65].w[0]"  1;
+	setAttr ".wl[66].w[0]"  1;
+	setAttr ".wl[67].w[0]"  1;
+	setAttr ".wl[68].w[0]"  1;
+	setAttr ".wl[69].w[0]"  1;
+	setAttr ".wl[70].w[0]"  1;
+	setAttr ".wl[71].w[0]"  1;
+	setAttr ".wl[72].w[0]"  1;
+	setAttr ".wl[73].w[0]"  1;
+	setAttr ".wl[74].w[0]"  1;
+	setAttr ".wl[75].w[0]"  1;
+	setAttr ".wl[76].w[0]"  1;
+	setAttr ".wl[77].w[0]"  1;
+	setAttr ".wl[78].w[0]"  1;
+	setAttr ".wl[79].w[0]"  1;
+	setAttr ".wl[80].w[0]"  1;
+	setAttr ".wl[81].w[0]"  1;
+	setAttr ".wl[82].w[0]"  1;
+	setAttr ".wl[83].w[0]"  1;
+	setAttr ".wl[84].w[0]"  1;
+	setAttr ".wl[85].w[0]"  1;
+	setAttr ".wl[86].w[0]"  1;
+	setAttr ".wl[87].w[0]"  1;
+	setAttr ".wl[88].w[0]"  1;
+	setAttr ".wl[89].w[0]"  1;
+	setAttr ".wl[90].w[0]"  1;
+	setAttr ".wl[91].w[0]"  1;
+	setAttr ".wl[92].w[0]"  1;
+	setAttr ".wl[93].w[0]"  1;
+	setAttr ".wl[94].w[0]"  1;
+	setAttr ".wl[95].w[0]"  1;
+	setAttr ".wl[96].w[0]"  1;
+	setAttr ".wl[97].w[0]"  1;
+	setAttr ".wl[98].w[0]"  1;
+	setAttr ".wl[99].w[0]"  1;
+	setAttr ".wl[100].w[0]"  1;
+	setAttr ".wl[101].w[0]"  1;
+	setAttr ".wl[102].w[0]"  1;
+	setAttr ".wl[103].w[0]"  1;
+	setAttr ".wl[104].w[0]"  1;
+	setAttr ".wl[105].w[0]"  1;
+	setAttr ".wl[106].w[0]"  1;
+	setAttr ".wl[107].w[0]"  1;
+	setAttr ".wl[108].w[0]"  1;
+	setAttr ".wl[109].w[0]"  1;
+	setAttr ".wl[110].w[0]"  1;
+	setAttr ".wl[111].w[0]"  1;
+	setAttr ".wl[112].w[0]"  1;
+	setAttr ".wl[113].w[0]"  1;
+	setAttr ".wl[114].w[0]"  1;
+	setAttr ".wl[115].w[0]"  1;
+	setAttr ".wl[116].w[0]"  1;
+	setAttr ".wl[117].w[0]"  1;
+	setAttr ".wl[118].w[0]"  1;
+	setAttr ".wl[119].w[0]"  1;
+	setAttr ".wl[120].w[0]"  1;
+	setAttr ".wl[121].w[0]"  1;
+	setAttr ".wl[122].w[0]"  1;
+	setAttr ".wl[123].w[0]"  1;
+	setAttr ".wl[124].w[0]"  1;
+	setAttr ".wl[125].w[0]"  1;
+	setAttr ".wl[126].w[0]"  1;
+	setAttr ".wl[127].w[0]"  1;
+	setAttr ".wl[128].w[0]"  1;
+	setAttr ".wl[129].w[0]"  1;
+	setAttr ".wl[130].w[0]"  1;
+	setAttr ".wl[131].w[0]"  1;
+	setAttr ".wl[132].w[0]"  1;
+	setAttr ".wl[133].w[0]"  1;
+	setAttr ".wl[134].w[0]"  1;
+	setAttr ".wl[135].w[0]"  1;
+	setAttr ".wl[136].w[0]"  1;
+	setAttr ".wl[137].w[0]"  1;
+	setAttr ".wl[138].w[0]"  1;
+	setAttr ".wl[139].w[0]"  1;
+	setAttr ".wl[140].w[0]"  1;
+	setAttr ".wl[141].w[0]"  1;
+	setAttr ".wl[142].w[0]"  1;
+	setAttr ".wl[143].w[0]"  1;
+	setAttr ".wl[144].w[0]"  1;
+	setAttr ".wl[145].w[0]"  1;
+	setAttr ".wl[146].w[0]"  1;
+	setAttr ".wl[147].w[0]"  1;
+	setAttr ".wl[148].w[0]"  1;
+	setAttr ".wl[149].w[0]"  1;
+	setAttr ".wl[150].w[0]"  1;
+	setAttr ".wl[151].w[0]"  1;
+	setAttr ".wl[152].w[0]"  1;
+	setAttr ".wl[153].w[0]"  1;
+	setAttr ".wl[154].w[0]"  1;
+	setAttr ".wl[155].w[0]"  1;
+	setAttr ".wl[156].w[0]"  1;
+	setAttr ".wl[157].w[0]"  1;
+	setAttr ".wl[158].w[0]"  1;
+	setAttr ".wl[159].w[0]"  1;
+	setAttr ".wl[160].w[0]"  1;
+	setAttr ".wl[161].w[0]"  1;
+	setAttr ".wl[162].w[0]"  1;
+	setAttr ".wl[163].w[0]"  1;
+	setAttr ".wl[164].w[0]"  1;
+	setAttr ".wl[165].w[0]"  1;
+	setAttr ".wl[166].w[0]"  1;
+	setAttr ".wl[167].w[0]"  1;
+	setAttr ".wl[168].w[0]"  1;
+	setAttr ".wl[169].w[0]"  1;
+	setAttr ".wl[170].w[0]"  1;
+	setAttr ".wl[171].w[0]"  1;
+	setAttr ".wl[172].w[0]"  1;
+	setAttr ".pm[0]" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -2.0717962474645071 -7.7869974582191714 -0 1;
+	setAttr ".gm" -type "matrix" -0.16999195737462339 -0.022042143886524968 0.023364039052140618 0
+		 -0.030650151080491669 0.14895184043430759 -0.082479800375459239 0 -0.0096074276831656178 -0.085185052234052774 -0.15026710953896213 0
+		 2.1925822276733524 7.3141104211557479 0.25508345385099579 1;
+	setAttr ".dpf[0]"  1;
+	setAttr ".mi" 1;
+	setAttr ".ucm" yes;
+createNode tweak -n "tweak14";
+	rename -uid "4E6DAD62-40AA-3D5D-5B25-0DA122DE0D85";
+createNode objectSet -n "skinCluster14Set";
+	rename -uid "3192BA74-46A5-9272-6256-4483DF1F81DF";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "skinCluster14GroupId";
+	rename -uid "DF69E4DE-48BF-54FE-A0AB-5AB338A38F5F";
+	setAttr ".ihi" 0;
+createNode groupParts -n "skinCluster14GroupParts";
+	rename -uid "4BF292E9-44EB-764A-B94B-35B7C805A898";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode objectSet -n "tweakSet14";
+	rename -uid "C8CBDC2C-46B0-775E-B8A2-13AA6ADD77DE";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "groupId31";
+	rename -uid "A9E72448-4590-BDC5-0668-E88FD56D3BD0";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts31";
+	rename -uid "5A826EEC-4984-768D-73C2-2E8630A1F81F";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode skinCluster -n "skinCluster15";
+	rename -uid "9D3203B1-4BE2-43B1-B28E-47A2FF7B400A";
+	setAttr -s 51 ".wl";
+	setAttr ".wl[0].w[0]"  1;
+	setAttr ".wl[1].w[0]"  1;
+	setAttr ".wl[2].w[0]"  1;
+	setAttr ".wl[3].w[0]"  1;
+	setAttr ".wl[4].w[0]"  1;
+	setAttr ".wl[5].w[0]"  1;
+	setAttr ".wl[6].w[0]"  1;
+	setAttr ".wl[7].w[0]"  1;
+	setAttr ".wl[8].w[0]"  1;
+	setAttr ".wl[9].w[0]"  1;
+	setAttr ".wl[10].w[0]"  1;
+	setAttr ".wl[11].w[0]"  1;
+	setAttr ".wl[12].w[0]"  1;
+	setAttr ".wl[13].w[0]"  1;
+	setAttr ".wl[14].w[0]"  1;
+	setAttr ".wl[15].w[0]"  1;
+	setAttr ".wl[16].w[0]"  1;
+	setAttr ".wl[17].w[0]"  1;
+	setAttr ".wl[18].w[0]"  1;
+	setAttr ".wl[19].w[0]"  1;
+	setAttr ".wl[20].w[0]"  1;
+	setAttr ".wl[21].w[0]"  1;
+	setAttr ".wl[22].w[0]"  1;
+	setAttr ".wl[23].w[0]"  1;
+	setAttr ".wl[24].w[0]"  1;
+	setAttr ".wl[25].w[0]"  1;
+	setAttr ".wl[26].w[0]"  1;
+	setAttr ".wl[27].w[0]"  1;
+	setAttr ".wl[28].w[0]"  1;
+	setAttr ".wl[29].w[0]"  1;
+	setAttr ".wl[30].w[0]"  1;
+	setAttr ".wl[31].w[0]"  1;
+	setAttr ".wl[32].w[0]"  1;
+	setAttr ".wl[33].w[0]"  1;
+	setAttr ".wl[34].w[0]"  1;
+	setAttr ".wl[35].w[0]"  1;
+	setAttr ".wl[36].w[0]"  1;
+	setAttr ".wl[37].w[0]"  1;
+	setAttr ".wl[38].w[0]"  1;
+	setAttr ".wl[39].w[0]"  1;
+	setAttr ".wl[40].w[0]"  1;
+	setAttr ".wl[41].w[0]"  1;
+	setAttr ".wl[42].w[0]"  1;
+	setAttr ".wl[43].w[0]"  1;
+	setAttr ".wl[44].w[0]"  1;
+	setAttr ".wl[45].w[0]"  1;
+	setAttr ".wl[46].w[0]"  1;
+	setAttr ".wl[47].w[0]"  1;
+	setAttr ".wl[48].w[0]"  1;
+	setAttr ".wl[49].w[0]"  1;
+	setAttr ".wl[50].w[0]"  1;
+	setAttr ".pm[0]" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -2.0717962474645071 -7.7869974582191714 -0 1;
+	setAttr ".gm" -type "matrix" -0.16999195737462339 -0.022042143886524968 0.023364039052140618 0
+		 -0.030650151080491669 0.14895184043430759 -0.082479800375459239 0 -0.0096074276831656178 -0.085185052234052774 -0.15026710953896213 0
+		 2.1034009779641787 7.8331101810160106 0.49832911410187519 1;
+	setAttr ".dpf[0]"  1;
+	setAttr ".mi" 1;
+	setAttr ".ucm" yes;
+createNode tweak -n "tweak15";
+	rename -uid "4258A097-4ADC-7EE2-0CB2-50B054CF9237";
+createNode objectSet -n "skinCluster15Set";
+	rename -uid "0184C528-4811-1258-0498-778CED9075DC";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "skinCluster15GroupId";
+	rename -uid "9B47B6E7-434A-EF22-5DDE-829580A136B9";
+	setAttr ".ihi" 0;
+createNode groupParts -n "skinCluster15GroupParts";
+	rename -uid "98388951-4848-79C6-1011-EBA15176F0E2";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode objectSet -n "tweakSet15";
+	rename -uid "21DA16B7-4DE9-D0E5-65AC-439DD19A88C9";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "groupId33";
+	rename -uid "2C57751A-48B0-AF83-EA13-46AE1A0A96DB";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts33";
+	rename -uid "730EC60C-4799-9CD2-B2F7-6BA85F1DD9E8";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode skinCluster -n "skinCluster16";
+	rename -uid "76AE7B19-4CEF-3EFE-DF2A-4682EE638123";
+	setAttr -s 64 ".wl";
+	setAttr ".wl[0].w[0]"  1;
+	setAttr ".wl[1].w[0]"  1;
+	setAttr ".wl[2].w[0]"  1;
+	setAttr ".wl[3].w[0]"  1;
+	setAttr ".wl[4].w[0]"  1;
+	setAttr ".wl[5].w[0]"  1;
+	setAttr ".wl[6].w[0]"  1;
+	setAttr ".wl[7].w[0]"  1;
+	setAttr ".wl[8].w[0]"  1;
+	setAttr ".wl[9].w[0]"  1;
+	setAttr ".wl[10].w[0]"  1;
+	setAttr ".wl[11].w[0]"  1;
+	setAttr ".wl[12].w[0]"  1;
+	setAttr ".wl[13].w[0]"  1;
+	setAttr ".wl[14].w[0]"  1;
+	setAttr ".wl[15].w[0]"  1;
+	setAttr ".wl[16].w[0]"  1;
+	setAttr ".wl[17].w[0]"  1;
+	setAttr ".wl[18].w[0]"  1;
+	setAttr ".wl[19].w[0]"  1;
+	setAttr ".wl[20].w[0]"  1;
+	setAttr ".wl[21].w[0]"  1;
+	setAttr ".wl[22].w[0]"  1;
+	setAttr ".wl[23].w[0]"  1;
+	setAttr ".wl[24].w[0]"  1;
+	setAttr ".wl[25].w[0]"  1;
+	setAttr ".wl[26].w[0]"  1;
+	setAttr ".wl[27].w[0]"  1;
+	setAttr ".wl[28].w[0]"  1;
+	setAttr ".wl[29].w[0]"  1;
+	setAttr ".wl[30].w[0]"  1;
+	setAttr ".wl[31].w[0]"  1;
+	setAttr ".wl[32].w[0]"  1;
+	setAttr ".wl[33].w[0]"  1;
+	setAttr ".wl[34].w[0]"  1;
+	setAttr ".wl[35].w[0]"  1;
+	setAttr ".wl[36].w[0]"  1;
+	setAttr ".wl[37].w[0]"  1;
+	setAttr ".wl[38].w[0]"  1;
+	setAttr ".wl[39].w[0]"  1;
+	setAttr ".wl[40].w[0]"  1;
+	setAttr ".wl[41].w[0]"  1;
+	setAttr ".wl[42].w[0]"  1;
+	setAttr ".wl[43].w[0]"  1;
+	setAttr ".wl[44].w[0]"  1;
+	setAttr ".wl[45].w[0]"  1;
+	setAttr ".wl[46].w[0]"  1;
+	setAttr ".wl[47].w[0]"  1;
+	setAttr ".wl[48].w[0]"  1;
+	setAttr ".wl[49].w[0]"  1;
+	setAttr ".wl[50].w[0]"  1;
+	setAttr ".wl[51].w[0]"  1;
+	setAttr ".wl[52].w[0]"  1;
+	setAttr ".wl[53].w[0]"  1;
+	setAttr ".wl[54].w[0]"  1;
+	setAttr ".wl[55].w[0]"  1;
+	setAttr ".wl[56].w[0]"  1;
+	setAttr ".wl[57].w[0]"  1;
+	setAttr ".wl[58].w[0]"  1;
+	setAttr ".wl[59].w[0]"  1;
+	setAttr ".wl[60].w[0]"  1;
+	setAttr ".wl[61].w[0]"  1;
+	setAttr ".wl[62].w[0]"  1;
+	setAttr ".wl[63].w[0]"  1;
+	setAttr ".pm[0]" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -2.0717962474645071 -7.7869974582191714 -0 1;
+	setAttr ".gm" -type "matrix" 0.0082478923542389122 -0.040082632631781273 0.022195143936138476 0
+		 -0.045744484646428496 -0.0059314953963935527 0.0062872146553608049 0 -0.002585338947393336 -0.022923121624150129 -0.04043656883142864 0
+		 2.0359621718677499 7.7528038329415745 0.79891081423637877 1;
+	setAttr ".dpf[0]"  1;
+	setAttr ".mi" 1;
+	setAttr ".ucm" yes;
+createNode tweak -n "tweak16";
+	rename -uid "9EAB30A5-4AA2-044F-BC8E-E793D89C4CA1";
+createNode objectSet -n "skinCluster16Set";
+	rename -uid "D136A26A-4430-7C59-5D6A-D3BAE92C54C1";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "skinCluster16GroupId";
+	rename -uid "B3F240F5-4DA0-D2E3-A1B5-1CAAA395838B";
+	setAttr ".ihi" 0;
+createNode groupParts -n "skinCluster16GroupParts";
+	rename -uid "334E965E-478B-78CD-E149-27AA8D0B335A";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode objectSet -n "tweakSet16";
+	rename -uid "F7FCBA01-4CAF-3DE5-E5CB-70836B169244";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "groupId35";
+	rename -uid "4DE65DC4-431C-4E31-1A40-95A673949B22";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts35";
+	rename -uid "01451094-4D64-566C-9C95-D3BF8322BBDB";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode skinCluster -n "skinCluster17";
+	rename -uid "5AE27A2E-49B1-58E9-2472-429F89FFCC8B";
+	setAttr -s 98 ".wl";
+	setAttr ".wl[0].w[0]"  1;
+	setAttr ".wl[1].w[0]"  1;
+	setAttr ".wl[2].w[0]"  1;
+	setAttr ".wl[3].w[0]"  1;
+	setAttr ".wl[4].w[0]"  1;
+	setAttr ".wl[5].w[0]"  1;
+	setAttr ".wl[6].w[0]"  1;
+	setAttr ".wl[7].w[0]"  1;
+	setAttr ".wl[8].w[0]"  1;
+	setAttr ".wl[9].w[0]"  1;
+	setAttr ".wl[10].w[0]"  1;
+	setAttr ".wl[11].w[0]"  1;
+	setAttr ".wl[12].w[0]"  1;
+	setAttr ".wl[13].w[0]"  1;
+	setAttr ".wl[14].w[0]"  1;
+	setAttr ".wl[15].w[0]"  1;
+	setAttr ".wl[16].w[0]"  1;
+	setAttr ".wl[17].w[0]"  1;
+	setAttr ".wl[18].w[0]"  1;
+	setAttr ".wl[19].w[0]"  1;
+	setAttr ".wl[20].w[0]"  1;
+	setAttr ".wl[21].w[0]"  1;
+	setAttr ".wl[22].w[0]"  1;
+	setAttr ".wl[23].w[0]"  1;
+	setAttr ".wl[24].w[0]"  1;
+	setAttr ".wl[25].w[0]"  1;
+	setAttr ".wl[26].w[0]"  1;
+	setAttr ".wl[27].w[0]"  1;
+	setAttr ".wl[28].w[0]"  1;
+	setAttr ".wl[29].w[0]"  1;
+	setAttr ".wl[30].w[0]"  1;
+	setAttr ".wl[31].w[0]"  1;
+	setAttr ".wl[32].w[0]"  1;
+	setAttr ".wl[33].w[0]"  1;
+	setAttr ".wl[34].w[0]"  1;
+	setAttr ".wl[35].w[0]"  1;
+	setAttr ".wl[36].w[0]"  1;
+	setAttr ".wl[37].w[0]"  1;
+	setAttr ".wl[38].w[0]"  1;
+	setAttr ".wl[39].w[0]"  1;
+	setAttr ".wl[40].w[0]"  1;
+	setAttr ".wl[41].w[0]"  1;
+	setAttr ".wl[42].w[0]"  1;
+	setAttr ".wl[43].w[0]"  1;
+	setAttr ".wl[44].w[0]"  1;
+	setAttr ".wl[45].w[0]"  1;
+	setAttr ".wl[46].w[0]"  1;
+	setAttr ".wl[47].w[0]"  1;
+	setAttr ".wl[48].w[0]"  1;
+	setAttr ".wl[49].w[0]"  1;
+	setAttr ".wl[50].w[0]"  1;
+	setAttr ".wl[51].w[0]"  1;
+	setAttr ".wl[52].w[0]"  1;
+	setAttr ".wl[53].w[0]"  1;
+	setAttr ".wl[54].w[0]"  1;
+	setAttr ".wl[55].w[0]"  1;
+	setAttr ".wl[56].w[0]"  1;
+	setAttr ".wl[57].w[0]"  1;
+	setAttr ".wl[58].w[0]"  1;
+	setAttr ".wl[59].w[0]"  1;
+	setAttr ".wl[60].w[0]"  1;
+	setAttr ".wl[61].w[0]"  1;
+	setAttr ".wl[62].w[0]"  1;
+	setAttr ".wl[63].w[0]"  1;
+	setAttr ".wl[64].w[0]"  1;
+	setAttr ".wl[65].w[0]"  1;
+	setAttr ".wl[66].w[0]"  1;
+	setAttr ".wl[67].w[0]"  1;
+	setAttr ".wl[68].w[0]"  1;
+	setAttr ".wl[69].w[0]"  1;
+	setAttr ".wl[70].w[0]"  1;
+	setAttr ".wl[71].w[0]"  1;
+	setAttr ".wl[72].w[0]"  1;
+	setAttr ".wl[73].w[0]"  1;
+	setAttr ".wl[74].w[0]"  1;
+	setAttr ".wl[75].w[0]"  1;
+	setAttr ".wl[76].w[0]"  1;
+	setAttr ".wl[77].w[0]"  1;
+	setAttr ".wl[78].w[0]"  1;
+	setAttr ".wl[79].w[0]"  1;
+	setAttr ".wl[80].w[0]"  1;
+	setAttr ".wl[81].w[0]"  1;
+	setAttr ".wl[82].w[0]"  1;
+	setAttr ".wl[83].w[0]"  1;
+	setAttr ".wl[84].w[0]"  1;
+	setAttr ".wl[85].w[0]"  1;
+	setAttr ".wl[86].w[0]"  1;
+	setAttr ".wl[87].w[0]"  1;
+	setAttr ".wl[88].w[0]"  1;
+	setAttr ".wl[89].w[0]"  1;
+	setAttr ".wl[90].w[0]"  1;
+	setAttr ".wl[91].w[0]"  1;
+	setAttr ".wl[92].w[0]"  1;
+	setAttr ".wl[93].w[0]"  1;
+	setAttr ".wl[94].w[0]"  1;
+	setAttr ".wl[95].w[0]"  1;
+	setAttr ".wl[96].w[0]"  1;
+	setAttr ".wl[97].w[0]"  1;
+	setAttr ".pm[0]" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -2.0717962474645071 -7.7869974582191714 -0 1;
+	setAttr ".gm" -type "matrix" -0.16987961555431941 -0.021130815998686457 0.024968076304479149 0
+		 -0.030650151080491669 0.14895184043430759 -0.082479800375459239 0 -0.011422979377538584 -0.08541567681908413 -0.15000892538671859 0
+		 2.0861301572267696 8.1679944660999109 0.98838789818149064 1;
+	setAttr ".dpf[0]"  1;
+	setAttr ".mi" 1;
+	setAttr ".ucm" yes;
+createNode tweak -n "tweak17";
+	rename -uid "94FDC7A5-4FEB-447E-1930-BAB7FDD6C6B5";
+createNode objectSet -n "skinCluster17Set";
+	rename -uid "4E7898BF-4F24-7BD8-5E3F-76886C20C808";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "skinCluster17GroupId";
+	rename -uid "890FA09D-4DF2-2736-9A87-18BF966048B7";
+	setAttr ".ihi" 0;
+createNode groupParts -n "skinCluster17GroupParts";
+	rename -uid "7CC22FE6-4F2B-A63A-ADC5-D9A5D3D136BF";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode objectSet -n "tweakSet17";
+	rename -uid "DF4886F3-4B79-9B7A-2116-55B95929239E";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "groupId37";
+	rename -uid "D5911182-4B18-3383-DE01-09912AC4F0D1";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts37";
+	rename -uid "8CF7B1E5-4C58-B8BC-1206-52BCF887623B";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode skinCluster -n "skinCluster18";
+	rename -uid "0F5ECFD9-42D5-52C1-DD00-28B2CB53F3CD";
+	setAttr -s 368 ".wl";
+	setAttr ".wl[0].w[0]"  1;
+	setAttr ".wl[1].w[0]"  1;
+	setAttr ".wl[2].w[0]"  1;
+	setAttr ".wl[3].w[0]"  1;
+	setAttr ".wl[4].w[0]"  1;
+	setAttr ".wl[5].w[0]"  1;
+	setAttr ".wl[6].w[0]"  1;
+	setAttr ".wl[7].w[0]"  1;
+	setAttr ".wl[8].w[0]"  1;
+	setAttr ".wl[9].w[0]"  1;
+	setAttr ".wl[10].w[0]"  1;
+	setAttr ".wl[11].w[0]"  1;
+	setAttr ".wl[12].w[0]"  1;
+	setAttr ".wl[13].w[0]"  1;
+	setAttr ".wl[14].w[0]"  1;
+	setAttr ".wl[15].w[0]"  1;
+	setAttr ".wl[16].w[0]"  1;
+	setAttr ".wl[17].w[0]"  1;
+	setAttr ".wl[18].w[0]"  1;
+	setAttr ".wl[19].w[0]"  1;
+	setAttr ".wl[20].w[0]"  1;
+	setAttr ".wl[21].w[0]"  1;
+	setAttr ".wl[22].w[0]"  1;
+	setAttr ".wl[23].w[0]"  1;
+	setAttr ".wl[24].w[0]"  1;
+	setAttr ".wl[25].w[0]"  1;
+	setAttr ".wl[26].w[0]"  1;
+	setAttr ".wl[27].w[0]"  1;
+	setAttr ".wl[28].w[0]"  1;
+	setAttr ".wl[29].w[0]"  1;
+	setAttr ".wl[30].w[0]"  1;
+	setAttr ".wl[31].w[0]"  1;
+	setAttr ".wl[32].w[0]"  1;
+	setAttr ".wl[33].w[0]"  1;
+	setAttr ".wl[34].w[0]"  1;
+	setAttr ".wl[35].w[0]"  1;
+	setAttr ".wl[36].w[0]"  1;
+	setAttr ".wl[37].w[0]"  1;
+	setAttr ".wl[38].w[0]"  1;
+	setAttr ".wl[39].w[0]"  1;
+	setAttr ".wl[40].w[0]"  1;
+	setAttr ".wl[41].w[0]"  1;
+	setAttr ".wl[42].w[0]"  1;
+	setAttr ".wl[43].w[0]"  1;
+	setAttr ".wl[44].w[0]"  1;
+	setAttr ".wl[45].w[0]"  1;
+	setAttr ".wl[46].w[0]"  1;
+	setAttr ".wl[47].w[0]"  1;
+	setAttr ".wl[48].w[0]"  1;
+	setAttr ".wl[49].w[0]"  1;
+	setAttr ".wl[50].w[0]"  1;
+	setAttr ".wl[51].w[0]"  1;
+	setAttr ".wl[52].w[0]"  1;
+	setAttr ".wl[53].w[0]"  1;
+	setAttr ".wl[54].w[0]"  1;
+	setAttr ".wl[55].w[0]"  1;
+	setAttr ".wl[56].w[0]"  1;
+	setAttr ".wl[57].w[0]"  1;
+	setAttr ".wl[58].w[0]"  1;
+	setAttr ".wl[59].w[0]"  1;
+	setAttr ".wl[60].w[0]"  1;
+	setAttr ".wl[61].w[0]"  1;
+	setAttr ".wl[62].w[0]"  1;
+	setAttr ".wl[63].w[0]"  1;
+	setAttr ".wl[64].w[0]"  1;
+	setAttr ".wl[65].w[0]"  1;
+	setAttr ".wl[66].w[0]"  1;
+	setAttr ".wl[67].w[0]"  1;
+	setAttr ".wl[68].w[0]"  1;
+	setAttr ".wl[69].w[0]"  1;
+	setAttr ".wl[70].w[0]"  1;
+	setAttr ".wl[71].w[0]"  1;
+	setAttr ".wl[72].w[0]"  1;
+	setAttr ".wl[73].w[0]"  1;
+	setAttr ".wl[74].w[0]"  1;
+	setAttr ".wl[75].w[0]"  1;
+	setAttr ".wl[76].w[0]"  1;
+	setAttr ".wl[77].w[0]"  1;
+	setAttr ".wl[78].w[0]"  1;
+	setAttr ".wl[79].w[0]"  1;
+	setAttr ".wl[80].w[0]"  1;
+	setAttr ".wl[81].w[0]"  1;
+	setAttr ".wl[82].w[0]"  1;
+	setAttr ".wl[83].w[0]"  1;
+	setAttr ".wl[84].w[0]"  1;
+	setAttr ".wl[85].w[0]"  1;
+	setAttr ".wl[86].w[0]"  1;
+	setAttr ".wl[87].w[0]"  1;
+	setAttr ".wl[88].w[0]"  1;
+	setAttr ".wl[89].w[0]"  1;
+	setAttr ".wl[90].w[0]"  1;
+	setAttr ".wl[91].w[0]"  1;
+	setAttr ".wl[92].w[0]"  1;
+	setAttr ".wl[93].w[0]"  1;
+	setAttr ".wl[94].w[0]"  1;
+	setAttr ".wl[95].w[0]"  1;
+	setAttr ".wl[96].w[0]"  1;
+	setAttr ".wl[97].w[0]"  1;
+	setAttr ".wl[98].w[0]"  1;
+	setAttr ".wl[99].w[0]"  1;
+	setAttr ".wl[100].w[0]"  1;
+	setAttr ".wl[101].w[0]"  1;
+	setAttr ".wl[102].w[0]"  1;
+	setAttr ".wl[103].w[0]"  1;
+	setAttr ".wl[104].w[0]"  1;
+	setAttr ".wl[105].w[0]"  1;
+	setAttr ".wl[106].w[0]"  1;
+	setAttr ".wl[107].w[0]"  1;
+	setAttr ".wl[108].w[0]"  1;
+	setAttr ".wl[109].w[0]"  1;
+	setAttr ".wl[110].w[0]"  1;
+	setAttr ".wl[111].w[0]"  1;
+	setAttr ".wl[112].w[0]"  1;
+	setAttr ".wl[113].w[0]"  1;
+	setAttr ".wl[114].w[0]"  1;
+	setAttr ".wl[115].w[0]"  1;
+	setAttr ".wl[116].w[0]"  1;
+	setAttr ".wl[117].w[0]"  1;
+	setAttr ".wl[118].w[0]"  1;
+	setAttr ".wl[119].w[0]"  1;
+	setAttr ".wl[120].w[0]"  1;
+	setAttr ".wl[121].w[0]"  1;
+	setAttr ".wl[122].w[0]"  1;
+	setAttr ".wl[123].w[0]"  1;
+	setAttr ".wl[124].w[0]"  1;
+	setAttr ".wl[125].w[0]"  1;
+	setAttr ".wl[126].w[0]"  1;
+	setAttr ".wl[127].w[0]"  1;
+	setAttr ".wl[128].w[0]"  1;
+	setAttr ".wl[129].w[0]"  1;
+	setAttr ".wl[130].w[0]"  1;
+	setAttr ".wl[131].w[0]"  1;
+	setAttr ".wl[132].w[0]"  1;
+	setAttr ".wl[133].w[0]"  1;
+	setAttr ".wl[134].w[0]"  1;
+	setAttr ".wl[135].w[0]"  1;
+	setAttr ".wl[136].w[0]"  1;
+	setAttr ".wl[137].w[0]"  1;
+	setAttr ".wl[138].w[0]"  1;
+	setAttr ".wl[139].w[0]"  1;
+	setAttr ".wl[140].w[0]"  1;
+	setAttr ".wl[141].w[0]"  1;
+	setAttr ".wl[142].w[0]"  1;
+	setAttr ".wl[143].w[0]"  1;
+	setAttr ".wl[144].w[0]"  1;
+	setAttr ".wl[145].w[0]"  1;
+	setAttr ".wl[146].w[0]"  1;
+	setAttr ".wl[147].w[0]"  1;
+	setAttr ".wl[148].w[0]"  1;
+	setAttr ".wl[149].w[0]"  1;
+	setAttr ".wl[150].w[0]"  1;
+	setAttr ".wl[151].w[0]"  1;
+	setAttr ".wl[152].w[0]"  1;
+	setAttr ".wl[153].w[0]"  1;
+	setAttr ".wl[154].w[0]"  1;
+	setAttr ".wl[155].w[0]"  1;
+	setAttr ".wl[156].w[0]"  1;
+	setAttr ".wl[157].w[0]"  1;
+	setAttr ".wl[158].w[0]"  1;
+	setAttr ".wl[159].w[0]"  1;
+	setAttr ".wl[160].w[0]"  1;
+	setAttr ".wl[161].w[0]"  1;
+	setAttr ".wl[162].w[0]"  1;
+	setAttr ".wl[163].w[0]"  1;
+	setAttr ".wl[164].w[0]"  1;
+	setAttr ".wl[165].w[0]"  1;
+	setAttr ".wl[166].w[0]"  1;
+	setAttr ".wl[167].w[0]"  1;
+	setAttr ".wl[168].w[0]"  1;
+	setAttr ".wl[169].w[0]"  1;
+	setAttr ".wl[170].w[0]"  1;
+	setAttr ".wl[171].w[0]"  1;
+	setAttr ".wl[172].w[0]"  1;
+	setAttr ".wl[173].w[0]"  1;
+	setAttr ".wl[174].w[0]"  1;
+	setAttr ".wl[175].w[0]"  1;
+	setAttr ".wl[176].w[0]"  1;
+	setAttr ".wl[177].w[0]"  1;
+	setAttr ".wl[178].w[0]"  1;
+	setAttr ".wl[179].w[0]"  1;
+	setAttr ".wl[180].w[0]"  1;
+	setAttr ".wl[181].w[0]"  1;
+	setAttr ".wl[182].w[0]"  1;
+	setAttr ".wl[183].w[0]"  1;
+	setAttr ".wl[184].w[0]"  1;
+	setAttr ".wl[185].w[0]"  1;
+	setAttr ".wl[186].w[0]"  1;
+	setAttr ".wl[187].w[0]"  1;
+	setAttr ".wl[188].w[0]"  1;
+	setAttr ".wl[189].w[0]"  1;
+	setAttr ".wl[190].w[0]"  1;
+	setAttr ".wl[191].w[0]"  1;
+	setAttr ".wl[192].w[0]"  1;
+	setAttr ".wl[193].w[0]"  1;
+	setAttr ".wl[194].w[0]"  1;
+	setAttr ".wl[195].w[0]"  1;
+	setAttr ".wl[196].w[0]"  1;
+	setAttr ".wl[197].w[0]"  1;
+	setAttr ".wl[198].w[0]"  1;
+	setAttr ".wl[199].w[0]"  1;
+	setAttr ".wl[200].w[0]"  1;
+	setAttr ".wl[201].w[0]"  1;
+	setAttr ".wl[202].w[0]"  1;
+	setAttr ".wl[203].w[0]"  1;
+	setAttr ".wl[204].w[0]"  1;
+	setAttr ".wl[205].w[0]"  1;
+	setAttr ".wl[206].w[0]"  1;
+	setAttr ".wl[207].w[0]"  1;
+	setAttr ".wl[208].w[0]"  1;
+	setAttr ".wl[209].w[0]"  1;
+	setAttr ".wl[210].w[0]"  1;
+	setAttr ".wl[211].w[0]"  1;
+	setAttr ".wl[212].w[0]"  1;
+	setAttr ".wl[213].w[0]"  1;
+	setAttr ".wl[214].w[0]"  1;
+	setAttr ".wl[215].w[0]"  1;
+	setAttr ".wl[216].w[0]"  1;
+	setAttr ".wl[217].w[0]"  1;
+	setAttr ".wl[218].w[0]"  1;
+	setAttr ".wl[219].w[0]"  1;
+	setAttr ".wl[220].w[0]"  1;
+	setAttr ".wl[221].w[0]"  1;
+	setAttr ".wl[222].w[0]"  1;
+	setAttr ".wl[223].w[0]"  1;
+	setAttr ".wl[224].w[0]"  1;
+	setAttr ".wl[225].w[0]"  1;
+	setAttr ".wl[226].w[0]"  1;
+	setAttr ".wl[227].w[0]"  1;
+	setAttr ".wl[228].w[0]"  1;
+	setAttr ".wl[229].w[0]"  1;
+	setAttr ".wl[230].w[0]"  1;
+	setAttr ".wl[231].w[0]"  1;
+	setAttr ".wl[232].w[0]"  1;
+	setAttr ".wl[233].w[0]"  1;
+	setAttr ".wl[234].w[0]"  1;
+	setAttr ".wl[235].w[0]"  1;
+	setAttr ".wl[236].w[0]"  1;
+	setAttr ".wl[237].w[0]"  1;
+	setAttr ".wl[238].w[0]"  1;
+	setAttr ".wl[239].w[0]"  1;
+	setAttr ".wl[240].w[0]"  1;
+	setAttr ".wl[241].w[0]"  1;
+	setAttr ".wl[242].w[0]"  1;
+	setAttr ".wl[243].w[0]"  1;
+	setAttr ".wl[244].w[0]"  1;
+	setAttr ".wl[245].w[0]"  1;
+	setAttr ".wl[246].w[0]"  1;
+	setAttr ".wl[247].w[0]"  1;
+	setAttr ".wl[248].w[0]"  1;
+	setAttr ".wl[249].w[0]"  1;
+	setAttr ".wl[250].w[0]"  1;
+	setAttr ".wl[251].w[0]"  1;
+	setAttr ".wl[252].w[0]"  1;
+	setAttr ".wl[253].w[0]"  1;
+	setAttr ".wl[254].w[0]"  1;
+	setAttr ".wl[255].w[0]"  1;
+	setAttr ".wl[256].w[0]"  1;
+	setAttr ".wl[257].w[0]"  1;
+	setAttr ".wl[258].w[0]"  1;
+	setAttr ".wl[259].w[0]"  1;
+	setAttr ".wl[260].w[0]"  1;
+	setAttr ".wl[261].w[0]"  1;
+	setAttr ".wl[262].w[0]"  1;
+	setAttr ".wl[263].w[0]"  1;
+	setAttr ".wl[264].w[0]"  1;
+	setAttr ".wl[265].w[0]"  1;
+	setAttr ".wl[266].w[0]"  1;
+	setAttr ".wl[267].w[0]"  1;
+	setAttr ".wl[268].w[0]"  1;
+	setAttr ".wl[269].w[0]"  1;
+	setAttr ".wl[270].w[0]"  1;
+	setAttr ".wl[271].w[0]"  1;
+	setAttr ".wl[272].w[0]"  1;
+	setAttr ".wl[273].w[0]"  1;
+	setAttr ".wl[274].w[0]"  1;
+	setAttr ".wl[275].w[0]"  1;
+	setAttr ".wl[276].w[0]"  1;
+	setAttr ".wl[277].w[0]"  1;
+	setAttr ".wl[278].w[0]"  1;
+	setAttr ".wl[279].w[0]"  1;
+	setAttr ".wl[280].w[0]"  1;
+	setAttr ".wl[281].w[0]"  1;
+	setAttr ".wl[282].w[0]"  1;
+	setAttr ".wl[283].w[0]"  1;
+	setAttr ".wl[284].w[0]"  1;
+	setAttr ".wl[285].w[0]"  1;
+	setAttr ".wl[286].w[0]"  1;
+	setAttr ".wl[287].w[0]"  1;
+	setAttr ".wl[288].w[0]"  1;
+	setAttr ".wl[289].w[0]"  1;
+	setAttr ".wl[290].w[0]"  1;
+	setAttr ".wl[291].w[0]"  1;
+	setAttr ".wl[292].w[0]"  1;
+	setAttr ".wl[293].w[0]"  1;
+	setAttr ".wl[294].w[0]"  1;
+	setAttr ".wl[295].w[0]"  1;
+	setAttr ".wl[296].w[0]"  1;
+	setAttr ".wl[297].w[0]"  1;
+	setAttr ".wl[298].w[0]"  1;
+	setAttr ".wl[299].w[0]"  1;
+	setAttr ".wl[300].w[0]"  1;
+	setAttr ".wl[301].w[0]"  1;
+	setAttr ".wl[302].w[0]"  1;
+	setAttr ".wl[303].w[0]"  1;
+	setAttr ".wl[304].w[0]"  1;
+	setAttr ".wl[305].w[0]"  1;
+	setAttr ".wl[306].w[0]"  1;
+	setAttr ".wl[307].w[0]"  1;
+	setAttr ".wl[308].w[0]"  1;
+	setAttr ".wl[309].w[0]"  1;
+	setAttr ".wl[310].w[0]"  1;
+	setAttr ".wl[311].w[0]"  1;
+	setAttr ".wl[312].w[0]"  1;
+	setAttr ".wl[313].w[0]"  1;
+	setAttr ".wl[314].w[0]"  1;
+	setAttr ".wl[315].w[0]"  1;
+	setAttr ".wl[316].w[0]"  1;
+	setAttr ".wl[317].w[0]"  1;
+	setAttr ".wl[318].w[0]"  1;
+	setAttr ".wl[319].w[0]"  1;
+	setAttr ".wl[320].w[0]"  1;
+	setAttr ".wl[321].w[0]"  1;
+	setAttr ".wl[322].w[0]"  1;
+	setAttr ".wl[323].w[0]"  1;
+	setAttr ".wl[324].w[0]"  1;
+	setAttr ".wl[325].w[0]"  1;
+	setAttr ".wl[326].w[0]"  1;
+	setAttr ".wl[327].w[0]"  1;
+	setAttr ".wl[328].w[0]"  1;
+	setAttr ".wl[329].w[0]"  1;
+	setAttr ".wl[330].w[0]"  1;
+	setAttr ".wl[331].w[0]"  1;
+	setAttr ".wl[332].w[0]"  1;
+	setAttr ".wl[333].w[0]"  1;
+	setAttr ".wl[334].w[0]"  1;
+	setAttr ".wl[335].w[0]"  1;
+	setAttr ".wl[336].w[0]"  1;
+	setAttr ".wl[337].w[0]"  1;
+	setAttr ".wl[338].w[0]"  1;
+	setAttr ".wl[339].w[0]"  1;
+	setAttr ".wl[340].w[0]"  1;
+	setAttr ".wl[341].w[0]"  1;
+	setAttr ".wl[342].w[0]"  1;
+	setAttr ".wl[343].w[0]"  1;
+	setAttr ".wl[344].w[0]"  1;
+	setAttr ".wl[345].w[0]"  1;
+	setAttr ".wl[346].w[0]"  1;
+	setAttr ".wl[347].w[0]"  1;
+	setAttr ".wl[348].w[0]"  1;
+	setAttr ".wl[349].w[0]"  1;
+	setAttr ".wl[350].w[0]"  1;
+	setAttr ".wl[351].w[0]"  1;
+	setAttr ".wl[352].w[0]"  1;
+	setAttr ".wl[353].w[0]"  1;
+	setAttr ".wl[354].w[0]"  1;
+	setAttr ".wl[355].w[0]"  1;
+	setAttr ".wl[356].w[0]"  1;
+	setAttr ".wl[357].w[0]"  1;
+	setAttr ".wl[358].w[0]"  1;
+	setAttr ".wl[359].w[0]"  1;
+	setAttr ".wl[360].w[0]"  1;
+	setAttr ".wl[361].w[0]"  1;
+	setAttr ".wl[362].w[0]"  1;
+	setAttr ".wl[363].w[0]"  1;
+	setAttr ".wl[364].w[0]"  1;
+	setAttr ".wl[365].w[0]"  1;
+	setAttr ".wl[366].w[0]"  1;
+	setAttr ".wl[367].w[0]"  1;
+	setAttr ".pm[0]" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -2.0717962474645071 -7.7869974582191714 -0 1;
+	setAttr ".gm" -type "matrix" -0.48733257216657377 -0.063190369957405346 0.06697997613138662 0
+		 -0.052525652930535252 0.25526114548246476 -0.14134694987062058 0 -0.0096074276831656178 -0.085185052234052774 -0.15026710953896213 0
+		 1.9780802380486713 7.15086884080036 -1.4595947056103686 1;
+	setAttr ".dpf[0]"  1;
+	setAttr ".mi" 1;
+	setAttr ".ucm" yes;
+createNode tweak -n "tweak18";
+	rename -uid "2CBA5AAE-4BED-5409-6953-49B264546B78";
+createNode objectSet -n "skinCluster18Set";
+	rename -uid "437EEF62-4E4B-75A0-828A-E28B4F630493";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "skinCluster18GroupId";
+	rename -uid "40531A28-4C63-69B1-CEDA-11BD00442742";
+	setAttr ".ihi" 0;
+createNode groupParts -n "skinCluster18GroupParts";
+	rename -uid "1FA6EE93-42A0-339F-27FC-1F9F262BC7C1";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode objectSet -n "tweakSet18";
+	rename -uid "F0B47F6B-419E-CBA4-86DB-DA9C7B4A6ECF";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "groupId39";
+	rename -uid "5A4A6318-4D85-B734-134B-C18913029484";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts39";
+	rename -uid "8FD87415-4E34-141B-76F4-16A4BC880085";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode skinCluster -n "skinCluster19";
+	rename -uid "B30E4D89-4D2B-9EAD-2EEB-16B4D6BEE527";
+	setAttr -s 17 ".wl";
+	setAttr ".wl[0].w[0]"  1;
+	setAttr ".wl[1].w[0]"  1;
+	setAttr ".wl[2].w[0]"  1;
+	setAttr ".wl[3].w[0]"  1;
+	setAttr ".wl[4].w[0]"  1;
+	setAttr ".wl[5].w[0]"  1;
+	setAttr ".wl[6].w[0]"  1;
+	setAttr ".wl[7].w[0]"  1;
+	setAttr ".wl[8].w[0]"  1;
+	setAttr ".wl[9].w[0]"  1;
+	setAttr ".wl[10].w[0]"  1;
+	setAttr ".wl[11].w[0]"  1;
+	setAttr ".wl[12].w[0]"  1;
+	setAttr ".wl[13].w[0]"  1;
+	setAttr ".wl[14].w[0]"  1;
+	setAttr ".wl[15].w[0]"  1;
+	setAttr ".wl[16].w[0]"  1;
+	setAttr ".pm[0]" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -2.0717962474645071 -7.7869974582191714 -0 1;
+	setAttr ".gm" -type "matrix" -0.065322377412302762 -0.0084700786094178363 0.008978039905007543 0
+		 -0.003691821817770518 -0.032733843517412146 -0.057742760266758612 0 0.011777855655910333 -0.05723734515077377 0.031694303261322596 0
+		 2.0471628134078914 6.8644903023837749 -1.2271398101240893 1;
+	setAttr ".dpf[0]"  1;
+	setAttr ".mi" 1;
+	setAttr ".ucm" yes;
+createNode tweak -n "tweak19";
+	rename -uid "462EFB70-4DA7-4459-DE32-398B652179B2";
+createNode objectSet -n "skinCluster19Set";
+	rename -uid "F759EEF7-4B50-7956-6276-6FA1791D0D17";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "skinCluster19GroupId";
+	rename -uid "F5A6DB4C-4633-21AD-1BDA-D08C09C176B6";
+	setAttr ".ihi" 0;
+createNode groupParts -n "skinCluster19GroupParts";
+	rename -uid "976EB53E-4DAB-01F6-A4ED-72A5BAC2F9FF";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode objectSet -n "tweakSet19";
+	rename -uid "C9CB89BB-4116-0D4B-2A28-23B7FDA579F9";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "groupId41";
+	rename -uid "138F7569-466C-5E0E-FA98-26B6FC034671";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts41";
+	rename -uid "8712CB33-4419-88E0-0551-70B63A1BB2D8";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode skinCluster -n "skinCluster20";
+	rename -uid "CF48DFAF-4599-3FAB-42AD-80B85B8BFF92";
+	setAttr -s 76 ".wl";
+	setAttr ".wl[0].w[0]"  1;
+	setAttr ".wl[1].w[0]"  1;
+	setAttr ".wl[2].w[0]"  1;
+	setAttr ".wl[3].w[0]"  1;
+	setAttr ".wl[4].w[0]"  1;
+	setAttr ".wl[5].w[0]"  1;
+	setAttr ".wl[6].w[0]"  1;
+	setAttr ".wl[7].w[0]"  1;
+	setAttr ".wl[8].w[0]"  1;
+	setAttr ".wl[9].w[0]"  1;
+	setAttr ".wl[10].w[0]"  1;
+	setAttr ".wl[11].w[0]"  1;
+	setAttr ".wl[12].w[0]"  1;
+	setAttr ".wl[13].w[0]"  1;
+	setAttr ".wl[14].w[0]"  1;
+	setAttr ".wl[15].w[0]"  1;
+	setAttr ".wl[16].w[0]"  1;
+	setAttr ".wl[17].w[0]"  1;
+	setAttr ".wl[18].w[0]"  1;
+	setAttr ".wl[19].w[0]"  1;
+	setAttr ".wl[20].w[0]"  1;
+	setAttr ".wl[21].w[0]"  1;
+	setAttr ".wl[22].w[0]"  1;
+	setAttr ".wl[23].w[0]"  1;
+	setAttr ".wl[24].w[0]"  1;
+	setAttr ".wl[25].w[0]"  1;
+	setAttr ".wl[26].w[0]"  1;
+	setAttr ".wl[27].w[0]"  1;
+	setAttr ".wl[28].w[0]"  1;
+	setAttr ".wl[29].w[0]"  1;
+	setAttr ".wl[30].w[0]"  1;
+	setAttr ".wl[31].w[0]"  1;
+	setAttr ".wl[32].w[0]"  1;
+	setAttr ".wl[33].w[0]"  1;
+	setAttr ".wl[34].w[0]"  1;
+	setAttr ".wl[35].w[0]"  1;
+	setAttr ".wl[36].w[0]"  1;
+	setAttr ".wl[37].w[0]"  1;
+	setAttr ".wl[38].w[0]"  1;
+	setAttr ".wl[39].w[0]"  1;
+	setAttr ".wl[40].w[0]"  1;
+	setAttr ".wl[41].w[0]"  1;
+	setAttr ".wl[42].w[0]"  1;
+	setAttr ".wl[43].w[0]"  1;
+	setAttr ".wl[44].w[0]"  1;
+	setAttr ".wl[45].w[0]"  1;
+	setAttr ".wl[46].w[0]"  1;
+	setAttr ".wl[47].w[0]"  1;
+	setAttr ".wl[48].w[0]"  1;
+	setAttr ".wl[49].w[0]"  1;
+	setAttr ".wl[50].w[0]"  1;
+	setAttr ".wl[51].w[0]"  1;
+	setAttr ".wl[52].w[0]"  1;
+	setAttr ".wl[53].w[0]"  1;
+	setAttr ".wl[54].w[0]"  1;
+	setAttr ".wl[55].w[0]"  1;
+	setAttr ".wl[56].w[0]"  1;
+	setAttr ".wl[57].w[0]"  1;
+	setAttr ".wl[58].w[0]"  1;
+	setAttr ".wl[59].w[0]"  1;
+	setAttr ".wl[60].w[0]"  1;
+	setAttr ".wl[61].w[0]"  1;
+	setAttr ".wl[62].w[0]"  1;
+	setAttr ".wl[63].w[0]"  1;
+	setAttr ".wl[64].w[0]"  1;
+	setAttr ".wl[65].w[0]"  1;
+	setAttr ".wl[66].w[0]"  1;
+	setAttr ".wl[67].w[0]"  1;
+	setAttr ".wl[68].w[0]"  1;
+	setAttr ".wl[69].w[0]"  1;
+	setAttr ".wl[70].w[0]"  1;
+	setAttr ".wl[71].w[0]"  1;
+	setAttr ".wl[72].w[0]"  1;
+	setAttr ".wl[73].w[0]"  1;
+	setAttr ".wl[74].w[0]"  1;
+	setAttr ".wl[75].w[0]"  1;
+	setAttr ".pm[0]" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -2.0717962474645071 -7.7869974582191714 -0 1;
+	setAttr ".gm" -type "matrix" -0.16999195737462339 -0.022042143886524968 0.023364039052140618 0
+		 -0.030650151080491669 0.14895184043430759 -0.082479800375459239 0 -0.0096074276831656178 -0.085185052234052774 -0.15026710953896213 0
+		 2.1925822276733524 7.3141104211557479 0.25508345385099579 1;
+	setAttr ".dpf[0]"  1;
+	setAttr ".mi" 1;
+	setAttr ".ucm" yes;
+createNode tweak -n "tweak20";
+	rename -uid "5C6B85DA-4215-6B43-D90B-D9A05C81040F";
+createNode objectSet -n "skinCluster20Set";
+	rename -uid "508251C4-4BA8-1225-274A-AFAE34FCA710";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "skinCluster20GroupId";
+	rename -uid "6170071D-4032-379F-816A-1DA8F8B01ACD";
+	setAttr ".ihi" 0;
+createNode groupParts -n "skinCluster20GroupParts";
+	rename -uid "C00FCE94-459C-229E-6B95-48A833DB779F";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode objectSet -n "tweakSet20";
+	rename -uid "68C4172F-4AAB-1492-E418-A290652652CB";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "groupId43";
+	rename -uid "3895CBD5-4242-8D61-2D3A-B88B9E306BB9";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts43";
+	rename -uid "6BED0AA4-4CCB-CB76-06FA-0BA5497D6843";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode skinCluster -n "skinCluster21";
+	rename -uid "F018EB18-44EE-9A9A-E4B5-9CB240AB4474";
+	setAttr -s 742 ".wl";
+	setAttr ".wl[0].w[0]"  1;
+	setAttr ".wl[1].w[0]"  1;
+	setAttr ".wl[2].w[0]"  1;
+	setAttr ".wl[3].w[0]"  1;
+	setAttr ".wl[4].w[0]"  1;
+	setAttr ".wl[5].w[0]"  1;
+	setAttr ".wl[6].w[0]"  1;
+	setAttr ".wl[7].w[0]"  1;
+	setAttr ".wl[8].w[0]"  1;
+	setAttr ".wl[9].w[0]"  1;
+	setAttr ".wl[10].w[0]"  1;
+	setAttr ".wl[11].w[0]"  1;
+	setAttr ".wl[12].w[0]"  1;
+	setAttr ".wl[13].w[0]"  1;
+	setAttr ".wl[14].w[0]"  1;
+	setAttr ".wl[15].w[0]"  1;
+	setAttr ".wl[16].w[0]"  1;
+	setAttr ".wl[17].w[0]"  1;
+	setAttr ".wl[18].w[0]"  1;
+	setAttr ".wl[19].w[0]"  1;
+	setAttr ".wl[20].w[0]"  1;
+	setAttr ".wl[21].w[0]"  1;
+	setAttr ".wl[22].w[0]"  1;
+	setAttr ".wl[23].w[0]"  1;
+	setAttr ".wl[24].w[0]"  1;
+	setAttr ".wl[25].w[0]"  1;
+	setAttr ".wl[26].w[0]"  1;
+	setAttr ".wl[27].w[0]"  1;
+	setAttr ".wl[28].w[0]"  1;
+	setAttr ".wl[29].w[0]"  1;
+	setAttr ".wl[30].w[0]"  1;
+	setAttr ".wl[31].w[0]"  1;
+	setAttr ".wl[32].w[0]"  1;
+	setAttr ".wl[33].w[0]"  1;
+	setAttr ".wl[34].w[0]"  1;
+	setAttr ".wl[35].w[0]"  1;
+	setAttr ".wl[36].w[0]"  1;
+	setAttr ".wl[37].w[0]"  1;
+	setAttr ".wl[38].w[0]"  1;
+	setAttr ".wl[39].w[0]"  1;
+	setAttr ".wl[40].w[0]"  1;
+	setAttr ".wl[41].w[0]"  1;
+	setAttr ".wl[42].w[0]"  1;
+	setAttr ".wl[43].w[0]"  1;
+	setAttr ".wl[44].w[0]"  1;
+	setAttr ".wl[45].w[0]"  1;
+	setAttr ".wl[46].w[0]"  1;
+	setAttr ".wl[47].w[0]"  1;
+	setAttr ".wl[48].w[0]"  1;
+	setAttr ".wl[49].w[0]"  1;
+	setAttr ".wl[50].w[0]"  1;
+	setAttr ".wl[51].w[0]"  1;
+	setAttr ".wl[52].w[0]"  1;
+	setAttr ".wl[53].w[0]"  1;
+	setAttr ".wl[54].w[0]"  1;
+	setAttr ".wl[55].w[0]"  1;
+	setAttr ".wl[56].w[0]"  1;
+	setAttr ".wl[57].w[0]"  1;
+	setAttr ".wl[58].w[0]"  1;
+	setAttr ".wl[59].w[0]"  1;
+	setAttr ".wl[60].w[0]"  1;
+	setAttr ".wl[61].w[0]"  1;
+	setAttr ".wl[62].w[0]"  1;
+	setAttr ".wl[63].w[0]"  1;
+	setAttr ".wl[64].w[0]"  1;
+	setAttr ".wl[65].w[0]"  1;
+	setAttr ".wl[66].w[0]"  1;
+	setAttr ".wl[67].w[0]"  1;
+	setAttr ".wl[68].w[0]"  1;
+	setAttr ".wl[69].w[0]"  1;
+	setAttr ".wl[70].w[0]"  1;
+	setAttr ".wl[71].w[0]"  1;
+	setAttr ".wl[72].w[0]"  1;
+	setAttr ".wl[73].w[0]"  1;
+	setAttr ".wl[74].w[0]"  1;
+	setAttr ".wl[75].w[0]"  1;
+	setAttr ".wl[76].w[0]"  1;
+	setAttr ".wl[77].w[0]"  1;
+	setAttr ".wl[78].w[0]"  1;
+	setAttr ".wl[79].w[0]"  1;
+	setAttr ".wl[80].w[0]"  1;
+	setAttr ".wl[81].w[0]"  1;
+	setAttr ".wl[82].w[0]"  1;
+	setAttr ".wl[83].w[0]"  1;
+	setAttr ".wl[84].w[0]"  1;
+	setAttr ".wl[85].w[0]"  1;
+	setAttr ".wl[86].w[0]"  1;
+	setAttr ".wl[87].w[0]"  1;
+	setAttr ".wl[88].w[0]"  1;
+	setAttr ".wl[89].w[0]"  1;
+	setAttr ".wl[90].w[0]"  1;
+	setAttr ".wl[91].w[0]"  1;
+	setAttr ".wl[92].w[0]"  1;
+	setAttr ".wl[93].w[0]"  1;
+	setAttr ".wl[94].w[0]"  1;
+	setAttr ".wl[95].w[0]"  1;
+	setAttr ".wl[96].w[0]"  1;
+	setAttr ".wl[97].w[0]"  1;
+	setAttr ".wl[98].w[0]"  1;
+	setAttr ".wl[99].w[0]"  1;
+	setAttr ".wl[100].w[0]"  1;
+	setAttr ".wl[101].w[0]"  1;
+	setAttr ".wl[102].w[0]"  1;
+	setAttr ".wl[103].w[0]"  1;
+	setAttr ".wl[104].w[0]"  1;
+	setAttr ".wl[105].w[0]"  1;
+	setAttr ".wl[106].w[0]"  1;
+	setAttr ".wl[107].w[0]"  1;
+	setAttr ".wl[108].w[0]"  1;
+	setAttr ".wl[109].w[0]"  1;
+	setAttr ".wl[110].w[0]"  1;
+	setAttr ".wl[111].w[0]"  1;
+	setAttr ".wl[112].w[0]"  1;
+	setAttr ".wl[113].w[0]"  1;
+	setAttr ".wl[114].w[0]"  1;
+	setAttr ".wl[115].w[0]"  1;
+	setAttr ".wl[116].w[0]"  1;
+	setAttr ".wl[117].w[0]"  1;
+	setAttr ".wl[118].w[0]"  1;
+	setAttr ".wl[119].w[0]"  1;
+	setAttr ".wl[120].w[0]"  1;
+	setAttr ".wl[121].w[0]"  1;
+	setAttr ".wl[122].w[0]"  1;
+	setAttr ".wl[123].w[0]"  1;
+	setAttr ".wl[124].w[0]"  1;
+	setAttr ".wl[125].w[0]"  1;
+	setAttr ".wl[126].w[0]"  1;
+	setAttr ".wl[127].w[0]"  1;
+	setAttr ".wl[128].w[0]"  1;
+	setAttr ".wl[129].w[0]"  1;
+	setAttr ".wl[130].w[0]"  1;
+	setAttr ".wl[131].w[0]"  1;
+	setAttr ".wl[132].w[0]"  1;
+	setAttr ".wl[133].w[0]"  1;
+	setAttr ".wl[134].w[0]"  1;
+	setAttr ".wl[135].w[0]"  1;
+	setAttr ".wl[136].w[0]"  1;
+	setAttr ".wl[137].w[0]"  1;
+	setAttr ".wl[138].w[0]"  1;
+	setAttr ".wl[139].w[0]"  1;
+	setAttr ".wl[140].w[0]"  1;
+	setAttr ".wl[141].w[0]"  1;
+	setAttr ".wl[142].w[0]"  1;
+	setAttr ".wl[143].w[0]"  1;
+	setAttr ".wl[144].w[0]"  1;
+	setAttr ".wl[145].w[0]"  1;
+	setAttr ".wl[146].w[0]"  1;
+	setAttr ".wl[147].w[0]"  1;
+	setAttr ".wl[148].w[0]"  1;
+	setAttr ".wl[149].w[0]"  1;
+	setAttr ".wl[150].w[0]"  1;
+	setAttr ".wl[151].w[0]"  1;
+	setAttr ".wl[152].w[0]"  1;
+	setAttr ".wl[153].w[0]"  1;
+	setAttr ".wl[154].w[0]"  1;
+	setAttr ".wl[155].w[0]"  1;
+	setAttr ".wl[156].w[0]"  1;
+	setAttr ".wl[157].w[0]"  1;
+	setAttr ".wl[158].w[0]"  1;
+	setAttr ".wl[159].w[0]"  1;
+	setAttr ".wl[160].w[0]"  1;
+	setAttr ".wl[161].w[0]"  1;
+	setAttr ".wl[162].w[0]"  1;
+	setAttr ".wl[163].w[0]"  1;
+	setAttr ".wl[164].w[0]"  1;
+	setAttr ".wl[165].w[0]"  1;
+	setAttr ".wl[166].w[0]"  1;
+	setAttr ".wl[167].w[0]"  1;
+	setAttr ".wl[168].w[0]"  1;
+	setAttr ".wl[169].w[0]"  1;
+	setAttr ".wl[170].w[0]"  1;
+	setAttr ".wl[171].w[0]"  1;
+	setAttr ".wl[172].w[0]"  1;
+	setAttr ".wl[173].w[0]"  1;
+	setAttr ".wl[174].w[0]"  1;
+	setAttr ".wl[175].w[0]"  1;
+	setAttr ".wl[176].w[0]"  1;
+	setAttr ".wl[177].w[0]"  1;
+	setAttr ".wl[178].w[0]"  1;
+	setAttr ".wl[179].w[0]"  1;
+	setAttr ".wl[180].w[0]"  1;
+	setAttr ".wl[181].w[0]"  1;
+	setAttr ".wl[182].w[0]"  1;
+	setAttr ".wl[183].w[0]"  1;
+	setAttr ".wl[184].w[0]"  1;
+	setAttr ".wl[185].w[0]"  1;
+	setAttr ".wl[186].w[0]"  1;
+	setAttr ".wl[187].w[0]"  1;
+	setAttr ".wl[188].w[0]"  1;
+	setAttr ".wl[189].w[0]"  1;
+	setAttr ".wl[190].w[0]"  1;
+	setAttr ".wl[191].w[0]"  1;
+	setAttr ".wl[192].w[0]"  1;
+	setAttr ".wl[193].w[0]"  1;
+	setAttr ".wl[194].w[0]"  1;
+	setAttr ".wl[195].w[0]"  1;
+	setAttr ".wl[196].w[0]"  1;
+	setAttr ".wl[197].w[0]"  1;
+	setAttr ".wl[198].w[0]"  1;
+	setAttr ".wl[199].w[0]"  1;
+	setAttr ".wl[200].w[0]"  1;
+	setAttr ".wl[201].w[0]"  1;
+	setAttr ".wl[202].w[0]"  1;
+	setAttr ".wl[203].w[0]"  1;
+	setAttr ".wl[204].w[0]"  1;
+	setAttr ".wl[205].w[0]"  1;
+	setAttr ".wl[206].w[0]"  1;
+	setAttr ".wl[207].w[0]"  1;
+	setAttr ".wl[208].w[0]"  1;
+	setAttr ".wl[209].w[0]"  1;
+	setAttr ".wl[210].w[0]"  1;
+	setAttr ".wl[211].w[0]"  1;
+	setAttr ".wl[212].w[0]"  1;
+	setAttr ".wl[213].w[0]"  1;
+	setAttr ".wl[214].w[0]"  1;
+	setAttr ".wl[215].w[0]"  1;
+	setAttr ".wl[216].w[0]"  1;
+	setAttr ".wl[217].w[0]"  1;
+	setAttr ".wl[218].w[0]"  1;
+	setAttr ".wl[219].w[0]"  1;
+	setAttr ".wl[220].w[0]"  1;
+	setAttr ".wl[221].w[0]"  1;
+	setAttr ".wl[222].w[0]"  1;
+	setAttr ".wl[223].w[0]"  1;
+	setAttr ".wl[224].w[0]"  1;
+	setAttr ".wl[225].w[0]"  1;
+	setAttr ".wl[226].w[0]"  1;
+	setAttr ".wl[227].w[0]"  1;
+	setAttr ".wl[228].w[0]"  1;
+	setAttr ".wl[229].w[0]"  1;
+	setAttr ".wl[230].w[0]"  1;
+	setAttr ".wl[231].w[0]"  1;
+	setAttr ".wl[232].w[0]"  1;
+	setAttr ".wl[233].w[0]"  1;
+	setAttr ".wl[234].w[0]"  1;
+	setAttr ".wl[235].w[0]"  1;
+	setAttr ".wl[236].w[0]"  1;
+	setAttr ".wl[237].w[0]"  1;
+	setAttr ".wl[238].w[0]"  1;
+	setAttr ".wl[239].w[0]"  1;
+	setAttr ".wl[240].w[0]"  1;
+	setAttr ".wl[241].w[0]"  1;
+	setAttr ".wl[242].w[0]"  1;
+	setAttr ".wl[243].w[0]"  1;
+	setAttr ".wl[244].w[0]"  1;
+	setAttr ".wl[245].w[0]"  1;
+	setAttr ".wl[246].w[0]"  1;
+	setAttr ".wl[247].w[0]"  1;
+	setAttr ".wl[248].w[0]"  1;
+	setAttr ".wl[249].w[0]"  1;
+	setAttr ".wl[250].w[0]"  1;
+	setAttr ".wl[251].w[0]"  1;
+	setAttr ".wl[252].w[0]"  1;
+	setAttr ".wl[253].w[0]"  1;
+	setAttr ".wl[254].w[0]"  1;
+	setAttr ".wl[255].w[0]"  1;
+	setAttr ".wl[256].w[0]"  1;
+	setAttr ".wl[257].w[0]"  1;
+	setAttr ".wl[258].w[0]"  1;
+	setAttr ".wl[259].w[0]"  1;
+	setAttr ".wl[260].w[0]"  1;
+	setAttr ".wl[261].w[0]"  1;
+	setAttr ".wl[262].w[0]"  1;
+	setAttr ".wl[263].w[0]"  1;
+	setAttr ".wl[264].w[0]"  1;
+	setAttr ".wl[265].w[0]"  1;
+	setAttr ".wl[266].w[0]"  1;
+	setAttr ".wl[267].w[0]"  1;
+	setAttr ".wl[268].w[0]"  1;
+	setAttr ".wl[269].w[0]"  1;
+	setAttr ".wl[270].w[0]"  1;
+	setAttr ".wl[271].w[0]"  1;
+	setAttr ".wl[272].w[0]"  1;
+	setAttr ".wl[273].w[0]"  1;
+	setAttr ".wl[274].w[0]"  1;
+	setAttr ".wl[275].w[0]"  1;
+	setAttr ".wl[276].w[0]"  1;
+	setAttr ".wl[277].w[0]"  1;
+	setAttr ".wl[278].w[0]"  1;
+	setAttr ".wl[279].w[0]"  1;
+	setAttr ".wl[280].w[0]"  1;
+	setAttr ".wl[281].w[0]"  1;
+	setAttr ".wl[282].w[0]"  1;
+	setAttr ".wl[283].w[0]"  1;
+	setAttr ".wl[284].w[0]"  1;
+	setAttr ".wl[285].w[0]"  1;
+	setAttr ".wl[286].w[0]"  1;
+	setAttr ".wl[287].w[0]"  1;
+	setAttr ".wl[288].w[0]"  1;
+	setAttr ".wl[289].w[0]"  1;
+	setAttr ".wl[290].w[0]"  1;
+	setAttr ".wl[291].w[0]"  1;
+	setAttr ".wl[292].w[0]"  1;
+	setAttr ".wl[293].w[0]"  1;
+	setAttr ".wl[294].w[0]"  1;
+	setAttr ".wl[295].w[0]"  1;
+	setAttr ".wl[296].w[0]"  1;
+	setAttr ".wl[297].w[0]"  1;
+	setAttr ".wl[298].w[0]"  1;
+	setAttr ".wl[299].w[0]"  1;
+	setAttr ".wl[300].w[0]"  1;
+	setAttr ".wl[301].w[0]"  1;
+	setAttr ".wl[302].w[0]"  1;
+	setAttr ".wl[303].w[0]"  1;
+	setAttr ".wl[304].w[0]"  1;
+	setAttr ".wl[305].w[0]"  1;
+	setAttr ".wl[306].w[0]"  1;
+	setAttr ".wl[307].w[0]"  1;
+	setAttr ".wl[308].w[0]"  1;
+	setAttr ".wl[309].w[0]"  1;
+	setAttr ".wl[310].w[0]"  1;
+	setAttr ".wl[311].w[0]"  1;
+	setAttr ".wl[312].w[0]"  1;
+	setAttr ".wl[313].w[0]"  1;
+	setAttr ".wl[314].w[0]"  1;
+	setAttr ".wl[315].w[0]"  1;
+	setAttr ".wl[316].w[0]"  1;
+	setAttr ".wl[317].w[0]"  1;
+	setAttr ".wl[318].w[0]"  1;
+	setAttr ".wl[319].w[0]"  1;
+	setAttr ".wl[320].w[0]"  1;
+	setAttr ".wl[321].w[0]"  1;
+	setAttr ".wl[322].w[0]"  1;
+	setAttr ".wl[323].w[0]"  1;
+	setAttr ".wl[324].w[0]"  1;
+	setAttr ".wl[325].w[0]"  1;
+	setAttr ".wl[326].w[0]"  1;
+	setAttr ".wl[327].w[0]"  1;
+	setAttr ".wl[328].w[0]"  1;
+	setAttr ".wl[329].w[0]"  1;
+	setAttr ".wl[330].w[0]"  1;
+	setAttr ".wl[331].w[0]"  1;
+	setAttr ".wl[332].w[0]"  1;
+	setAttr ".wl[333].w[0]"  1;
+	setAttr ".wl[334].w[0]"  1;
+	setAttr ".wl[335].w[0]"  1;
+	setAttr ".wl[336].w[0]"  1;
+	setAttr ".wl[337].w[0]"  1;
+	setAttr ".wl[338].w[0]"  1;
+	setAttr ".wl[339].w[0]"  1;
+	setAttr ".wl[340].w[0]"  1;
+	setAttr ".wl[341].w[0]"  1;
+	setAttr ".wl[342].w[0]"  1;
+	setAttr ".wl[343].w[0]"  1;
+	setAttr ".wl[344].w[0]"  1;
+	setAttr ".wl[345].w[0]"  1;
+	setAttr ".wl[346].w[0]"  1;
+	setAttr ".wl[347].w[0]"  1;
+	setAttr ".wl[348].w[0]"  1;
+	setAttr ".wl[349].w[0]"  1;
+	setAttr ".wl[350].w[0]"  1;
+	setAttr ".wl[351].w[0]"  1;
+	setAttr ".wl[352].w[0]"  1;
+	setAttr ".wl[353].w[0]"  1;
+	setAttr ".wl[354].w[0]"  1;
+	setAttr ".wl[355].w[0]"  1;
+	setAttr ".wl[356].w[0]"  1;
+	setAttr ".wl[357].w[0]"  1;
+	setAttr ".wl[358].w[0]"  1;
+	setAttr ".wl[359].w[0]"  1;
+	setAttr ".wl[360].w[0]"  1;
+	setAttr ".wl[361].w[0]"  1;
+	setAttr ".wl[362].w[0]"  1;
+	setAttr ".wl[363].w[0]"  1;
+	setAttr ".wl[364].w[0]"  1;
+	setAttr ".wl[365].w[0]"  1;
+	setAttr ".wl[366].w[0]"  1;
+	setAttr ".wl[367].w[0]"  1;
+	setAttr ".wl[368].w[0]"  1;
+	setAttr ".wl[369].w[0]"  1;
+	setAttr ".wl[370].w[0]"  1;
+	setAttr ".wl[371].w[0]"  1;
+	setAttr ".wl[372].w[0]"  1;
+	setAttr ".wl[373].w[0]"  1;
+	setAttr ".wl[374].w[0]"  1;
+	setAttr ".wl[375].w[0]"  1;
+	setAttr ".wl[376].w[0]"  1;
+	setAttr ".wl[377].w[0]"  1;
+	setAttr ".wl[378].w[0]"  1;
+	setAttr ".wl[379].w[0]"  1;
+	setAttr ".wl[380].w[0]"  1;
+	setAttr ".wl[381].w[0]"  1;
+	setAttr ".wl[382].w[0]"  1;
+	setAttr ".wl[383].w[0]"  1;
+	setAttr ".wl[384].w[0]"  1;
+	setAttr ".wl[385].w[0]"  1;
+	setAttr ".wl[386].w[0]"  1;
+	setAttr ".wl[387].w[0]"  1;
+	setAttr ".wl[388].w[0]"  1;
+	setAttr ".wl[389].w[0]"  1;
+	setAttr ".wl[390].w[0]"  1;
+	setAttr ".wl[391].w[0]"  1;
+	setAttr ".wl[392].w[0]"  1;
+	setAttr ".wl[393].w[0]"  1;
+	setAttr ".wl[394].w[0]"  1;
+	setAttr ".wl[395].w[0]"  1;
+	setAttr ".wl[396].w[0]"  1;
+	setAttr ".wl[397].w[0]"  1;
+	setAttr ".wl[398].w[0]"  1;
+	setAttr ".wl[399].w[0]"  1;
+	setAttr ".wl[400].w[0]"  1;
+	setAttr ".wl[401].w[0]"  1;
+	setAttr ".wl[402].w[0]"  1;
+	setAttr ".wl[403].w[0]"  1;
+	setAttr ".wl[404].w[0]"  1;
+	setAttr ".wl[405].w[0]"  1;
+	setAttr ".wl[406].w[0]"  1;
+	setAttr ".wl[407].w[0]"  1;
+	setAttr ".wl[408].w[0]"  1;
+	setAttr ".wl[409].w[0]"  1;
+	setAttr ".wl[410].w[0]"  1;
+	setAttr ".wl[411].w[0]"  1;
+	setAttr ".wl[412].w[0]"  1;
+	setAttr ".wl[413].w[0]"  1;
+	setAttr ".wl[414].w[0]"  1;
+	setAttr ".wl[415].w[0]"  1;
+	setAttr ".wl[416].w[0]"  1;
+	setAttr ".wl[417].w[0]"  1;
+	setAttr ".wl[418].w[0]"  1;
+	setAttr ".wl[419].w[0]"  1;
+	setAttr ".wl[420].w[0]"  1;
+	setAttr ".wl[421].w[0]"  1;
+	setAttr ".wl[422].w[0]"  1;
+	setAttr ".wl[423].w[0]"  1;
+	setAttr ".wl[424].w[0]"  1;
+	setAttr ".wl[425].w[0]"  1;
+	setAttr ".wl[426].w[0]"  1;
+	setAttr ".wl[427].w[0]"  1;
+	setAttr ".wl[428].w[0]"  1;
+	setAttr ".wl[429].w[0]"  1;
+	setAttr ".wl[430].w[0]"  1;
+	setAttr ".wl[431].w[0]"  1;
+	setAttr ".wl[432].w[0]"  1;
+	setAttr ".wl[433].w[0]"  1;
+	setAttr ".wl[434].w[0]"  1;
+	setAttr ".wl[435].w[0]"  1;
+	setAttr ".wl[436].w[0]"  1;
+	setAttr ".wl[437].w[0]"  1;
+	setAttr ".wl[438].w[0]"  1;
+	setAttr ".wl[439].w[0]"  1;
+	setAttr ".wl[440].w[0]"  1;
+	setAttr ".wl[441].w[0]"  1;
+	setAttr ".wl[442].w[0]"  1;
+	setAttr ".wl[443].w[0]"  1;
+	setAttr ".wl[444].w[0]"  1;
+	setAttr ".wl[445].w[0]"  1;
+	setAttr ".wl[446].w[0]"  1;
+	setAttr ".wl[447].w[0]"  1;
+	setAttr ".wl[448].w[0]"  1;
+	setAttr ".wl[449].w[0]"  1;
+	setAttr ".wl[450].w[0]"  1;
+	setAttr ".wl[451].w[0]"  1;
+	setAttr ".wl[452].w[0]"  1;
+	setAttr ".wl[453].w[0]"  1;
+	setAttr ".wl[454].w[0]"  1;
+	setAttr ".wl[455].w[0]"  1;
+	setAttr ".wl[456].w[0]"  1;
+	setAttr ".wl[457].w[0]"  1;
+	setAttr ".wl[458].w[0]"  1;
+	setAttr ".wl[459].w[0]"  1;
+	setAttr ".wl[460].w[0]"  1;
+	setAttr ".wl[461].w[0]"  1;
+	setAttr ".wl[462].w[0]"  1;
+	setAttr ".wl[463].w[0]"  1;
+	setAttr ".wl[464].w[0]"  1;
+	setAttr ".wl[465].w[0]"  1;
+	setAttr ".wl[466].w[0]"  1;
+	setAttr ".wl[467].w[0]"  1;
+	setAttr ".wl[468].w[0]"  1;
+	setAttr ".wl[469].w[0]"  1;
+	setAttr ".wl[470].w[0]"  1;
+	setAttr ".wl[471].w[0]"  1;
+	setAttr ".wl[472].w[0]"  1;
+	setAttr ".wl[473].w[0]"  1;
+	setAttr ".wl[474].w[0]"  1;
+	setAttr ".wl[475].w[0]"  1;
+	setAttr ".wl[476].w[0]"  1;
+	setAttr ".wl[477].w[0]"  1;
+	setAttr ".wl[478].w[0]"  1;
+	setAttr ".wl[479].w[0]"  1;
+	setAttr ".wl[480].w[0]"  1;
+	setAttr ".wl[481].w[0]"  1;
+	setAttr ".wl[482].w[0]"  1;
+	setAttr ".wl[483].w[0]"  1;
+	setAttr ".wl[484].w[0]"  1;
+	setAttr ".wl[485].w[0]"  1;
+	setAttr ".wl[486].w[0]"  1;
+	setAttr ".wl[487].w[0]"  1;
+	setAttr ".wl[488].w[0]"  1;
+	setAttr ".wl[489].w[0]"  1;
+	setAttr ".wl[490].w[0]"  1;
+	setAttr ".wl[491].w[0]"  1;
+	setAttr ".wl[492].w[0]"  1;
+	setAttr ".wl[493].w[0]"  1;
+	setAttr ".wl[494].w[0]"  1;
+	setAttr ".wl[495].w[0]"  1;
+	setAttr ".wl[496].w[0]"  1;
+	setAttr ".wl[497].w[0]"  1;
+	setAttr ".wl[498].w[0]"  1;
+	setAttr ".wl[499].w[0]"  1;
+	setAttr ".wl[500].w[0]"  1;
+	setAttr ".wl[501].w[0]"  1;
+	setAttr ".wl[502].w[0]"  1;
+	setAttr ".wl[503].w[0]"  1;
+	setAttr ".wl[504].w[0]"  1;
+	setAttr ".wl[505].w[0]"  1;
+	setAttr ".wl[506].w[0]"  1;
+	setAttr ".wl[507].w[0]"  1;
+	setAttr ".wl[508].w[0]"  1;
+	setAttr ".wl[509].w[0]"  1;
+	setAttr ".wl[510].w[0]"  1;
+	setAttr ".wl[511].w[0]"  1;
+	setAttr ".wl[512].w[0]"  1;
+	setAttr ".wl[513].w[0]"  1;
+	setAttr ".wl[514].w[0]"  1;
+	setAttr ".wl[515].w[0]"  1;
+	setAttr ".wl[516].w[0]"  1;
+	setAttr ".wl[517].w[0]"  1;
+	setAttr ".wl[518].w[0]"  1;
+	setAttr ".wl[519].w[0]"  1;
+	setAttr ".wl[520].w[0]"  1;
+	setAttr ".wl[521].w[0]"  1;
+	setAttr ".wl[522].w[0]"  1;
+	setAttr ".wl[523].w[0]"  1;
+	setAttr ".wl[524].w[0]"  1;
+	setAttr ".wl[525].w[0]"  1;
+	setAttr ".wl[526].w[0]"  1;
+	setAttr ".wl[527].w[0]"  1;
+	setAttr ".wl[528].w[0]"  1;
+	setAttr ".wl[529].w[0]"  1;
+	setAttr ".wl[530].w[0]"  1;
+	setAttr ".wl[531].w[0]"  1;
+	setAttr ".wl[532].w[0]"  1;
+	setAttr ".wl[533].w[0]"  1;
+	setAttr ".wl[534].w[0]"  1;
+	setAttr ".wl[535].w[0]"  1;
+	setAttr ".wl[536].w[0]"  1;
+	setAttr ".wl[537].w[0]"  1;
+	setAttr ".wl[538].w[0]"  1;
+	setAttr ".wl[539].w[0]"  1;
+	setAttr ".wl[540].w[0]"  1;
+	setAttr ".wl[541].w[0]"  1;
+	setAttr ".wl[542].w[0]"  1;
+	setAttr ".wl[543].w[0]"  1;
+	setAttr ".wl[544].w[0]"  1;
+	setAttr ".wl[545].w[0]"  1;
+	setAttr ".wl[546].w[0]"  1;
+	setAttr ".wl[547].w[0]"  1;
+	setAttr ".wl[548].w[0]"  1;
+	setAttr ".wl[549].w[0]"  1;
+	setAttr ".wl[550].w[0]"  1;
+	setAttr ".wl[551].w[0]"  1;
+	setAttr ".wl[552].w[0]"  1;
+	setAttr ".wl[553].w[0]"  1;
+	setAttr ".wl[554].w[0]"  1;
+	setAttr ".wl[555].w[0]"  1;
+	setAttr ".wl[556].w[0]"  1;
+	setAttr ".wl[557].w[0]"  1;
+	setAttr ".wl[558].w[0]"  1;
+	setAttr ".wl[559].w[0]"  1;
+	setAttr ".wl[560].w[0]"  1;
+	setAttr ".wl[561].w[0]"  1;
+	setAttr ".wl[562].w[0]"  1;
+	setAttr ".wl[563].w[0]"  1;
+	setAttr ".wl[564].w[0]"  1;
+	setAttr ".wl[565].w[0]"  1;
+	setAttr ".wl[566].w[0]"  1;
+	setAttr ".wl[567].w[0]"  1;
+	setAttr ".wl[568].w[0]"  1;
+	setAttr ".wl[569].w[0]"  1;
+	setAttr ".wl[570].w[0]"  1;
+	setAttr ".wl[571].w[0]"  1;
+	setAttr ".wl[572].w[0]"  1;
+	setAttr ".wl[573].w[0]"  1;
+	setAttr ".wl[574].w[0]"  1;
+	setAttr ".wl[575].w[0]"  1;
+	setAttr ".wl[576].w[0]"  1;
+	setAttr ".wl[577].w[0]"  1;
+	setAttr ".wl[578].w[0]"  1;
+	setAttr ".wl[579].w[0]"  1;
+	setAttr ".wl[580].w[0]"  1;
+	setAttr ".wl[581].w[0]"  1;
+	setAttr ".wl[582].w[0]"  1;
+	setAttr ".wl[583].w[0]"  1;
+	setAttr ".wl[584].w[0]"  1;
+	setAttr ".wl[585].w[0]"  1;
+	setAttr ".wl[586].w[0]"  1;
+	setAttr ".wl[587].w[0]"  1;
+	setAttr ".wl[588].w[0]"  1;
+	setAttr ".wl[589].w[0]"  1;
+	setAttr ".wl[590].w[0]"  1;
+	setAttr ".wl[591].w[0]"  1;
+	setAttr ".wl[592].w[0]"  1;
+	setAttr ".wl[593].w[0]"  1;
+	setAttr ".wl[594].w[0]"  1;
+	setAttr ".wl[595].w[0]"  1;
+	setAttr ".wl[596].w[0]"  1;
+	setAttr ".wl[597].w[0]"  1;
+	setAttr ".wl[598].w[0]"  1;
+	setAttr ".wl[599].w[0]"  1;
+	setAttr ".wl[600].w[0]"  1;
+	setAttr ".wl[601].w[0]"  1;
+	setAttr ".wl[602].w[0]"  1;
+	setAttr ".wl[603].w[0]"  1;
+	setAttr ".wl[604].w[0]"  1;
+	setAttr ".wl[605].w[0]"  1;
+	setAttr ".wl[606].w[0]"  1;
+	setAttr ".wl[607].w[0]"  1;
+	setAttr ".wl[608].w[0]"  1;
+	setAttr ".wl[609].w[0]"  1;
+	setAttr ".wl[610].w[0]"  1;
+	setAttr ".wl[611].w[0]"  1;
+	setAttr ".wl[612].w[0]"  1;
+	setAttr ".wl[613].w[0]"  1;
+	setAttr ".wl[614].w[0]"  1;
+	setAttr ".wl[615].w[0]"  1;
+	setAttr ".wl[616].w[0]"  1;
+	setAttr ".wl[617].w[0]"  1;
+	setAttr ".wl[618].w[0]"  1;
+	setAttr ".wl[619].w[0]"  1;
+	setAttr ".wl[620].w[0]"  1;
+	setAttr ".wl[621].w[0]"  1;
+	setAttr ".wl[622].w[0]"  1;
+	setAttr ".wl[623].w[0]"  1;
+	setAttr ".wl[624].w[0]"  1;
+	setAttr ".wl[625].w[0]"  1;
+	setAttr ".wl[626].w[0]"  1;
+	setAttr ".wl[627].w[0]"  1;
+	setAttr ".wl[628].w[0]"  1;
+	setAttr ".wl[629].w[0]"  1;
+	setAttr ".wl[630].w[0]"  1;
+	setAttr ".wl[631].w[0]"  1;
+	setAttr ".wl[632].w[0]"  1;
+	setAttr ".wl[633].w[0]"  1;
+	setAttr ".wl[634].w[0]"  1;
+	setAttr ".wl[635].w[0]"  1;
+	setAttr ".wl[636].w[0]"  1;
+	setAttr ".wl[637].w[0]"  1;
+	setAttr ".wl[638].w[0]"  1;
+	setAttr ".wl[639].w[0]"  1;
+	setAttr ".wl[640].w[0]"  1;
+	setAttr ".wl[641].w[0]"  1;
+	setAttr ".wl[642].w[0]"  1;
+	setAttr ".wl[643].w[0]"  1;
+	setAttr ".wl[644].w[0]"  1;
+	setAttr ".wl[645].w[0]"  1;
+	setAttr ".wl[646].w[0]"  1;
+	setAttr ".wl[647].w[0]"  1;
+	setAttr ".wl[648].w[0]"  1;
+	setAttr ".wl[649].w[0]"  1;
+	setAttr ".wl[650].w[0]"  1;
+	setAttr ".wl[651].w[0]"  1;
+	setAttr ".wl[652].w[0]"  1;
+	setAttr ".wl[653].w[0]"  1;
+	setAttr ".wl[654].w[0]"  1;
+	setAttr ".wl[655].w[0]"  1;
+	setAttr ".wl[656].w[0]"  1;
+	setAttr ".wl[657].w[0]"  1;
+	setAttr ".wl[658].w[0]"  1;
+	setAttr ".wl[659].w[0]"  1;
+	setAttr ".wl[660].w[0]"  1;
+	setAttr ".wl[661].w[0]"  1;
+	setAttr ".wl[662].w[0]"  1;
+	setAttr ".wl[663].w[0]"  1;
+	setAttr ".wl[664].w[0]"  1;
+	setAttr ".wl[665].w[0]"  1;
+	setAttr ".wl[666].w[0]"  1;
+	setAttr ".wl[667].w[0]"  1;
+	setAttr ".wl[668].w[0]"  1;
+	setAttr ".wl[669].w[0]"  1;
+	setAttr ".wl[670].w[0]"  1;
+	setAttr ".wl[671].w[0]"  1;
+	setAttr ".wl[672].w[0]"  1;
+	setAttr ".wl[673].w[0]"  1;
+	setAttr ".wl[674].w[0]"  1;
+	setAttr ".wl[675].w[0]"  1;
+	setAttr ".wl[676].w[0]"  1;
+	setAttr ".wl[677].w[0]"  1;
+	setAttr ".wl[678].w[0]"  1;
+	setAttr ".wl[679].w[0]"  1;
+	setAttr ".wl[680].w[0]"  1;
+	setAttr ".wl[681].w[0]"  1;
+	setAttr ".wl[682].w[0]"  1;
+	setAttr ".wl[683].w[0]"  1;
+	setAttr ".wl[684].w[0]"  1;
+	setAttr ".wl[685].w[0]"  1;
+	setAttr ".wl[686].w[0]"  1;
+	setAttr ".wl[687].w[0]"  1;
+	setAttr ".wl[688].w[0]"  1;
+	setAttr ".wl[689].w[0]"  1;
+	setAttr ".wl[690].w[0]"  1;
+	setAttr ".wl[691].w[0]"  1;
+	setAttr ".wl[692].w[0]"  1;
+	setAttr ".wl[693].w[0]"  1;
+	setAttr ".wl[694].w[0]"  1;
+	setAttr ".wl[695].w[0]"  1;
+	setAttr ".wl[696].w[0]"  1;
+	setAttr ".wl[697].w[0]"  1;
+	setAttr ".wl[698].w[0]"  1;
+	setAttr ".wl[699].w[0]"  1;
+	setAttr ".wl[700].w[0]"  1;
+	setAttr ".wl[701].w[0]"  1;
+	setAttr ".wl[702].w[0]"  1;
+	setAttr ".wl[703].w[0]"  1;
+	setAttr ".wl[704].w[0]"  1;
+	setAttr ".wl[705].w[0]"  1;
+	setAttr ".wl[706].w[0]"  1;
+	setAttr ".wl[707].w[0]"  1;
+	setAttr ".wl[708].w[0]"  1;
+	setAttr ".wl[709].w[0]"  1;
+	setAttr ".wl[710].w[0]"  1;
+	setAttr ".wl[711].w[0]"  1;
+	setAttr ".wl[712].w[0]"  1;
+	setAttr ".wl[713].w[0]"  1;
+	setAttr ".wl[714].w[0]"  1;
+	setAttr ".wl[715].w[0]"  1;
+	setAttr ".wl[716].w[0]"  1;
+	setAttr ".wl[717].w[0]"  1;
+	setAttr ".wl[718].w[0]"  1;
+	setAttr ".wl[719].w[0]"  1;
+	setAttr ".wl[720].w[0]"  1;
+	setAttr ".wl[721].w[0]"  1;
+	setAttr ".wl[722].w[0]"  1;
+	setAttr ".wl[723].w[0]"  1;
+	setAttr ".wl[724].w[0]"  1;
+	setAttr ".wl[725].w[0]"  1;
+	setAttr ".wl[726].w[0]"  1;
+	setAttr ".wl[727].w[0]"  1;
+	setAttr ".wl[728].w[0]"  1;
+	setAttr ".wl[729].w[0]"  1;
+	setAttr ".wl[730].w[0]"  1;
+	setAttr ".wl[731].w[0]"  1;
+	setAttr ".wl[732].w[0]"  1;
+	setAttr ".wl[733].w[0]"  1;
+	setAttr ".wl[734].w[0]"  1;
+	setAttr ".wl[735].w[0]"  1;
+	setAttr ".wl[736].w[0]"  1;
+	setAttr ".wl[737].w[0]"  1;
+	setAttr ".wl[738].w[0]"  1;
+	setAttr ".wl[739].w[0]"  1;
+	setAttr ".wl[740].w[0]"  1;
+	setAttr ".wl[741].w[0]"  1;
+	setAttr ".pm[0]" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -2.0717962474645071 -7.7869974582191714 -0 1;
+	setAttr ".gm" -type "matrix" -0.16999195737462339 -0.022042143886524968 0.023364039052140618 0
+		 -0.030650151080491669 0.14895184043430759 -0.082479800375459239 0 -0.0096074276831656178 -0.085185052234052774 -0.15026710953896213 0
+		 2.1925822276733524 7.3141104211557479 0.25508345385099579 1;
+	setAttr ".dpf[0]"  1;
+	setAttr ".mi" 1;
+	setAttr ".ucm" yes;
+createNode tweak -n "tweak21";
+	rename -uid "EA3ADDEF-47B9-E07F-5EC5-87B290D4F62A";
+createNode objectSet -n "skinCluster21Set";
+	rename -uid "8911EAEF-4CC3-49DD-700E-64B4A7460921";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "skinCluster21GroupId";
+	rename -uid "4B8749E7-4952-F613-AFEC-A995E15BC323";
+	setAttr ".ihi" 0;
+createNode groupParts -n "skinCluster21GroupParts";
+	rename -uid "3361D929-442E-50C9-53C0-B5ACBD193979";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode objectSet -n "tweakSet21";
+	rename -uid "716382EE-4373-0686-1BE7-11B5D282FA71";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "groupId45";
+	rename -uid "B48C8C41-40DF-F158-8DF7-0084FCDAB3D7";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts45";
+	rename -uid "8DC4FA20-41CC-504A-7F84-D4BB75821875";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode groupId -n "groupId46";
+	rename -uid "86A19E54-46F1-B313-B9DF-03BF992E8452";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts46";
+	rename -uid "E634C06A-4C3A-4F32-6D5E-08A12F763144";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:752]";
+createNode skinCluster -n "skinCluster22";
+	rename -uid "8B066358-4A91-8D16-915F-AFA4E65A0DFB";
+	setAttr -s 164 ".wl";
+	setAttr ".wl[0].w[0]"  1;
+	setAttr ".wl[1].w[0]"  1;
+	setAttr ".wl[2].w[0]"  1;
+	setAttr ".wl[3].w[0]"  1;
+	setAttr ".wl[4].w[0]"  1;
+	setAttr ".wl[5].w[0]"  1;
+	setAttr ".wl[6].w[0]"  1;
+	setAttr ".wl[7].w[0]"  1;
+	setAttr ".wl[8].w[0]"  1;
+	setAttr ".wl[9].w[0]"  1;
+	setAttr ".wl[10].w[0]"  1;
+	setAttr ".wl[11].w[0]"  1;
+	setAttr ".wl[12].w[0]"  1;
+	setAttr ".wl[13].w[0]"  1;
+	setAttr ".wl[14].w[0]"  1;
+	setAttr ".wl[15].w[0]"  1;
+	setAttr ".wl[16].w[0]"  1;
+	setAttr ".wl[17].w[0]"  1;
+	setAttr ".wl[18].w[0]"  1;
+	setAttr ".wl[19].w[0]"  1;
+	setAttr ".wl[20].w[0]"  1;
+	setAttr ".wl[21].w[0]"  1;
+	setAttr ".wl[22].w[0]"  1;
+	setAttr ".wl[23].w[0]"  1;
+	setAttr ".wl[24].w[0]"  1;
+	setAttr ".wl[25].w[0]"  1;
+	setAttr ".wl[26].w[0]"  1;
+	setAttr ".wl[27].w[0]"  1;
+	setAttr ".wl[28].w[0]"  1;
+	setAttr ".wl[29].w[0]"  1;
+	setAttr ".wl[30].w[0]"  1;
+	setAttr ".wl[31].w[0]"  1;
+	setAttr ".wl[32].w[0]"  1;
+	setAttr ".wl[33].w[0]"  1;
+	setAttr ".wl[34].w[0]"  1;
+	setAttr ".wl[35].w[0]"  1;
+	setAttr ".wl[36].w[0]"  1;
+	setAttr ".wl[37].w[0]"  1;
+	setAttr ".wl[38].w[0]"  1;
+	setAttr ".wl[39].w[0]"  1;
+	setAttr ".wl[40].w[0]"  1;
+	setAttr ".wl[41].w[0]"  1;
+	setAttr ".wl[42].w[0]"  1;
+	setAttr ".wl[43].w[0]"  1;
+	setAttr ".wl[44].w[0]"  1;
+	setAttr ".wl[45].w[0]"  1;
+	setAttr ".wl[46].w[0]"  1;
+	setAttr ".wl[47].w[0]"  1;
+	setAttr ".wl[48].w[0]"  1;
+	setAttr ".wl[49].w[0]"  1;
+	setAttr ".wl[50].w[0]"  1;
+	setAttr ".wl[51].w[0]"  1;
+	setAttr ".wl[52].w[0]"  1;
+	setAttr ".wl[53].w[0]"  1;
+	setAttr ".wl[54].w[0]"  1;
+	setAttr ".wl[55].w[0]"  1;
+	setAttr ".wl[56].w[0]"  1;
+	setAttr ".wl[57].w[0]"  1;
+	setAttr ".wl[58].w[0]"  1;
+	setAttr ".wl[59].w[0]"  1;
+	setAttr ".wl[60].w[0]"  1;
+	setAttr ".wl[61].w[0]"  1;
+	setAttr ".wl[62].w[0]"  1;
+	setAttr ".wl[63].w[0]"  1;
+	setAttr ".wl[64].w[0]"  1;
+	setAttr ".wl[65].w[0]"  1;
+	setAttr ".wl[66].w[0]"  1;
+	setAttr ".wl[67].w[0]"  1;
+	setAttr ".wl[68].w[0]"  1;
+	setAttr ".wl[69].w[0]"  1;
+	setAttr ".wl[70].w[0]"  1;
+	setAttr ".wl[71].w[0]"  1;
+	setAttr ".wl[72].w[0]"  1;
+	setAttr ".wl[73].w[0]"  1;
+	setAttr ".wl[74].w[0]"  1;
+	setAttr ".wl[75].w[0]"  1;
+	setAttr ".wl[76].w[0]"  1;
+	setAttr ".wl[77].w[0]"  1;
+	setAttr ".wl[78].w[0]"  1;
+	setAttr ".wl[79].w[0]"  1;
+	setAttr ".wl[80].w[0]"  1;
+	setAttr ".wl[81].w[0]"  1;
+	setAttr ".wl[82].w[0]"  1;
+	setAttr ".wl[83].w[0]"  1;
+	setAttr ".wl[84].w[0]"  1;
+	setAttr ".wl[85].w[0]"  1;
+	setAttr ".wl[86].w[0]"  1;
+	setAttr ".wl[87].w[0]"  1;
+	setAttr ".wl[88].w[0]"  1;
+	setAttr ".wl[89].w[0]"  1;
+	setAttr ".wl[90].w[0]"  1;
+	setAttr ".wl[91].w[0]"  1;
+	setAttr ".wl[92].w[0]"  1;
+	setAttr ".wl[93].w[0]"  1;
+	setAttr ".wl[94].w[0]"  1;
+	setAttr ".wl[95].w[0]"  1;
+	setAttr ".wl[96].w[0]"  1;
+	setAttr ".wl[97].w[0]"  1;
+	setAttr ".wl[98].w[0]"  1;
+	setAttr ".wl[99].w[0]"  1;
+	setAttr ".wl[100].w[0]"  1;
+	setAttr ".wl[101].w[0]"  1;
+	setAttr ".wl[102].w[0]"  1;
+	setAttr ".wl[103].w[0]"  1;
+	setAttr ".wl[104].w[0]"  1;
+	setAttr ".wl[105].w[0]"  1;
+	setAttr ".wl[106].w[0]"  1;
+	setAttr ".wl[107].w[0]"  1;
+	setAttr ".wl[108].w[0]"  1;
+	setAttr ".wl[109].w[0]"  1;
+	setAttr ".wl[110].w[0]"  1;
+	setAttr ".wl[111].w[0]"  1;
+	setAttr ".wl[112].w[0]"  1;
+	setAttr ".wl[113].w[0]"  1;
+	setAttr ".wl[114].w[0]"  1;
+	setAttr ".wl[115].w[0]"  1;
+	setAttr ".wl[116].w[0]"  1;
+	setAttr ".wl[117].w[0]"  1;
+	setAttr ".wl[118].w[0]"  1;
+	setAttr ".wl[119].w[0]"  1;
+	setAttr ".wl[120].w[0]"  1;
+	setAttr ".wl[121].w[0]"  1;
+	setAttr ".wl[122].w[0]"  1;
+	setAttr ".wl[123].w[0]"  1;
+	setAttr ".wl[124].w[0]"  1;
+	setAttr ".wl[125].w[0]"  1;
+	setAttr ".wl[126].w[0]"  1;
+	setAttr ".wl[127].w[0]"  1;
+	setAttr ".wl[128].w[0]"  1;
+	setAttr ".wl[129].w[0]"  1;
+	setAttr ".wl[130].w[0]"  1;
+	setAttr ".wl[131].w[0]"  1;
+	setAttr ".wl[132].w[0]"  1;
+	setAttr ".wl[133].w[0]"  1;
+	setAttr ".wl[134].w[0]"  1;
+	setAttr ".wl[135].w[0]"  1;
+	setAttr ".wl[136].w[0]"  1;
+	setAttr ".wl[137].w[0]"  1;
+	setAttr ".wl[138].w[0]"  1;
+	setAttr ".wl[139].w[0]"  1;
+	setAttr ".wl[140].w[0]"  1;
+	setAttr ".wl[141].w[0]"  1;
+	setAttr ".wl[142].w[0]"  1;
+	setAttr ".wl[143].w[0]"  1;
+	setAttr ".wl[144].w[0]"  1;
+	setAttr ".wl[145].w[0]"  1;
+	setAttr ".wl[146].w[0]"  1;
+	setAttr ".wl[147].w[0]"  1;
+	setAttr ".wl[148].w[0]"  1;
+	setAttr ".wl[149].w[0]"  1;
+	setAttr ".wl[150].w[0]"  1;
+	setAttr ".wl[151].w[0]"  1;
+	setAttr ".wl[152].w[0]"  1;
+	setAttr ".wl[153].w[0]"  1;
+	setAttr ".wl[154].w[0]"  1;
+	setAttr ".wl[155].w[0]"  1;
+	setAttr ".wl[156].w[0]"  1;
+	setAttr ".wl[157].w[0]"  1;
+	setAttr ".wl[158].w[0]"  1;
+	setAttr ".wl[159].w[0]"  1;
+	setAttr ".wl[160].w[0]"  1;
+	setAttr ".wl[161].w[0]"  1;
+	setAttr ".wl[162].w[0]"  1;
+	setAttr ".wl[163].w[0]"  1;
+	setAttr ".pm[0]" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -2.0717962474645071 -7.7869974582191714 -0 1;
+	setAttr ".gm" -type "matrix" -0.16999195737462339 -0.022042143886524968 0.023364039052140618 0
+		 -0.030650151080491669 0.14895184043430759 -0.082479800375459239 0 -0.0096074276831656178 -0.085185052234052774 -0.15026710953896213 0
+		 2.1919242237049632 7.3140251005419188 0.25517389124963119 1;
+	setAttr ".dpf[0]"  1;
+	setAttr ".mi" 1;
+	setAttr ".ucm" yes;
+createNode tweak -n "tweak22";
+	rename -uid "20F96AEC-487D-8DA0-0261-97B0A7DFC3F6";
+createNode objectSet -n "skinCluster22Set";
+	rename -uid "094DEF89-4F6C-A952-5F7C-F4A3C94C48A5";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "skinCluster22GroupId";
+	rename -uid "9AB6330A-4FBC-75CC-97E5-8CBAF02514B6";
+	setAttr ".ihi" 0;
+createNode groupParts -n "skinCluster22GroupParts";
+	rename -uid "B48E799C-451E-D88C-AFBD-729E81D13131";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode objectSet -n "tweakSet22";
+	rename -uid "926170DF-43AD-4F59-6B23-75BAAE7EC36C";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "groupId48";
+	rename -uid "D97FCEF8-47C1-4C65-5F44-34BE2AA1C2EA";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts48";
+	rename -uid "29FE3F6E-4BC8-5AB7-F0AC-BFABA7D2E430";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode skinCluster -n "skinCluster23";
+	rename -uid "BD37DEC1-479D-1AFF-4CAE-A6AB25176A29";
+	setAttr -s 54 ".wl";
+	setAttr ".wl[0].w[0]"  1;
+	setAttr ".wl[1].w[0]"  1;
+	setAttr ".wl[2].w[0]"  1;
+	setAttr ".wl[3].w[0]"  1;
+	setAttr ".wl[4].w[0]"  1;
+	setAttr ".wl[5].w[0]"  1;
+	setAttr ".wl[6].w[0]"  1;
+	setAttr ".wl[7].w[0]"  1;
+	setAttr ".wl[8].w[0]"  1;
+	setAttr ".wl[9].w[0]"  1;
+	setAttr ".wl[10].w[0]"  1;
+	setAttr ".wl[11].w[0]"  1;
+	setAttr ".wl[12].w[0]"  1;
+	setAttr ".wl[13].w[0]"  1;
+	setAttr ".wl[14].w[0]"  1;
+	setAttr ".wl[15].w[0]"  1;
+	setAttr ".wl[16].w[0]"  1;
+	setAttr ".wl[17].w[0]"  1;
+	setAttr ".wl[18].w[0]"  1;
+	setAttr ".wl[19].w[0]"  1;
+	setAttr ".wl[20].w[0]"  1;
+	setAttr ".wl[21].w[0]"  1;
+	setAttr ".wl[22].w[0]"  1;
+	setAttr ".wl[23].w[0]"  1;
+	setAttr ".wl[24].w[0]"  1;
+	setAttr ".wl[25].w[0]"  1;
+	setAttr ".wl[26].w[0]"  1;
+	setAttr ".wl[27].w[0]"  1;
+	setAttr ".wl[28].w[0]"  1;
+	setAttr ".wl[29].w[0]"  1;
+	setAttr ".wl[30].w[0]"  1;
+	setAttr ".wl[31].w[0]"  1;
+	setAttr ".wl[32].w[0]"  1;
+	setAttr ".wl[33].w[0]"  1;
+	setAttr ".wl[34].w[0]"  1;
+	setAttr ".wl[35].w[0]"  1;
+	setAttr ".wl[36].w[0]"  1;
+	setAttr ".wl[37].w[0]"  1;
+	setAttr ".wl[38].w[0]"  1;
+	setAttr ".wl[39].w[0]"  1;
+	setAttr ".wl[40].w[0]"  1;
+	setAttr ".wl[41].w[0]"  1;
+	setAttr ".wl[42].w[0]"  1;
+	setAttr ".wl[43].w[0]"  1;
+	setAttr ".wl[44].w[0]"  1;
+	setAttr ".wl[45].w[0]"  1;
+	setAttr ".wl[46].w[0]"  1;
+	setAttr ".wl[47].w[0]"  1;
+	setAttr ".wl[48].w[0]"  1;
+	setAttr ".wl[49].w[0]"  1;
+	setAttr ".wl[50].w[0]"  1;
+	setAttr ".wl[51].w[0]"  1;
+	setAttr ".wl[52].w[0]"  1;
+	setAttr ".wl[53].w[0]"  1;
+	setAttr ".pm[0]" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -2.0717962474645071 -7.7869974582191714 -0 1;
+	setAttr ".gm" -type "matrix" -0.16999195737462339 -0.022042143886524968 0.023364039052140618 0
+		 -0.030650151080491669 0.14895184043430759 -0.082479800375459239 0 -0.0096074276831656178 -0.085185052234052774 -0.15026710953896213 0
+		 2.1916750527385855 7.3139927915881424 0.25520813781210994 1;
+	setAttr ".dpf[0]"  1;
+	setAttr ".mi" 1;
+	setAttr ".ucm" yes;
+createNode tweak -n "tweak23";
+	rename -uid "5B2C9D77-4060-860D-2A3B-ACB0CA5F2725";
+createNode objectSet -n "skinCluster23Set";
+	rename -uid "F301302A-4026-39C1-F85B-E8A1C10AFDE2";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "skinCluster23GroupId";
+	rename -uid "F896E2A1-48C1-934D-0D25-FAB3D3491977";
+	setAttr ".ihi" 0;
+createNode groupParts -n "skinCluster23GroupParts";
+	rename -uid "373C7BB5-40BE-1F1A-55EF-62A587793E14";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode objectSet -n "tweakSet23";
+	rename -uid "EF775FFD-4C3F-B724-C5F7-109558BFB56F";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "groupId50";
+	rename -uid "7EB3A9FE-47C8-276E-C51A-5A95E05721AB";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts50";
+	rename -uid "CD633387-4CA9-33D9-3EE4-1CB481C0B04B";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode groupId -n "groupId51";
+	rename -uid "F6EAF63D-45A4-5B1C-ED9D-CEA797E472D8";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts51";
+	rename -uid "1894195C-44D0-BAFD-A5D5-7F897C8B2E48";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:51]";
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -21070,18 +25162,19 @@ select -ne :hardwareRenderingGlobals;
 		 0 0 0 0 ;
 	setAttr ".fprt" yes;
 select -ne :renderPartition;
-	setAttr -s 24 ".st";
+	setAttr -s 34 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 16 ".s";
+	setAttr -s 23 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 53 ".u";
+	setAttr -s 94 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 3 ".r";
+	setAttr -s 4 ".r";
+select -ne :lightList1;
 select -ne :defaultTextureList1;
-	setAttr -s 41 ".tx";
+	setAttr -s 73 ".tx";
 select -ne :initialShadingGroup;
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
@@ -21090,6 +25183,7 @@ select -ne :defaultRenderGlobals;
 	setAttr ".ren" -type "string" "mentalRay";
 select -ne :defaultResolution;
 	setAttr ".pa" 1;
+select -ne :defaultLightSet;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
@@ -21136,6 +25230,54 @@ connectAttr "gorilla_spy_eyesShapeDeformed.iog" "final_gorilla_mesh_3_0_RN.phl[3
 connectAttr "gorilla_spy_shirt1ShapeDeformed.iog.og[2]" "final_gorilla_mesh_3_0_RN.phl[39]"
 		;
 connectAttr "groupId16.msg" "final_gorilla_mesh_3_0_RN.phl[40]";
+connectAttr "hammer_meshRN.phl[1]" "groupParts22.ig";
+connectAttr "hammer_meshRN.phl[2]" "groupParts24.ig";
+connectAttr "hammer_meshRN.phl[3]" "groupParts27.ig";
+connectAttr "hammer_meshRN.phl[4]" "groupParts29.ig";
+connectAttr "hammer_meshRN.phl[5]" "groupParts31.ig";
+connectAttr "hammer_meshRN.phl[6]" "groupParts33.ig";
+connectAttr "hammer_meshRN.phl[7]" "groupParts35.ig";
+connectAttr "hammer_meshRN.phl[8]" "groupParts37.ig";
+connectAttr "hammer_meshRN.phl[9]" "groupParts39.ig";
+connectAttr "hammer_meshRN.phl[10]" "groupParts41.ig";
+connectAttr "hammer_meshRN.phl[11]" "groupParts43.ig";
+connectAttr "hammer_meshRN.phl[12]" "groupParts45.ig";
+connectAttr "hammer_meshRN.phl[13]" "groupParts48.ig";
+connectAttr "hammer_meshRN.phl[14]" "groupParts50.ig";
+connectAttr "hammer_meshRN.phl[15]" "barellShapeDeformed.uvst[0].uvtw";
+connectAttr "hammer_meshRN.phl[16]" "slide_releaseShapeDeformed.uvst[0].uvtw";
+connectAttr "hammer_meshRN.phl[17]" "safteyShapeDeformed.uvst[0].uvtw";
+connectAttr "hammer_meshRN.phl[18]" "triggerShapeDeformed.uvst[0].uvtw";
+connectAttr "hammer_meshRN.phl[19]" "clip_releaseShapeDeformed.uvst[0].uvtw";
+connectAttr "hammer_meshRN.phl[20]" "pistol_gripShapeDeformed.uvst[0].uvtw";
+connectAttr "hammer_meshRN.phl[21]" "hammerShapeDeformed.uvst[0].uvtw";
+connectAttr "hammer_meshRN.phl[22]" "pistol_handleShapeDeformed.uvst[0].uvtw";
+connectAttr "hammer_meshRN.phl[23]" "muzzel_flashShapeDeformed.uvst[0].uvtw";
+connectAttr "hammer_meshRN.phl[24]" "bottom_cylinderShapeDeformed.uvst[0].uvtw";
+connectAttr "hammer_meshRN.phl[25]" "clipShapeDeformed.uvst[0].uvtw";
+connectAttr "hammer_meshRN.phl[26]" "sight_mountShapeDeformed.uvst[0].uvtw";
+connectAttr "hammer_meshRN.phl[27]" "sightShapeDeformed.uvst[0].uvtw";
+connectAttr "hammer_meshRN.phl[28]" "slideShapeDeformed.uvst[0].uvtw";
+connectAttr "muzzel_flashShapeDeformed.iog" "hammer_meshRN.phl[29]";
+connectAttr "sightShapeDeformed.iog" "hammer_meshRN.phl[30]";
+connectAttr "barellShapeDeformed.iog" "hammer_meshRN.phl[31]";
+connectAttr "bottom_cylinderShapeDeformed.iog" "hammer_meshRN.phl[32]";
+connectAttr "hammer_meshRN.phl[33]" "slideShapeDeformed.iog.og[2].gco";
+connectAttr "hammer_meshRN.phl[34]" "sight_mountShapeDeformed.iog.og[2].gco";
+connectAttr "slideShapeDeformed.iog.og[2]" "hammer_meshRN.phl[35]";
+connectAttr "sight_mountShapeDeformed.iog.og[2]" "hammer_meshRN.phl[36]";
+connectAttr "groupId46.msg" "hammer_meshRN.phl[37]";
+connectAttr "groupId51.msg" "hammer_meshRN.phl[38]";
+connectAttr "clipShapeDeformed.iog" "hammer_meshRN.phl[39]";
+connectAttr "pistol_gripShapeDeformed.iog" "hammer_meshRN.phl[40]";
+connectAttr "safteyShapeDeformed.iog" "hammer_meshRN.phl[41]";
+connectAttr "hammerShapeDeformed.iog" "hammer_meshRN.phl[42]";
+connectAttr "triggerShapeDeformed.iog" "hammer_meshRN.phl[43]";
+connectAttr "clip_releaseShapeDeformed.iog" "hammer_meshRN.phl[44]";
+connectAttr "slide_releaseShapeDeformed.iog" "hammer_meshRN.phl[45]";
+connectAttr "hammer_meshRN.phl[46]" "pistol_handleShapeDeformed.iog.og[2].gco";
+connectAttr "pistol_handleShapeDeformed.iog.og[2]" "hammer_meshRN.phl[47]";
+connectAttr "groupId25.msg" "hammer_meshRN.phl[48]";
 connectAttr "R_IK_FK_switch_cntrl_parentConstraint1.ctx" "R_IK_FK_switch_cntrl.tx"
 		;
 connectAttr "R_IK_FK_switch_cntrl_parentConstraint1.cty" "R_IK_FK_switch_cntrl.ty"
@@ -21877,6 +26019,7 @@ connectAttr "shoulder_jnt_orientConstraint1.w0" "shoulder_jnt_orientConstraint1.
 connectAttr "shoulder_jnt.s" "holster_mid_back_jnt.is";
 connectAttr "shoulder_jnt.s" "holster_R_armpit_jnt.is";
 connectAttr "shoulder_jnt.s" "holster_L_armpit_jnt.is";
+connectAttr "holster_L_armpit_jnt.s" "joint76.is";
 connectAttr "spine_mid_joint.ro" "spine_mid_joint_orientConstraint1.cro";
 connectAttr "spine_mid_joint.pim" "spine_mid_joint_orientConstraint1.cpim";
 connectAttr "spine_mid_joint.jo" "spine_mid_joint_orientConstraint1.cjo";
@@ -22060,6 +26203,96 @@ connectAttr "groupId7.id" "gorilla_spy_baseShapeDeformed.iog.og[1].gid";
 connectAttr "tweakSet3.mwc" "gorilla_spy_baseShapeDeformed.iog.og[1].gco";
 connectAttr "skinCluster3.og[0]" "gorilla_spy_baseShapeDeformed.i";
 connectAttr "tweak3.vl[0].vt[0]" "gorilla_spy_baseShapeDeformed.twl";
+connectAttr "skinCluster21GroupId.id" "slideShapeDeformed.iog.og[0].gid";
+connectAttr "skinCluster21Set.mwc" "slideShapeDeformed.iog.og[0].gco";
+connectAttr "groupId45.id" "slideShapeDeformed.iog.og[1].gid";
+connectAttr "tweakSet21.mwc" "slideShapeDeformed.iog.og[1].gco";
+connectAttr "groupId46.id" "slideShapeDeformed.iog.og[2].gid";
+connectAttr "groupParts46.og" "slideShapeDeformed.i";
+connectAttr "tweak21.vl[0].vt[0]" "slideShapeDeformed.twl";
+connectAttr "skinCluster23GroupId.id" "sight_mountShapeDeformed.iog.og[0].gid";
+connectAttr "skinCluster23Set.mwc" "sight_mountShapeDeformed.iog.og[0].gco";
+connectAttr "groupId50.id" "sight_mountShapeDeformed.iog.og[1].gid";
+connectAttr "tweakSet23.mwc" "sight_mountShapeDeformed.iog.og[1].gco";
+connectAttr "groupId51.id" "sight_mountShapeDeformed.iog.og[2].gid";
+connectAttr "groupParts51.og" "sight_mountShapeDeformed.i";
+connectAttr "tweak23.vl[0].vt[0]" "sight_mountShapeDeformed.twl";
+connectAttr "skinCluster22GroupId.id" "sightShapeDeformed.iog.og[0].gid";
+connectAttr "skinCluster22Set.mwc" "sightShapeDeformed.iog.og[0].gco";
+connectAttr "groupId48.id" "sightShapeDeformed.iog.og[1].gid";
+connectAttr "tweakSet22.mwc" "sightShapeDeformed.iog.og[1].gco";
+connectAttr "skinCluster22.og[0]" "sightShapeDeformed.i";
+connectAttr "tweak22.vl[0].vt[0]" "sightShapeDeformed.twl";
+connectAttr "skinCluster20GroupId.id" "clipShapeDeformed.iog.og[0].gid";
+connectAttr "skinCluster20Set.mwc" "clipShapeDeformed.iog.og[0].gco";
+connectAttr "groupId43.id" "clipShapeDeformed.iog.og[1].gid";
+connectAttr "tweakSet20.mwc" "clipShapeDeformed.iog.og[1].gco";
+connectAttr "skinCluster20.og[0]" "clipShapeDeformed.i";
+connectAttr "tweak20.vl[0].vt[0]" "clipShapeDeformed.twl";
+connectAttr "skinCluster19GroupId.id" "bottom_cylinderShapeDeformed.iog.og[0].gid"
+		;
+connectAttr "skinCluster19Set.mwc" "bottom_cylinderShapeDeformed.iog.og[0].gco";
+connectAttr "groupId41.id" "bottom_cylinderShapeDeformed.iog.og[1].gid";
+connectAttr "tweakSet19.mwc" "bottom_cylinderShapeDeformed.iog.og[1].gco";
+connectAttr "skinCluster19.og[0]" "bottom_cylinderShapeDeformed.i";
+connectAttr "tweak19.vl[0].vt[0]" "bottom_cylinderShapeDeformed.twl";
+connectAttr "skinCluster18GroupId.id" "muzzel_flashShapeDeformed.iog.og[0].gid";
+connectAttr "skinCluster18Set.mwc" "muzzel_flashShapeDeformed.iog.og[0].gco";
+connectAttr "groupId39.id" "muzzel_flashShapeDeformed.iog.og[1].gid";
+connectAttr "tweakSet18.mwc" "muzzel_flashShapeDeformed.iog.og[1].gco";
+connectAttr "skinCluster18.og[0]" "muzzel_flashShapeDeformed.i";
+connectAttr "tweak18.vl[0].vt[0]" "muzzel_flashShapeDeformed.twl";
+connectAttr "skinCluster11GroupId.id" "pistol_handleShapeDeformed.iog.og[0].gid"
+		;
+connectAttr "skinCluster11Set.mwc" "pistol_handleShapeDeformed.iog.og[0].gco";
+connectAttr "groupId24.id" "pistol_handleShapeDeformed.iog.og[1].gid";
+connectAttr "tweakSet11.mwc" "pistol_handleShapeDeformed.iog.og[1].gco";
+connectAttr "groupId25.id" "pistol_handleShapeDeformed.iog.og[2].gid";
+connectAttr "groupParts25.og" "pistol_handleShapeDeformed.i";
+connectAttr "tweak11.vl[0].vt[0]" "pistol_handleShapeDeformed.twl";
+connectAttr "skinCluster17GroupId.id" "slide_releaseShapeDeformed.iog.og[0].gid"
+		;
+connectAttr "skinCluster17Set.mwc" "slide_releaseShapeDeformed.iog.og[0].gco";
+connectAttr "groupId37.id" "slide_releaseShapeDeformed.iog.og[1].gid";
+connectAttr "tweakSet17.mwc" "slide_releaseShapeDeformed.iog.og[1].gco";
+connectAttr "skinCluster17.og[0]" "slide_releaseShapeDeformed.i";
+connectAttr "tweak17.vl[0].vt[0]" "slide_releaseShapeDeformed.twl";
+connectAttr "skinCluster16GroupId.id" "clip_releaseShapeDeformed.iog.og[0].gid";
+connectAttr "skinCluster16Set.mwc" "clip_releaseShapeDeformed.iog.og[0].gco";
+connectAttr "groupId35.id" "clip_releaseShapeDeformed.iog.og[1].gid";
+connectAttr "tweakSet16.mwc" "clip_releaseShapeDeformed.iog.og[1].gco";
+connectAttr "skinCluster16.og[0]" "clip_releaseShapeDeformed.i";
+connectAttr "tweak16.vl[0].vt[0]" "clip_releaseShapeDeformed.twl";
+connectAttr "skinCluster15GroupId.id" "triggerShapeDeformed.iog.og[0].gid";
+connectAttr "skinCluster15Set.mwc" "triggerShapeDeformed.iog.og[0].gco";
+connectAttr "groupId33.id" "triggerShapeDeformed.iog.og[1].gid";
+connectAttr "tweakSet15.mwc" "triggerShapeDeformed.iog.og[1].gco";
+connectAttr "skinCluster15.og[0]" "triggerShapeDeformed.i";
+connectAttr "tweak15.vl[0].vt[0]" "triggerShapeDeformed.twl";
+connectAttr "skinCluster14GroupId.id" "hammerShapeDeformed.iog.og[0].gid";
+connectAttr "skinCluster14Set.mwc" "hammerShapeDeformed.iog.og[0].gco";
+connectAttr "groupId31.id" "hammerShapeDeformed.iog.og[1].gid";
+connectAttr "tweakSet14.mwc" "hammerShapeDeformed.iog.og[1].gco";
+connectAttr "skinCluster14.og[0]" "hammerShapeDeformed.i";
+connectAttr "tweak14.vl[0].vt[0]" "hammerShapeDeformed.twl";
+connectAttr "skinCluster13GroupId.id" "safteyShapeDeformed.iog.og[0].gid";
+connectAttr "skinCluster13Set.mwc" "safteyShapeDeformed.iog.og[0].gco";
+connectAttr "groupId29.id" "safteyShapeDeformed.iog.og[1].gid";
+connectAttr "tweakSet13.mwc" "safteyShapeDeformed.iog.og[1].gco";
+connectAttr "skinCluster13.og[0]" "safteyShapeDeformed.i";
+connectAttr "tweak13.vl[0].vt[0]" "safteyShapeDeformed.twl";
+connectAttr "skinCluster12GroupId.id" "pistol_gripShapeDeformed.iog.og[0].gid";
+connectAttr "skinCluster12Set.mwc" "pistol_gripShapeDeformed.iog.og[0].gco";
+connectAttr "groupId27.id" "pistol_gripShapeDeformed.iog.og[1].gid";
+connectAttr "tweakSet12.mwc" "pistol_gripShapeDeformed.iog.og[1].gco";
+connectAttr "skinCluster12.og[0]" "pistol_gripShapeDeformed.i";
+connectAttr "tweak12.vl[0].vt[0]" "pistol_gripShapeDeformed.twl";
+connectAttr "skinCluster10GroupId.id" "barellShapeDeformed.iog.og[0].gid";
+connectAttr "skinCluster10Set.mwc" "barellShapeDeformed.iog.og[0].gco";
+connectAttr "groupId22.id" "barellShapeDeformed.iog.og[1].gid";
+connectAttr "tweakSet10.mwc" "barellShapeDeformed.iog.og[1].gco";
+connectAttr "skinCluster10.og[0]" "barellShapeDeformed.i";
+connectAttr "tweak10.vl[0].vt[0]" "barellShapeDeformed.twl";
 connectAttr ":mentalrayGlobals.msg" ":mentalrayItemsList.glb";
 connectAttr ":miDefaultOptions.msg" ":mentalrayItemsList.opt" -na;
 connectAttr ":miDefaultFramebuffer.msg" ":mentalrayItemsList.fb" -na;
@@ -22920,6 +27153,254 @@ connectAttr "groupId18.msg" "tweakSet8.gn" -na;
 connectAttr "gorilla_spy_holsterShapeDeformed.iog.og[1]" "tweakSet8.dsm" -na;
 connectAttr "tweak8.msg" "tweakSet8.ub[0]";
 connectAttr "groupId18.id" "groupParts18.gi";
+connectAttr "hammer_meshRNfosterParent1.msg" "hammer_meshRN.fp";
+connectAttr "skinCluster10GroupParts.og" "skinCluster10.ip[0].ig";
+connectAttr "skinCluster10GroupId.id" "skinCluster10.ip[0].gi";
+connectAttr "bindPose3.msg" "skinCluster10.bp";
+connectAttr "joint76.wm" "skinCluster10.ma[0]";
+connectAttr "joint76.liw" "skinCluster10.lw[0]";
+connectAttr "joint76.obcc" "skinCluster10.ifcl[0]";
+connectAttr "groupParts22.og" "tweak10.ip[0].ig";
+connectAttr "groupId22.id" "tweak10.ip[0].gi";
+connectAttr "skinCluster10GroupId.msg" "skinCluster10Set.gn" -na;
+connectAttr "barellShapeDeformed.iog.og[0]" "skinCluster10Set.dsm" -na;
+connectAttr "skinCluster10.msg" "skinCluster10Set.ub[0]";
+connectAttr "tweak10.og[0]" "skinCluster10GroupParts.ig";
+connectAttr "skinCluster10GroupId.id" "skinCluster10GroupParts.gi";
+connectAttr "groupId22.msg" "tweakSet10.gn" -na;
+connectAttr "barellShapeDeformed.iog.og[1]" "tweakSet10.dsm" -na;
+connectAttr "tweak10.msg" "tweakSet10.ub[0]";
+connectAttr "groupId22.id" "groupParts22.gi";
+connectAttr "joint76.msg" "bindPose3.m[0]";
+connectAttr "bindPose3.w" "bindPose3.p[0]";
+connectAttr "joint76.bps" "bindPose3.wm[0]";
+connectAttr "skinCluster11GroupParts.og" "skinCluster11.ip[0].ig";
+connectAttr "skinCluster11GroupId.id" "skinCluster11.ip[0].gi";
+connectAttr "joint76.wm" "skinCluster11.ma[0]";
+connectAttr "joint76.liw" "skinCluster11.lw[0]";
+connectAttr "joint76.obcc" "skinCluster11.ifcl[0]";
+connectAttr "bindPose3.msg" "skinCluster11.bp";
+connectAttr "groupParts24.og" "tweak11.ip[0].ig";
+connectAttr "groupId24.id" "tweak11.ip[0].gi";
+connectAttr "skinCluster11GroupId.msg" "skinCluster11Set.gn" -na;
+connectAttr "pistol_handleShapeDeformed.iog.og[0]" "skinCluster11Set.dsm" -na;
+connectAttr "skinCluster11.msg" "skinCluster11Set.ub[0]";
+connectAttr "tweak11.og[0]" "skinCluster11GroupParts.ig";
+connectAttr "skinCluster11GroupId.id" "skinCluster11GroupParts.gi";
+connectAttr "groupId24.msg" "tweakSet11.gn" -na;
+connectAttr "pistol_handleShapeDeformed.iog.og[1]" "tweakSet11.dsm" -na;
+connectAttr "tweak11.msg" "tweakSet11.ub[0]";
+connectAttr "groupId24.id" "groupParts24.gi";
+connectAttr "skinCluster11.og[0]" "groupParts25.ig";
+connectAttr "groupId25.id" "groupParts25.gi";
+connectAttr "skinCluster12GroupParts.og" "skinCluster12.ip[0].ig";
+connectAttr "skinCluster12GroupId.id" "skinCluster12.ip[0].gi";
+connectAttr "joint76.wm" "skinCluster12.ma[0]";
+connectAttr "joint76.liw" "skinCluster12.lw[0]";
+connectAttr "joint76.obcc" "skinCluster12.ifcl[0]";
+connectAttr "bindPose3.msg" "skinCluster12.bp";
+connectAttr "groupParts27.og" "tweak12.ip[0].ig";
+connectAttr "groupId27.id" "tweak12.ip[0].gi";
+connectAttr "skinCluster12GroupId.msg" "skinCluster12Set.gn" -na;
+connectAttr "pistol_gripShapeDeformed.iog.og[0]" "skinCluster12Set.dsm" -na;
+connectAttr "skinCluster12.msg" "skinCluster12Set.ub[0]";
+connectAttr "tweak12.og[0]" "skinCluster12GroupParts.ig";
+connectAttr "skinCluster12GroupId.id" "skinCluster12GroupParts.gi";
+connectAttr "groupId27.msg" "tweakSet12.gn" -na;
+connectAttr "pistol_gripShapeDeformed.iog.og[1]" "tweakSet12.dsm" -na;
+connectAttr "tweak12.msg" "tweakSet12.ub[0]";
+connectAttr "groupId27.id" "groupParts27.gi";
+connectAttr "skinCluster13GroupParts.og" "skinCluster13.ip[0].ig";
+connectAttr "skinCluster13GroupId.id" "skinCluster13.ip[0].gi";
+connectAttr "joint76.wm" "skinCluster13.ma[0]";
+connectAttr "joint76.liw" "skinCluster13.lw[0]";
+connectAttr "joint76.obcc" "skinCluster13.ifcl[0]";
+connectAttr "bindPose3.msg" "skinCluster13.bp";
+connectAttr "groupParts29.og" "tweak13.ip[0].ig";
+connectAttr "groupId29.id" "tweak13.ip[0].gi";
+connectAttr "skinCluster13GroupId.msg" "skinCluster13Set.gn" -na;
+connectAttr "safteyShapeDeformed.iog.og[0]" "skinCluster13Set.dsm" -na;
+connectAttr "skinCluster13.msg" "skinCluster13Set.ub[0]";
+connectAttr "tweak13.og[0]" "skinCluster13GroupParts.ig";
+connectAttr "skinCluster13GroupId.id" "skinCluster13GroupParts.gi";
+connectAttr "groupId29.msg" "tweakSet13.gn" -na;
+connectAttr "safteyShapeDeformed.iog.og[1]" "tweakSet13.dsm" -na;
+connectAttr "tweak13.msg" "tweakSet13.ub[0]";
+connectAttr "groupId29.id" "groupParts29.gi";
+connectAttr "skinCluster14GroupParts.og" "skinCluster14.ip[0].ig";
+connectAttr "skinCluster14GroupId.id" "skinCluster14.ip[0].gi";
+connectAttr "joint76.wm" "skinCluster14.ma[0]";
+connectAttr "joint76.liw" "skinCluster14.lw[0]";
+connectAttr "joint76.obcc" "skinCluster14.ifcl[0]";
+connectAttr "bindPose3.msg" "skinCluster14.bp";
+connectAttr "groupParts31.og" "tweak14.ip[0].ig";
+connectAttr "groupId31.id" "tweak14.ip[0].gi";
+connectAttr "skinCluster14GroupId.msg" "skinCluster14Set.gn" -na;
+connectAttr "hammerShapeDeformed.iog.og[0]" "skinCluster14Set.dsm" -na;
+connectAttr "skinCluster14.msg" "skinCluster14Set.ub[0]";
+connectAttr "tweak14.og[0]" "skinCluster14GroupParts.ig";
+connectAttr "skinCluster14GroupId.id" "skinCluster14GroupParts.gi";
+connectAttr "groupId31.msg" "tweakSet14.gn" -na;
+connectAttr "hammerShapeDeformed.iog.og[1]" "tweakSet14.dsm" -na;
+connectAttr "tweak14.msg" "tweakSet14.ub[0]";
+connectAttr "groupId31.id" "groupParts31.gi";
+connectAttr "skinCluster15GroupParts.og" "skinCluster15.ip[0].ig";
+connectAttr "skinCluster15GroupId.id" "skinCluster15.ip[0].gi";
+connectAttr "joint76.wm" "skinCluster15.ma[0]";
+connectAttr "joint76.liw" "skinCluster15.lw[0]";
+connectAttr "joint76.obcc" "skinCluster15.ifcl[0]";
+connectAttr "bindPose3.msg" "skinCluster15.bp";
+connectAttr "groupParts33.og" "tweak15.ip[0].ig";
+connectAttr "groupId33.id" "tweak15.ip[0].gi";
+connectAttr "skinCluster15GroupId.msg" "skinCluster15Set.gn" -na;
+connectAttr "triggerShapeDeformed.iog.og[0]" "skinCluster15Set.dsm" -na;
+connectAttr "skinCluster15.msg" "skinCluster15Set.ub[0]";
+connectAttr "tweak15.og[0]" "skinCluster15GroupParts.ig";
+connectAttr "skinCluster15GroupId.id" "skinCluster15GroupParts.gi";
+connectAttr "groupId33.msg" "tweakSet15.gn" -na;
+connectAttr "triggerShapeDeformed.iog.og[1]" "tweakSet15.dsm" -na;
+connectAttr "tweak15.msg" "tweakSet15.ub[0]";
+connectAttr "groupId33.id" "groupParts33.gi";
+connectAttr "skinCluster16GroupParts.og" "skinCluster16.ip[0].ig";
+connectAttr "skinCluster16GroupId.id" "skinCluster16.ip[0].gi";
+connectAttr "joint76.wm" "skinCluster16.ma[0]";
+connectAttr "joint76.liw" "skinCluster16.lw[0]";
+connectAttr "joint76.obcc" "skinCluster16.ifcl[0]";
+connectAttr "bindPose3.msg" "skinCluster16.bp";
+connectAttr "groupParts35.og" "tweak16.ip[0].ig";
+connectAttr "groupId35.id" "tweak16.ip[0].gi";
+connectAttr "skinCluster16GroupId.msg" "skinCluster16Set.gn" -na;
+connectAttr "clip_releaseShapeDeformed.iog.og[0]" "skinCluster16Set.dsm" -na;
+connectAttr "skinCluster16.msg" "skinCluster16Set.ub[0]";
+connectAttr "tweak16.og[0]" "skinCluster16GroupParts.ig";
+connectAttr "skinCluster16GroupId.id" "skinCluster16GroupParts.gi";
+connectAttr "groupId35.msg" "tweakSet16.gn" -na;
+connectAttr "clip_releaseShapeDeformed.iog.og[1]" "tweakSet16.dsm" -na;
+connectAttr "tweak16.msg" "tweakSet16.ub[0]";
+connectAttr "groupId35.id" "groupParts35.gi";
+connectAttr "skinCluster17GroupParts.og" "skinCluster17.ip[0].ig";
+connectAttr "skinCluster17GroupId.id" "skinCluster17.ip[0].gi";
+connectAttr "joint76.wm" "skinCluster17.ma[0]";
+connectAttr "joint76.liw" "skinCluster17.lw[0]";
+connectAttr "joint76.obcc" "skinCluster17.ifcl[0]";
+connectAttr "bindPose3.msg" "skinCluster17.bp";
+connectAttr "groupParts37.og" "tweak17.ip[0].ig";
+connectAttr "groupId37.id" "tweak17.ip[0].gi";
+connectAttr "skinCluster17GroupId.msg" "skinCluster17Set.gn" -na;
+connectAttr "slide_releaseShapeDeformed.iog.og[0]" "skinCluster17Set.dsm" -na;
+connectAttr "skinCluster17.msg" "skinCluster17Set.ub[0]";
+connectAttr "tweak17.og[0]" "skinCluster17GroupParts.ig";
+connectAttr "skinCluster17GroupId.id" "skinCluster17GroupParts.gi";
+connectAttr "groupId37.msg" "tweakSet17.gn" -na;
+connectAttr "slide_releaseShapeDeformed.iog.og[1]" "tweakSet17.dsm" -na;
+connectAttr "tweak17.msg" "tweakSet17.ub[0]";
+connectAttr "groupId37.id" "groupParts37.gi";
+connectAttr "skinCluster18GroupParts.og" "skinCluster18.ip[0].ig";
+connectAttr "skinCluster18GroupId.id" "skinCluster18.ip[0].gi";
+connectAttr "joint76.wm" "skinCluster18.ma[0]";
+connectAttr "joint76.liw" "skinCluster18.lw[0]";
+connectAttr "joint76.obcc" "skinCluster18.ifcl[0]";
+connectAttr "bindPose3.msg" "skinCluster18.bp";
+connectAttr "groupParts39.og" "tweak18.ip[0].ig";
+connectAttr "groupId39.id" "tweak18.ip[0].gi";
+connectAttr "skinCluster18GroupId.msg" "skinCluster18Set.gn" -na;
+connectAttr "muzzel_flashShapeDeformed.iog.og[0]" "skinCluster18Set.dsm" -na;
+connectAttr "skinCluster18.msg" "skinCluster18Set.ub[0]";
+connectAttr "tweak18.og[0]" "skinCluster18GroupParts.ig";
+connectAttr "skinCluster18GroupId.id" "skinCluster18GroupParts.gi";
+connectAttr "groupId39.msg" "tweakSet18.gn" -na;
+connectAttr "muzzel_flashShapeDeformed.iog.og[1]" "tweakSet18.dsm" -na;
+connectAttr "tweak18.msg" "tweakSet18.ub[0]";
+connectAttr "groupId39.id" "groupParts39.gi";
+connectAttr "skinCluster19GroupParts.og" "skinCluster19.ip[0].ig";
+connectAttr "skinCluster19GroupId.id" "skinCluster19.ip[0].gi";
+connectAttr "joint76.wm" "skinCluster19.ma[0]";
+connectAttr "joint76.liw" "skinCluster19.lw[0]";
+connectAttr "joint76.obcc" "skinCluster19.ifcl[0]";
+connectAttr "bindPose3.msg" "skinCluster19.bp";
+connectAttr "groupParts41.og" "tweak19.ip[0].ig";
+connectAttr "groupId41.id" "tweak19.ip[0].gi";
+connectAttr "skinCluster19GroupId.msg" "skinCluster19Set.gn" -na;
+connectAttr "bottom_cylinderShapeDeformed.iog.og[0]" "skinCluster19Set.dsm" -na;
+connectAttr "skinCluster19.msg" "skinCluster19Set.ub[0]";
+connectAttr "tweak19.og[0]" "skinCluster19GroupParts.ig";
+connectAttr "skinCluster19GroupId.id" "skinCluster19GroupParts.gi";
+connectAttr "groupId41.msg" "tweakSet19.gn" -na;
+connectAttr "bottom_cylinderShapeDeformed.iog.og[1]" "tweakSet19.dsm" -na;
+connectAttr "tweak19.msg" "tweakSet19.ub[0]";
+connectAttr "groupId41.id" "groupParts41.gi";
+connectAttr "skinCluster20GroupParts.og" "skinCluster20.ip[0].ig";
+connectAttr "skinCluster20GroupId.id" "skinCluster20.ip[0].gi";
+connectAttr "joint76.wm" "skinCluster20.ma[0]";
+connectAttr "joint76.liw" "skinCluster20.lw[0]";
+connectAttr "joint76.obcc" "skinCluster20.ifcl[0]";
+connectAttr "bindPose3.msg" "skinCluster20.bp";
+connectAttr "groupParts43.og" "tweak20.ip[0].ig";
+connectAttr "groupId43.id" "tweak20.ip[0].gi";
+connectAttr "skinCluster20GroupId.msg" "skinCluster20Set.gn" -na;
+connectAttr "clipShapeDeformed.iog.og[0]" "skinCluster20Set.dsm" -na;
+connectAttr "skinCluster20.msg" "skinCluster20Set.ub[0]";
+connectAttr "tweak20.og[0]" "skinCluster20GroupParts.ig";
+connectAttr "skinCluster20GroupId.id" "skinCluster20GroupParts.gi";
+connectAttr "groupId43.msg" "tweakSet20.gn" -na;
+connectAttr "clipShapeDeformed.iog.og[1]" "tweakSet20.dsm" -na;
+connectAttr "tweak20.msg" "tweakSet20.ub[0]";
+connectAttr "groupId43.id" "groupParts43.gi";
+connectAttr "skinCluster21GroupParts.og" "skinCluster21.ip[0].ig";
+connectAttr "skinCluster21GroupId.id" "skinCluster21.ip[0].gi";
+connectAttr "joint76.wm" "skinCluster21.ma[0]";
+connectAttr "joint76.liw" "skinCluster21.lw[0]";
+connectAttr "joint76.obcc" "skinCluster21.ifcl[0]";
+connectAttr "bindPose3.msg" "skinCluster21.bp";
+connectAttr "groupParts45.og" "tweak21.ip[0].ig";
+connectAttr "groupId45.id" "tweak21.ip[0].gi";
+connectAttr "skinCluster21GroupId.msg" "skinCluster21Set.gn" -na;
+connectAttr "slideShapeDeformed.iog.og[0]" "skinCluster21Set.dsm" -na;
+connectAttr "skinCluster21.msg" "skinCluster21Set.ub[0]";
+connectAttr "tweak21.og[0]" "skinCluster21GroupParts.ig";
+connectAttr "skinCluster21GroupId.id" "skinCluster21GroupParts.gi";
+connectAttr "groupId45.msg" "tweakSet21.gn" -na;
+connectAttr "slideShapeDeformed.iog.og[1]" "tweakSet21.dsm" -na;
+connectAttr "tweak21.msg" "tweakSet21.ub[0]";
+connectAttr "groupId45.id" "groupParts45.gi";
+connectAttr "skinCluster21.og[0]" "groupParts46.ig";
+connectAttr "groupId46.id" "groupParts46.gi";
+connectAttr "skinCluster22GroupParts.og" "skinCluster22.ip[0].ig";
+connectAttr "skinCluster22GroupId.id" "skinCluster22.ip[0].gi";
+connectAttr "joint76.wm" "skinCluster22.ma[0]";
+connectAttr "joint76.liw" "skinCluster22.lw[0]";
+connectAttr "joint76.obcc" "skinCluster22.ifcl[0]";
+connectAttr "bindPose3.msg" "skinCluster22.bp";
+connectAttr "groupParts48.og" "tweak22.ip[0].ig";
+connectAttr "groupId48.id" "tweak22.ip[0].gi";
+connectAttr "skinCluster22GroupId.msg" "skinCluster22Set.gn" -na;
+connectAttr "sightShapeDeformed.iog.og[0]" "skinCluster22Set.dsm" -na;
+connectAttr "skinCluster22.msg" "skinCluster22Set.ub[0]";
+connectAttr "tweak22.og[0]" "skinCluster22GroupParts.ig";
+connectAttr "skinCluster22GroupId.id" "skinCluster22GroupParts.gi";
+connectAttr "groupId48.msg" "tweakSet22.gn" -na;
+connectAttr "sightShapeDeformed.iog.og[1]" "tweakSet22.dsm" -na;
+connectAttr "tweak22.msg" "tweakSet22.ub[0]";
+connectAttr "groupId48.id" "groupParts48.gi";
+connectAttr "skinCluster23GroupParts.og" "skinCluster23.ip[0].ig";
+connectAttr "skinCluster23GroupId.id" "skinCluster23.ip[0].gi";
+connectAttr "joint76.wm" "skinCluster23.ma[0]";
+connectAttr "joint76.liw" "skinCluster23.lw[0]";
+connectAttr "joint76.obcc" "skinCluster23.ifcl[0]";
+connectAttr "bindPose3.msg" "skinCluster23.bp";
+connectAttr "groupParts50.og" "tweak23.ip[0].ig";
+connectAttr "groupId50.id" "tweak23.ip[0].gi";
+connectAttr "skinCluster23GroupId.msg" "skinCluster23Set.gn" -na;
+connectAttr "sight_mountShapeDeformed.iog.og[0]" "skinCluster23Set.dsm" -na;
+connectAttr "skinCluster23.msg" "skinCluster23Set.ub[0]";
+connectAttr "tweak23.og[0]" "skinCluster23GroupParts.ig";
+connectAttr "skinCluster23GroupId.id" "skinCluster23GroupParts.gi";
+connectAttr "groupId50.msg" "tweakSet23.gn" -na;
+connectAttr "sight_mountShapeDeformed.iog.og[1]" "tweakSet23.dsm" -na;
+connectAttr "tweak23.msg" "tweakSet23.ub[0]";
+connectAttr "groupId50.id" "groupParts50.gi";
+connectAttr "skinCluster23.og[0]" "groupParts51.ig";
+connectAttr "groupId51.id" "groupParts51.gi";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "ikSCsolver.msg" ":ikSystem.sol" -na;
 connectAttr "ikRPsolver.msg" ":ikSystem.sol" -na;

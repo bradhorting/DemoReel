@@ -1,6 +1,6 @@
 //Maya ASCII 2016 scene
 //Name: shot_4_a.ma
-//Last modified: Fri, Nov 20, 2015 12:25:40 PM
+//Last modified: Mon, Nov 23, 2015 09:20:31 AM
 //Codeset: 1252
 file -rdi 1 -ns "scene_layout_03" -rfn "scene_layout_03RN" -op "v=0;" -typ "mayaAscii"
 		 "C:/DemoReel//scenes/scene_layout_03.ma";
@@ -58,26 +58,26 @@ file -r -ns "gorilla_rig_v3" -dr 1 -rfn "gorilla_rig_v3RN" -op "v=0;" -typ "maya
 		 "C:/DemoReel//scenes/gorilla_rig_v3.ma";
 requires maya "2016";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
-		 -nodeType "mentalrayItemsList" -dataType "byteArray" "Mayatomr" "2016.0 - 3.13.1.2 ";
+		 -nodeType "mentalrayItemsList" -dataType "byteArray" "Mayatomr" "2016.0 - 3.13.1.8 ";
 requires "stereoCamera" "10.0";
 requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2016";
 fileInfo "version" "2016";
-fileInfo "cutIdentifier" "201502261600-953408";
-fileInfo "osv" "Microsoft Windows 7 Enterprise Edition, 64-bit Windows 7 Service Pack 1 (Build 7601)\n";
+fileInfo "cutIdentifier" "201508242200-969261";
+fileInfo "osv" "Microsoft Windows 8 Home Premium Edition, 64-bit  (Build 9200)\n";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "07C5C3D9-48C9-8393-8CA4-9787226CF019";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -106.99335481483597 29.422249425857647 29.20784651155023 ;
-	setAttr ".r" -type "double3" -17.138352728777441 225.80000000018205 0 ;
+	setAttr ".t" -type "double3" -388.63755209638975 131.66402086832463 -181.33564233235705 ;
+	setAttr ".r" -type "double3" -19.538352728781312 230.60000000017348 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "9D12586E-4859-1503-A0EC-8ABD3C25A907";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 77.363183537140287;
+	setAttr ".coi" 454.74131313657813;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -139,21 +139,22 @@ createNode camera -n "cameraShape1" -p "camera1";
 	setAttr ".cap" -type "double2" 1.41732 0.94488 ;
 	setAttr ".ff" 0;
 	setAttr ".ovr" 1.3;
+	setAttr ".coi" 6.0576372496296731;
 	setAttr ".ow" 30;
 	setAttr ".imn" -type "string" "camera1";
 	setAttr ".den" -type "string" "camera1_depth";
 	setAttr ".man" -type "string" "camera1_mask";
 	setAttr ".dr" yes;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "CA41A169-40A5-57ED-A123-5780D9B79665";
+	rename -uid "2685712C-47A4-42B4-4025-DB9BDF9885FC";
 	setAttr -s 145 ".lnk";
 	setAttr -s 145 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "E8E8752F-47A9-1DDD-69C0-7BB32A03FF2B";
+	rename -uid "786C2F7F-4600-91D4-5806-F5B194F107DE";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "335549CD-40DF-BDAF-5C89-DBA6B3512701";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "97D5E13B-413A-E17E-B29A-47842C8CEC13";
+	rename -uid "48513CD4-4820-57AA-D250-6BA9768EBB0F";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "5F1A9C66-43F0-919B-8754-148598F61A71";
 	setAttr ".g" yes;
@@ -460,7 +461,7 @@ createNode vectorRenderGlobals -s -n "vectorRenderGlobals";
 	rename -uid "D1D2F9DB-4B17-E74E-03A0-609E2DD7EFAC";
 createNode reference -n "gorilla_rig_v3RN";
 	rename -uid "91B45F4D-4909-7E5A-0C10-C8B9F86F75DB";
-	setAttr -s 71 ".phl";
+	setAttr -s 74 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -532,6 +533,9 @@ createNode reference -n "gorilla_rig_v3RN";
 	setAttr ".phl[69]" 0;
 	setAttr ".phl[70]" 0;
 	setAttr ".phl[71]" 0;
+	setAttr ".phl[72]" 0;
+	setAttr ".phl[73]" 0;
+	setAttr ".phl[74]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"gorilla_rig_v3RN"
 		"gorilla_rig_v3:hammer_meshRN" 0
@@ -547,7 +551,7 @@ createNode reference -n "gorilla_rig_v3RN";
 		" 0"
 		2 "|gorilla_rig_v3:final_gorilla_mesh_3_0_:gorilla_mesh_grp" "translate" 
 		" -type \"double3\" 0 0 0"
-		"gorilla_rig_v3RN" 169
+		"gorilla_rig_v3RN" 171
 		2 "|gorilla_rig_v3:gorilla_rig_grp" "translate" " -type \"double3\" -34.265755803842254 1.7457672846853498 0"
 		
 		2 "|gorilla_rig_v3:gorilla_rig_grp" "scale" " -type \"double3\" 1.5291852177271832 1.5291852177271832 1.5291852177271832"
@@ -557,7 +561,7 @@ createNode reference -n "gorilla_rig_v3RN";
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl" "rotate" " -type \"double3\" 0 -171.64020497763696 0"
 		
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl" 
-		"translate" " -type \"double3\" 26.399649680783583 -58.788260094771211 108.28128187516934"
+		"translate" " -type \"double3\" 3.0252313287734198 -1.6287601272888166 -22.096738545665882"
 		
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl" 
 		"translateX" " -av"
@@ -566,8 +570,7 @@ createNode reference -n "gorilla_rig_v3RN";
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl" 
 		"translateZ" " -av"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl" 
-		"rotate" " -type \"double3\" -1.6130990427576517 36.812180822115508 5.2554625673133541"
-		
+		"rotate" " -type \"double3\" 45.313939948755355 0 0"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl" 
 		"rotateX" " -av"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl" 
@@ -575,8 +578,7 @@ createNode reference -n "gorilla_rig_v3RN";
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl" 
 		"rotateZ" " -av"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl" 
-		"rotate" " -type \"double3\" 6.3333895121221229 4.2340160309799044 -8.2154024864824056"
-		
+		"rotate" " -type \"double3\" 7.3403580578071796 0 0"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl" 
 		"rotateX" " -av"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl" 
@@ -584,7 +586,7 @@ createNode reference -n "gorilla_rig_v3RN";
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl" 
 		"rotateZ" " -av"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl" 
-		"rotate" " -type \"double3\" 3.8430124402087995 0 0"
+		"rotate" " -type \"double3\" 7.858906022721766 0 0"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl" 
 		"rotateX" " -av"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl" 
@@ -594,8 +596,7 @@ createNode reference -n "gorilla_rig_v3RN";
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl" 
 		"visibility" " 1"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl" 
-		"rotate" " -type \"double3\" 10.610322684982236 -7.9986516929284557 0.78839438722510702"
-		
+		"rotate" " -type \"double3\" 5.4198532988986168 0 0"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl" 
 		"rotateX" " -av"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl" 
@@ -603,8 +604,7 @@ createNode reference -n "gorilla_rig_v3RN";
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl" 
 		"rotateZ" " -av"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:neck_cntrl" 
-		"rotate" " -type \"double3\" 15.729835481459615 10.243034219061755 -4.9489356699707967"
-		
+		"rotate" " -type \"double3\" -14.957063854901566 0 0"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:neck_cntrl" 
 		"rotateX" " -av"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:neck_cntrl" 
@@ -616,7 +616,7 @@ createNode reference -n "gorilla_rig_v3RN";
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:l_shoulder_cntrl" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:l_shoulder_cntrl" 
-		"rotate" " -type \"double3\" 25.653220285231757 -25.2398463593935 -33.405548448187382"
+		"rotate" " -type \"double3\" -73.899589219606625 -21.625846283912111 -8.8754461617934535"
 		
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:l_shoulder_cntrl" 
 		"rotateX" " -av"
@@ -627,8 +627,7 @@ createNode reference -n "gorilla_rig_v3RN";
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:l_shoulder_cntrl" 
 		"scale" " -type \"double3\" 1 1 1"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:l_shoulder_cntrl|gorilla_rig_v3:l_elbow_cntrl" 
-		"rotate" " -type \"double3\" -1.6085419898818023 -26.530512620135216 -0.99037063919269064"
-		
+		"rotate" " -type \"double3\" 0 0 -34.699955079460054"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:l_shoulder_cntrl|gorilla_rig_v3:l_elbow_cntrl" 
 		"rotateX" " -av"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:l_shoulder_cntrl|gorilla_rig_v3:l_elbow_cntrl" 
@@ -636,7 +635,7 @@ createNode reference -n "gorilla_rig_v3RN";
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:l_shoulder_cntrl|gorilla_rig_v3:l_elbow_cntrl" 
 		"rotateZ" " -av"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:l_shoulder_cntrl|gorilla_rig_v3:l_elbow_cntrl|gorilla_rig_v3:l_wrist_cntrl" 
-		"rotate" " -type \"double3\" -33.954894599033459 15.56128825130026 -22.911037884688053"
+		"rotate" " -type \"double3\" 111.42820292872418 -82.449490555895579 -62.04204784364677"
 		
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:l_shoulder_cntrl|gorilla_rig_v3:l_elbow_cntrl|gorilla_rig_v3:l_wrist_cntrl" 
 		"rotateX" " -av"
@@ -651,7 +650,7 @@ createNode reference -n "gorilla_rig_v3RN";
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:R_shoulder_cntrl" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:R_shoulder_cntrl" 
-		"rotate" " -type \"double3\" -34.463341323021858 41.922231927137034 -2.8069998806800998"
+		"rotate" " -type \"double3\" -36.721852679355436 5.7673283366351109 15.509564401449738"
 		
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:R_shoulder_cntrl" 
 		"rotateX" " -av"
@@ -662,7 +661,7 @@ createNode reference -n "gorilla_rig_v3RN";
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:R_shoulder_cntrl" 
 		"scale" " -type \"double3\" 1 1 1"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:R_shoulder_cntrl|gorilla_rig_v3:R_elbow_cntrl" 
-		"rotate" " -type \"double3\" -48.195367420320075 27.108975191088785 9.5716785271952158"
+		"rotate" " -type \"double3\" -17.461602874664756 30.684790980366692 19.609528041815647"
 		
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:R_shoulder_cntrl|gorilla_rig_v3:R_elbow_cntrl" 
 		"rotateX" " -av"
@@ -671,7 +670,7 @@ createNode reference -n "gorilla_rig_v3RN";
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:R_shoulder_cntrl|gorilla_rig_v3:R_elbow_cntrl" 
 		"rotateZ" " -av"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:R_shoulder_cntrl|gorilla_rig_v3:R_elbow_cntrl|gorilla_rig_v3:R_wrist_cntrl" 
-		"rotate" " -type \"double3\" 36.994801647030606 29.412480848901716 16.291133883802075"
+		"rotate" " -type \"double3\" 14.053131653923691 4.4883342235766452 19.978191388585866"
 		
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:R_shoulder_cntrl|gorilla_rig_v3:R_elbow_cntrl|gorilla_rig_v3:R_wrist_cntrl" 
 		"rotateX" " -av"
@@ -700,11 +699,8 @@ createNode reference -n "gorilla_rig_v3RN";
 		"translateY" " -av"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:R_holster_cntrl" 
 		"translateZ" " -av"
-		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:R_holster_cntrl" 
-		"rotate" " -type \"double3\" 1.1303065114516695 14.497603414616419 4.5063650978135383"
-		
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:L_holster_cntrl" 
-		"translate" " -type \"double3\" 0.0066543195363000796 -0.034009090187342134 0.19189912893090966"
+		"translate" " -type \"double3\" -0.088765609623982361 0.039210106491962715 0.18065931172277219"
 		
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:L_holster_cntrl" 
 		"translateX" " -av"
@@ -713,7 +709,7 @@ createNode reference -n "gorilla_rig_v3RN";
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:L_holster_cntrl" 
 		"translateZ" " -av"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:L_holster_cntrl" 
-		"rotate" " -type \"double3\" -4.229068532950496 6.1735622586938268 -15.374369352277906"
+		"rotate" " -type \"double3\" -1.8368958730944618 -7.8026862659069156 2.3399478672514937"
 		
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:L_holster_cntrl" 
 		"rotateX" " -av"
@@ -724,8 +720,7 @@ createNode reference -n "gorilla_rig_v3RN";
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:L_holster_cntrl" 
 		"scale" " -type \"double3\" 1 1 1"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:R_foot_cntrl" 
-		"translate" " -type \"double3\" 26.679884005218806 -58.440194591469663 108.70781131826867"
-		
+		"translate" " -type \"double3\" 3.1032533399050131 0 -22.388470539811742"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:R_foot_cntrl" 
 		"translateX" " -av"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:R_foot_cntrl" 
@@ -733,8 +728,7 @@ createNode reference -n "gorilla_rig_v3RN";
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:R_foot_cntrl" 
 		"translateZ" " -av"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:R_foot_cntrl" 
-		"rotate" " -type \"double3\" -0.62481241449795533 2.3381284699356431 -1.8883813257687707"
-		
+		"rotate" " -type \"double3\" 0 -25.599186757489086 0"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:R_foot_cntrl" 
 		"rotateX" " -av"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:R_foot_cntrl" 
@@ -742,8 +736,7 @@ createNode reference -n "gorilla_rig_v3RN";
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:R_foot_cntrl" 
 		"rotateZ" " -av"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:l_foot_cntrl" 
-		"translate" " -type \"double3\" 26.748110878013673 -58.335586278121113 107.24366873682959"
-		
+		"translate" " -type \"double3\" 3.1032533399050131 0 -22.378079544279455"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:l_foot_cntrl" 
 		"translateX" " -av"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:l_foot_cntrl" 
@@ -751,8 +744,7 @@ createNode reference -n "gorilla_rig_v3RN";
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:l_foot_cntrl" 
 		"translateZ" " -av"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:l_foot_cntrl" 
-		"rotate" " -type \"double3\" 0.12981377648283826 33.874290589480104 -0.37693280395649098"
-		
+		"rotate" " -type \"double3\" 0 20.180664716078482 0"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:l_foot_cntrl" 
 		"rotateX" " -av"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:l_foot_cntrl" 
@@ -847,62 +839,68 @@ createNode reference -n "gorilla_rig_v3RN";
 		"gorilla_rig_v3RN.placeHolderList[42]" ""
 		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:R_holster_cntrl.translateZ" 
 		"gorilla_rig_v3RN.placeHolderList[43]" ""
-		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:L_holster_cntrl.translateX" 
+		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:R_holster_cntrl.rotateX" 
 		"gorilla_rig_v3RN.placeHolderList[44]" ""
-		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:L_holster_cntrl.translateY" 
+		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:R_holster_cntrl.rotateY" 
 		"gorilla_rig_v3RN.placeHolderList[45]" ""
-		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:L_holster_cntrl.translateZ" 
+		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:R_holster_cntrl.rotateZ" 
 		"gorilla_rig_v3RN.placeHolderList[46]" ""
-		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:L_holster_cntrl.rotateX" 
+		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:L_holster_cntrl.translateX" 
 		"gorilla_rig_v3RN.placeHolderList[47]" ""
-		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:L_holster_cntrl.rotateY" 
+		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:L_holster_cntrl.translateY" 
 		"gorilla_rig_v3RN.placeHolderList[48]" ""
-		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:L_holster_cntrl.rotateZ" 
+		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:L_holster_cntrl.translateZ" 
 		"gorilla_rig_v3RN.placeHolderList[49]" ""
-		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:R_foot_cntrl.translateX" 
+		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:L_holster_cntrl.rotateX" 
 		"gorilla_rig_v3RN.placeHolderList[50]" ""
-		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:R_foot_cntrl.translateY" 
+		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:L_holster_cntrl.rotateY" 
 		"gorilla_rig_v3RN.placeHolderList[51]" ""
-		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:R_foot_cntrl.translateZ" 
+		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:L_holster_cntrl.rotateZ" 
 		"gorilla_rig_v3RN.placeHolderList[52]" ""
-		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:R_foot_cntrl.rotateX" 
+		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:R_foot_cntrl.translateX" 
 		"gorilla_rig_v3RN.placeHolderList[53]" ""
-		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:R_foot_cntrl.rotateY" 
+		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:R_foot_cntrl.translateY" 
 		"gorilla_rig_v3RN.placeHolderList[54]" ""
-		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:R_foot_cntrl.rotateZ" 
+		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:R_foot_cntrl.translateZ" 
 		"gorilla_rig_v3RN.placeHolderList[55]" ""
-		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:l_foot_cntrl.translateX" 
+		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:R_foot_cntrl.rotateX" 
 		"gorilla_rig_v3RN.placeHolderList[56]" ""
-		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:l_foot_cntrl.translateY" 
+		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:R_foot_cntrl.rotateY" 
 		"gorilla_rig_v3RN.placeHolderList[57]" ""
-		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:l_foot_cntrl.translateZ" 
+		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:R_foot_cntrl.rotateZ" 
 		"gorilla_rig_v3RN.placeHolderList[58]" ""
-		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:l_foot_cntrl.rotateX" 
+		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:l_foot_cntrl.translateX" 
 		"gorilla_rig_v3RN.placeHolderList[59]" ""
-		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:l_foot_cntrl.rotateY" 
+		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:l_foot_cntrl.translateY" 
 		"gorilla_rig_v3RN.placeHolderList[60]" ""
-		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:l_foot_cntrl.rotateZ" 
+		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:l_foot_cntrl.translateZ" 
 		"gorilla_rig_v3RN.placeHolderList[61]" ""
-		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:r_thumb_cntrl1.knukle_1" 
+		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:l_foot_cntrl.rotateX" 
 		"gorilla_rig_v3RN.placeHolderList[62]" ""
-		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:r_thumb_cntrl1.knukle_2" 
+		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:l_foot_cntrl.rotateY" 
 		"gorilla_rig_v3RN.placeHolderList[63]" ""
-		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:r_finger_3_cntrl1.knukle_1" 
+		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:l_foot_cntrl.rotateZ" 
 		"gorilla_rig_v3RN.placeHolderList[64]" ""
-		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:r_finger_3_cntrl1.knukle_2" 
+		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:r_thumb_cntrl1.knukle_1" 
 		"gorilla_rig_v3RN.placeHolderList[65]" ""
-		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:r_finger_1_cntrl1.knukle_1" 
+		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:r_thumb_cntrl1.knukle_2" 
 		"gorilla_rig_v3RN.placeHolderList[66]" ""
-		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:r_finger_1_cntrl1.knukle_2" 
+		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:r_finger_3_cntrl1.knukle_1" 
 		"gorilla_rig_v3RN.placeHolderList[67]" ""
-		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:r_finger_2_cntrl1.knukle_1" 
+		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:r_finger_3_cntrl1.knukle_2" 
 		"gorilla_rig_v3RN.placeHolderList[68]" ""
-		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:r_finger_2_cntrl1.knukle_2" 
+		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:r_finger_1_cntrl1.knukle_1" 
 		"gorilla_rig_v3RN.placeHolderList[69]" ""
-		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:r_finger_4_cntrl1.knukle_1" 
+		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:r_finger_1_cntrl1.knukle_2" 
 		"gorilla_rig_v3RN.placeHolderList[70]" ""
-		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:r_finger_4_cntrl1.knukle_2" 
+		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:r_finger_2_cntrl1.knukle_1" 
 		"gorilla_rig_v3RN.placeHolderList[71]" ""
+		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:r_finger_2_cntrl1.knukle_2" 
+		"gorilla_rig_v3RN.placeHolderList[72]" ""
+		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:r_finger_4_cntrl1.knukle_1" 
+		"gorilla_rig_v3RN.placeHolderList[73]" ""
+		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:r_finger_4_cntrl1.knukle_2" 
+		"gorilla_rig_v3RN.placeHolderList[74]" ""
 		"gorilla_rig_v3:hammer_rigRN" 15
 		2 "|gorilla_rig_v3:hammer_rig:hammer_gun_grp" "translate" " -type \"double3\" 0 0 0"
 		
@@ -921,7 +919,7 @@ createNode reference -n "gorilla_rig_v3RN";
 		2 "|gorilla_rig_v3:hammer_rig:hammer_gun_grp|gorilla_rig_v3:hammer_rig:gun_ctrl" 
 		"slide_pos" " -av -k 1 0"
 		2 "|gorilla_rig_v3:hammer_rig:hammer_gun_grp|gorilla_rig_v3:hammer_rig:gun_ctrl|gorilla_rig_v3:hammer_rig:gun_base_jnt" 
-		"translate" " -type \"double3\" 21.539874361466957 11.51995630456544 47.144357118885324"
+		"translate" " -type \"double3\" 686.6385300209995 283.092630841377 -188.92128970009566"
 		
 		2 "|gorilla_rig_v3:hammer_rig:hammer_gun_grp|gorilla_rig_v3:hammer_rig:gun_ctrl|gorilla_rig_v3:hammer_rig:gun_base_jnt" 
 		"translateX" " -av"
@@ -968,10 +966,10 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"camera1\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n"
 		+ "                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 1\n                -activeComponentsXray 0\n                -displayTextures 1\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n"
 		+ "                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 0\n                -imagePlane 0\n                -joints 0\n"
-		+ "                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 1602\n                -height 731\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n"
+		+ "                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 1626\n                -height 730\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n"
 		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"camera1\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n"
 		+ "            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n"
-		+ "            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 0\n            -joints 0\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1602\n            -height 731\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n"
+		+ "            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 0\n            -joints 0\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1626\n            -height 730\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n"
 		+ "            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            outlinerEditor -e \n                -docTag \"isolOutln_fromSeln\" \n                -showShapes 0\n                -showReferenceNodes 1\n                -showReferenceMembers 1\n                -showAttributes 0\n                -showConnected 0\n                -showAnimCurvesOnly 0\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 1\n                -showAssets 1\n                -showContainedOnly 1\n                -showPublishedAsConnected 0\n                -showContainerContents 1\n                -ignoreDagHierarchy 0\n"
 		+ "                -expandConnections 0\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 0\n                -highlightActive 1\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"defaultSetFilter\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n"
 		+ "                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 0\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n"
@@ -1012,13 +1010,13 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Model Panel10\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Model Panel10\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"camera1\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n"
 		+ "                -displayTextures 1\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n"
 		+ "                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 0\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 0\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n"
-		+ "                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 789\n                -height 402\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Model Panel10\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"camera1\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n"
+		+ "                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 1276\n                -height 918\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Model Panel10\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"camera1\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n"
 		+ "            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n"
 		+ "            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 0\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n"
-		+ "            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 789\n            -height 402\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\tmodelPanel -e -to $panelName;\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n"
+		+ "            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1276\n            -height 918\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\tmodelPanel -e -to $panelName;\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n"
 		+ "\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"camera1\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1602\\n    -height 731\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"camera1\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1602\\n    -height 731\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"camera1\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1626\\n    -height 730\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"camera1\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1626\\n    -height 730\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -1211,7 +1209,7 @@ createNode animCurveTA -n "R_foot_cntrl_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  35 0 77 0 80 0 85 40.631913975960551 92 67.436031762846184
-		 95 45.308592004934326 98 21.789349120892393 100 0 140 0 144 5.9370318479731763 147 52.149421969045278
+		 95 45.308592004934326 98 21.789349120892393 100 0 140 0 144 5.9370318479731763 147 52.149421969045285
 		 148 60.707219758544532 149 50.005811455476888 153 28.941662429502969 155 18.658897008153083
 		 158 23.510815202882128 161 -0.62481241449795533;
 	setAttr -s 17 ".kit[7:16]"  3 1 1 18 18 18 18 18 
@@ -1537,7 +1535,7 @@ createNode animCurveTA -n "R_shoulder_cntrl_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 10 ".ktv[0:9]"  78 15.509564401449738 85 -10.994652483325671
-		 100 -2.3769422094204371 133 11.599026023747932 145 -11.476077981785377 161 2.6123384691331455
+		 100 -2.3769422094204371 133 11.599026023747932 145 -11.476077981785378 161 2.6123384691331455
 		 194 29.773965788693864 223 -17.031979699204751 307.836 -17.031979699204751 322.964 -2.8069998806800998;
 createNode animCurveTA -n "R_elbow_cntrl_rotateX";
 	rename -uid "976870C5-419B-5D6A-278E-C7912BEE6B86";
@@ -1559,7 +1557,7 @@ createNode animCurveTA -n "R_elbow_cntrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 7 ".ktv[0:6]"  78 19.609528041815647 85 19.609528041815647
 		 100 19.609528041815647 194 14.829469997304972 218 4.845185061918003 313.536 4.845185061918003
-		 332.5 9.5716785271952158;
+		 332.5 9.5716785271952176;
 createNode animCurveTA -n "R_wrist_cntrl_rotateX";
 	rename -uid "6C6F7A6E-43AC-8F5C-06CF-F9BED3FBF4F5";
 	setAttr ".tan" 18;
@@ -1585,24 +1583,23 @@ createNode animCurveTA -n "neck_cntrl_rotateX";
 	rename -uid "45AD941E-4168-A283-044B-1A982ED8A5A5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  80 -14.957063854901566 85 -14.957063854901566
+	setAttr -s 10 ".ktv[0:9]"  80 -14.957063854901566 85 -14.957063854901566
 		 100 -30.882115338801437 142 -37.211984553771998 148 -4.3849072702453169 155 -17.66573626070663
-		 161 -3.1567403728058503 194 5.6109438524738406 294 5.6109438524738406 307.836 20.869350576698043
-		 308 15.729835481459615;
+		 161 -3.1567403728058503 194 5.6109438524738406 294 5.6109438524738406 308 15.729835481459615;
 createNode animCurveTA -n "neck_cntrl_rotateY";
 	rename -uid "3B7A3371-4A1B-28FC-0615-088C1107C564";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  80 0 85 0 100 13.727894837488437 142 9.3276981252422075
+	setAttr -s 10 ".ktv[0:9]"  80 0 85 0 100 13.727894837488437 142 9.3276981252422075
 		 148 3.1545013508175628 155 -5.2806156411660465 161 -9.3453484912965337 194 -9.3453484912965283
-		 294 -9.3453484912965283 307.836 11.124471976086127 308 10.243034219061755;
+		 294 -9.3453484912965283 308 10.243034219061755;
 createNode animCurveTA -n "neck_cntrl_rotateZ";
 	rename -uid "83862892-4C5C-210C-F342-AE8BEA9BEFA2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  80 0 85 0 100 -17.874758098357113 142 -11.759255832306197
+	setAttr -s 10 ".ktv[0:9]"  80 0 85 0 100 -17.874758098357113 142 -11.759255832306197
 		 148 6.1716213068914243 155 3.9757087343893609 161 2.2333221827192093 194 2.2333221827192151
-		 294 2.2333221827192151 307.836 -12.375324523334081 308 -4.9489356699707967;
+		 294 2.2333221827192151 308 -4.9489356699707967;
 createNode animCurveTA -n "upper_spine_cntrl_rotateX";
 	rename -uid "F17561E6-40C8-8581-A435-A989EFFB978F";
 	setAttr ".tan" 18;
@@ -1643,17 +1640,20 @@ createNode animCurveTL -n "R_holster_cntrl_translateX";
 	rename -uid "24444B3C-49D4-99CB-B12D-B1912948DE82";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  80 0.020691165926288772 300 0.020691165926288772;
+	setAttr -s 4 ".ktv[0:3]"  80 0.020691165926288772 200 -0.088460134004498286
+		 220 -0.11184068339901415 300 0.020691165926288772;
 createNode animCurveTL -n "R_holster_cntrl_translateY";
 	rename -uid "31B076D7-4D24-F5B1-4641-BE828C4F1EB8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  80 -0.063684708832352985 300 -0.063684708832352985;
+	setAttr -s 4 ".ktv[0:3]"  80 -0.063684708832352985 200 -0.072287303479461815
+		 220 -0.0056883642486025513 300 -0.063684708832352985;
 createNode animCurveTL -n "R_holster_cntrl_translateZ";
 	rename -uid "C5AD4E31-4E09-D16F-3F7D-1B93335B6804";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  80 0.14176249398337448 300 0.14176249398337448;
+	setAttr -s 4 ".ktv[0:3]"  80 0.14176249398337448 200 0.17007358917393917
+		 220 0.21406394582755969 300 0.14176249398337448;
 createNode animCurveTL -n "r_holster_cntrl_translateX";
 	rename -uid "3AEFD57C-47CE-C2B1-4FCD-3CB45C1B0BE2";
 	setAttr ".tan" 18;
@@ -1750,9 +1750,24 @@ createNode animCurveTU -n "gun_ctrl_slide_pos";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  234 0 236 10 239 0;
+createNode animCurveTA -n "R_holster_cntrl_rotateX";
+	rename -uid "4C837FA2-4F9C-9A43-BD7D-4FB6B6133F72";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  200 1.1303065114516695 220 1.1303065114516695;
+createNode animCurveTA -n "R_holster_cntrl_rotateY";
+	rename -uid "AA32C213-4D26-D0C6-D61C-95B0F2186589";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  200 14.497603414616419 220 14.497603414616419;
+createNode animCurveTA -n "R_holster_cntrl_rotateZ";
+	rename -uid "48933A8F-4A9D-4492-7BD9-D48C0FCB47AF";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  200 4.5063650978135383 220 4.5063650978135383;
 select -ne :time1;
-	setAttr ".o" 350;
-	setAttr ".unw" 350;
+	setAttr ".o" 46;
+	setAttr ".unw" 46;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -1831,34 +1846,37 @@ connectAttr "r_holster_cntrl_translateZ.o" "gorilla_rig_v3RN.phl[40]";
 connectAttr "R_holster_cntrl_translateX.o" "gorilla_rig_v3RN.phl[41]";
 connectAttr "R_holster_cntrl_translateY.o" "gorilla_rig_v3RN.phl[42]";
 connectAttr "R_holster_cntrl_translateZ.o" "gorilla_rig_v3RN.phl[43]";
-connectAttr "L_holster_cntrl_translateX.o" "gorilla_rig_v3RN.phl[44]";
-connectAttr "L_holster_cntrl_translateY.o" "gorilla_rig_v3RN.phl[45]";
-connectAttr "L_holster_cntrl_translateZ.o" "gorilla_rig_v3RN.phl[46]";
-connectAttr "L_holster_cntrl_rotateX.o" "gorilla_rig_v3RN.phl[47]";
-connectAttr "L_holster_cntrl_rotateY.o" "gorilla_rig_v3RN.phl[48]";
-connectAttr "L_holster_cntrl_rotateZ.o" "gorilla_rig_v3RN.phl[49]";
-connectAttr "R_foot_cntrl_translateX.o" "gorilla_rig_v3RN.phl[50]";
-connectAttr "R_foot_cntrl_translateY.o" "gorilla_rig_v3RN.phl[51]";
-connectAttr "R_foot_cntrl_translateZ.o" "gorilla_rig_v3RN.phl[52]";
-connectAttr "R_foot_cntrl_rotateX.o" "gorilla_rig_v3RN.phl[53]";
-connectAttr "R_foot_cntrl_rotateY.o" "gorilla_rig_v3RN.phl[54]";
-connectAttr "R_foot_cntrl_rotateZ.o" "gorilla_rig_v3RN.phl[55]";
-connectAttr "l_foot_cntrl_translateX.o" "gorilla_rig_v3RN.phl[56]";
-connectAttr "l_foot_cntrl_translateY.o" "gorilla_rig_v3RN.phl[57]";
-connectAttr "l_foot_cntrl_translateZ.o" "gorilla_rig_v3RN.phl[58]";
-connectAttr "l_foot_cntrl_rotateX.o" "gorilla_rig_v3RN.phl[59]";
-connectAttr "l_foot_cntrl_rotateY.o" "gorilla_rig_v3RN.phl[60]";
-connectAttr "l_foot_cntrl_rotateZ.o" "gorilla_rig_v3RN.phl[61]";
-connectAttr "r_thumb_cntrl1_knukle_1.o" "gorilla_rig_v3RN.phl[62]";
-connectAttr "r_thumb_cntrl1_knukle_2.o" "gorilla_rig_v3RN.phl[63]";
-connectAttr "r_finger_3_cntrl1_knukle_1.o" "gorilla_rig_v3RN.phl[64]";
-connectAttr "r_finger_3_cntrl1_knukle_2.o" "gorilla_rig_v3RN.phl[65]";
-connectAttr "r_finger_1_cntrl1_knukle_1.o" "gorilla_rig_v3RN.phl[66]";
-connectAttr "r_finger_1_cntrl1_knukle_2.o" "gorilla_rig_v3RN.phl[67]";
-connectAttr "r_finger_2_cntrl1_knukle_1.o" "gorilla_rig_v3RN.phl[68]";
-connectAttr "r_finger_2_cntrl1_knukle_2.o" "gorilla_rig_v3RN.phl[69]";
-connectAttr "r_finger_4_cntrl1_knukle_1.o" "gorilla_rig_v3RN.phl[70]";
-connectAttr "r_finger_4_cntrl1_knukle_2.o" "gorilla_rig_v3RN.phl[71]";
+connectAttr "R_holster_cntrl_rotateX.o" "gorilla_rig_v3RN.phl[44]";
+connectAttr "R_holster_cntrl_rotateY.o" "gorilla_rig_v3RN.phl[45]";
+connectAttr "R_holster_cntrl_rotateZ.o" "gorilla_rig_v3RN.phl[46]";
+connectAttr "L_holster_cntrl_translateX.o" "gorilla_rig_v3RN.phl[47]";
+connectAttr "L_holster_cntrl_translateY.o" "gorilla_rig_v3RN.phl[48]";
+connectAttr "L_holster_cntrl_translateZ.o" "gorilla_rig_v3RN.phl[49]";
+connectAttr "L_holster_cntrl_rotateX.o" "gorilla_rig_v3RN.phl[50]";
+connectAttr "L_holster_cntrl_rotateY.o" "gorilla_rig_v3RN.phl[51]";
+connectAttr "L_holster_cntrl_rotateZ.o" "gorilla_rig_v3RN.phl[52]";
+connectAttr "R_foot_cntrl_translateX.o" "gorilla_rig_v3RN.phl[53]";
+connectAttr "R_foot_cntrl_translateY.o" "gorilla_rig_v3RN.phl[54]";
+connectAttr "R_foot_cntrl_translateZ.o" "gorilla_rig_v3RN.phl[55]";
+connectAttr "R_foot_cntrl_rotateX.o" "gorilla_rig_v3RN.phl[56]";
+connectAttr "R_foot_cntrl_rotateY.o" "gorilla_rig_v3RN.phl[57]";
+connectAttr "R_foot_cntrl_rotateZ.o" "gorilla_rig_v3RN.phl[58]";
+connectAttr "l_foot_cntrl_translateX.o" "gorilla_rig_v3RN.phl[59]";
+connectAttr "l_foot_cntrl_translateY.o" "gorilla_rig_v3RN.phl[60]";
+connectAttr "l_foot_cntrl_translateZ.o" "gorilla_rig_v3RN.phl[61]";
+connectAttr "l_foot_cntrl_rotateX.o" "gorilla_rig_v3RN.phl[62]";
+connectAttr "l_foot_cntrl_rotateY.o" "gorilla_rig_v3RN.phl[63]";
+connectAttr "l_foot_cntrl_rotateZ.o" "gorilla_rig_v3RN.phl[64]";
+connectAttr "r_thumb_cntrl1_knukle_1.o" "gorilla_rig_v3RN.phl[65]";
+connectAttr "r_thumb_cntrl1_knukle_2.o" "gorilla_rig_v3RN.phl[66]";
+connectAttr "r_finger_3_cntrl1_knukle_1.o" "gorilla_rig_v3RN.phl[67]";
+connectAttr "r_finger_3_cntrl1_knukle_2.o" "gorilla_rig_v3RN.phl[68]";
+connectAttr "r_finger_1_cntrl1_knukle_1.o" "gorilla_rig_v3RN.phl[69]";
+connectAttr "r_finger_1_cntrl1_knukle_2.o" "gorilla_rig_v3RN.phl[70]";
+connectAttr "r_finger_2_cntrl1_knukle_1.o" "gorilla_rig_v3RN.phl[71]";
+connectAttr "r_finger_2_cntrl1_knukle_2.o" "gorilla_rig_v3RN.phl[72]";
+connectAttr "r_finger_4_cntrl1_knukle_1.o" "gorilla_rig_v3RN.phl[73]";
+connectAttr "r_finger_4_cntrl1_knukle_2.o" "gorilla_rig_v3RN.phl[74]";
 connectAttr "gun_ctrl_slide_pos.o" "gorilla_rig_v3RN.phl[1]";
 connectAttr "camera1_translateX.o" "camera1.tx";
 connectAttr "camera1_translateY.o" "camera1.ty";

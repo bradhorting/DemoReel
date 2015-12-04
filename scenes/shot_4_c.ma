@@ -1,6 +1,6 @@
 //Maya ASCII 2016 scene
 //Name: shot_4_c.ma
-//Last modified: Thu, Dec 03, 2015 08:49:00 PM
+//Last modified: Fri, Dec 04, 2015 12:56:22 PM
 //Codeset: 1252
 file -rdi 1 -ns "gorilla_rig_v3" -rfn "gorilla_rig_v3RN" -op "v=0;" -typ "mayaAscii"
 		 "C:/DemoReel//scenes/gorilla_rig_v3.ma";
@@ -62,26 +62,26 @@ file -r -ns "scene_layout_03" -dr 1 -rfn "scene_layout_03RN" -op "v=0;" -typ "ma
 		 "C:/DemoReel//scenes/scene_layout_03.ma";
 requires maya "2016";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
-		 -nodeType "mentalrayItemsList" -dataType "byteArray" "Mayatomr" "2016.0 - 3.13.1.8 ";
+		 -nodeType "mentalrayItemsList" -dataType "byteArray" "Mayatomr" "2016.0 - 3.13.1.2 ";
 requires "stereoCamera" "10.0";
 requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2016";
 fileInfo "version" "2016";
-fileInfo "cutIdentifier" "201508242200-969261";
-fileInfo "osv" "Microsoft Windows 8 Home Premium Edition, 64-bit  (Build 9200)\n";
+fileInfo "cutIdentifier" "201502261600-953408";
+fileInfo "osv" "Microsoft Windows 7 Enterprise Edition, 64-bit Windows 7 Service Pack 1 (Build 7601)\n";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "07C5C3D9-48C9-8393-8CA4-9787226CF019";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -305.98899267186079 36.997548110122175 -196.03412968058939 ;
-	setAttr ".r" -type "double3" -4.5383527294354034 227.00000000001739 0 ;
+	setAttr ".t" -type "double3" -39.68241226229582 49.309005893491808 138.51626100057985 ;
+	setAttr ".r" -type "double3" -6.9383527293813119 -145.79999999998535 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "9D12586E-4859-1503-A0EC-8ABD3C25A907";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 404.22491102839888;
+	setAttr ".coi" 28.390449111814085;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -172,7 +172,7 @@ createNode fluidShape -n "smoke_test:fluidShape1" -p "smoke_test:fluid1";
 	setAttr ".dd" 15;
 	setAttr ".aure" yes;
 	setAttr ".vqu" 2;
-	setAttr ".ots" 4;
+	setAttr ".ots" 15;
 	setAttr ".bndx" 2;
 	setAttr ".bndy" 2;
 	setAttr ".dsc" 8.0090494155883789;
@@ -182,9 +182,9 @@ createNode fluidShape -n "smoke_test:fluidShape1" -p "smoke_test:fluid1";
 	setAttr ".vsns" 0.32126697897911072;
 	setAttr ".tst" 0.099547512829303741;
 	setAttr ".tmet" 2;
-	setAttr ".tmsc" 2;
-	setAttr ".tdf" 0.57918552044627358;
-	setAttr ".tmns" 0.17647059261798859;
+	setAttr ".tmsc" 4;
+	setAttr ".tdf" 0.45911949772223737;
+	setAttr ".tmns" 0.31132075190544128;
 	setAttr ".tmpt" 0.11312217265367508;
 	setAttr ".fmet" 2;
 	setAttr -s 2 ".cl";
@@ -197,14 +197,11 @@ createNode fluidShape -n "smoke_test:fluidShape1" -p "smoke_test:fluid1";
 	setAttr ".coi" 5;
 	setAttr ".cib" 0.91596639156341553;
 	setAttr -s 2 ".opa[0:1]"  0 0 1 1 1 1;
-	setAttr -s 2 ".i";
-	setAttr ".i[1].ip" 1;
-	setAttr ".i[1].ic" -type "float3" 0.199 0.1821291 0.17730901 ;
-	setAttr ".i[1].ii" 1;
-	setAttr ".i[2].ip" 0.83478260040283203;
+	setAttr ".oib" 0.1260504275560379;
+	setAttr ".i[2].ip" 1;
 	setAttr ".i[2].ic" -type "float3" 0 0 0 ;
 	setAttr ".i[2].ii" 1;
-	setAttr ".iib" 0.59663867950439453;
+	setAttr ".iib" 0.79831933975219727;
 	setAttr ".env[0].envp" 0;
 	setAttr ".env[0].envc" -type "float3" 0 0 0 ;
 	setAttr ".env[0].envi" 1;
@@ -267,7 +264,7 @@ createNode fluidShape -n "smoke_test1:fluidShape1" -p "smoke_test1:fluid1";
 	setAttr ".dd" 15;
 	setAttr ".aure" yes;
 	setAttr ".vqu" 2;
-	setAttr ".ots" 4;
+	setAttr ".ots" 12;
 	setAttr ".bndx" 2;
 	setAttr ".bndy" 2;
 	setAttr ".dsc" 5;
@@ -277,10 +274,13 @@ createNode fluidShape -n "smoke_test1:fluidShape1" -p "smoke_test1:fluid1";
 	setAttr ".vsns" 0.32126697897911072;
 	setAttr ".tst" 0.099547512829303741;
 	setAttr ".tmet" 2;
-	setAttr ".tmsc" 2;
-	setAttr ".tdf" 0.57918552044627358;
+	setAttr ".tmsc" 5.2452831268310547;
+	setAttr ".tds" 0.028301886335577606;
+	setAttr ".tdf" 0.19496855362312598;
 	setAttr ".tmns" 0.17647059261798859;
+	setAttr ".tmpr" 0.037735849618911743;
 	setAttr ".tmpt" 0.11312217265367508;
+	setAttr ".tttn" 1.9811320304870605;
 	setAttr ".fmet" 2;
 	setAttr -s 2 ".cl";
 	setAttr ".cl[0].clp" 0.56521737575531006;
@@ -290,16 +290,13 @@ createNode fluidShape -n "smoke_test1:fluidShape1" -p "smoke_test1:fluid1";
 	setAttr ".cl[1].clc" -type "float3" 0.015 0.015 0.015 ;
 	setAttr ".cl[1].cli" 1;
 	setAttr ".coi" 5;
-	setAttr ".cib" 0.49579831957817078;
+	setAttr ".cib" -0.4285714328289032;
 	setAttr -s 2 ".opa[0:1]"  0 0 1 1 1 1;
-	setAttr -s 2 ".i";
-	setAttr ".i[1].ip" 1;
-	setAttr ".i[1].ic" -type "float3" 0.199 0.1821291 0.17730901 ;
-	setAttr ".i[1].ii" 1;
-	setAttr ".i[2].ip" 0.83478260040283203;
+	setAttr ".oib" 0.025210084393620491;
+	setAttr ".i[2].ip" 0.69565218687057495;
 	setAttr ".i[2].ic" -type "float3" 0 0 0 ;
 	setAttr ".i[2].ii" 1;
-	setAttr ".iib" 0.19327731430530548;
+	setAttr ".iib" -0.17647059261798859;
 	setAttr ".env[0].envp" 0;
 	setAttr ".env[0].envc" -type "float3" 0 0 0 ;
 	setAttr ".env[0].envi" 1;
@@ -307,6 +304,7 @@ createNode fluidShape -n "smoke_test1:fluidShape1" -p "smoke_test1:fluid1";
 	setAttr ".edr" 0.14847160875797272;
 createNode transform -n "smoke_test1:pSphere1";
 	rename -uid "A75F5A5E-42B3-0548-6DD1-A0A6411BA945";
+	setAttr ".v" no;
 	setAttr ".t" -type "double3" -33.689171246241102 6.6459008465635563 103.99576943387839 ;
 	setAttr ".s" -type "double3" 1.7676500091468961 1 1 ;
 createNode mesh -n "smoke_test1:pSphereShape1" -p "smoke_test1:pSphere1";
@@ -337,16 +335,172 @@ createNode fluidEmitter -n "smoke_test1:fluidEmitter1" -p "smoke_test1:pSphere1"
 	setAttr -k off ".dss";
 	setAttr ".fhe" 1;
 	setAttr ".ffe" 1;
+createNode transform -n "main_light";
+	rename -uid "F7C1A651-47CB-9BA6-661C-69851D4E1504";
+	addAttr -ci true -sn "miLabel" -ln "miLabel" -at "long";
+	setAttr ".t" -type "double3" -193.49192984608734 81.57698837512919 0 ;
+	setAttr ".r" -type "double3" -31.246667264237598 -126.02526270298364 1.4048409267148003 ;
+	setAttr ".s" -type "double3" 8.3765299642818949 8.3765299642818949 8.3765299642818949 ;
+createNode directionalLight -n "main_lightShape" -p "main_light";
+	rename -uid "CD2ED7D9-4E0A-4F73-B6AE-BFA2E5EC518A";
+	setAttr -k off ".v";
+	setAttr ".in" 2.9447853565216064;
+createNode transform -n "spill_light";
+	rename -uid "190E4180-472A-4065-A197-3B964737555F";
+	addAttr -ci true -sn "miLabel" -ln "miLabel" -at "long";
+	setAttr ".t" -type "double3" -193.49192984608734 81.57698837512919 0 ;
+	setAttr ".r" -type "double3" -31.246667264237598 -126.02526270298364 1.4048409267148003 ;
+	setAttr ".s" -type "double3" 8.3765299642818949 8.3765299642818949 8.3765299642818949 ;
+createNode directionalLight -n "spill_lightShape" -p "spill_light";
+	rename -uid "FB9ACC43-4C12-9746-917E-EC847501EA41";
+	setAttr -k off ".v";
+	setAttr ".cl" -type "float3" 1 0.91114968 0.53799999 ;
+	setAttr ".in" 0.64417177438735962;
+createNode transform -n "ambientLight1";
+	rename -uid "661E5265-4833-DDD0-8DA3-B18F6116E5F4";
+	addAttr -ci true -sn "miLabel" -ln "miLabel" -at "long";
+	setAttr ".t" -type "double3" -168.30982030311498 94.623747618756738 0 ;
+createNode ambientLight -n "ambientLightShape1" -p "ambientLight1";
+	rename -uid "E6F2DBC2-4BDB-E7F3-4121-0EBC543723B9";
+	setAttr -k off ".v";
+	setAttr ".in" 0.11834319680929184;
+	setAttr ".urs" no;
+createNode transform -n "pointLight1";
+	rename -uid "ED4EA65F-41BB-3BFD-DC53-AC9DC1732047";
+	addAttr -ci true -sn "miLabel" -ln "miLabel" -at "long";
+	setAttr ".t" -type "double3" -55.395411009024244 5.1430264590761459 36.300922772903959 ;
+createNode pointLight -n "pointLightShape1" -p "pointLight1";
+	rename -uid "ACB4ED5D-456F-EF4D-3FEC-28A58CE999D5";
+	setAttr -k off ".v";
+	setAttr ".cl" -type "float3" 1 0.67299998 0.34600002 ;
+	setAttr ".in" 9.5266275405883789;
+	setAttr ".de" 1;
+	setAttr ".us" no;
+createNode transform -n "pointLight2";
+	rename -uid "EA3EBCCC-41ED-4E68-95A2-55B9AAE3FA87";
+	addAttr -ci true -sn "miLabel" -ln "miLabel" -at "long";
+	setAttr ".t" -type "double3" -31.2660242044456 5.1430264590761459 108.2907582172824 ;
+createNode pointLight -n "pointLightShape2" -p "pointLight2";
+	rename -uid "8711171B-4422-03FB-58D7-0A94B2609A8D";
+	setAttr -k off ".v";
+	setAttr ".cl" -type "float3" 1 0.67299998 0.34600002 ;
+	setAttr ".in" 9.5266275405883789;
+	setAttr ".de" 1;
+	setAttr ".us" no;
+createNode transform -n "spotLight1";
+	rename -uid "FBA34FD9-403D-2881-24FE-A0A2CD7302C2";
+	addAttr -ci true -sn "miLabel" -ln "miLabel" -at "long";
+	setAttr ".t" -type "double3" -58.775643739714155 1.7648239903474874 35.491717543254168 ;
+	setAttr ".r" -type "double3" 33.006164152795122 -130.55715047415038 2.6695558925836225 ;
+createNode spotLight -n "spotLightShape1" -p "spotLight1";
+	rename -uid "0F4CFF00-43EE-048F-0EE4-2099155A41AC";
+	setAttr -k off ".v";
+	setAttr ".cl" -type "float3" 1 0.67299998 0.34600002 ;
+	setAttr ".in" 10;
+	setAttr ".de" 1;
+	setAttr ".ca" 145.3810894775971;
+	setAttr ".pa" -10;
+	setAttr ".dro" 9.0532543352865691;
+createNode transform -n "spotLight2";
+	rename -uid "BA8156F6-4DDA-DC12-9005-96AC22C3CF18";
+	addAttr -ci true -sn "miLabel" -ln "miLabel" -at "long";
+	setAttr ".t" -type "double3" -17.513541922334412 7.0636011055773018 132.19298672870534 ;
+	setAttr ".r" -type "double3" 34.407934591526377 -165.90335663237443 -10.047972901821963 ;
+createNode spotLight -n "spotLightShape2" -p "spotLight2";
+	rename -uid "BE91F6ED-4F74-87DE-039C-F695E8542CE9";
+	setAttr -k off ".v";
+	setAttr ".cl" -type "float3" 1 0.67299998 0.34600002 ;
+	setAttr ".in" 10;
+	setAttr ".de" 1;
+	setAttr ".ca" 115.56050288739169;
+	setAttr ".pa" -8.7573964498143582;
+	setAttr ".dro" 3.017751524257942;
+createNode transform -n "spotLight3";
+	rename -uid "C69B4CA5-4A0E-3130-B0A2-5DAD4D8EF44C";
+	addAttr -ci true -sn "miLabel" -ln "miLabel" -at "long";
+	setAttr ".t" -type "double3" -17.513541922334412 26.765239541612672 132.19298672870534 ;
+	setAttr ".r" -type "double3" 34.407934591526377 -165.90335663237443 -10.047972901821963 ;
+createNode spotLight -n "spotLightShape3" -p "spotLight3";
+	rename -uid "E12E5AAC-400B-4BBC-FF5E-7EB79B6F72B3";
+	setAttr -k off ".v";
+	setAttr ".cl" -type "float3" 1 0.67299998 0.34600002 ;
+	setAttr ".in" 10;
+	setAttr ".de" 1;
+	setAttr ".ca" 115.56050288739169;
+	setAttr ".pa" -8.7573964498143582;
+	setAttr ".dro" 3.017751524257942;
+createNode transform -n "spotLight4";
+	rename -uid "6BDEB262-4CF4-086F-5474-4F9F372FA4C2";
+	addAttr -ci true -sn "miLabel" -ln "miLabel" -at "long";
+	setAttr ".t" -type "double3" -7.5457874913096106 42.919493677567338 155.07866344596559 ;
+	setAttr ".r" -type "double3" -0.29191476523379051 -230.9063236554031 -12.74358452993282 ;
+createNode spotLight -n "spotLightShape4" -p "spotLight4";
+	rename -uid "55559494-4B26-D22A-E27C-9C86F7942E57";
+	setAttr -k off ".v";
+	setAttr ".cl" -type "float3" 1 0.67299998 0.34600002 ;
+	setAttr ".in" 10;
+	setAttr ".de" 1;
+	setAttr ".ca" 69.764601950659653;
+	setAttr ".pa" -9.1124260409035269;
+	setAttr ".dro" 6.035503048515884;
+createNode transform -n "spotLight5";
+	rename -uid "A9B91EC9-4E51-812C-F232-3C9B6C1C9565";
+	addAttr -ci true -sn "miLabel" -ln "miLabel" -at "long";
+	setAttr ".t" -type "double3" -58.775643739714155 15.848371275508505 79.29532723796595 ;
+	setAttr ".r" -type "double3" 12.883576694630044 -209.50425902142098 10.484076717149607 ;
+createNode spotLight -n "spotLightShape5" -p "spotLight5";
+	rename -uid "ABE07A34-4BB2-F176-90FC-D7BE0703A026";
+	setAttr -k off ".v";
+	setAttr ".cl" -type "float3" 1 0.67299998 0.34600002 ;
+	setAttr ".in" 10;
+	setAttr ".de" 1;
+	setAttr ".ca" 138.45845335575774;
+	setAttr ".pa" -10;
+createNode transform -n "main_lightfor_the_shirt";
+	rename -uid "BB8BB2C1-453D-8CFB-5675-A3AF17FF24DA";
+	addAttr -ci true -sn "miLabel" -ln "miLabel" -at "long";
+	setAttr ".t" -type "double3" -193.49192984608734 81.57698837512919 0 ;
+	setAttr ".r" -type "double3" -31.246667264237598 -126.02526270298364 1.4048409267148003 ;
+	setAttr ".s" -type "double3" 8.3765299642818949 8.3765299642818949 8.3765299642818949 ;
+createNode directionalLight -n "main_lightfor_the_shirtShape" -p "main_lightfor_the_shirt";
+	rename -uid "1FC8386F-4AB6-A657-91E9-B8ADDF66F3A1";
+	setAttr -k off ".v";
+	setAttr ".in" 1.8098160028457642;
+	setAttr ".urs" no;
+createNode transform -n "back_building_light";
+	rename -uid "27F68A4A-449E-BDD7-F0BA-40B87EEA3785";
+	addAttr -ci true -sn "miLabel" -ln "miLabel" -at "long";
+	setAttr ".v" no;
+	setAttr ".t" -type "double3" -193.49192984608734 81.57698837512919 0 ;
+	setAttr ".r" -type "double3" -31.246667264237598 -126.02526270298364 1.4048409267148003 ;
+	setAttr ".s" -type "double3" 8.3765299642818949 8.3765299642818949 8.3765299642818949 ;
+createNode directionalLight -n "back_building_lightShape" -p "back_building_light";
+	rename -uid "5F798E11-417F-F564-7959-01B5D76D640B";
+	setAttr -k off ".v";
+	setAttr ".in" 0.39877301454544067;
+createNode transform -n "spotLight6";
+	rename -uid "AA74E625-462D-5E83-D5FD-BB85240218FB";
+	addAttr -ci true -sn "miLabel" -ln "miLabel" -at "long";
+	setAttr ".t" -type "double3" -30.765638651212125 43.422999492896444 155.3318965172918 ;
+	setAttr ".r" -type "double3" 216.58580837709741 322.25862951415536 -205.52317842305288 ;
+createNode spotLight -n "spotLightShape6" -p "spotLight6";
+	rename -uid "7DA44887-4E28-0F91-7E45-68823BF60553";
+	setAttr -k off ".v";
+	setAttr ".in" 20;
+	setAttr ".ca" 22.90368004631733;
+	setAttr ".pa" -10;
+	setAttr ".dro" 76.198224800076758;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "AF9F73D8-4EBD-E65C-3341-478F5F5F1117";
-	setAttr -s 159 ".lnk";
+	rename -uid "C05DD700-4D86-513F-4843-5A9493FA31B3";
+	setAttr -s 182 ".lnk";
+	setAttr -s 1395 ".ign";
 	setAttr -s 159 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "E8DED063-474F-56EC-8532-1A9C85828EB2";
+	rename -uid "61A13BE5-44B2-165D-BEEC-CBBF8EDF6C9D";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "335549CD-40DF-BDAF-5C89-DBA6B3512701";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "314550C6-4EB9-9C46-691F-438D6B73953B";
+	rename -uid "A11B9F3E-4B63-8318-C686-C49C02C41F2E";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "5F1A9C66-43F0-919B-8754-148598F61A71";
 	setAttr ".g" yes;
@@ -698,15 +852,119 @@ createNode reference -n "gorilla_rig_v3RN";
 		"gorilla_rig_v3RN" 0
 		"gorilla_rig_v3:hammer_rigRN" 0
 		"gorilla_rig_v3:final_gorilla_mesh_3_0_RN1" 0
-		"gorilla_rig_v3:hammer_meshRN" 1
+		"gorilla_rig_v3:hammer_meshRN" 21
 		2 "|gorilla_rig_v3:hammer_mesh:hammer_grp" "translate" " -type \"double3\" 2.1925822276733524 7.3141104211557479 0.25508345385099579"
 		
-		"gorilla_rig_v3:final_gorilla_mesh_3_0_RN" 2
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:hammer_mesh:hammer_mia_material_x_passes1SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:hammer_mesh:hammer_mia_material_x_passes1SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:hammer_mesh:lambert2SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:hammer_mesh:lambert2SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:hammer_mesh:sight1_phongE1SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:hammer_mesh:sight1_phongE1SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:hammer_mesh:phong1SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:hammer_mesh:phong1SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:hammer_mesh:sight1_phongE1SG1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:hammer_mesh:sight1_phongE1SG1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:hammer_mesh:sight1_phongE1SG2.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:hammer_mesh:sight1_phongE1SG2.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:hammer_mesh:clip_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:hammer_mesh:clip_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:hammer_mesh:gripSG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:hammer_mesh:gripSG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:hammer_mesh:parts_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:hammer_mesh:parts_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:hammer_mesh:handle_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:hammer_mesh:handle_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		"gorilla_rig_v3:final_gorilla_mesh_3_0_RN" 34
 		2 "|gorilla_rig_v3:final_gorilla_mesh_3_0_:gorilla_mesh_grp" "visibility" 
 		" 0"
 		2 "|gorilla_rig_v3:final_gorilla_mesh_3_0_:gorilla_mesh_grp" "translate" 
 		" -type \"double3\" 0 0 0"
-		"gorilla_rig_v3RN" 171
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_:eyes:initialShadingGroup.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_:eyes:initialShadingGroup.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_:holster_details_final_mesh:initialShadingGroup.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_:holster_details_final_mesh:initialShadingGroup.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_:holster_details_final_mesh:lambert2SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_:holster_details_final_mesh:lambert2SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_:mia_material_x_passes1SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_:mia_material_x_passes1SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_:shirt_final_mesh:defaultMat.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_:shirt_final_mesh:defaultMat.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_:pant_final_mesh:defaultMat.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_:pant_final_mesh:defaultMat.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_:gorilla_final_mesh:defaultMat.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_:gorilla_final_mesh:defaultMat.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_:gorilla_material_mia_material_x_passes2SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_:gorilla_material_mia_material_x_passes2SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_:cloth_mia_material_x_passes3SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_:cloth_mia_material_x_passes3SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_:holster_material_mia_material_x_passes4SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_:holster_material_mia_material_x_passes4SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_:eye_mia_material_x_passes2SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_:eye_mia_material_x_passes2SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_:lambert2SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_:lambert2SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_:holster_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_:holster_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_:gorilla_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_:gorilla_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_:lambert3SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_:lambert3SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_:eye_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_:eye_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		"gorilla_rig_v3RN" 214
 		2 "|gorilla_rig_v3:gorilla_rig_grp" "translate" " -type \"double3\" -34.265755803842254 1.7457672846853498 0"
 		
 		2 "|gorilla_rig_v3:gorilla_rig_grp" "scale" " -type \"double3\" 1.5291852177271832 1.5291852177271832 1.5291852177271832"
@@ -716,7 +974,7 @@ createNode reference -n "gorilla_rig_v3RN";
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl" "rotate" " -type \"double3\" 0 -171.64020497763696 0"
 		
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl" 
-		"translate" " -type \"double3\" 3.0958338121744537 -1.6287601272888166 -22.344450187825867"
+		"translate" " -type \"double3\" 4.1748508141811378 -36.137089176141195 53.781558946445365"
 		
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl" 
 		"translateX" " -av"
@@ -725,7 +983,7 @@ createNode reference -n "gorilla_rig_v3RN";
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl" 
 		"translateZ" " -av"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl" 
-		"rotate" " -type \"double3\" 45.313939948755355 0 0"
+		"rotate" " -type \"double3\" 34.592047507366054 0 0"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl" 
 		"rotateX" " -av"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl" 
@@ -741,7 +999,7 @@ createNode reference -n "gorilla_rig_v3RN";
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl" 
 		"rotateZ" " -av"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl" 
-		"rotate" " -type \"double3\" 7.858906022721766 0 0"
+		"rotate" " -type \"double3\" 16.190094889408414 0 0"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl" 
 		"rotateX" " -av"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl" 
@@ -759,7 +1017,8 @@ createNode reference -n "gorilla_rig_v3RN";
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl" 
 		"rotateZ" " -av"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:neck_cntrl" 
-		"rotate" " -type \"double3\" -14.957063854901566 0 0"
+		"rotate" " -type \"double3\" -30.882115338801437 13.727894837488437 -17.874758098357113"
+		
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:neck_cntrl" 
 		"rotateX" " -av"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:neck_cntrl" 
@@ -771,8 +1030,7 @@ createNode reference -n "gorilla_rig_v3RN";
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:l_shoulder_cntrl" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:l_shoulder_cntrl" 
-		"rotate" " -type \"double3\" -73.899589219606625 -21.625846283912111 -8.8754461617934535"
-		
+		"rotate" " -type \"double3\" 0 0 11.318641425642344"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:l_shoulder_cntrl" 
 		"rotateX" " -av"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:l_shoulder_cntrl" 
@@ -782,7 +1040,8 @@ createNode reference -n "gorilla_rig_v3RN";
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:l_shoulder_cntrl" 
 		"scale" " -type \"double3\" 1 1 1"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:l_shoulder_cntrl|gorilla_rig_v3:l_elbow_cntrl" 
-		"rotate" " -type \"double3\" 0 0 -34.699955079460054"
+		"rotate" " -type \"double3\" -1.6085419898818023 -26.530512620135216 -0.99037063919269064"
+		
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:l_shoulder_cntrl|gorilla_rig_v3:l_elbow_cntrl" 
 		"rotateX" " -av"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:l_shoulder_cntrl|gorilla_rig_v3:l_elbow_cntrl" 
@@ -790,7 +1049,7 @@ createNode reference -n "gorilla_rig_v3RN";
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:l_shoulder_cntrl|gorilla_rig_v3:l_elbow_cntrl" 
 		"rotateZ" " -av"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:l_shoulder_cntrl|gorilla_rig_v3:l_elbow_cntrl|gorilla_rig_v3:l_wrist_cntrl" 
-		"rotate" " -type \"double3\" 111.42820292872418 -82.449490555895579 -62.04204784364677"
+		"rotate" " -type \"double3\" -33.954894599033459 15.56128825130026 -22.911037884688053"
 		
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:l_shoulder_cntrl|gorilla_rig_v3:l_elbow_cntrl|gorilla_rig_v3:l_wrist_cntrl" 
 		"rotateX" " -av"
@@ -805,7 +1064,7 @@ createNode reference -n "gorilla_rig_v3RN";
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:R_shoulder_cntrl" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:R_shoulder_cntrl" 
-		"rotate" " -type \"double3\" -36.721852679355436 5.7673283366351109 15.509564401449738"
+		"rotate" " -type \"double3\" -30.913829649468802 3.9268197950382771 -2.3769422094204371"
 		
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:R_shoulder_cntrl" 
 		"rotateX" " -av"
@@ -846,7 +1105,7 @@ createNode reference -n "gorilla_rig_v3RN";
 		"rotate" " -type \"double3\" -1.1883028501138568 -4.7372790824678628 -8.3746400564369718"
 		
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:R_holster_cntrl" 
-		"translate" " -type \"double3\" 0.020691165926288772 -0.063684708832352985 0.14176249398337448"
+		"translate" " -type \"double3\" 0.015235484802744306 -0.064321938008499419 0.14242505963055113"
 		
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:R_holster_cntrl" 
 		"translateX" " -av"
@@ -855,7 +1114,7 @@ createNode reference -n "gorilla_rig_v3RN";
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:R_holster_cntrl" 
 		"translateZ" " -av"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:L_holster_cntrl" 
-		"translate" " -type \"double3\" -0.088765609623982361 0.039210106491962715 0.18065931172277219"
+		"translate" " -type \"double3\" 0.0014794419285516945 0.082010898349185332 -0.02578724297880431"
 		
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:L_holster_cntrl" 
 		"translateX" " -av"
@@ -875,7 +1134,8 @@ createNode reference -n "gorilla_rig_v3RN";
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:base_cntrl|gorilla_rig_v3:lower_spine_cntrl|gorilla_rig_v3:mid_spine_cntrl|gorilla_rig_v3:upper_spine_cntrl|gorilla_rig_v3:L_holster_cntrl" 
 		"scale" " -type \"double3\" 1 1 1"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:R_foot_cntrl" 
-		"translate" " -type \"double3\" 3.173855823306047 0 -22.635778068332225"
+		"translate" " -type \"double3\" 3.2212935854648688 -34.201488570443288 53.641433505373094"
+		
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:R_foot_cntrl" 
 		"translateX" " -av"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:R_foot_cntrl" 
@@ -883,7 +1143,7 @@ createNode reference -n "gorilla_rig_v3RN";
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:R_foot_cntrl" 
 		"translateZ" " -av"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:R_foot_cntrl" 
-		"rotate" " -type \"double3\" 0 -25.599186757489086 0"
+		"rotate" " -type \"double3\" 0 -27.863194614119614 0"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:R_foot_cntrl" 
 		"rotateX" " -av"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:R_foot_cntrl" 
@@ -891,7 +1151,8 @@ createNode reference -n "gorilla_rig_v3RN";
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:R_foot_cntrl" 
 		"rotateZ" " -av"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:l_foot_cntrl" 
-		"translate" " -type \"double3\" 3.173855823306047 0 -22.635778068332225"
+		"translate" " -type \"double3\" 4.4769385588577526 -34.201488570443288 53.82595080588559"
+		
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:l_foot_cntrl" 
 		"translateX" " -av"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:l_foot_cntrl" 
@@ -899,7 +1160,8 @@ createNode reference -n "gorilla_rig_v3RN";
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:l_foot_cntrl" 
 		"translateZ" " -av"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:l_foot_cntrl" 
-		"rotate" " -type \"double3\" 0 20.180664716078482 0"
+		"rotate" " -type \"double3\" -0.13710175458141843 6.4883550825318457 -2.3743827399341315"
+		
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:l_foot_cntrl" 
 		"rotateX" " -av"
 		2 "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:l_foot_cntrl" 
@@ -1056,7 +1318,93 @@ createNode reference -n "gorilla_rig_v3RN";
 		"gorilla_rig_v3RN.placeHolderList[73]" ""
 		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:gorilla_rig_grp|gorilla_rig_v3:root_cntrl|gorilla_rig_v3:r_finger_4_cntrl1.knukle_2" 
 		"gorilla_rig_v3RN.placeHolderList[74]" ""
-		"gorilla_rig_v3:hammer_rigRN" 15
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_meshRNfosterParent1|gorilla_rig_v3:slideShapeDeformed.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_meshRNfosterParent1|gorilla_rig_v3:slideShapeDeformed.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_meshRNfosterParent1|gorilla_rig_v3:sight_mountShapeDeformed.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_meshRNfosterParent1|gorilla_rig_v3:sight_mountShapeDeformed.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_meshRNfosterParent1|gorilla_rig_v3:sightShapeDeformed.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_meshRNfosterParent1|gorilla_rig_v3:sightShapeDeformed.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_meshRNfosterParent1|gorilla_rig_v3:clipShapeDeformed.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_meshRNfosterParent1|gorilla_rig_v3:clipShapeDeformed.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_meshRNfosterParent1|gorilla_rig_v3:bottom_cylinderShapeDeformed.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_meshRNfosterParent1|gorilla_rig_v3:bottom_cylinderShapeDeformed.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_meshRNfosterParent1|gorilla_rig_v3:muzzel_flashShapeDeformed.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_meshRNfosterParent1|gorilla_rig_v3:muzzel_flashShapeDeformed.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_meshRNfosterParent1|gorilla_rig_v3:pistol_handleShapeDeformed.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_meshRNfosterParent1|gorilla_rig_v3:pistol_handleShapeDeformed.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_meshRNfosterParent1|gorilla_rig_v3:slide_releaseShapeDeformed.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_meshRNfosterParent1|gorilla_rig_v3:slide_releaseShapeDeformed.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_meshRNfosterParent1|gorilla_rig_v3:clip_releaseShapeDeformed.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_meshRNfosterParent1|gorilla_rig_v3:clip_releaseShapeDeformed.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_meshRNfosterParent1|gorilla_rig_v3:triggerShapeDeformed.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_meshRNfosterParent1|gorilla_rig_v3:triggerShapeDeformed.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_meshRNfosterParent1|gorilla_rig_v3:hammerShapeDeformed.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_meshRNfosterParent1|gorilla_rig_v3:hammerShapeDeformed.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_meshRNfosterParent1|gorilla_rig_v3:safteyShapeDeformed.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_meshRNfosterParent1|gorilla_rig_v3:safteyShapeDeformed.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_meshRNfosterParent1|gorilla_rig_v3:pistol_gripShapeDeformed.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_meshRNfosterParent1|gorilla_rig_v3:pistol_gripShapeDeformed.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_meshRNfosterParent1|gorilla_rig_v3:barellShapeDeformed.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_meshRNfosterParent1|gorilla_rig_v3:barellShapeDeformed.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:final_gorilla_mesh_3_0_RN1fosterParent1|gorilla_rig_v3:gorilla_spy_shirt1ShapeDeformed.message" "|main_light|main_lightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "|gorilla_rig_v3:final_gorilla_mesh_3_0_RN1fosterParent1|gorilla_rig_v3:gorilla_spy_shirt1ShapeDeformed.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:final_gorilla_mesh_3_0_RN1fosterParent1|gorilla_rig_v3:gorilla_spy_shirt1ShapeDeformed.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:final_gorilla_mesh_3_0_RN1fosterParent1|gorilla_rig_v3:gorilla_spy_eyesShapeDeformed.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:final_gorilla_mesh_3_0_RN1fosterParent1|gorilla_rig_v3:gorilla_spy_eyesShapeDeformed.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:final_gorilla_mesh_3_0_RN1fosterParent1|gorilla_rig_v3:gorilla_spy_holster_detailsShapeDeformed.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:final_gorilla_mesh_3_0_RN1fosterParent1|gorilla_rig_v3:gorilla_spy_holster_detailsShapeDeformed.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:final_gorilla_mesh_3_0_RN1fosterParent1|gorilla_rig_v3:gorilla_spy_holsterShapeDeformed.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:final_gorilla_mesh_3_0_RN1fosterParent1|gorilla_rig_v3:gorilla_spy_holsterShapeDeformed.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:final_gorilla_mesh_3_0_RN1fosterParent1|gorilla_rig_v3:gorilla_spy_pantsShapeDeformed.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:final_gorilla_mesh_3_0_RN1fosterParent1|gorilla_rig_v3:gorilla_spy_pantsShapeDeformed.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:final_gorilla_mesh_3_0_RN1fosterParent1|gorilla_rig_v3:gorilla_spy_baseShapeDeformed.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:final_gorilla_mesh_3_0_RN1fosterParent1|gorilla_rig_v3:gorilla_spy_baseShapeDeformed.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_:gorilla_materialSG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_:gorilla_materialSG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		"gorilla_rig_v3:hammer_rigRN" 65
 		2 "|gorilla_rig_v3:hammer_rig:hammer_gun_grp" "translate" " -type \"double3\" 0 0 0"
 		
 		2 "|gorilla_rig_v3:hammer_rig:hammer_gun_grp" "scale" " -type \"double3\" 1 1 1"
@@ -1074,7 +1422,7 @@ createNode reference -n "gorilla_rig_v3RN";
 		2 "|gorilla_rig_v3:hammer_rig:hammer_gun_grp|gorilla_rig_v3:hammer_rig:gun_ctrl" 
 		"slide_pos" " -av -k 1 0"
 		2 "|gorilla_rig_v3:hammer_rig:hammer_gun_grp|gorilla_rig_v3:hammer_rig:gun_ctrl|gorilla_rig_v3:hammer_rig:gun_base_jnt" 
-		"translate" " -type \"double3\" 687.97522912228578 283.09454798591383 -188.71559245928378"
+		"translate" " -type \"double3\" 292.06648277222524 106.5313087006943 -135.77388676939665"
 		
 		2 "|gorilla_rig_v3:hammer_rig:hammer_gun_grp|gorilla_rig_v3:hammer_rig:gun_ctrl|gorilla_rig_v3:hammer_rig:gun_base_jnt" 
 		"translateX" " -av"
@@ -1088,11 +1436,175 @@ createNode reference -n "gorilla_rig_v3RN";
 		"nurbsCircle1W0" " -k 1 0"
 		2 "|gorilla_rig_v3:hammer_rig:hammer_gun_grp|gorilla_rig_v3:hammer_rig:gun_ctrl|gorilla_rig_v3:hammer_rig:gun_base_jnt|gorilla_rig_v3:hammer_rig:joint1_parentConstraint1" 
 		"R_wrist_cntrlW1" " -k 1 1"
+		2 "gorilla_rig_v3:hammer_rig:sight1" "reflectivity" " -av 0.23006135225296021"
+		
+		2 "gorilla_rig_v3:hammer_rig:sight1" "whiteness" " -type \"float3\" 0.14723431000000001 0.14723431000000001 0.14723431000000001"
+		
 		5 4 "gorilla_rig_v3RN" "|gorilla_rig_v3:hammer_rig:hammer_gun_grp|gorilla_rig_v3:hammer_rig:gun_ctrl.slide_pos" 
 		"gorilla_rig_v3RN.placeHolderList[1]" ""
-		"gorilla_rig_v3:final_gorilla_mesh_3_0_RN1" 1
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_rig:hammer_gun_grp|gorilla_rig_v3:hammer_rig:hammer_grp|gorilla_rig_v3:hammer_rig:barell|gorilla_rig_v3:hammer_rig:barellShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_rig:hammer_gun_grp|gorilla_rig_v3:hammer_rig:hammer_grp|gorilla_rig_v3:hammer_rig:barell|gorilla_rig_v3:hammer_rig:barellShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_rig:hammer_gun_grp|gorilla_rig_v3:hammer_rig:hammer_grp|gorilla_rig_v3:hammer_rig:pistol_handle|gorilla_rig_v3:hammer_rig:pistol_handleShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_rig:hammer_gun_grp|gorilla_rig_v3:hammer_rig:hammer_grp|gorilla_rig_v3:hammer_rig:pistol_handle|gorilla_rig_v3:hammer_rig:pistol_handleShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_rig:hammer_gun_grp|gorilla_rig_v3:hammer_rig:hammer_grp|gorilla_rig_v3:hammer_rig:pistol_handle|gorilla_rig_v3:hammer_rig:pistol_grip|gorilla_rig_v3:hammer_rig:pistol_gripShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_rig:hammer_gun_grp|gorilla_rig_v3:hammer_rig:hammer_grp|gorilla_rig_v3:hammer_rig:pistol_handle|gorilla_rig_v3:hammer_rig:pistol_grip|gorilla_rig_v3:hammer_rig:pistol_gripShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_rig:hammer_gun_grp|gorilla_rig_v3:hammer_rig:hammer_grp|gorilla_rig_v3:hammer_rig:pistol_handle|gorilla_rig_v3:hammer_rig:saftey|gorilla_rig_v3:hammer_rig:safteyShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_rig:hammer_gun_grp|gorilla_rig_v3:hammer_rig:hammer_grp|gorilla_rig_v3:hammer_rig:pistol_handle|gorilla_rig_v3:hammer_rig:saftey|gorilla_rig_v3:hammer_rig:safteyShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_rig:hammer_gun_grp|gorilla_rig_v3:hammer_rig:hammer_grp|gorilla_rig_v3:hammer_rig:pistol_handle|gorilla_rig_v3:hammer_rig:hammer|gorilla_rig_v3:hammer_rig:hammerShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_rig:hammer_gun_grp|gorilla_rig_v3:hammer_rig:hammer_grp|gorilla_rig_v3:hammer_rig:pistol_handle|gorilla_rig_v3:hammer_rig:hammer|gorilla_rig_v3:hammer_rig:hammerShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_rig:hammer_gun_grp|gorilla_rig_v3:hammer_rig:hammer_grp|gorilla_rig_v3:hammer_rig:pistol_handle|gorilla_rig_v3:hammer_rig:trigger|gorilla_rig_v3:hammer_rig:triggerShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_rig:hammer_gun_grp|gorilla_rig_v3:hammer_rig:hammer_grp|gorilla_rig_v3:hammer_rig:pistol_handle|gorilla_rig_v3:hammer_rig:trigger|gorilla_rig_v3:hammer_rig:triggerShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_rig:hammer_gun_grp|gorilla_rig_v3:hammer_rig:hammer_grp|gorilla_rig_v3:hammer_rig:pistol_handle|gorilla_rig_v3:hammer_rig:clip_release|gorilla_rig_v3:hammer_rig:clip_releaseShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_rig:hammer_gun_grp|gorilla_rig_v3:hammer_rig:hammer_grp|gorilla_rig_v3:hammer_rig:pistol_handle|gorilla_rig_v3:hammer_rig:clip_release|gorilla_rig_v3:hammer_rig:clip_releaseShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_rig:hammer_gun_grp|gorilla_rig_v3:hammer_rig:hammer_grp|gorilla_rig_v3:hammer_rig:pistol_handle|gorilla_rig_v3:hammer_rig:slide_release|gorilla_rig_v3:hammer_rig:slide_releaseShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_rig:hammer_gun_grp|gorilla_rig_v3:hammer_rig:hammer_grp|gorilla_rig_v3:hammer_rig:pistol_handle|gorilla_rig_v3:hammer_rig:slide_release|gorilla_rig_v3:hammer_rig:slide_releaseShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_rig:hammer_gun_grp|gorilla_rig_v3:hammer_rig:hammer_grp|gorilla_rig_v3:hammer_rig:muzzel_flash|gorilla_rig_v3:hammer_rig:muzzel_flashShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_rig:hammer_gun_grp|gorilla_rig_v3:hammer_rig:hammer_grp|gorilla_rig_v3:hammer_rig:muzzel_flash|gorilla_rig_v3:hammer_rig:muzzel_flashShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_rig:hammer_gun_grp|gorilla_rig_v3:hammer_rig:hammer_grp|gorilla_rig_v3:hammer_rig:bottom_cylinder|gorilla_rig_v3:hammer_rig:bottom_cylinderShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_rig:hammer_gun_grp|gorilla_rig_v3:hammer_rig:hammer_grp|gorilla_rig_v3:hammer_rig:bottom_cylinder|gorilla_rig_v3:hammer_rig:bottom_cylinderShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_rig:hammer_gun_grp|gorilla_rig_v3:hammer_rig:hammer_grp|gorilla_rig_v3:hammer_rig:clip|gorilla_rig_v3:hammer_rig:clipShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_rig:hammer_gun_grp|gorilla_rig_v3:hammer_rig:hammer_grp|gorilla_rig_v3:hammer_rig:clip|gorilla_rig_v3:hammer_rig:clipShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_rig:hammer_gun_grp|gorilla_rig_v3:hammer_rig:hammer_grp|gorilla_rig_v3:hammer_rig:slide|gorilla_rig_v3:hammer_rig:slideShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_rig:hammer_gun_grp|gorilla_rig_v3:hammer_rig:hammer_grp|gorilla_rig_v3:hammer_rig:slide|gorilla_rig_v3:hammer_rig:slideShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_rig:hammer_gun_grp|gorilla_rig_v3:hammer_rig:hammer_grp|gorilla_rig_v3:hammer_rig:slide|gorilla_rig_v3:hammer_rig:sight_grp|gorilla_rig_v3:hammer_rig:sight|gorilla_rig_v3:hammer_rig:sightShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_rig:hammer_gun_grp|gorilla_rig_v3:hammer_rig:hammer_grp|gorilla_rig_v3:hammer_rig:slide|gorilla_rig_v3:hammer_rig:sight_grp|gorilla_rig_v3:hammer_rig:sight|gorilla_rig_v3:hammer_rig:sightShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_rig:hammer_gun_grp|gorilla_rig_v3:hammer_rig:hammer_grp|gorilla_rig_v3:hammer_rig:slide|gorilla_rig_v3:hammer_rig:sight_grp|gorilla_rig_v3:hammer_rig:sight_mount|gorilla_rig_v3:hammer_rig:sight_mountShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|gorilla_rig_v3:hammer_rig:hammer_gun_grp|gorilla_rig_v3:hammer_rig:hammer_grp|gorilla_rig_v3:hammer_rig:slide|gorilla_rig_v3:hammer_rig:sight_grp|gorilla_rig_v3:hammer_rig:sight_mount|gorilla_rig_v3:hammer_rig:sight_mountShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:hammer_rig:hammer_mia_material_x_passes1SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:hammer_rig:hammer_mia_material_x_passes1SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:hammer_rig:lambert2SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:hammer_rig:lambert2SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:hammer_rig:sight1_phongE1SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:hammer_rig:sight1_phongE1SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:hammer_rig:phong1SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:hammer_rig:phong1SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:hammer_rig:sight1_phongE1SG1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:hammer_rig:sight1_phongE1SG1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:hammer_rig:sight1_phongE1SG2.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:hammer_rig:sight1_phongE1SG2.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:hammer_rig:clip_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:hammer_rig:clip_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:hammer_rig:gripSG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:hammer_rig:gripSG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:hammer_rig:parts_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:hammer_rig:parts_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:hammer_rig:handle_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:hammer_rig:handle_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		"gorilla_rig_v3:final_gorilla_mesh_3_0_RN1" 33
 		2 "|gorilla_rig_v3:final_gorilla_mesh_3_0_1:gorilla_mesh_grp" "translate" 
-		" -type \"double3\" 0 0 0";
+		" -type \"double3\" 0 0 0"
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_1:eyes:initialShadingGroup.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_1:eyes:initialShadingGroup.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_1:holster_details_final_mesh:initialShadingGroup.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_1:holster_details_final_mesh:initialShadingGroup.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_1:holster_details_final_mesh:lambert2SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_1:holster_details_final_mesh:lambert2SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_1:mia_material_x_passes1SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_1:mia_material_x_passes1SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_1:shirt_final_mesh:defaultMat.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_1:shirt_final_mesh:defaultMat.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_1:pant_final_mesh:defaultMat.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_1:pant_final_mesh:defaultMat.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_1:gorilla_final_mesh:defaultMat.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_1:gorilla_final_mesh:defaultMat.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_1:gorilla_material_mia_material_x_passes2SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_1:gorilla_material_mia_material_x_passes2SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_1:cloth_mia_material_x_passes3SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_1:cloth_mia_material_x_passes3SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_1:holster_material_mia_material_x_passes4SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_1:holster_material_mia_material_x_passes4SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_1:eye_mia_material_x_passes2SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_1:eye_mia_material_x_passes2SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_1:lambert2SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_1:lambert2SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_1:holster_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_1:holster_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_1:gorilla_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_1:gorilla_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_1:lambert3SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_1:lambert3SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_1:eye_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "gorilla_rig_v3:final_gorilla_mesh_3_0_1:eye_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0;
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode script -n "uiConfigurationScriptNode";
@@ -1101,10 +1613,10 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"camera1\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n"
 		+ "                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n"
 		+ "                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n"
-		+ "                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 1\n                -height 1\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n"
+		+ "                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 319\n                -height 731\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n"
 		+ "                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"camera1\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n"
 		+ "            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n"
-		+ "            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n"
+		+ "            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 319\n            -height 731\n            -sceneRenderFilter 0\n            $editorName;\n"
 		+ "        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"side\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n"
 		+ "                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n"
 		+ "                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n"
@@ -1118,13 +1630,13 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -width 1\n                -height 1\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n"
 		+ "            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n"
 		+ "            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n"
-		+ "            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n"
+		+ "            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"all\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n"
 		+ "                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 1\n                -activeComponentsXray 0\n                -displayTextures 1\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n"
 		+ "                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 0\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 0\n                -imagePlane 0\n                -joints 0\n"
-		+ "                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 1626\n                -height 730\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n"
-		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n"
+		+ "                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 1\n                -captureSequenceNumber -1\n                -width 888\n                -height 731\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"all\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n"
 		+ "            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n"
-		+ "            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 0\n            -joints 0\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1626\n            -height 730\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n"
+		+ "            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 0\n            -joints 0\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 1\n            -captureSequenceNumber -1\n            -width 888\n            -height 731\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n"
 		+ "            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            outlinerEditor -e \n                -docTag \"isolOutln_fromSeln\" \n                -showShapes 0\n                -showReferenceNodes 1\n                -showReferenceMembers 1\n                -showAttributes 0\n                -showConnected 0\n                -showAnimCurvesOnly 0\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 1\n                -showAssets 1\n                -showContainedOnly 1\n                -showPublishedAsConnected 0\n                -showContainerContents 1\n                -ignoreDagHierarchy 0\n"
 		+ "                -expandConnections 0\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 0\n                -highlightActive 1\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"defaultSetFilter\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n"
 		+ "                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 0\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n"
@@ -1175,9 +1687,18 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Model Panel6\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"camera1\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n"
 		+ "            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 4 4 \n            -bumpResolution 4 4 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 0\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 0\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 0\n            -height 0\n"
-		+ "            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1626\\n    -height 730\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1626\\n    -height 730\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Model Panel7\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Model Panel7\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"camera1\" \n                -useInteractiveMode 0\n                -displayLights \"all\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n"
+		+ "                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 1\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n"
+		+ "                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 0\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n"
+		+ "                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 1\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Model Panel7\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"camera1\" \n            -useInteractiveMode 0\n"
+		+ "            -displayLights \"all\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -objectFilterShowInHUD 1\n"
+		+ "            -isFiltered 0\n            -colorResolution 4 4 \n            -bumpResolution 4 4 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 0\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 0\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n"
+		+ "            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 1\n            -captureSequenceNumber -1\n            -width 0\n            -height 0\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n"
+		+ "\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"vertical2\\\" -ps 1 27 100 -ps 2 73 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Outliner\")) \n\t\t\t\t\t\"outlinerPanel\"\n\t\t\t\t\t\"$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\\\"Outliner\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\noutlinerEditor -e \\n    -docTag \\\"isolOutln_fromSeln\\\" \\n    -showShapes 0\\n    -showReferenceNodes 1\\n    -showReferenceMembers 1\\n    -showAttributes 0\\n    -showConnected 0\\n    -showAnimCurvesOnly 0\\n    -showMuteInfo 0\\n    -organizeByLayer 1\\n    -showAnimLayerWeight 1\\n    -autoExpandLayers 1\\n    -autoExpand 0\\n    -showDagOnly 1\\n    -showAssets 1\\n    -showContainedOnly 1\\n    -showPublishedAsConnected 0\\n    -showContainerContents 1\\n    -ignoreDagHierarchy 0\\n    -expandConnections 0\\n    -showUpstreamCurves 1\\n    -showUnitlessCurves 1\\n    -showCompounds 1\\n    -showLeafs 1\\n    -showNumericAttrsOnly 0\\n    -highlightActive 1\\n    -autoSelectNewObjects 0\\n    -doNotSelectNewObjects 0\\n    -dropIsParent 1\\n    -transmitFilters 0\\n    -setFilter \\\"defaultSetFilter\\\" \\n    -showSetMembers 1\\n    -allowMultiSelection 1\\n    -alwaysToggleSelect 0\\n    -directSelect 0\\n    -displayMode \\\"DAG\\\" \\n    -expandObjects 0\\n    -setsIgnoreFilters 1\\n    -containersIgnoreFilters 0\\n    -editAttrName 0\\n    -showAttrValues 0\\n    -highlightSecondary 0\\n    -showUVAttrsOnly 0\\n    -showTextureNodesOnly 0\\n    -attrAlphaOrder \\\"default\\\" \\n    -animLayerFilterOptions \\\"allAffecting\\\" \\n    -sortOrder \\\"none\\\" \\n    -longNames 0\\n    -niceNames 1\\n    -showNamespace 1\\n    -showPinIcons 0\\n    -mapMotionTrails 0\\n    -ignoreHiddenAttribute 0\\n    -ignoreOutlinerColor 0\\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"outlinerPanel -edit -l (localizedPanelLabel(\\\"Outliner\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\noutlinerEditor -e \\n    -docTag \\\"isolOutln_fromSeln\\\" \\n    -showShapes 0\\n    -showReferenceNodes 1\\n    -showReferenceMembers 1\\n    -showAttributes 0\\n    -showConnected 0\\n    -showAnimCurvesOnly 0\\n    -showMuteInfo 0\\n    -organizeByLayer 1\\n    -showAnimLayerWeight 1\\n    -autoExpandLayers 1\\n    -autoExpand 0\\n    -showDagOnly 1\\n    -showAssets 1\\n    -showContainedOnly 1\\n    -showPublishedAsConnected 0\\n    -showContainerContents 1\\n    -ignoreDagHierarchy 0\\n    -expandConnections 0\\n    -showUpstreamCurves 1\\n    -showUnitlessCurves 1\\n    -showCompounds 1\\n    -showLeafs 1\\n    -showNumericAttrsOnly 0\\n    -highlightActive 1\\n    -autoSelectNewObjects 0\\n    -doNotSelectNewObjects 0\\n    -dropIsParent 1\\n    -transmitFilters 0\\n    -setFilter \\\"defaultSetFilter\\\" \\n    -showSetMembers 1\\n    -allowMultiSelection 1\\n    -alwaysToggleSelect 0\\n    -directSelect 0\\n    -displayMode \\\"DAG\\\" \\n    -expandObjects 0\\n    -setsIgnoreFilters 1\\n    -containersIgnoreFilters 0\\n    -editAttrName 0\\n    -showAttrValues 0\\n    -highlightSecondary 0\\n    -showUVAttrsOnly 0\\n    -showTextureNodesOnly 0\\n    -attrAlphaOrder \\\"default\\\" \\n    -animLayerFilterOptions \\\"allAffecting\\\" \\n    -sortOrder \\\"none\\\" \\n    -longNames 0\\n    -niceNames 1\\n    -showNamespace 1\\n    -showPinIcons 0\\n    -mapMotionTrails 0\\n    -ignoreHiddenAttribute 0\\n    -ignoreOutlinerColor 0\\n    $editorName\"\n"
+		+ "\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"all\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 1\\n    -captureSequenceNumber -1\\n    -width 888\\n    -height 731\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"all\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 1\\n    -captureSequenceNumber -1\\n    -width 888\\n    -height 731\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -1953,7 +2474,7 @@ createNode reference -n "cal_bullet_rigRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"cal_bullet_rigRN"
 		"cal_bullet_rigRN" 0
-		"cal_bullet_rigRN" 27
+		"cal_bullet_rigRN" 39
 		2 "|cal_bullet_rig:bullet_grp" "visibility" " -av 0"
 		2 "|cal_bullet_rig:bullet_grp" "translate" " -type \"double3\" -0.3155403540694266 0.036633201922608549 0.87390555674750203"
 		
@@ -2005,7 +2526,31 @@ createNode reference -n "cal_bullet_rigRN";
 		5 4 "cal_bullet_rigRN" "|cal_bullet_rig:bullet_grp|cal_bullet_rig:bullet_root.rotateY" 
 		"cal_bullet_rigRN.placeHolderList[6]" ""
 		5 4 "cal_bullet_rigRN" "|cal_bullet_rig:bullet_grp|cal_bullet_rig:bullet_root.rotateZ" 
-		"cal_bullet_rigRN.placeHolderList[7]" "";
+		"cal_bullet_rigRN.placeHolderList[7]" ""
+		7 "ignore" ":lightLinker1" 2 "|cal_bullet_rig:bullet_grp|cal_bullet_rig:bullet_caseing|cal_bullet_rig:bullet_caseingShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|cal_bullet_rig:bullet_grp|cal_bullet_rig:bullet_caseing|cal_bullet_rig:bullet_caseingShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|cal_bullet_rig:bullet_grp|cal_bullet_rig:bullet|cal_bullet_rig:bulletShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|cal_bullet_rig:bullet_grp|cal_bullet_rig:bullet|cal_bullet_rig:bulletShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "cal_bullet_rig:bullet_phongSG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "cal_bullet_rig:bullet_phongSG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "cal_bullet_rig:bullet_casing_SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "cal_bullet_rig:bullet_casing_SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "cal_bullet_rig:mia_material_x_passes1SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "cal_bullet_rig:mia_material_x_passes1SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "cal_bullet_rig:StingrayPBS1SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "cal_bullet_rig:StingrayPBS1SG.message" "|back_building_light|back_building_lightShape.message" 
+		0;
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode animCurveTL -n "bullet_root_translateX";
@@ -2070,8 +2615,8 @@ createNode reference -n "scene_layout_03RN";
 		"scene_layout_03:brick_01RN" 0
 		"scene_layout_03:rubble_03RN" 0
 		"scene_layout_03:office_rubbleRN4" 0
-		"scene_layout_03:rubble_01RN2" 0
 		"scene_layout_03:fire_rubble_2RN" 0
+		"scene_layout_03:rubble_01RN2" 0
 		"scene_layout_03RN" 0
 		"scene_layout_03:cal_bulletRN" 0
 		"scene_layout_03:office_rubbleRN3" 0
@@ -2082,14 +2627,1818 @@ createNode reference -n "scene_layout_03RN";
 		"scene_layout_03:rubble_02RN" 0
 		"scene_layout_03:rubble_02RN1" 0
 		"scene_layout_03:rubble_04RN1" 0
-		"scene_layout_03:office_rubbleRN2" 0
 		"scene_layout_03:brick_01RN1" 0
+		"scene_layout_03:office_rubbleRN2" 0
 		"scene_layout_03:desk_01RN" 0
 		"scene_layout_03:office_rubbleRN" 0
 		"scene_layout_03:rubble_01RN1" 0
-		"scene_layout_03:fire_rubble_2RN1" 19
+		"scene_layout_03:brick_01RN" 4
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:brick_01:pCube1|scene_layout_03:brick_01:pCubeShape1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:brick_01:pCube1|scene_layout_03:brick_01:pCubeShape1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:brick_01:phongE1SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:brick_01:phongE1SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		"scene_layout_03:rubble_03RN" 6
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_03:pPlane1|scene_layout_03:rubble_03:pPlaneShape1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_03:pPlane1|scene_layout_03:rubble_03:pPlaneShape1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_03:lambert2SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_03:lambert2SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_03:rubble_3_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_03:rubble_3_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		"scene_layout_03:office_rubbleRN4" 74
+		2 "scene_layout_03:office_rubble4:first_floor_phongE" "reflectivity" " 0"
+		
+		2 "scene_layout_03:office_rubble4:first_floor_phongE" "whiteness" " -type \"float3\" 0.0061341267999999996 0.0061341267999999996 0.0061341267999999996"
+		
+		2 "scene_layout_03:office_rubble4:second_floor_phongE" "reflectivity" " 0"
+		
+		2 "scene_layout_03:office_rubble4:second_floor_phongE" "whiteness" " -type \"float3\" 0.0061341267999999996 0.0061341267999999996 0.0061341267999999996"
+		
+		2 "scene_layout_03:office_rubble4:third_floor_phongE" "reflectivity" " 0.0092024542391300201"
+		
+		2 "scene_layout_03:office_rubble4:third_floor_phongE" "whiteness" " -type \"float3\" 0.0061341267999999996 0.0061341267999999996 0.0061341267999999996"
+		
+		2 "scene_layout_03:office_rubble4:fourth_floor_phongE" "reflectivity" " 0"
+		
+		2 "scene_layout_03:office_rubble4:fourth_floor_phongE" "whiteness" " -type \"float3\" 0.018402380999999999 0.018402380999999999 0.018402380999999999"
+		
+		2 "scene_layout_03:office_rubble4:fifth_floor_phongE" "reflectivity" " 0"
+		
+		2 "scene_layout_03:office_rubble4:fifth_floor_phongE" "whiteness" " -type \"float3\" 0.0092011903999999999 0.0092011903999999999 0.0092011903999999999"
+		
+		2 "scene_layout_03:office_rubble4:roof_phongE" "reflectivity" " 0"
+		2 "scene_layout_03:office_rubble4:roof_phongE" "whiteness" " -type \"float3\" 0.015335316999999999 0.015335316999999999 0.015335316999999999"
+		
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:first_floor_grp|scene_layout_03:office_rubble4:hero_room|scene_layout_03:office_rubble4:hero_roomShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:first_floor_grp|scene_layout_03:office_rubble4:hero_room|scene_layout_03:office_rubble4:hero_roomShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:first_floor_grp|scene_layout_03:office_rubble4:hero_room|scene_layout_03:office_rubble4:door_frame_3|scene_layout_03:office_rubble4:door_frame_3Shape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:first_floor_grp|scene_layout_03:office_rubble4:hero_room|scene_layout_03:office_rubble4:door_frame_3|scene_layout_03:office_rubble4:door_frame_3Shape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:first_floor_grp|scene_layout_03:office_rubble4:hero_room|scene_layout_03:office_rubble4:window_frame|scene_layout_03:office_rubble4:window_frameShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:first_floor_grp|scene_layout_03:office_rubble4:hero_room|scene_layout_03:office_rubble4:window_frame|scene_layout_03:office_rubble4:window_frameShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:first_floor_grp|scene_layout_03:office_rubble4:first_floor|scene_layout_03:office_rubble4:first_floorShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:first_floor_grp|scene_layout_03:office_rubble4:first_floor|scene_layout_03:office_rubble4:first_floorShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:first_floor_grp|scene_layout_03:office_rubble4:building_ground|scene_layout_03:office_rubble4:building_groundShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:first_floor_grp|scene_layout_03:office_rubble4:building_ground|scene_layout_03:office_rubble4:building_groundShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:first_floor_grp|scene_layout_03:office_rubble4:panel_1|scene_layout_03:office_rubble4:panel_Shape1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:first_floor_grp|scene_layout_03:office_rubble4:panel_1|scene_layout_03:office_rubble4:panel_Shape1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:first_floor_grp|scene_layout_03:office_rubble4:panel_9|scene_layout_03:office_rubble4:panel_Shape9.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:first_floor_grp|scene_layout_03:office_rubble4:panel_9|scene_layout_03:office_rubble4:panel_Shape9.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:first_floor_grp|scene_layout_03:office_rubble4:panel_10|scene_layout_03:office_rubble4:panel_Shape10.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:first_floor_grp|scene_layout_03:office_rubble4:panel_10|scene_layout_03:office_rubble4:panel_Shape10.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:first_floor_grp|scene_layout_03:office_rubble4:panel_11|scene_layout_03:office_rubble4:panel_Shape11.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:first_floor_grp|scene_layout_03:office_rubble4:panel_11|scene_layout_03:office_rubble4:panel_Shape11.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:second_floor_grp|scene_layout_03:office_rubble4:second_floor|scene_layout_03:office_rubble4:second_floorShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:second_floor_grp|scene_layout_03:office_rubble4:second_floor|scene_layout_03:office_rubble4:second_floorShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:second_floor_grp|scene_layout_03:office_rubble4:floor_one|scene_layout_03:office_rubble4:floor_oneShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:second_floor_grp|scene_layout_03:office_rubble4:floor_one|scene_layout_03:office_rubble4:floor_oneShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:second_floor_grp|scene_layout_03:office_rubble4:panel_6|scene_layout_03:office_rubble4:panel_Shape6.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:second_floor_grp|scene_layout_03:office_rubble4:panel_6|scene_layout_03:office_rubble4:panel_Shape6.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:second_floor_grp|scene_layout_03:office_rubble4:panel_7|scene_layout_03:office_rubble4:panel_Shape7.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:second_floor_grp|scene_layout_03:office_rubble4:panel_7|scene_layout_03:office_rubble4:panel_Shape7.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:second_floor_grp|scene_layout_03:office_rubble4:panel_2|scene_layout_03:office_rubble4:panel_Shape2.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:second_floor_grp|scene_layout_03:office_rubble4:panel_2|scene_layout_03:office_rubble4:panel_Shape2.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:third_floor_grp|scene_layout_03:office_rubble4:third_floor|scene_layout_03:office_rubble4:third_floorShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:third_floor_grp|scene_layout_03:office_rubble4:third_floor|scene_layout_03:office_rubble4:third_floorShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:third_floor_grp|scene_layout_03:office_rubble4:panel_4|scene_layout_03:office_rubble4:panel_Shape4.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:third_floor_grp|scene_layout_03:office_rubble4:panel_4|scene_layout_03:office_rubble4:panel_Shape4.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:third_floor_grp|scene_layout_03:office_rubble4:panel_3|scene_layout_03:office_rubble4:panel_Shape3.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:third_floor_grp|scene_layout_03:office_rubble4:panel_3|scene_layout_03:office_rubble4:panel_Shape3.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:fourth_floor_grp|scene_layout_03:office_rubble4:forth_floor|scene_layout_03:office_rubble4:forth_floorShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:fourth_floor_grp|scene_layout_03:office_rubble4:forth_floor|scene_layout_03:office_rubble4:forth_floorShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:fourth_floor_grp|scene_layout_03:office_rubble4:panel_8|scene_layout_03:office_rubble4:panel_Shape8.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:fourth_floor_grp|scene_layout_03:office_rubble4:panel_8|scene_layout_03:office_rubble4:panel_Shape8.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:fourth_floor_grp|scene_layout_03:office_rubble4:panel_5|scene_layout_03:office_rubble4:panel_Shape5.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:fourth_floor_grp|scene_layout_03:office_rubble4:panel_5|scene_layout_03:office_rubble4:panel_Shape5.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:fifth_floor_grp|scene_layout_03:office_rubble4:roof|scene_layout_03:office_rubble4:roofShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:fifth_floor_grp|scene_layout_03:office_rubble4:roof|scene_layout_03:office_rubble4:roofShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:fifth_floor_grp|scene_layout_03:office_rubble4:fifth_floor|scene_layout_03:office_rubble4:fifth_floorShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble4:building_rubble_grp|scene_layout_03:office_rubble4:fifth_floor_grp|scene_layout_03:office_rubble4:fifth_floor|scene_layout_03:office_rubble4:fifth_floorShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble4:hero_room_phongeSG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble4:hero_room_phongeSG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble4:first_floor_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble4:first_floor_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble4:second_floor_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble4:second_floor_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble4:third_floor_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble4:third_floor_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble4:fourth_floor_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble4:fourth_floor_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble4:fifth_floor_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble4:fifth_floor_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble4:roof_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble4:roof_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble4:building_ground_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble4:building_ground_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble4:panel_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble4:panel_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		"scene_layout_03:rubble_01RN2" 86
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rubble_corner|scene_layout_03:rubble_08:rubble_cornerShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rubble_corner|scene_layout_03:rubble_08:rubble_cornerShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rubble_pillar|scene_layout_03:rubble_08:rubble_pillarShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rubble_pillar|scene_layout_03:rubble_08:rubble_pillarShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:cinder_block_1|scene_layout_03:rubble_08:cinder_block_Shape1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:cinder_block_1|scene_layout_03:rubble_08:cinder_block_Shape1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:cinder_block_2|scene_layout_03:rubble_08:cinder_block_Shape2.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:cinder_block_2|scene_layout_03:rubble_08:cinder_block_Shape2.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_1|scene_layout_03:rubble_08:rebar_Shape1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_1|scene_layout_03:rubble_08:rebar_Shape1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_2|scene_layout_03:rubble_08:rebar_Shape2.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_2|scene_layout_03:rubble_08:rebar_Shape2.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_3|scene_layout_03:rubble_08:rebar_Shape3.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_3|scene_layout_03:rubble_08:rebar_Shape3.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_4|scene_layout_03:rubble_08:rebar_Shape4.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_4|scene_layout_03:rubble_08:rebar_Shape4.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_5|scene_layout_03:rubble_08:rebar_Shape5.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_5|scene_layout_03:rubble_08:rebar_Shape5.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_6|scene_layout_03:rubble_08:rebar_Shape6.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_6|scene_layout_03:rubble_08:rebar_Shape6.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_7|scene_layout_03:rubble_08:rebar_Shape7.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_7|scene_layout_03:rubble_08:rebar_Shape7.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_8|scene_layout_03:rubble_08:rebar_Shape8.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_8|scene_layout_03:rubble_08:rebar_Shape8.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_9|scene_layout_03:rubble_08:rebar_Shape9.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_9|scene_layout_03:rubble_08:rebar_Shape9.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_10|scene_layout_03:rubble_08:rebar_Shape10.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_10|scene_layout_03:rubble_08:rebar_Shape10.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_11|scene_layout_03:rubble_08:rebar_Shape11.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_11|scene_layout_03:rubble_08:rebar_Shape11.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_12|scene_layout_03:rubble_08:rebar_Shape12.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_12|scene_layout_03:rubble_08:rebar_Shape12.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_13|scene_layout_03:rubble_08:rebar_Shape13.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_13|scene_layout_03:rubble_08:rebar_Shape13.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_14|scene_layout_03:rubble_08:rebar_Shape14.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_14|scene_layout_03:rubble_08:rebar_Shape14.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_15|scene_layout_03:rubble_08:rebar_Shape15.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_15|scene_layout_03:rubble_08:rebar_Shape15.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_16|scene_layout_03:rubble_08:rebar_Shape16.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_16|scene_layout_03:rubble_08:rebar_Shape16.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_17|scene_layout_03:rubble_08:rebar_Shape17.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_17|scene_layout_03:rubble_08:rebar_Shape17.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_18|scene_layout_03:rubble_08:rebar_Shape18.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_18|scene_layout_03:rubble_08:rebar_Shape18.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_19|scene_layout_03:rubble_08:rebar_19Shape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_19|scene_layout_03:rubble_08:rebar_19Shape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_20|scene_layout_03:rubble_08:rebar_Shape20.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_20|scene_layout_03:rubble_08:rebar_Shape20.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_21|scene_layout_03:rubble_08:rebar_Shape21.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_21|scene_layout_03:rubble_08:rebar_Shape21.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_22|scene_layout_03:rubble_08:rebar_Shape22.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_22|scene_layout_03:rubble_08:rebar_Shape22.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_23|scene_layout_03:rubble_08:rebar_Shape23.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_23|scene_layout_03:rubble_08:rebar_Shape23.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_24|scene_layout_03:rubble_08:rebar_Shape24.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_24|scene_layout_03:rubble_08:rebar_Shape24.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_25|scene_layout_03:rubble_08:rebar_25Shape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_25|scene_layout_03:rubble_08:rebar_25Shape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_26|scene_layout_03:rubble_08:rebar_Shape26.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_26|scene_layout_03:rubble_08:rebar_Shape26.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rubble_1_ground|scene_layout_03:rubble_08:rubble_1_groundShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rubble_1_ground|scene_layout_03:rubble_08:rubble_1_groundShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_27|scene_layout_03:rubble_08:rebar_Shape27.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_27|scene_layout_03:rubble_08:rebar_Shape27.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_28|scene_layout_03:rubble_08:rebar_Shape28.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_28|scene_layout_03:rubble_08:rebar_Shape28.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_29|scene_layout_03:rubble_08:rebar_Shape29.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_29|scene_layout_03:rubble_08:rebar_Shape29.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_30|scene_layout_03:rubble_08:rebar_Shape30.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_08:rubble_01|scene_layout_03:rubble_08:rebar_30|scene_layout_03:rubble_08:rebar_Shape30.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_08:mia_material_x1SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_08:mia_material_x1SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_08:rubble_1_phongSG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_08:rubble_1_phongSG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_08:leaning_wall.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_08:leaning_wall.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_08:main_wall.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_08:main_wall.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_08:blocks1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_08:blocks1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_08:ground_rublle_1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_08:ground_rublle_1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_08:rubble_1_2:defaultMat.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_08:rubble_1_2:defaultMat.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_08:phongE2SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_08:phongE2SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		"scene_layout_03:fire_rubble_2RN" 40
+		2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp" "visibility" " 1"
+		2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_test_3:fluid1" 
+		"visibility" " 0"
+		2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_test_3:fluid1|scene_layout_03:fire_rubble_2:fire_test_3:fluidShape1" 
+		"startFrame" " -263"
+		2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_test_3:fluid1|scene_layout_03:fire_rubble_2:fire_test_3:fluidShape1" 
+		"dynamicOffsetX" " 0"
+		2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_test_3:fluid1|scene_layout_03:fire_rubble_2:fire_test_3:fluidShape1" 
+		"dynamicOffsetY" " 0"
+		2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_test_3:fluid1|scene_layout_03:fire_rubble_2:fire_test_3:fluidShape1" 
+		"dynamicOffsetZ" " 0"
+		2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_test_4:fluid1" 
+		"visibility" " 0"
+		2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_test_4:fluid1|scene_layout_03:fire_rubble_2:fire_test_4:fluidShape1" 
+		"startFrame" " -263"
+		2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_test_4:fluid1|scene_layout_03:fire_rubble_2:fire_test_4:fluidShape1" 
+		"dynamicOffsetX" " 0"
+		2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_test_4:fluid1|scene_layout_03:fire_rubble_2:fire_test_4:fluidShape1" 
+		"dynamicOffsetY" " 0"
+		2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_test_4:fluid1|scene_layout_03:fire_rubble_2:fire_test_4:fluidShape1" 
+		"dynamicOffsetZ" " 0"
+		2 "scene_layout_03:fire_rubble_2:fire_rubble_1:fire_rubble_phongE" "whiteness" 
+		" -type \"float3\" 0.085893035000000006 0.085893035000000006 0.085893035000000006"
+		
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_rubble_1:fire_rubble_1|scene_layout_03:fire_rubble_2:fire_rubble_1:wood_plank|scene_layout_03:fire_rubble_2:fire_rubble_1:wood_plankShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_rubble_1:fire_rubble_1|scene_layout_03:fire_rubble_2:fire_rubble_1:wood_plank|scene_layout_03:fire_rubble_2:fire_rubble_1:wood_plankShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_rubble_1:fire_rubble_1|scene_layout_03:fire_rubble_2:fire_rubble_1:brick_1|scene_layout_03:fire_rubble_2:fire_rubble_1:brick_Shape1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_rubble_1:fire_rubble_1|scene_layout_03:fire_rubble_2:fire_rubble_1:brick_1|scene_layout_03:fire_rubble_2:fire_rubble_1:brick_Shape1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_rubble_1:fire_rubble_1|scene_layout_03:fire_rubble_2:fire_rubble_1:wood_plank1|scene_layout_03:fire_rubble_2:fire_rubble_1:wood_plankShape1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_rubble_1:fire_rubble_1|scene_layout_03:fire_rubble_2:fire_rubble_1:wood_plank1|scene_layout_03:fire_rubble_2:fire_rubble_1:wood_plankShape1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_rubble_1:fire_rubble_1|scene_layout_03:fire_rubble_2:fire_rubble_1:brick_2|scene_layout_03:fire_rubble_2:fire_rubble_1:brick_Shape2.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_rubble_1:fire_rubble_1|scene_layout_03:fire_rubble_2:fire_rubble_1:brick_2|scene_layout_03:fire_rubble_2:fire_rubble_1:brick_Shape2.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_rubble_1:fire_rubble_1|scene_layout_03:fire_rubble_2:fire_rubble_1:large_brink|scene_layout_03:fire_rubble_2:fire_rubble_1:large_brinkShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_rubble_1:fire_rubble_1|scene_layout_03:fire_rubble_2:fire_rubble_1:large_brink|scene_layout_03:fire_rubble_2:fire_rubble_1:large_brinkShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_rubble_1:fire_rubble_1|scene_layout_03:fire_rubble_2:fire_rubble_1:wood_plank2|scene_layout_03:fire_rubble_2:fire_rubble_1:wood_plankShape2.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_rubble_1:fire_rubble_1|scene_layout_03:fire_rubble_2:fire_rubble_1:wood_plank2|scene_layout_03:fire_rubble_2:fire_rubble_1:wood_plankShape2.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_rubble_1:fire_rubble_1|scene_layout_03:fire_rubble_2:fire_rubble_1:brick_3|scene_layout_03:fire_rubble_2:fire_rubble_1:brick_Shape3.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_rubble_1:fire_rubble_1|scene_layout_03:fire_rubble_2:fire_rubble_1:brick_3|scene_layout_03:fire_rubble_2:fire_rubble_1:brick_Shape3.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_rubble_1:fire_rubble_1|scene_layout_03:fire_rubble_2:fire_rubble_1:brick_4|scene_layout_03:fire_rubble_2:fire_rubble_1:brick_Shape4.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_rubble_1:fire_rubble_1|scene_layout_03:fire_rubble_2:fire_rubble_1:brick_4|scene_layout_03:fire_rubble_2:fire_rubble_1:brick_Shape4.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_rubble_1:fire_rubble_1|scene_layout_03:fire_rubble_2:fire_rubble_1:brick_5|scene_layout_03:fire_rubble_2:fire_rubble_1:brick_Shape5.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_rubble_1:fire_rubble_1|scene_layout_03:fire_rubble_2:fire_rubble_1:brick_5|scene_layout_03:fire_rubble_2:fire_rubble_1:brick_Shape5.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_test_3:fluid1|scene_layout_03:fire_rubble_2:fire_test_3:fluidShape1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_test_3:fluid1|scene_layout_03:fire_rubble_2:fire_test_3:fluidShape1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_test_4:fluid1|scene_layout_03:fire_rubble_2:fire_test_4:fluidShape1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_test_4:fluid1|scene_layout_03:fire_rubble_2:fire_test_4:fluidShape1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:fire_rubble_2:fire_rubble_1:fire_rubble_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:fire_rubble_2:fire_rubble_1:fire_rubble_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:fire_rubble_2:fire_test_3:fluidShape1SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:fire_rubble_2:fire_test_3:fluidShape1SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:fire_rubble_2:fire_test_4:fluidShape1SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:fire_rubble_2:fire_test_4:fluidShape1SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		"scene_layout_03RN" 277
+		2 "|scene_layout_03:rubble_grp|scene_layout_03:rock_6" "translate" " -type \"double3\" -48.194115492179279 12.798155630307418 136.56881470686136"
+		
+		2 "|scene_layout_03:rubble_grp|scene_layout_03:pCube4" "translate" " -type \"double3\" -44.239285436324344 13.658259032952344 146.88228717668179"
+		
+		2 "|scene_layout_03:rubble_grp|scene_layout_03:rock_2" "translate" " -type \"double3\" -47.809526759668287 12.811986827640423 136.93385456948201"
+		
+		2 "|scene_layout_03:rubble_grp|scene_layout_03:rock_9" "translate" " -type \"double3\" -35.63876703896964 14.119373043950878 139.76888503448592"
+		
+		2 "scene_layout_03:scene" "displayType" " 0"
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:ground|scene_layout_03:groundShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:ground|scene_layout_03:groundShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:wall_1|scene_layout_03:wall_Shape1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:wall_1|scene_layout_03:wall_Shape1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_1|scene_layout_03:reebar_Shape1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_1|scene_layout_03:reebar_Shape1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_2|scene_layout_03:reebar_Shape2.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_2|scene_layout_03:reebar_Shape2.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_3|scene_layout_03:reebar_Shape3.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_3|scene_layout_03:reebar_Shape3.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_4|scene_layout_03:reebar_Shape4.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_4|scene_layout_03:reebar_Shape4.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_5|scene_layout_03:reebar_Shape5.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_5|scene_layout_03:reebar_Shape5.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_6|scene_layout_03:reebar_Shape6.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_6|scene_layout_03:reebar_Shape6.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_7|scene_layout_03:reebar_Shape7.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_7|scene_layout_03:reebar_Shape7.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_8|scene_layout_03:reebar_Shape8.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_8|scene_layout_03:reebar_Shape8.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_9|scene_layout_03:reebar_Shape9.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_9|scene_layout_03:reebar_Shape9.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_10|scene_layout_03:reebar_Shape10.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_10|scene_layout_03:reebar_Shape10.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_11|scene_layout_03:reebar_Shape11.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_11|scene_layout_03:reebar_Shape11.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_12|scene_layout_03:reebar_Shape12.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_12|scene_layout_03:reebar_Shape12.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_13|scene_layout_03:reebar_Shape13.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_13|scene_layout_03:reebar_Shape13.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_14|scene_layout_03:reebar_Shape14.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_14|scene_layout_03:reebar_Shape14.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_15|scene_layout_03:reebar_Shape15.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_15|scene_layout_03:reebar_Shape15.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_16|scene_layout_03:reebar_Shape16.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_16|scene_layout_03:reebar_Shape16.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_17|scene_layout_03:reebar_Shape17.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_17|scene_layout_03:reebar_Shape17.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_18|scene_layout_03:reebar_Shape18.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_18|scene_layout_03:reebar_Shape18.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_19|scene_layout_03:reebar_Shape19.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_19|scene_layout_03:reebar_Shape19.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_20|scene_layout_03:reebar_Shape20.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_20|scene_layout_03:reebar_Shape20.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_21|scene_layout_03:reebar_Shape21.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_21|scene_layout_03:reebar_Shape21.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_22|scene_layout_03:reebar_Shape22.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_22|scene_layout_03:reebar_Shape22.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_23|scene_layout_03:reebar_Shape23.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_23|scene_layout_03:reebar_Shape23.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_24|scene_layout_03:reebar_Shape24.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_24|scene_layout_03:reebar_Shape24.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_25|scene_layout_03:reebar_Shape25.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_1_grp|scene_layout_03:reebar_25|scene_layout_03:reebar_Shape25.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_2_grp|scene_layout_03:wall_2|scene_layout_03:wall_Shape2.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_2_grp|scene_layout_03:wall_2|scene_layout_03:wall_Shape2.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_2_grp|scene_layout_03:reebar_26|scene_layout_03:reebar_Shape26.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_2_grp|scene_layout_03:reebar_26|scene_layout_03:reebar_Shape26.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_2_grp|scene_layout_03:reebar_27|scene_layout_03:reebar_Shape27.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_2_grp|scene_layout_03:reebar_27|scene_layout_03:reebar_Shape27.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_2_grp|scene_layout_03:reebar_28|scene_layout_03:reebar_Shape28.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_2_grp|scene_layout_03:reebar_28|scene_layout_03:reebar_Shape28.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_2_grp|scene_layout_03:reebar_29|scene_layout_03:reebar_Shape29.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_2_grp|scene_layout_03:reebar_29|scene_layout_03:reebar_Shape29.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_2_grp|scene_layout_03:reebar_30|scene_layout_03:reebar_Shape30.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_2_grp|scene_layout_03:reebar_30|scene_layout_03:reebar_Shape30.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_2_grp|scene_layout_03:reebar_31|scene_layout_03:reebar_Shape31.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_2_grp|scene_layout_03:reebar_31|scene_layout_03:reebar_Shape31.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_2_grp|scene_layout_03:reebar_32|scene_layout_03:reebar_Shape32.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_2_grp|scene_layout_03:reebar_32|scene_layout_03:reebar_Shape32.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_2_grp|scene_layout_03:reebar_33|scene_layout_03:reebar_Shape33.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_2_grp|scene_layout_03:reebar_33|scene_layout_03:reebar_Shape33.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_2_grp|scene_layout_03:reebar_34|scene_layout_03:reebar_Shape34.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_2_grp|scene_layout_03:reebar_34|scene_layout_03:reebar_Shape34.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_2_grp|scene_layout_03:reebar_35|scene_layout_03:reebar_Shape35.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_2_grp|scene_layout_03:reebar_35|scene_layout_03:reebar_Shape35.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_2_grp|scene_layout_03:reebar_36|scene_layout_03:reebar_Shape36.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_2_grp|scene_layout_03:reebar_36|scene_layout_03:reebar_Shape36.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_2_grp|scene_layout_03:reebar_37|scene_layout_03:reebar_Shape37.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_2_grp|scene_layout_03:reebar_37|scene_layout_03:reebar_Shape37.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_2_grp|scene_layout_03:reebar_38|scene_layout_03:reebar_Shape38.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_2_grp|scene_layout_03:reebar_38|scene_layout_03:reebar_Shape38.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_2_grp|scene_layout_03:wall_3|scene_layout_03:wall_Shape3.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:wall_2_grp|scene_layout_03:wall_3|scene_layout_03:wall_Shape3.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:rock_grp|scene_layout_03:rock_1|scene_layout_03:rock_Shape1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:rock_grp|scene_layout_03:rock_1|scene_layout_03:rock_Shape1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:rock_grp|scene_layout_03:rock_2|scene_layout_03:rock_Shape2.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:rock_grp|scene_layout_03:rock_2|scene_layout_03:rock_Shape2.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:rock_grp|scene_layout_03:rock_3|scene_layout_03:rock_Shape3.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:rock_grp|scene_layout_03:rock_3|scene_layout_03:rock_Shape3.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:rock_grp|scene_layout_03:rock_4|scene_layout_03:rock_Shape4.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:rock_grp|scene_layout_03:rock_4|scene_layout_03:rock_Shape4.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:rock_grp|scene_layout_03:rock_5|scene_layout_03:rock_Shape5.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:rock_grp|scene_layout_03:rock_5|scene_layout_03:rock_Shape5.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:rock_grp|scene_layout_03:rock_6|scene_layout_03:rock_Shape6.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:rock_grp|scene_layout_03:rock_6|scene_layout_03:rock_Shape6.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:rock_grp|scene_layout_03:rock_7|scene_layout_03:rock_Shape7.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:rock_grp|scene_layout_03:rock_7|scene_layout_03:rock_Shape7.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:rock_grp|scene_layout_03:rock_8|scene_layout_03:rock_Shape8.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:rock_grp|scene_layout_03:rock_8|scene_layout_03:rock_Shape8.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:rock_grp|scene_layout_03:rock_10|scene_layout_03:rock_Shape10.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_2_grp|scene_layout_03:rock_grp|scene_layout_03:rock_10|scene_layout_03:rock_Shape10.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:brick_1|scene_layout_03:brick_Shape1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:brick_1|scene_layout_03:brick_Shape1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:brick_2|scene_layout_03:brick_Shape2.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:brick_2|scene_layout_03:brick_Shape2.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:brick_3|scene_layout_03:brick_Shape3.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:brick_3|scene_layout_03:brick_Shape3.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:brick_4|scene_layout_03:brick_Shape4.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:brick_4|scene_layout_03:brick_Shape4.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_grp|scene_layout_03:rock_6|scene_layout_03:rock_Shape6.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_grp|scene_layout_03:rock_6|scene_layout_03:rock_Shape6.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_grp|scene_layout_03:pCube4|scene_layout_03:pCubeShape4.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_grp|scene_layout_03:pCube4|scene_layout_03:pCubeShape4.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_grp|scene_layout_03:rock_2|scene_layout_03:rock_Shape2.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_grp|scene_layout_03:rock_2|scene_layout_03:rock_Shape2.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_grp|scene_layout_03:rock_9|scene_layout_03:rock_Shape9.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_grp|scene_layout_03:rock_9|scene_layout_03:rock_Shape9.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:ground_2|scene_layout_03:ground_Shape2.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:ground_2|scene_layout_03:ground_Shape2.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:first_floor_grp|scene_layout_03:hero_room|scene_layout_03:hero_roomShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:first_floor_grp|scene_layout_03:hero_room|scene_layout_03:hero_roomShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:first_floor_grp|scene_layout_03:hero_room|scene_layout_03:door_frame_3|scene_layout_03:door_frame_3Shape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:first_floor_grp|scene_layout_03:hero_room|scene_layout_03:door_frame_3|scene_layout_03:door_frame_3Shape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:first_floor_grp|scene_layout_03:hero_room|scene_layout_03:window_frame|scene_layout_03:window_frameShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:first_floor_grp|scene_layout_03:hero_room|scene_layout_03:window_frame|scene_layout_03:window_frameShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:first_floor_grp|scene_layout_03:first_floor|scene_layout_03:first_floorShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:first_floor_grp|scene_layout_03:first_floor|scene_layout_03:first_floorShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:first_floor_grp|scene_layout_03:building_ground|scene_layout_03:building_groundShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:first_floor_grp|scene_layout_03:building_ground|scene_layout_03:building_groundShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:first_floor_grp|scene_layout_03:panel_1|scene_layout_03:panel_Shape1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:first_floor_grp|scene_layout_03:panel_1|scene_layout_03:panel_Shape1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:first_floor_grp|scene_layout_03:panel_9|scene_layout_03:panel_Shape9.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:first_floor_grp|scene_layout_03:panel_9|scene_layout_03:panel_Shape9.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:first_floor_grp|scene_layout_03:panel_10|scene_layout_03:panel_Shape10.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:first_floor_grp|scene_layout_03:panel_10|scene_layout_03:panel_Shape10.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:first_floor_grp|scene_layout_03:panel_11|scene_layout_03:panel_Shape11.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:first_floor_grp|scene_layout_03:panel_11|scene_layout_03:panel_Shape11.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:second_floor_grp|scene_layout_03:second_floor|scene_layout_03:second_floorShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:second_floor_grp|scene_layout_03:second_floor|scene_layout_03:second_floorShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:second_floor_grp|scene_layout_03:floor_one|scene_layout_03:floor_oneShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:second_floor_grp|scene_layout_03:floor_one|scene_layout_03:floor_oneShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:second_floor_grp|scene_layout_03:panel_6|scene_layout_03:panel_Shape6.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:second_floor_grp|scene_layout_03:panel_6|scene_layout_03:panel_Shape6.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:second_floor_grp|scene_layout_03:panel_7|scene_layout_03:panel_Shape7.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:second_floor_grp|scene_layout_03:panel_7|scene_layout_03:panel_Shape7.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:second_floor_grp|scene_layout_03:panel_2|scene_layout_03:panel_Shape2.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:second_floor_grp|scene_layout_03:panel_2|scene_layout_03:panel_Shape2.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:third_floor_grp|scene_layout_03:third_floor|scene_layout_03:third_floorShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:third_floor_grp|scene_layout_03:third_floor|scene_layout_03:third_floorShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:third_floor_grp|scene_layout_03:panel_4|scene_layout_03:panel_Shape4.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:third_floor_grp|scene_layout_03:panel_4|scene_layout_03:panel_Shape4.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:third_floor_grp|scene_layout_03:panel_3|scene_layout_03:panel_Shape3.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:third_floor_grp|scene_layout_03:panel_3|scene_layout_03:panel_Shape3.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:fourth_floor_grp|scene_layout_03:forth_floor|scene_layout_03:forth_floorShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:fourth_floor_grp|scene_layout_03:forth_floor|scene_layout_03:forth_floorShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:fourth_floor_grp|scene_layout_03:panel_8|scene_layout_03:panel_Shape8.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:fourth_floor_grp|scene_layout_03:panel_8|scene_layout_03:panel_Shape8.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:fourth_floor_grp|scene_layout_03:panel_5|scene_layout_03:panel_Shape5.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:fourth_floor_grp|scene_layout_03:panel_5|scene_layout_03:panel_Shape5.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:fifth_floor_grp|scene_layout_03:roof|scene_layout_03:roofShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:fifth_floor_grp|scene_layout_03:roof|scene_layout_03:roofShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:fifth_floor_grp|scene_layout_03:fifth_floor|scene_layout_03:fifth_floorShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp1|scene_layout_03:fifth_floor_grp|scene_layout_03:fifth_floor|scene_layout_03:fifth_floorShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:ground_3|scene_layout_03:ground_Shape3.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:ground_3|scene_layout_03:ground_Shape3.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:first_floor_grp|scene_layout_03:hero_room|scene_layout_03:hero_roomShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:first_floor_grp|scene_layout_03:hero_room|scene_layout_03:hero_roomShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:first_floor_grp|scene_layout_03:hero_room|scene_layout_03:door_frame_3|scene_layout_03:door_frame_3Shape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:first_floor_grp|scene_layout_03:hero_room|scene_layout_03:door_frame_3|scene_layout_03:door_frame_3Shape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:first_floor_grp|scene_layout_03:hero_room|scene_layout_03:window_frame|scene_layout_03:window_frameShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:first_floor_grp|scene_layout_03:hero_room|scene_layout_03:window_frame|scene_layout_03:window_frameShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:first_floor_grp|scene_layout_03:first_floor|scene_layout_03:first_floorShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:first_floor_grp|scene_layout_03:first_floor|scene_layout_03:first_floorShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:first_floor_grp|scene_layout_03:building_ground|scene_layout_03:building_groundShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:first_floor_grp|scene_layout_03:building_ground|scene_layout_03:building_groundShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:first_floor_grp|scene_layout_03:panel_1|scene_layout_03:panel_Shape1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:first_floor_grp|scene_layout_03:panel_1|scene_layout_03:panel_Shape1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:first_floor_grp|scene_layout_03:panel_9|scene_layout_03:panel_Shape9.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:first_floor_grp|scene_layout_03:panel_9|scene_layout_03:panel_Shape9.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:first_floor_grp|scene_layout_03:panel_10|scene_layout_03:panel_Shape10.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:first_floor_grp|scene_layout_03:panel_10|scene_layout_03:panel_Shape10.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:first_floor_grp|scene_layout_03:panel_11|scene_layout_03:panel_Shape11.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:first_floor_grp|scene_layout_03:panel_11|scene_layout_03:panel_Shape11.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:second_floor_grp|scene_layout_03:second_floor|scene_layout_03:second_floorShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:second_floor_grp|scene_layout_03:second_floor|scene_layout_03:second_floorShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:second_floor_grp|scene_layout_03:floor_one|scene_layout_03:floor_oneShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:second_floor_grp|scene_layout_03:floor_one|scene_layout_03:floor_oneShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:second_floor_grp|scene_layout_03:panel_6|scene_layout_03:panel_Shape6.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:second_floor_grp|scene_layout_03:panel_6|scene_layout_03:panel_Shape6.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:second_floor_grp|scene_layout_03:panel_7|scene_layout_03:panel_Shape7.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:second_floor_grp|scene_layout_03:panel_7|scene_layout_03:panel_Shape7.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:second_floor_grp|scene_layout_03:panel_2|scene_layout_03:panel_Shape2.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:second_floor_grp|scene_layout_03:panel_2|scene_layout_03:panel_Shape2.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:third_floor_grp|scene_layout_03:third_floor|scene_layout_03:third_floorShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:third_floor_grp|scene_layout_03:third_floor|scene_layout_03:third_floorShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:third_floor_grp|scene_layout_03:panel_4|scene_layout_03:panel_Shape4.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:third_floor_grp|scene_layout_03:panel_4|scene_layout_03:panel_Shape4.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:third_floor_grp|scene_layout_03:panel_3|scene_layout_03:panel_Shape3.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:third_floor_grp|scene_layout_03:panel_3|scene_layout_03:panel_Shape3.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:fourth_floor_grp|scene_layout_03:forth_floor|scene_layout_03:forth_floorShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:fourth_floor_grp|scene_layout_03:forth_floor|scene_layout_03:forth_floorShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:fourth_floor_grp|scene_layout_03:panel_8|scene_layout_03:panel_Shape8.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:fourth_floor_grp|scene_layout_03:panel_8|scene_layout_03:panel_Shape8.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:fourth_floor_grp|scene_layout_03:panel_5|scene_layout_03:panel_Shape5.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:fourth_floor_grp|scene_layout_03:panel_5|scene_layout_03:panel_Shape5.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:fifth_floor_grp|scene_layout_03:roof|scene_layout_03:roofShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:fifth_floor_grp|scene_layout_03:roof|scene_layout_03:roofShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:fifth_floor_grp|scene_layout_03:fifth_floor|scene_layout_03:fifth_floorShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:building_rubble_grp2|scene_layout_03:fifth_floor_grp|scene_layout_03:fifth_floor|scene_layout_03:fifth_floorShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_pile_1|scene_layout_03:rubble_pile_Shape1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_pile_1|scene_layout_03:rubble_pile_Shape1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02RNfosterParent1|scene_layout_03:rock_12|scene_layout_03:rock_Shape12.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02RNfosterParent1|scene_layout_03:rock_12|scene_layout_03:rock_Shape12.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02RNfosterParent1|scene_layout_03:rock_11|scene_layout_03:rock_Shape11.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02RNfosterParent1|scene_layout_03:rock_11|scene_layout_03:rock_Shape11.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_grp3|scene_layout_03:bullet_caseing4|scene_layout_03:bullet_caseing4Shape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_grp3|scene_layout_03:bullet_caseing4|scene_layout_03:bullet_caseing4Shape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_grp3|scene_layout_03:bullet_caseing5|scene_layout_03:bullet_caseing5Shape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_grp3|scene_layout_03:bullet_caseing5|scene_layout_03:bullet_caseing5Shape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_grp3|scene_layout_03:bullet_caseing6|scene_layout_03:bullet_caseing6Shape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_grp3|scene_layout_03:bullet_caseing6|scene_layout_03:bullet_caseing6Shape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_grp3|scene_layout_03:bullet_caseing7|scene_layout_03:bullet_caseing7Shape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_grp3|scene_layout_03:bullet_caseing7|scene_layout_03:bullet_caseing7Shape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_grp3|scene_layout_03:bullet_caseing8|scene_layout_03:bullet_caseingShape8.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_grp3|scene_layout_03:bullet_caseing8|scene_layout_03:bullet_caseingShape8.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_grp2|scene_layout_03:bullet_caseing4|scene_layout_03:bullet_caseing4Shape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_grp2|scene_layout_03:bullet_caseing4|scene_layout_03:bullet_caseing4Shape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_grp2|scene_layout_03:bullet_caseing5|scene_layout_03:bullet_caseing5Shape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_grp2|scene_layout_03:bullet_caseing5|scene_layout_03:bullet_caseing5Shape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_grp2|scene_layout_03:bullet_caseing6|scene_layout_03:bullet_caseing6Shape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_grp2|scene_layout_03:bullet_caseing6|scene_layout_03:bullet_caseing6Shape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_grp2|scene_layout_03:bullet_caseing7|scene_layout_03:bullet_caseing7Shape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_grp2|scene_layout_03:bullet_caseing7|scene_layout_03:bullet_caseing7Shape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_grp2|scene_layout_03:bullet_caseing8|scene_layout_03:bullet_caseingShape8.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_grp2|scene_layout_03:bullet_caseing8|scene_layout_03:bullet_caseingShape8.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_grp1|scene_layout_03:bullet_caseing4|scene_layout_03:bullet_caseing4Shape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_grp1|scene_layout_03:bullet_caseing4|scene_layout_03:bullet_caseing4Shape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_grp1|scene_layout_03:bullet_caseing5|scene_layout_03:bullet_caseing5Shape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_grp1|scene_layout_03:bullet_caseing5|scene_layout_03:bullet_caseing5Shape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_grp1|scene_layout_03:bullet_caseing6|scene_layout_03:bullet_caseing6Shape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_grp1|scene_layout_03:bullet_caseing6|scene_layout_03:bullet_caseing6Shape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_grp1|scene_layout_03:bullet_caseing7|scene_layout_03:bullet_caseing7Shape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_grp1|scene_layout_03:bullet_caseing7|scene_layout_03:bullet_caseing7Shape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_grp1|scene_layout_03:bullet_caseing8|scene_layout_03:bullet_caseingShape8.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_grp1|scene_layout_03:bullet_caseing8|scene_layout_03:bullet_caseingShape8.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_grp|scene_layout_03:bullet_caseing4|scene_layout_03:bullet_caseing4Shape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_grp|scene_layout_03:bullet_caseing4|scene_layout_03:bullet_caseing4Shape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_grp|scene_layout_03:bullet_caseing5|scene_layout_03:bullet_caseing5Shape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_grp|scene_layout_03:bullet_caseing5|scene_layout_03:bullet_caseing5Shape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_grp|scene_layout_03:bullet_caseing6|scene_layout_03:bullet_caseing6Shape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_grp|scene_layout_03:bullet_caseing6|scene_layout_03:bullet_caseing6Shape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_grp|scene_layout_03:bullet_caseing7|scene_layout_03:bullet_caseing7Shape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_grp|scene_layout_03:bullet_caseing7|scene_layout_03:bullet_caseing7Shape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_grp|scene_layout_03:bullet_caseing8|scene_layout_03:bullet_caseingShape8.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_grp|scene_layout_03:bullet_caseing8|scene_layout_03:bullet_caseingShape8.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_caseing3|scene_layout_03:bullet_caseing3Shape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_caseing3|scene_layout_03:bullet_caseing3Shape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_caseing2|scene_layout_03:bullet_caseing2Shape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_caseing2|scene_layout_03:bullet_caseing2Shape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_caseing1|scene_layout_03:bullet_caseing1Shape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_caseing1|scene_layout_03:bullet_caseing1Shape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_caseing|scene_layout_03:bullet_caseingShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bulletRNfosterParent1|scene_layout_03:bullet_caseing|scene_layout_03:bullet_caseingShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:lambert2SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:lambert2SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:mia_material_x_passes1SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:mia_material_x_passes1SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:lambert3SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:lambert3SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:scene_ground_phongSG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:scene_ground_phongSG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		"scene_layout_03:cal_bulletRN" 12
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bullet:bullet_grp|scene_layout_03:cal_bullet:bullet_caseing|scene_layout_03:cal_bullet:bullet_caseingShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bullet:bullet_grp|scene_layout_03:cal_bullet:bullet_caseing|scene_layout_03:cal_bullet:bullet_caseingShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bullet:bullet_grp|scene_layout_03:cal_bullet:bullet|scene_layout_03:cal_bullet:bulletShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:cal_bullet:bullet_grp|scene_layout_03:cal_bullet:bullet|scene_layout_03:cal_bullet:bulletShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:cal_bullet:bullet_phongSG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:cal_bullet:bullet_phongSG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:cal_bullet:bullet_casing_SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:cal_bullet:bullet_casing_SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:cal_bullet:mia_material_x_passes1SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:cal_bullet:mia_material_x_passes1SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:cal_bullet:StingrayPBS1SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:cal_bullet:StingrayPBS1SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		"scene_layout_03:office_rubbleRN3" 75
+		2 "scene_layout_03:office_rubble3:hero_room_phonge" "reflectivity" " 0"
+		2 "scene_layout_03:office_rubble3:hero_room_phonge" "whiteness" " -type \"float3\" 0 0 0"
+		
+		2 "scene_layout_03:office_rubble3:first_floor_phongE" "reflectivity" " 0"
+		
+		2 "scene_layout_03:office_rubble3:second_floor_phongE" "reflectivity" " 0"
+		
+		2 "scene_layout_03:office_rubble3:second_floor_phongE" "whiteness" " -type \"float3\" 0 0 0"
+		
+		2 "scene_layout_03:office_rubble3:third_floor_phongE" "reflectivity" " 0"
+		
+		2 "scene_layout_03:office_rubble3:third_floor_phongE" "whiteness" " -type \"float3\" 0.015335316999999999 0.015335316999999999 0.015335316999999999"
+		
+		2 "scene_layout_03:office_rubble3:fourth_floor_phongE" "reflectivity" " 0"
+		
+		2 "scene_layout_03:office_rubble3:fourth_floor_phongE" "whiteness" " -type \"float3\" 0.0061341267999999996 0.0061341267999999996 0.0061341267999999996"
+		
+		2 "scene_layout_03:office_rubble3:fifth_floor_phongE" "reflectivity" " 0"
+		
+		2 "scene_layout_03:office_rubble3:fifth_floor_phongE" "whiteness" " -type \"float3\" 0 0 0"
+		
+		2 "scene_layout_03:office_rubble3:roof_phongE" "reflectivity" " 0"
+		2 "scene_layout_03:office_rubble3:roof_phongE" "whiteness" " -type \"float3\" 0 0 0"
+		
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:first_floor_grp|scene_layout_03:office_rubble3:hero_room|scene_layout_03:office_rubble3:hero_roomShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:first_floor_grp|scene_layout_03:office_rubble3:hero_room|scene_layout_03:office_rubble3:hero_roomShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:first_floor_grp|scene_layout_03:office_rubble3:hero_room|scene_layout_03:office_rubble3:door_frame_3|scene_layout_03:office_rubble3:door_frame_3Shape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:first_floor_grp|scene_layout_03:office_rubble3:hero_room|scene_layout_03:office_rubble3:door_frame_3|scene_layout_03:office_rubble3:door_frame_3Shape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:first_floor_grp|scene_layout_03:office_rubble3:hero_room|scene_layout_03:office_rubble3:window_frame|scene_layout_03:office_rubble3:window_frameShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:first_floor_grp|scene_layout_03:office_rubble3:hero_room|scene_layout_03:office_rubble3:window_frame|scene_layout_03:office_rubble3:window_frameShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:first_floor_grp|scene_layout_03:office_rubble3:first_floor|scene_layout_03:office_rubble3:first_floorShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:first_floor_grp|scene_layout_03:office_rubble3:first_floor|scene_layout_03:office_rubble3:first_floorShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:first_floor_grp|scene_layout_03:office_rubble3:building_ground|scene_layout_03:office_rubble3:building_groundShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:first_floor_grp|scene_layout_03:office_rubble3:building_ground|scene_layout_03:office_rubble3:building_groundShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:first_floor_grp|scene_layout_03:office_rubble3:panel_1|scene_layout_03:office_rubble3:panel_Shape1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:first_floor_grp|scene_layout_03:office_rubble3:panel_1|scene_layout_03:office_rubble3:panel_Shape1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:first_floor_grp|scene_layout_03:office_rubble3:panel_9|scene_layout_03:office_rubble3:panel_Shape9.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:first_floor_grp|scene_layout_03:office_rubble3:panel_9|scene_layout_03:office_rubble3:panel_Shape9.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:first_floor_grp|scene_layout_03:office_rubble3:panel_10|scene_layout_03:office_rubble3:panel_Shape10.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:first_floor_grp|scene_layout_03:office_rubble3:panel_10|scene_layout_03:office_rubble3:panel_Shape10.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:first_floor_grp|scene_layout_03:office_rubble3:panel_11|scene_layout_03:office_rubble3:panel_Shape11.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:first_floor_grp|scene_layout_03:office_rubble3:panel_11|scene_layout_03:office_rubble3:panel_Shape11.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:second_floor_grp|scene_layout_03:office_rubble3:second_floor|scene_layout_03:office_rubble3:second_floorShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:second_floor_grp|scene_layout_03:office_rubble3:second_floor|scene_layout_03:office_rubble3:second_floorShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:second_floor_grp|scene_layout_03:office_rubble3:floor_one|scene_layout_03:office_rubble3:floor_oneShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:second_floor_grp|scene_layout_03:office_rubble3:floor_one|scene_layout_03:office_rubble3:floor_oneShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:second_floor_grp|scene_layout_03:office_rubble3:panel_6|scene_layout_03:office_rubble3:panel_Shape6.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:second_floor_grp|scene_layout_03:office_rubble3:panel_6|scene_layout_03:office_rubble3:panel_Shape6.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:second_floor_grp|scene_layout_03:office_rubble3:panel_7|scene_layout_03:office_rubble3:panel_Shape7.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:second_floor_grp|scene_layout_03:office_rubble3:panel_7|scene_layout_03:office_rubble3:panel_Shape7.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:second_floor_grp|scene_layout_03:office_rubble3:panel_2|scene_layout_03:office_rubble3:panel_Shape2.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:second_floor_grp|scene_layout_03:office_rubble3:panel_2|scene_layout_03:office_rubble3:panel_Shape2.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:third_floor_grp|scene_layout_03:office_rubble3:third_floor|scene_layout_03:office_rubble3:third_floorShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:third_floor_grp|scene_layout_03:office_rubble3:third_floor|scene_layout_03:office_rubble3:third_floorShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:third_floor_grp|scene_layout_03:office_rubble3:panel_4|scene_layout_03:office_rubble3:panel_Shape4.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:third_floor_grp|scene_layout_03:office_rubble3:panel_4|scene_layout_03:office_rubble3:panel_Shape4.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:third_floor_grp|scene_layout_03:office_rubble3:panel_3|scene_layout_03:office_rubble3:panel_Shape3.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:third_floor_grp|scene_layout_03:office_rubble3:panel_3|scene_layout_03:office_rubble3:panel_Shape3.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:fourth_floor_grp|scene_layout_03:office_rubble3:forth_floor|scene_layout_03:office_rubble3:forth_floorShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:fourth_floor_grp|scene_layout_03:office_rubble3:forth_floor|scene_layout_03:office_rubble3:forth_floorShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:fourth_floor_grp|scene_layout_03:office_rubble3:panel_8|scene_layout_03:office_rubble3:panel_Shape8.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:fourth_floor_grp|scene_layout_03:office_rubble3:panel_8|scene_layout_03:office_rubble3:panel_Shape8.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:fourth_floor_grp|scene_layout_03:office_rubble3:panel_5|scene_layout_03:office_rubble3:panel_Shape5.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:fourth_floor_grp|scene_layout_03:office_rubble3:panel_5|scene_layout_03:office_rubble3:panel_Shape5.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:fifth_floor_grp|scene_layout_03:office_rubble3:roof|scene_layout_03:office_rubble3:roofShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:fifth_floor_grp|scene_layout_03:office_rubble3:roof|scene_layout_03:office_rubble3:roofShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:fifth_floor_grp|scene_layout_03:office_rubble3:fifth_floor|scene_layout_03:office_rubble3:fifth_floorShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble3:building_rubble_grp|scene_layout_03:office_rubble3:fifth_floor_grp|scene_layout_03:office_rubble3:fifth_floor|scene_layout_03:office_rubble3:fifth_floorShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble3:hero_room_phongeSG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble3:hero_room_phongeSG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble3:first_floor_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble3:first_floor_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble3:second_floor_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble3:second_floor_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble3:third_floor_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble3:third_floor_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble3:fourth_floor_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble3:fourth_floor_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble3:fifth_floor_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble3:fifth_floor_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble3:roof_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble3:roof_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble3:building_ground_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble3:building_ground_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble3:panel_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble3:panel_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		"scene_layout_03:rubble_04RN" 4
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_04:rubble_4|scene_layout_03:rubble_04:rubble_Shape4.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_04:rubble_4|scene_layout_03:rubble_04:rubble_Shape4.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_04:rubble_4_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_04:rubble_4_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		"scene_layout_03:office_rubbleRN1" 76
+		2 "scene_layout_03:office_rubble1:first_floor_phongE" "reflectivity" " 0"
+		
+		2 "scene_layout_03:office_rubble1:first_floor_phongE" "whiteness" " -type \"float3\" 0 0 0"
+		
+		2 "scene_layout_03:office_rubble1:second_floor_phongE" "reflectivity" " 0"
+		
+		2 "scene_layout_03:office_rubble1:second_floor_phongE" "whiteness" " -type \"float3\" 0 0 0"
+		
+		2 "scene_layout_03:office_rubble1:third_floor_phongE" "reflectivity" " 0"
+		
+		2 "scene_layout_03:office_rubble1:third_floor_phongE" "whiteness" " -type \"float3\" 0 0 0"
+		
+		2 "scene_layout_03:office_rubble1:fourth_floor_phongE" "reflectivity" " 0"
+		
+		2 "scene_layout_03:office_rubble1:fourth_floor_phongE" "whiteness" " -type \"float3\" 0 0 0"
+		
+		2 "scene_layout_03:office_rubble1:fifth_floor_phongE" "reflectivity" " 0"
+		
+		2 "scene_layout_03:office_rubble1:fifth_floor_phongE" "whiteness" " -type \"float3\" 0 0 0"
+		
+		2 "scene_layout_03:office_rubble1:roof_phongE" "reflectivity" " 0"
+		2 "scene_layout_03:office_rubble1:roof_phongE" "whiteness" " -type \"float3\" 0 0 0"
+		
+		2 "scene_layout_03:office_rubble1:panel_phongE" "reflectivity" " 0"
+		2 "scene_layout_03:office_rubble1:panel_phongE" "whiteness" " -type \"float3\" 0 0 0"
+		
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:first_floor_grp|scene_layout_03:office_rubble1:hero_room|scene_layout_03:office_rubble1:hero_roomShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:first_floor_grp|scene_layout_03:office_rubble1:hero_room|scene_layout_03:office_rubble1:hero_roomShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:first_floor_grp|scene_layout_03:office_rubble1:hero_room|scene_layout_03:office_rubble1:door_frame_3|scene_layout_03:office_rubble1:door_frame_3Shape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:first_floor_grp|scene_layout_03:office_rubble1:hero_room|scene_layout_03:office_rubble1:door_frame_3|scene_layout_03:office_rubble1:door_frame_3Shape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:first_floor_grp|scene_layout_03:office_rubble1:hero_room|scene_layout_03:office_rubble1:window_frame|scene_layout_03:office_rubble1:window_frameShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:first_floor_grp|scene_layout_03:office_rubble1:hero_room|scene_layout_03:office_rubble1:window_frame|scene_layout_03:office_rubble1:window_frameShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:first_floor_grp|scene_layout_03:office_rubble1:first_floor|scene_layout_03:office_rubble1:first_floorShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:first_floor_grp|scene_layout_03:office_rubble1:first_floor|scene_layout_03:office_rubble1:first_floorShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:first_floor_grp|scene_layout_03:office_rubble1:building_ground|scene_layout_03:office_rubble1:building_groundShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:first_floor_grp|scene_layout_03:office_rubble1:building_ground|scene_layout_03:office_rubble1:building_groundShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:first_floor_grp|scene_layout_03:office_rubble1:panel_1|scene_layout_03:office_rubble1:panel_Shape1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:first_floor_grp|scene_layout_03:office_rubble1:panel_1|scene_layout_03:office_rubble1:panel_Shape1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:first_floor_grp|scene_layout_03:office_rubble1:panel_9|scene_layout_03:office_rubble1:panel_Shape9.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:first_floor_grp|scene_layout_03:office_rubble1:panel_9|scene_layout_03:office_rubble1:panel_Shape9.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:first_floor_grp|scene_layout_03:office_rubble1:panel_10|scene_layout_03:office_rubble1:panel_Shape10.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:first_floor_grp|scene_layout_03:office_rubble1:panel_10|scene_layout_03:office_rubble1:panel_Shape10.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:first_floor_grp|scene_layout_03:office_rubble1:panel_11|scene_layout_03:office_rubble1:panel_Shape11.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:first_floor_grp|scene_layout_03:office_rubble1:panel_11|scene_layout_03:office_rubble1:panel_Shape11.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:second_floor_grp|scene_layout_03:office_rubble1:second_floor|scene_layout_03:office_rubble1:second_floorShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:second_floor_grp|scene_layout_03:office_rubble1:second_floor|scene_layout_03:office_rubble1:second_floorShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:second_floor_grp|scene_layout_03:office_rubble1:floor_one|scene_layout_03:office_rubble1:floor_oneShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:second_floor_grp|scene_layout_03:office_rubble1:floor_one|scene_layout_03:office_rubble1:floor_oneShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:second_floor_grp|scene_layout_03:office_rubble1:panel_6|scene_layout_03:office_rubble1:panel_Shape6.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:second_floor_grp|scene_layout_03:office_rubble1:panel_6|scene_layout_03:office_rubble1:panel_Shape6.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:second_floor_grp|scene_layout_03:office_rubble1:panel_7|scene_layout_03:office_rubble1:panel_Shape7.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:second_floor_grp|scene_layout_03:office_rubble1:panel_7|scene_layout_03:office_rubble1:panel_Shape7.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:second_floor_grp|scene_layout_03:office_rubble1:panel_2|scene_layout_03:office_rubble1:panel_Shape2.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:second_floor_grp|scene_layout_03:office_rubble1:panel_2|scene_layout_03:office_rubble1:panel_Shape2.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:third_floor_grp|scene_layout_03:office_rubble1:third_floor|scene_layout_03:office_rubble1:third_floorShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:third_floor_grp|scene_layout_03:office_rubble1:third_floor|scene_layout_03:office_rubble1:third_floorShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:third_floor_grp|scene_layout_03:office_rubble1:panel_4|scene_layout_03:office_rubble1:panel_Shape4.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:third_floor_grp|scene_layout_03:office_rubble1:panel_4|scene_layout_03:office_rubble1:panel_Shape4.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:third_floor_grp|scene_layout_03:office_rubble1:panel_3|scene_layout_03:office_rubble1:panel_Shape3.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:third_floor_grp|scene_layout_03:office_rubble1:panel_3|scene_layout_03:office_rubble1:panel_Shape3.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:fourth_floor_grp|scene_layout_03:office_rubble1:forth_floor|scene_layout_03:office_rubble1:forth_floorShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:fourth_floor_grp|scene_layout_03:office_rubble1:forth_floor|scene_layout_03:office_rubble1:forth_floorShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:fourth_floor_grp|scene_layout_03:office_rubble1:panel_8|scene_layout_03:office_rubble1:panel_Shape8.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:fourth_floor_grp|scene_layout_03:office_rubble1:panel_8|scene_layout_03:office_rubble1:panel_Shape8.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:fourth_floor_grp|scene_layout_03:office_rubble1:panel_5|scene_layout_03:office_rubble1:panel_Shape5.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:fourth_floor_grp|scene_layout_03:office_rubble1:panel_5|scene_layout_03:office_rubble1:panel_Shape5.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:fifth_floor_grp|scene_layout_03:office_rubble1:roof|scene_layout_03:office_rubble1:roofShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:fifth_floor_grp|scene_layout_03:office_rubble1:roof|scene_layout_03:office_rubble1:roofShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:fifth_floor_grp|scene_layout_03:office_rubble1:fifth_floor|scene_layout_03:office_rubble1:fifth_floorShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble1:building_rubble_grp|scene_layout_03:office_rubble1:fifth_floor_grp|scene_layout_03:office_rubble1:fifth_floor|scene_layout_03:office_rubble1:fifth_floorShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble1:hero_room_phongeSG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble1:hero_room_phongeSG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble1:first_floor_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble1:first_floor_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble1:second_floor_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble1:second_floor_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble1:third_floor_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble1:third_floor_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble1:fourth_floor_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble1:fourth_floor_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble1:fifth_floor_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble1:fifth_floor_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble1:roof_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble1:roof_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble1:building_ground_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble1:building_ground_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble1:panel_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble1:panel_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		"scene_layout_03:rubble_01RN3" 219
+		2 "|scene_layout_03:rubble_09:rubble_01" "translate" " -type \"double3\" -37.677117102026614 -0.14770192826672002 118.2587195251609"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_corner" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"uvPivot" " -type \"double2\" 0.36368769407272339 0.095287397503852844"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts" " -s 123"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[0]" " -type \"float3\" -2.546629 -0.068452879999999994 0.79605585000000001"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[1]" " -type \"float3\" -1.4499282 0 1.219133"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[2]" " -type \"float3\" -0.61219513000000003 0 2.1380148000000001"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[3]" " -type \"float3\" 0.54194814000000002 0 2.6351773999999999"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[4]" " -type \"float3\" 1.9677073 0 2.2188058000000002"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[5]" " -type \"float3\" 3.3934665000000002 0 1.7604735"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[6]" " -type \"float3\" 4.8192257999999999 0 2.2188058000000002"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[7]" " -type \"float3\" 6.1168699000000002 0 2.2935392999999999"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[8]" " -type \"float3\" 7.400547 -0.0047710230999999997 1.9160634000000001"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[9]" " -type \"float3\" 8.5621834000000003 0.081295028000000005 1.5469942999999999"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[10]" " -type \"float3\" 9.7387046999999995 0.20863393999999999 1.211307"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[11]" " -type \"float3\" -2.7255349 -0.10724752 -0.29514365999999997"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[12]" " -type \"float3\" -1.5939753999999999 0.26704967000000002 0.016897867"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[13]" " -type \"float3\" -0.59769088000000004 0.12548544 0.68295687000000005"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[14]" " -type \"float3\" 0.54194814000000002 -0.015779067000000001 1.2094183000000001"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[15]" " -type \"float3\" 1.9677073 -0.043958510999999999 1.0601395"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[16]" " -type \"float3\" 3.3934665000000002 0.089037769000000003 0.79442418000000004"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[17]" " -type \"float3\" 4.8192257999999999 0.29170844000000001 1.0677246"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[18]" " -type \"float3\" 6.1993093000000004 0.10470974 1.0876185"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[19]" " -type \"float3\" 7.539887 0.047971847999999997 0.86436002999999995"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[20]" " -type \"float3\" 8.8150215000000003 0.10912482 0.72212076000000003"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[21]" " -type \"float3\" 10.076291 0.10441517 0.43617716000000001"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[22]" " -type \"float3\" -3.0647557000000001 0.064494006000000006 -0.96099787999999997"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[23]" " -type \"float3\" -1.8819109000000001 0.094289199000000004 -0.78621483000000003"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[24]" " -type \"float3\" -0.76213503000000005 0.33469352000000002 -0.44022557000000001"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[25]" " -type \"float3\" 0.54194814000000002 0.049661309000000001 -0.21634081999999999"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[26]" " -type \"float3\" 1.9677073 0.17092193999999999 -0.21634081999999999"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[27]" " -type \"float3\" 3.3934665000000002 0.33833848999999999 -0.21634081999999999"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[28]" " -type \"float3\" 4.8192257999999999 0.62329710000000005 -0.21634081999999999"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[29]" " -type \"float3\" 6.2449840999999999 0.36297053000000001 -0.21634081999999999"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[30]" " -type \"float3\" 7.6707435000000004 0.27662086000000002 -0.21634081999999999"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[31]" " -type \"float3\" 9.0493202000000004 0.32170241999999999 -0.27925204999999997"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[32]" " -type \"float3\" 10.45856 0.10396942000000001 -0.30127767"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[33]" " -type \"float3\" -3.2643349000000002 -0.061547216000000002 -2.0233816999999998"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[34]" " -type \"float3\" -2.0900425999999999 0.19340110999999999 -1.8198131"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[35]" " -type \"float3\" -0.88381124 0.10556806000000001 -1.6421003000000001"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[36]" " -type \"float3\" 0.54194814000000002 0.2527433 -1.6421003000000001"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[37]" " -type \"float3\" 1.968303 0.52683234000000001 -1.6583451"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[38]" " -type \"float3\" 3.3834841 0.52566338000000001 -1.6324631999999999"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[39]" " -type \"float3\" 4.8192257999999999 0.32566785999999998 -1.6421003000000001"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[40]" " -type \"float3\" 6.2449840999999999 0.28436369 -1.6421003000000001"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[41]" " -type \"float3\" 7.6707435000000004 0.31776687999999997 -1.6421003000000001"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[42]" " -type \"float3\" 8.936861 0.28809794999999999 -1.6421003000000001"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[43]" " -type \"float3\" 10.070969 0.067207314000000004 -1.6421003000000001"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[44]" " -type \"float3\" -3.5126008999999998 -0.015190479 -3.2481632"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[45]" " -type \"float3\" -2.2298765 -0.015497558 -3.1323732999999998"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[46]" " -type \"float3\" -0.88381124 0 -3.0678592"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[47]" " -type \"float3\" 0.54194814000000002 0.11902448 -3.0678592"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[48]" " -type \"float3\" 1.9776895000000001 0.46277924999999998 -3.0774965000000001"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[49]" " -type \"float3\" 3.3928707 0.42540485 -3.0516144999999999"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[50]" " -type \"float3\" 4.8192257999999999 0.012285762 -3.0678592"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[51]" " -type \"float3\" 6.2449840999999999 0.072821683999999998 -3.0678592"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[52]" " -type \"float3\" 7.6707435000000004 0.11954579999999999 -3.0678592"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[53]" " -type \"float3\" 8.6445846999999993 0.069762519999999995 -3.0678592"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[54]" " -type \"float3\" 9.5728807000000007 0.010785932999999999 -3.0678592"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[55]" " -type \"float3\" -3.6597841 0.050281286000000001 -4.7174978000000003"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[56]" " -type \"float3\" -2.0991105999999999 0.14007741000000001 -5.1173181999999997"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[57]" " -type \"float3\" -0.80826575000000001 0.050281286000000001 -4.7174978000000003"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[58]" " -type \"float3\" 0.54194814000000002 0.055902361999999997 -4.4936185000000002"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[59]" " -type \"float3\" 1.9677073 0.11743847 -4.4936185000000002"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[60]" " -type \"float3\" 3.3934665000000002 0.16903119 -4.4936185000000002"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[61]" " -type \"float3\" 4.8192257999999999 0.33959571 -4.4936185000000002"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[62]" " -type \"float3\" 6.2449840999999999 0.24369505 -4.4936185000000002"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[63]" " -type \"float3\" 7.6707435000000004 0.17371622 -4.4936185000000002"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[64]" " -type \"float3\" 8.8487282 0.052545178999999997 -4.5683775000000004"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[65]" " -type \"float3\" 9.7668619000000003 0 -4.7579416999999999"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[66]" " -type \"float3\" -3.5248697 -0.01346371 -6.5430779000000001"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[67]" " -type \"float3\" -1.8674402000000001 0.29427174 -7.2296332999999997"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[68]" " -type \"float3\" -0.67335146999999995 0.14007741000000001 -6.5430779000000001"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[69]" " -type \"float3\" 0.54194814000000002 0.020066339999999998 -5.9193783"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[70]" " -type \"float3\" 1.9677073 0.055902361999999997 -5.9193783"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[71]" " -type \"float3\" 3.3934665000000002 0.33074647000000001 -5.9193783"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[72]" " -type \"float3\" 4.8192257999999999 0.72688847999999995 -5.9193783"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[73]" " -type \"float3\" 6.2449840999999999 0.62358581999999996 -5.9193783"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[74]" " -type \"float3\" 7.6707435000000004 0.38832754000000003 -5.9193783"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[75]" " -type \"float3\" 8.7684955999999996 0.14869663 -6.2050618999999996"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[76]" " -type \"float3\" 9.8073835000000003 0 -6.5420942000000002"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[77]" " -type \"float3\" -3.6573194999999998 -0.024495209 -7.5665506999999996"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[78]" " -type \"float3\" -2.0657187000000001 0.26696165999999999 -7.9297627999999998"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[79]" " -type \"float3\" -0.81244558 0.40255954999999999 -7.550189"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[80]" " -type \"float3\" 0.54194814000000002 0.12783827 -7.3451366"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[81]" " -type \"float3\" 1.9677073 0 -7.3451366"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[82]" " -type \"float3\" 3.3934665000000002 0.11361545000000001 -7.3451366"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[83]" " -type \"float3\" 4.8192257999999999 0.41742363999999998 -7.3451366"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[84]" " -type \"float3\" 6.2449840999999999 0.46054012 -7.3451366"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[85]" " -type \"float3\" 7.6707435000000004 0.25279977999999997 -7.3451366"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[86]" " -type \"float3\" 8.9193802000000009 0.045783825 -7.4996404999999999"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[87]" " -type \"float3\" 9.9718046000000005 -0.018868592 -7.8254533000000004"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[88]" " -type \"float3\" -3.5402168999999999 0 -8.5759858999999992"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[89]" " -type \"float3\" -2.1191713999999999 0.40220951999999999 -8.5804968000000006"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[90]" " -type \"float3\" -0.69633144000000002 0.86844116000000005 -8.583416"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[91]" " -type \"float3\" 0.60881037000000005 0.40220951999999999 -8.7040339000000007"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[92]" " -type \"float3\" 1.9677073 0 -8.770896"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[93]" " -type \"float3\" 3.3934665000000002 -0.042078460999999998 -8.770896"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[94]" " -type \"float3\" 4.8192257999999999 0.10422859 -8.770896"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[95]" " -type \"float3\" 6.2449840999999999 0.42565398999999998 -8.770896"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[96]" " -type \"float3\" 7.6707435000000004 0.22092914999999999 -8.770896"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[97]" " -type \"float3\" 8.9034376000000002 -0.018868592 -8.8825502000000007"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[98]" " -type \"float3\" 10.053459 -0.03963875 -8.8970604000000009"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[99]" " -type \"float3\" -3.0220094 0 -9.5046882999999998"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[100]" " -type \"float3\" -1.7990991000000001 0.25340256 -9.6935471999999994"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[101]" " -type \"float3\" -0.48010143999999999 0.62575442000000003 -9.7929458999999994"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[102]" " -type \"float3\" 0.72319257000000003 0.25340256 -10.015411"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[103]" " -type \"float3\" 1.9677073 0 -10.196655"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[104]" " -type \"float3\" 3.3934665000000002 -0.1173751 -10.196655"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[105]" " -type \"float3\" 4.8192257999999999 -0.16792493999999999 -10.196655"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[106]" " -type \"float3\" 6.2449840999999999 0.10422859 -10.196655"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[107]" " -type \"float3\" 7.5218677999999999 0.079303211999999998 -9.9828854000000007"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[108]" " -type \"float3\" 8.5124663999999992 -0.0067613474000000002 -9.4777173999999995"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[109]" " -type \"float3\" 9.7337665999999992 -0.018868592 -9.356926"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[110]" " -type \"float3\" -2.6811991000000002 0 -10.61314"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[111]" " -type \"float3\" -1.5962504 0.042528274999999997 -10.930447"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[112]" " -type \"float3\" -0.48010143999999999 -0.16044372000000001 -11.218704"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[113]" " -type \"float3\" 0.73361730999999997 -0.19516933 -11.430745"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[114]" " -type \"float3\" 1.9677073 -0.096269146 -11.622415"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[115]" " -type \"float3\" 3.3934665000000002 -0.042078460999999998 -11.622415"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[116]" " -type \"float3\" 4.8192257999999999 -0.1173751 -11.622415"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[117]" " -type \"float3\" 6.2449840999999999 -0.042078460999999998 -11.622415"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[118]" " -type \"float3\" 7.2543715999999998 0 -11.024547"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[119]" " -type \"float3\" 8.1250371999999995 0 -10.201127"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[120]" " -type \"float3\" 9.5676117000000005 0 -10.104986"
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[121]" " -type \"float3\" 6.2848597000000002 0.48070431000000002 -1.7615358000000001"
+		
+		2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape" 
+		"pnts[122]" " -type \"float3\" 6.2848597000000002 0.31539655 -2.9484235999999999"
+		
+		5 3 "scene_layout_03RN" "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_corner|scene_layout_03:rubble_09:rubble_cornerShape.outMesh" 
+		"scene_layout_03RN.placeHolderList[1]" ""
+		5 3 "scene_layout_03RN" "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_corner|scene_layout_03:rubble_09:rubble_cornerShape.outMesh" 
+		"scene_layout_03RN.placeHolderList[2]" ""
+		5 3 "scene_layout_03RN" "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_corner|scene_layout_03:rubble_09:rubble_cornerShape.message" 
+		"scene_layout_03RN.placeHolderList[3]" ""
+		5 3 "scene_layout_03RN" "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_corner|scene_layout_03:rubble_09:rubble_cornerShape.message" 
+		"scene_layout_03RN.placeHolderList[4]" ""
+		5 3 "scene_layout_03RN" "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_corner|scene_layout_03:rubble_09:rubble_cornerShape.worldMatrix" 
+		"scene_layout_03RN.placeHolderList[5]" ""
+		5 3 "scene_layout_03RN" "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_corner|scene_layout_03:rubble_09:rubble_cornerShape.worldMatrix" 
+		"scene_layout_03RN.placeHolderList[6]" ""
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_corner|scene_layout_03:rubble_09:rubble_cornerShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_corner|scene_layout_03:rubble_09:rubble_cornerShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_pillar|scene_layout_03:rubble_09:rubble_pillarShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_pillar|scene_layout_03:rubble_09:rubble_pillarShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:cinder_block_1|scene_layout_03:rubble_09:cinder_block_Shape1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:cinder_block_1|scene_layout_03:rubble_09:cinder_block_Shape1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:cinder_block_2|scene_layout_03:rubble_09:cinder_block_Shape2.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:cinder_block_2|scene_layout_03:rubble_09:cinder_block_Shape2.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_1|scene_layout_03:rubble_09:rebar_Shape1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_1|scene_layout_03:rubble_09:rebar_Shape1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_2|scene_layout_03:rubble_09:rebar_Shape2.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_2|scene_layout_03:rubble_09:rebar_Shape2.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_3|scene_layout_03:rubble_09:rebar_Shape3.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_3|scene_layout_03:rubble_09:rebar_Shape3.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_4|scene_layout_03:rubble_09:rebar_Shape4.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_4|scene_layout_03:rubble_09:rebar_Shape4.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_5|scene_layout_03:rubble_09:rebar_Shape5.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_5|scene_layout_03:rubble_09:rebar_Shape5.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_6|scene_layout_03:rubble_09:rebar_Shape6.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_6|scene_layout_03:rubble_09:rebar_Shape6.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_7|scene_layout_03:rubble_09:rebar_Shape7.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_7|scene_layout_03:rubble_09:rebar_Shape7.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_8|scene_layout_03:rubble_09:rebar_Shape8.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_8|scene_layout_03:rubble_09:rebar_Shape8.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_9|scene_layout_03:rubble_09:rebar_Shape9.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_9|scene_layout_03:rubble_09:rebar_Shape9.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_10|scene_layout_03:rubble_09:rebar_Shape10.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_10|scene_layout_03:rubble_09:rebar_Shape10.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_11|scene_layout_03:rubble_09:rebar_Shape11.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_11|scene_layout_03:rubble_09:rebar_Shape11.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_12|scene_layout_03:rubble_09:rebar_Shape12.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_12|scene_layout_03:rubble_09:rebar_Shape12.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_13|scene_layout_03:rubble_09:rebar_Shape13.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_13|scene_layout_03:rubble_09:rebar_Shape13.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_14|scene_layout_03:rubble_09:rebar_Shape14.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_14|scene_layout_03:rubble_09:rebar_Shape14.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_15|scene_layout_03:rubble_09:rebar_Shape15.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_15|scene_layout_03:rubble_09:rebar_Shape15.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_16|scene_layout_03:rubble_09:rebar_Shape16.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_16|scene_layout_03:rubble_09:rebar_Shape16.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_17|scene_layout_03:rubble_09:rebar_Shape17.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_17|scene_layout_03:rubble_09:rebar_Shape17.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_18|scene_layout_03:rubble_09:rebar_Shape18.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_18|scene_layout_03:rubble_09:rebar_Shape18.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_19|scene_layout_03:rubble_09:rebar_19Shape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_19|scene_layout_03:rubble_09:rebar_19Shape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_20|scene_layout_03:rubble_09:rebar_Shape20.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_20|scene_layout_03:rubble_09:rebar_Shape20.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_21|scene_layout_03:rubble_09:rebar_Shape21.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_21|scene_layout_03:rubble_09:rebar_Shape21.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_22|scene_layout_03:rubble_09:rebar_Shape22.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_22|scene_layout_03:rubble_09:rebar_Shape22.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_23|scene_layout_03:rubble_09:rebar_Shape23.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_23|scene_layout_03:rubble_09:rebar_Shape23.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_24|scene_layout_03:rubble_09:rebar_Shape24.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_24|scene_layout_03:rubble_09:rebar_Shape24.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_25|scene_layout_03:rubble_09:rebar_25Shape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_25|scene_layout_03:rubble_09:rebar_25Shape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_26|scene_layout_03:rubble_09:rebar_Shape26.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_26|scene_layout_03:rubble_09:rebar_Shape26.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_1_ground|scene_layout_03:rubble_09:rubble_1_groundShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_27|scene_layout_03:rubble_09:rebar_Shape27.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_27|scene_layout_03:rubble_09:rebar_Shape27.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_28|scene_layout_03:rubble_09:rebar_Shape28.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_28|scene_layout_03:rubble_09:rebar_Shape28.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_29|scene_layout_03:rubble_09:rebar_Shape29.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_29|scene_layout_03:rubble_09:rebar_Shape29.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_30|scene_layout_03:rubble_09:rebar_Shape30.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rebar_30|scene_layout_03:rubble_09:rebar_Shape30.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_09:mia_material_x1SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_09:mia_material_x1SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_09:rubble_1_phongSG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_09:rubble_1_phongSG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_09:leaning_wall.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_09:leaning_wall.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_09:main_wall.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_09:main_wall.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_09:blocks1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_09:blocks1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_09:ground_rublle_1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_09:ground_rublle_1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_09:rubble_1_2:defaultMat.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_09:rubble_1_2:defaultMat.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_09:phongE2SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_09:phongE2SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		"scene_layout_03:fire_rubble_2RN1" 51
 		2 "|scene_layout_03:fire_rubble_3:fire_rubble_grp" "visibility" " 1"
-		2 "|scene_layout_03:fire_rubble_3:fire_rubble_grp" "translate" " -type \"double3\" -30.265533243579021 1.4686196556954343 107.34274479772516"
+		2 "|scene_layout_03:fire_rubble_3:fire_rubble_grp" "translate" " -type \"double3\" -30.565245432260561 1.2298964725923471 107.34274479772516"
 		
 		2 "|scene_layout_03:fire_rubble_3:fire_rubble_grp|scene_layout_03:fire_rubble_3:fire_test_3:fluid1" 
 		"visibility" " 0"
@@ -2125,43 +4474,1396 @@ createNode reference -n "scene_layout_03RN";
 		"scene_layout_03RN.placeHolderList[11]" ""
 		5 4 "scene_layout_03RN" "|scene_layout_03:fire_rubble_3:fire_rubble_grp|scene_layout_03:fire_rubble_3:fire_test_4:fluid1|scene_layout_03:fire_rubble_3:fire_test_4:fluidShape1.collisionGeometry" 
 		"scene_layout_03RN.placeHolderList[12]" ""
-		"scene_layout_03:fire_rubble_2RN" 11
-		2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp" "visibility" " 1"
-		2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_test_3:fluid1" 
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_3:fire_rubble_grp|scene_layout_03:fire_rubble_3:fire_rubble_1:fire_rubble_1|scene_layout_03:fire_rubble_3:fire_rubble_1:wood_plank|scene_layout_03:fire_rubble_3:fire_rubble_1:wood_plankShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_3:fire_rubble_grp|scene_layout_03:fire_rubble_3:fire_rubble_1:fire_rubble_1|scene_layout_03:fire_rubble_3:fire_rubble_1:wood_plank|scene_layout_03:fire_rubble_3:fire_rubble_1:wood_plankShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_3:fire_rubble_grp|scene_layout_03:fire_rubble_3:fire_rubble_1:fire_rubble_1|scene_layout_03:fire_rubble_3:fire_rubble_1:brick_1|scene_layout_03:fire_rubble_3:fire_rubble_1:brick_Shape1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_3:fire_rubble_grp|scene_layout_03:fire_rubble_3:fire_rubble_1:fire_rubble_1|scene_layout_03:fire_rubble_3:fire_rubble_1:brick_1|scene_layout_03:fire_rubble_3:fire_rubble_1:brick_Shape1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_3:fire_rubble_grp|scene_layout_03:fire_rubble_3:fire_rubble_1:fire_rubble_1|scene_layout_03:fire_rubble_3:fire_rubble_1:wood_plank1|scene_layout_03:fire_rubble_3:fire_rubble_1:wood_plankShape1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_3:fire_rubble_grp|scene_layout_03:fire_rubble_3:fire_rubble_1:fire_rubble_1|scene_layout_03:fire_rubble_3:fire_rubble_1:wood_plank1|scene_layout_03:fire_rubble_3:fire_rubble_1:wood_plankShape1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_3:fire_rubble_grp|scene_layout_03:fire_rubble_3:fire_rubble_1:fire_rubble_1|scene_layout_03:fire_rubble_3:fire_rubble_1:brick_2|scene_layout_03:fire_rubble_3:fire_rubble_1:brick_Shape2.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_3:fire_rubble_grp|scene_layout_03:fire_rubble_3:fire_rubble_1:fire_rubble_1|scene_layout_03:fire_rubble_3:fire_rubble_1:brick_2|scene_layout_03:fire_rubble_3:fire_rubble_1:brick_Shape2.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_3:fire_rubble_grp|scene_layout_03:fire_rubble_3:fire_rubble_1:fire_rubble_1|scene_layout_03:fire_rubble_3:fire_rubble_1:large_brink|scene_layout_03:fire_rubble_3:fire_rubble_1:large_brinkShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_3:fire_rubble_grp|scene_layout_03:fire_rubble_3:fire_rubble_1:fire_rubble_1|scene_layout_03:fire_rubble_3:fire_rubble_1:large_brink|scene_layout_03:fire_rubble_3:fire_rubble_1:large_brinkShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_3:fire_rubble_grp|scene_layout_03:fire_rubble_3:fire_rubble_1:fire_rubble_1|scene_layout_03:fire_rubble_3:fire_rubble_1:wood_plank2|scene_layout_03:fire_rubble_3:fire_rubble_1:wood_plankShape2.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_3:fire_rubble_grp|scene_layout_03:fire_rubble_3:fire_rubble_1:fire_rubble_1|scene_layout_03:fire_rubble_3:fire_rubble_1:wood_plank2|scene_layout_03:fire_rubble_3:fire_rubble_1:wood_plankShape2.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_3:fire_rubble_grp|scene_layout_03:fire_rubble_3:fire_rubble_1:fire_rubble_1|scene_layout_03:fire_rubble_3:fire_rubble_1:brick_3|scene_layout_03:fire_rubble_3:fire_rubble_1:brick_Shape3.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_3:fire_rubble_grp|scene_layout_03:fire_rubble_3:fire_rubble_1:fire_rubble_1|scene_layout_03:fire_rubble_3:fire_rubble_1:brick_3|scene_layout_03:fire_rubble_3:fire_rubble_1:brick_Shape3.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_3:fire_rubble_grp|scene_layout_03:fire_rubble_3:fire_rubble_1:fire_rubble_1|scene_layout_03:fire_rubble_3:fire_rubble_1:brick_4|scene_layout_03:fire_rubble_3:fire_rubble_1:brick_Shape4.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_3:fire_rubble_grp|scene_layout_03:fire_rubble_3:fire_rubble_1:fire_rubble_1|scene_layout_03:fire_rubble_3:fire_rubble_1:brick_4|scene_layout_03:fire_rubble_3:fire_rubble_1:brick_Shape4.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_3:fire_rubble_grp|scene_layout_03:fire_rubble_3:fire_rubble_1:fire_rubble_1|scene_layout_03:fire_rubble_3:fire_rubble_1:brick_5|scene_layout_03:fire_rubble_3:fire_rubble_1:brick_Shape5.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_3:fire_rubble_grp|scene_layout_03:fire_rubble_3:fire_rubble_1:fire_rubble_1|scene_layout_03:fire_rubble_3:fire_rubble_1:brick_5|scene_layout_03:fire_rubble_3:fire_rubble_1:brick_Shape5.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_3:fire_rubble_grp|scene_layout_03:fire_rubble_3:fire_test_3:fluid1|scene_layout_03:fire_rubble_3:fire_test_3:fluidShape1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_3:fire_rubble_grp|scene_layout_03:fire_rubble_3:fire_test_3:fluid1|scene_layout_03:fire_rubble_3:fire_test_3:fluidShape1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_3:fire_rubble_grp|scene_layout_03:fire_rubble_3:fire_test_4:fluid1|scene_layout_03:fire_rubble_3:fire_test_4:fluidShape1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:fire_rubble_3:fire_rubble_grp|scene_layout_03:fire_rubble_3:fire_test_4:fluid1|scene_layout_03:fire_rubble_3:fire_test_4:fluidShape1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:fire_rubble_3:fire_rubble_1:fire_rubble_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:fire_rubble_3:fire_rubble_1:fire_rubble_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:fire_rubble_3:fire_test_3:fluidShape1SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:fire_rubble_3:fire_test_3:fluidShape1SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:fire_rubble_3:fire_test_4:fluidShape1SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:fire_rubble_3:fire_test_4:fluidShape1SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:fire_rubble_3:fire_test_3:fluidShape1SG1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:fire_rubble_3:fire_test_3:fluidShape1SG1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:fire_rubble_3:fire_test_4:fluidShape1SG1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:fire_rubble_3:fire_test_4:fluidShape1SG1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		"scene_layout_03:rubble_02RN" 100
+		2 "scene_layout_03:rubble_02:rubble_2_phongE" "reflectivity" " 0"
+		2 "scene_layout_03:rubble_02:rubble_2_phongE" "whiteness" " -type \"float3\" 0.046005948999999997 0.046005948999999997 0.046005948999999997"
+		
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:wall_1|scene_layout_03:rubble_02:wall_Shape1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:wall_1|scene_layout_03:rubble_02:wall_Shape1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_1|scene_layout_03:rubble_02:reebar_Shape1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_1|scene_layout_03:rubble_02:reebar_Shape1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_2|scene_layout_03:rubble_02:reebar_Shape2.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_2|scene_layout_03:rubble_02:reebar_Shape2.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_3|scene_layout_03:rubble_02:reebar_Shape3.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_3|scene_layout_03:rubble_02:reebar_Shape3.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_4|scene_layout_03:rubble_02:reebar_Shape4.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_4|scene_layout_03:rubble_02:reebar_Shape4.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_5|scene_layout_03:rubble_02:reebar_Shape5.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_5|scene_layout_03:rubble_02:reebar_Shape5.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_6|scene_layout_03:rubble_02:reebar_Shape6.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_6|scene_layout_03:rubble_02:reebar_Shape6.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_7|scene_layout_03:rubble_02:reebar_Shape7.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_7|scene_layout_03:rubble_02:reebar_Shape7.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_8|scene_layout_03:rubble_02:reebar_Shape8.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_8|scene_layout_03:rubble_02:reebar_Shape8.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_9|scene_layout_03:rubble_02:reebar_Shape9.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_9|scene_layout_03:rubble_02:reebar_Shape9.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_10|scene_layout_03:rubble_02:reebar_Shape10.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_10|scene_layout_03:rubble_02:reebar_Shape10.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_11|scene_layout_03:rubble_02:reebar_Shape11.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_11|scene_layout_03:rubble_02:reebar_Shape11.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_12|scene_layout_03:rubble_02:reebar_Shape12.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_12|scene_layout_03:rubble_02:reebar_Shape12.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_13|scene_layout_03:rubble_02:reebar_Shape13.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_13|scene_layout_03:rubble_02:reebar_Shape13.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_14|scene_layout_03:rubble_02:reebar_Shape14.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_14|scene_layout_03:rubble_02:reebar_Shape14.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_15|scene_layout_03:rubble_02:reebar_Shape15.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_15|scene_layout_03:rubble_02:reebar_Shape15.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_16|scene_layout_03:rubble_02:reebar_Shape16.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_16|scene_layout_03:rubble_02:reebar_Shape16.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_17|scene_layout_03:rubble_02:reebar_Shape17.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_17|scene_layout_03:rubble_02:reebar_Shape17.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_18|scene_layout_03:rubble_02:reebar_Shape18.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_18|scene_layout_03:rubble_02:reebar_Shape18.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_19|scene_layout_03:rubble_02:reebar_Shape19.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_19|scene_layout_03:rubble_02:reebar_Shape19.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_20|scene_layout_03:rubble_02:reebar_Shape20.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_20|scene_layout_03:rubble_02:reebar_Shape20.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_21|scene_layout_03:rubble_02:reebar_Shape21.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_21|scene_layout_03:rubble_02:reebar_Shape21.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_22|scene_layout_03:rubble_02:reebar_Shape22.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_22|scene_layout_03:rubble_02:reebar_Shape22.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_23|scene_layout_03:rubble_02:reebar_Shape23.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_23|scene_layout_03:rubble_02:reebar_Shape23.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_24|scene_layout_03:rubble_02:reebar_Shape24.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_24|scene_layout_03:rubble_02:reebar_Shape24.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_25|scene_layout_03:rubble_02:reebar_Shape25.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_1_grp|scene_layout_03:rubble_02:reebar_25|scene_layout_03:rubble_02:reebar_Shape25.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_2_grp|scene_layout_03:rubble_02:wall_2|scene_layout_03:rubble_02:wall_Shape2.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_2_grp|scene_layout_03:rubble_02:wall_2|scene_layout_03:rubble_02:wall_Shape2.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_2_grp|scene_layout_03:rubble_02:reebar_26|scene_layout_03:rubble_02:reebar_Shape26.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_2_grp|scene_layout_03:rubble_02:reebar_26|scene_layout_03:rubble_02:reebar_Shape26.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_2_grp|scene_layout_03:rubble_02:reebar_27|scene_layout_03:rubble_02:reebar_Shape27.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_2_grp|scene_layout_03:rubble_02:reebar_27|scene_layout_03:rubble_02:reebar_Shape27.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_2_grp|scene_layout_03:rubble_02:reebar_28|scene_layout_03:rubble_02:reebar_Shape28.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_2_grp|scene_layout_03:rubble_02:reebar_28|scene_layout_03:rubble_02:reebar_Shape28.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_2_grp|scene_layout_03:rubble_02:reebar_29|scene_layout_03:rubble_02:reebar_Shape29.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_2_grp|scene_layout_03:rubble_02:reebar_29|scene_layout_03:rubble_02:reebar_Shape29.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_2_grp|scene_layout_03:rubble_02:reebar_30|scene_layout_03:rubble_02:reebar_Shape30.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_2_grp|scene_layout_03:rubble_02:reebar_30|scene_layout_03:rubble_02:reebar_Shape30.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_2_grp|scene_layout_03:rubble_02:reebar_31|scene_layout_03:rubble_02:reebar_Shape31.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_2_grp|scene_layout_03:rubble_02:reebar_31|scene_layout_03:rubble_02:reebar_Shape31.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_2_grp|scene_layout_03:rubble_02:reebar_32|scene_layout_03:rubble_02:reebar_Shape32.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_2_grp|scene_layout_03:rubble_02:reebar_32|scene_layout_03:rubble_02:reebar_Shape32.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_2_grp|scene_layout_03:rubble_02:reebar_33|scene_layout_03:rubble_02:reebar_Shape33.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_2_grp|scene_layout_03:rubble_02:reebar_33|scene_layout_03:rubble_02:reebar_Shape33.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_2_grp|scene_layout_03:rubble_02:reebar_34|scene_layout_03:rubble_02:reebar_Shape34.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_2_grp|scene_layout_03:rubble_02:reebar_34|scene_layout_03:rubble_02:reebar_Shape34.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_2_grp|scene_layout_03:rubble_02:reebar_35|scene_layout_03:rubble_02:reebar_Shape35.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_2_grp|scene_layout_03:rubble_02:reebar_35|scene_layout_03:rubble_02:reebar_Shape35.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_2_grp|scene_layout_03:rubble_02:reebar_36|scene_layout_03:rubble_02:reebar_Shape36.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_2_grp|scene_layout_03:rubble_02:reebar_36|scene_layout_03:rubble_02:reebar_Shape36.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_2_grp|scene_layout_03:rubble_02:reebar_37|scene_layout_03:rubble_02:reebar_Shape37.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_2_grp|scene_layout_03:rubble_02:reebar_37|scene_layout_03:rubble_02:reebar_Shape37.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_2_grp|scene_layout_03:rubble_02:reebar_38|scene_layout_03:rubble_02:reebar_Shape38.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:wall_2_grp|scene_layout_03:rubble_02:reebar_38|scene_layout_03:rubble_02:reebar_Shape38.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:rock_grp|scene_layout_03:rubble_02:rock_1|scene_layout_03:rubble_02:rock_Shape1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:rock_grp|scene_layout_03:rubble_02:rock_1|scene_layout_03:rubble_02:rock_Shape1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:rock_grp|scene_layout_03:rubble_02:rock_2|scene_layout_03:rubble_02:rock_Shape2.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:rock_grp|scene_layout_03:rubble_02:rock_2|scene_layout_03:rubble_02:rock_Shape2.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:rock_grp|scene_layout_03:rubble_02:rock_3|scene_layout_03:rubble_02:rock_Shape3.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:rock_grp|scene_layout_03:rubble_02:rock_3|scene_layout_03:rubble_02:rock_Shape3.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:rock_grp|scene_layout_03:rubble_02:rock_4|scene_layout_03:rubble_02:rock_Shape4.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:rock_grp|scene_layout_03:rubble_02:rock_4|scene_layout_03:rubble_02:rock_Shape4.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:rock_grp|scene_layout_03:rubble_02:rock_5|scene_layout_03:rubble_02:rock_Shape5.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:rock_grp|scene_layout_03:rubble_02:rock_5|scene_layout_03:rubble_02:rock_Shape5.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:rock_grp|scene_layout_03:rubble_02:rock_6|scene_layout_03:rubble_02:rock_Shape6.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:rock_grp|scene_layout_03:rubble_02:rock_6|scene_layout_03:rubble_02:rock_Shape6.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:rock_grp|scene_layout_03:rubble_02:rock_7|scene_layout_03:rubble_02:rock_Shape7.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_02:rubble_2_grp|scene_layout_03:rubble_02:rock_grp|scene_layout_03:rubble_02:rock_7|scene_layout_03:rubble_02:rock_Shape7.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_02:lambert2SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_02:lambert2SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_02:rubble_2_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_02:rubble_2_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		"scene_layout_03:rubble_02RN1" 98
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:wall_1|scene_layout_03:rubble_06:wall_Shape1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:wall_1|scene_layout_03:rubble_06:wall_Shape1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_1|scene_layout_03:rubble_06:reebar_Shape1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_1|scene_layout_03:rubble_06:reebar_Shape1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_2|scene_layout_03:rubble_06:reebar_Shape2.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_2|scene_layout_03:rubble_06:reebar_Shape2.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_3|scene_layout_03:rubble_06:reebar_Shape3.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_3|scene_layout_03:rubble_06:reebar_Shape3.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_4|scene_layout_03:rubble_06:reebar_Shape4.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_4|scene_layout_03:rubble_06:reebar_Shape4.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_5|scene_layout_03:rubble_06:reebar_Shape5.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_5|scene_layout_03:rubble_06:reebar_Shape5.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_6|scene_layout_03:rubble_06:reebar_Shape6.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_6|scene_layout_03:rubble_06:reebar_Shape6.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_7|scene_layout_03:rubble_06:reebar_Shape7.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_7|scene_layout_03:rubble_06:reebar_Shape7.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_8|scene_layout_03:rubble_06:reebar_Shape8.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_8|scene_layout_03:rubble_06:reebar_Shape8.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_9|scene_layout_03:rubble_06:reebar_Shape9.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_9|scene_layout_03:rubble_06:reebar_Shape9.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_10|scene_layout_03:rubble_06:reebar_Shape10.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_10|scene_layout_03:rubble_06:reebar_Shape10.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_11|scene_layout_03:rubble_06:reebar_Shape11.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_11|scene_layout_03:rubble_06:reebar_Shape11.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_12|scene_layout_03:rubble_06:reebar_Shape12.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_12|scene_layout_03:rubble_06:reebar_Shape12.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_13|scene_layout_03:rubble_06:reebar_Shape13.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_13|scene_layout_03:rubble_06:reebar_Shape13.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_14|scene_layout_03:rubble_06:reebar_Shape14.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_14|scene_layout_03:rubble_06:reebar_Shape14.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_15|scene_layout_03:rubble_06:reebar_Shape15.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_15|scene_layout_03:rubble_06:reebar_Shape15.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_16|scene_layout_03:rubble_06:reebar_Shape16.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_16|scene_layout_03:rubble_06:reebar_Shape16.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_17|scene_layout_03:rubble_06:reebar_Shape17.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_17|scene_layout_03:rubble_06:reebar_Shape17.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_18|scene_layout_03:rubble_06:reebar_Shape18.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_18|scene_layout_03:rubble_06:reebar_Shape18.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_19|scene_layout_03:rubble_06:reebar_Shape19.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_19|scene_layout_03:rubble_06:reebar_Shape19.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_20|scene_layout_03:rubble_06:reebar_Shape20.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_20|scene_layout_03:rubble_06:reebar_Shape20.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_21|scene_layout_03:rubble_06:reebar_Shape21.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_21|scene_layout_03:rubble_06:reebar_Shape21.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_22|scene_layout_03:rubble_06:reebar_Shape22.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_22|scene_layout_03:rubble_06:reebar_Shape22.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_23|scene_layout_03:rubble_06:reebar_Shape23.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_23|scene_layout_03:rubble_06:reebar_Shape23.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_24|scene_layout_03:rubble_06:reebar_Shape24.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_24|scene_layout_03:rubble_06:reebar_Shape24.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_25|scene_layout_03:rubble_06:reebar_Shape25.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_1_grp|scene_layout_03:rubble_06:reebar_25|scene_layout_03:rubble_06:reebar_Shape25.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_2_grp|scene_layout_03:rubble_06:wall_2|scene_layout_03:rubble_06:wall_Shape2.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_2_grp|scene_layout_03:rubble_06:wall_2|scene_layout_03:rubble_06:wall_Shape2.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_2_grp|scene_layout_03:rubble_06:reebar_26|scene_layout_03:rubble_06:reebar_Shape26.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_2_grp|scene_layout_03:rubble_06:reebar_26|scene_layout_03:rubble_06:reebar_Shape26.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_2_grp|scene_layout_03:rubble_06:reebar_27|scene_layout_03:rubble_06:reebar_Shape27.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_2_grp|scene_layout_03:rubble_06:reebar_27|scene_layout_03:rubble_06:reebar_Shape27.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_2_grp|scene_layout_03:rubble_06:reebar_28|scene_layout_03:rubble_06:reebar_Shape28.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_2_grp|scene_layout_03:rubble_06:reebar_28|scene_layout_03:rubble_06:reebar_Shape28.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_2_grp|scene_layout_03:rubble_06:reebar_29|scene_layout_03:rubble_06:reebar_Shape29.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_2_grp|scene_layout_03:rubble_06:reebar_29|scene_layout_03:rubble_06:reebar_Shape29.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_2_grp|scene_layout_03:rubble_06:reebar_30|scene_layout_03:rubble_06:reebar_Shape30.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_2_grp|scene_layout_03:rubble_06:reebar_30|scene_layout_03:rubble_06:reebar_Shape30.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_2_grp|scene_layout_03:rubble_06:reebar_31|scene_layout_03:rubble_06:reebar_Shape31.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_2_grp|scene_layout_03:rubble_06:reebar_31|scene_layout_03:rubble_06:reebar_Shape31.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_2_grp|scene_layout_03:rubble_06:reebar_32|scene_layout_03:rubble_06:reebar_Shape32.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_2_grp|scene_layout_03:rubble_06:reebar_32|scene_layout_03:rubble_06:reebar_Shape32.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_2_grp|scene_layout_03:rubble_06:reebar_33|scene_layout_03:rubble_06:reebar_Shape33.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_2_grp|scene_layout_03:rubble_06:reebar_33|scene_layout_03:rubble_06:reebar_Shape33.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_2_grp|scene_layout_03:rubble_06:reebar_34|scene_layout_03:rubble_06:reebar_Shape34.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_2_grp|scene_layout_03:rubble_06:reebar_34|scene_layout_03:rubble_06:reebar_Shape34.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_2_grp|scene_layout_03:rubble_06:reebar_35|scene_layout_03:rubble_06:reebar_Shape35.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_2_grp|scene_layout_03:rubble_06:reebar_35|scene_layout_03:rubble_06:reebar_Shape35.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_2_grp|scene_layout_03:rubble_06:reebar_36|scene_layout_03:rubble_06:reebar_Shape36.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_2_grp|scene_layout_03:rubble_06:reebar_36|scene_layout_03:rubble_06:reebar_Shape36.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_2_grp|scene_layout_03:rubble_06:reebar_37|scene_layout_03:rubble_06:reebar_Shape37.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_2_grp|scene_layout_03:rubble_06:reebar_37|scene_layout_03:rubble_06:reebar_Shape37.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_2_grp|scene_layout_03:rubble_06:reebar_38|scene_layout_03:rubble_06:reebar_Shape38.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:wall_2_grp|scene_layout_03:rubble_06:reebar_38|scene_layout_03:rubble_06:reebar_Shape38.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:rock_grp|scene_layout_03:rubble_06:rock_1|scene_layout_03:rubble_06:rock_Shape1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:rock_grp|scene_layout_03:rubble_06:rock_1|scene_layout_03:rubble_06:rock_Shape1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:rock_grp|scene_layout_03:rubble_06:rock_2|scene_layout_03:rubble_06:rock_Shape2.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:rock_grp|scene_layout_03:rubble_06:rock_2|scene_layout_03:rubble_06:rock_Shape2.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:rock_grp|scene_layout_03:rubble_06:rock_3|scene_layout_03:rubble_06:rock_Shape3.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:rock_grp|scene_layout_03:rubble_06:rock_3|scene_layout_03:rubble_06:rock_Shape3.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:rock_grp|scene_layout_03:rubble_06:rock_4|scene_layout_03:rubble_06:rock_Shape4.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:rock_grp|scene_layout_03:rubble_06:rock_4|scene_layout_03:rubble_06:rock_Shape4.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:rock_grp|scene_layout_03:rubble_06:rock_5|scene_layout_03:rubble_06:rock_Shape5.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:rock_grp|scene_layout_03:rubble_06:rock_5|scene_layout_03:rubble_06:rock_Shape5.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:rock_grp|scene_layout_03:rubble_06:rock_6|scene_layout_03:rubble_06:rock_Shape6.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:rock_grp|scene_layout_03:rubble_06:rock_6|scene_layout_03:rubble_06:rock_Shape6.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:rock_grp|scene_layout_03:rubble_06:rock_7|scene_layout_03:rubble_06:rock_Shape7.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_06:rubble_2_grp|scene_layout_03:rubble_06:rock_grp|scene_layout_03:rubble_06:rock_7|scene_layout_03:rubble_06:rock_Shape7.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_06:lambert2SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_06:lambert2SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_06:rubble_2_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_06:rubble_2_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		"scene_layout_03:rubble_04RN1" 4
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_05:rubble_4|scene_layout_03:rubble_05:rubble_Shape4.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_05:rubble_4|scene_layout_03:rubble_05:rubble_Shape4.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_05:rubble_4_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_05:rubble_4_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		"scene_layout_03:brick_01RN1" 4
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:brick_02:pCube1|scene_layout_03:brick_02:pCubeShape1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:brick_02:pCube1|scene_layout_03:brick_02:pCubeShape1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:brick_02:phongE1SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:brick_02:phongE1SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		"scene_layout_03:office_rubbleRN2" 126
+		2 "scene_layout_03:office_rubble2:first_floor_phongE" "reflectivity" " 0"
+		
+		2 "scene_layout_03:office_rubble2:first_floor_phongE" "whiteness" " -type \"float3\" 0.0061341267999999996 0.0061341267999999996 0.0061341267999999996"
+		
+		2 "scene_layout_03:office_rubble2:second_floor_phongE" "reflectivity" " 0"
+		
+		2 "scene_layout_03:office_rubble2:second_floor_phongE" "whiteness" " -type \"float3\" 0 0 0"
+		
+		2 "scene_layout_03:office_rubble2:third_floor_phongE" "reflectivity" " 0"
+		
+		2 "scene_layout_03:office_rubble2:third_floor_phongE" "whiteness" " -type \"float3\" 0 0 0"
+		
+		2 "scene_layout_03:office_rubble2:fourth_floor_phongE" "reflectivity" " 0"
+		
+		2 "scene_layout_03:office_rubble2:fourth_floor_phongE" "whiteness" " -type \"float3\" 0.027603570000000001 0.027603570000000001 0.027603570000000001"
+		
+		2 "scene_layout_03:office_rubble2:fifth_floor_phongE" "reflectivity" " 0"
+		
+		2 "scene_layout_03:office_rubble2:fifth_floor_phongE" "whiteness" " -type \"float3\" 0 0 0"
+		
+		2 "scene_layout_03:office_rubble2:roof_phongE" "reflectivity" " 0"
+		2 "scene_layout_03:office_rubble2:roof_phongE" "whiteness" " -type \"float3\" 0.012268253999999999 0.012268253999999999 0.012268253999999999"
+		
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:first_floor_grp|scene_layout_03:office_rubble2:hero_room|scene_layout_03:office_rubble2:hero_roomShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:first_floor_grp|scene_layout_03:office_rubble2:hero_room|scene_layout_03:office_rubble2:hero_roomShape.message" "|main_light|main_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:first_floor_grp|scene_layout_03:office_rubble2:hero_room|scene_layout_03:office_rubble2:hero_roomShape.message" "|spill_light|spill_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:first_floor_grp|scene_layout_03:office_rubble2:hero_room|scene_layout_03:office_rubble2:hero_roomShape.message" ":defaultLightSet.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:first_floor_grp|scene_layout_03:office_rubble2:hero_room|scene_layout_03:office_rubble2:door_frame_3|scene_layout_03:office_rubble2:door_frame_3Shape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:first_floor_grp|scene_layout_03:office_rubble2:hero_room|scene_layout_03:office_rubble2:door_frame_3|scene_layout_03:office_rubble2:door_frame_3Shape.message" "|main_light|main_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:first_floor_grp|scene_layout_03:office_rubble2:hero_room|scene_layout_03:office_rubble2:door_frame_3|scene_layout_03:office_rubble2:door_frame_3Shape.message" "|spill_light|spill_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:first_floor_grp|scene_layout_03:office_rubble2:hero_room|scene_layout_03:office_rubble2:door_frame_3|scene_layout_03:office_rubble2:door_frame_3Shape.message" ":defaultLightSet.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:first_floor_grp|scene_layout_03:office_rubble2:hero_room|scene_layout_03:office_rubble2:window_frame|scene_layout_03:office_rubble2:window_frameShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:first_floor_grp|scene_layout_03:office_rubble2:hero_room|scene_layout_03:office_rubble2:window_frame|scene_layout_03:office_rubble2:window_frameShape.message" "|main_light|main_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:first_floor_grp|scene_layout_03:office_rubble2:hero_room|scene_layout_03:office_rubble2:window_frame|scene_layout_03:office_rubble2:window_frameShape.message" "|spill_light|spill_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:first_floor_grp|scene_layout_03:office_rubble2:hero_room|scene_layout_03:office_rubble2:window_frame|scene_layout_03:office_rubble2:window_frameShape.message" ":defaultLightSet.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:first_floor_grp|scene_layout_03:office_rubble2:first_floor|scene_layout_03:office_rubble2:first_floorShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:first_floor_grp|scene_layout_03:office_rubble2:first_floor|scene_layout_03:office_rubble2:first_floorShape.message" "|main_light|main_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:first_floor_grp|scene_layout_03:office_rubble2:first_floor|scene_layout_03:office_rubble2:first_floorShape.message" "|spill_light|spill_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:first_floor_grp|scene_layout_03:office_rubble2:first_floor|scene_layout_03:office_rubble2:first_floorShape.message" ":defaultLightSet.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:first_floor_grp|scene_layout_03:office_rubble2:building_ground|scene_layout_03:office_rubble2:building_groundShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:first_floor_grp|scene_layout_03:office_rubble2:building_ground|scene_layout_03:office_rubble2:building_groundShape.message" "|main_light|main_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:first_floor_grp|scene_layout_03:office_rubble2:building_ground|scene_layout_03:office_rubble2:building_groundShape.message" "|spill_light|spill_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:first_floor_grp|scene_layout_03:office_rubble2:building_ground|scene_layout_03:office_rubble2:building_groundShape.message" ":defaultLightSet.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:first_floor_grp|scene_layout_03:office_rubble2:panel_1|scene_layout_03:office_rubble2:panel_Shape1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:first_floor_grp|scene_layout_03:office_rubble2:panel_1|scene_layout_03:office_rubble2:panel_Shape1.message" "|main_light|main_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:first_floor_grp|scene_layout_03:office_rubble2:panel_1|scene_layout_03:office_rubble2:panel_Shape1.message" "|spill_light|spill_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:first_floor_grp|scene_layout_03:office_rubble2:panel_1|scene_layout_03:office_rubble2:panel_Shape1.message" ":defaultLightSet.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:first_floor_grp|scene_layout_03:office_rubble2:panel_9|scene_layout_03:office_rubble2:panel_Shape9.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:first_floor_grp|scene_layout_03:office_rubble2:panel_9|scene_layout_03:office_rubble2:panel_Shape9.message" "|main_light|main_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:first_floor_grp|scene_layout_03:office_rubble2:panel_9|scene_layout_03:office_rubble2:panel_Shape9.message" "|spill_light|spill_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:first_floor_grp|scene_layout_03:office_rubble2:panel_9|scene_layout_03:office_rubble2:panel_Shape9.message" ":defaultLightSet.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:first_floor_grp|scene_layout_03:office_rubble2:panel_10|scene_layout_03:office_rubble2:panel_Shape10.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:first_floor_grp|scene_layout_03:office_rubble2:panel_10|scene_layout_03:office_rubble2:panel_Shape10.message" "|main_light|main_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:first_floor_grp|scene_layout_03:office_rubble2:panel_10|scene_layout_03:office_rubble2:panel_Shape10.message" "|spill_light|spill_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:first_floor_grp|scene_layout_03:office_rubble2:panel_10|scene_layout_03:office_rubble2:panel_Shape10.message" ":defaultLightSet.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:first_floor_grp|scene_layout_03:office_rubble2:panel_11|scene_layout_03:office_rubble2:panel_Shape11.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:first_floor_grp|scene_layout_03:office_rubble2:panel_11|scene_layout_03:office_rubble2:panel_Shape11.message" "|main_light|main_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:first_floor_grp|scene_layout_03:office_rubble2:panel_11|scene_layout_03:office_rubble2:panel_Shape11.message" "|spill_light|spill_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:first_floor_grp|scene_layout_03:office_rubble2:panel_11|scene_layout_03:office_rubble2:panel_Shape11.message" ":defaultLightSet.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:second_floor_grp|scene_layout_03:office_rubble2:second_floor|scene_layout_03:office_rubble2:second_floorShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:second_floor_grp|scene_layout_03:office_rubble2:second_floor|scene_layout_03:office_rubble2:second_floorShape.message" "|main_light|main_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:second_floor_grp|scene_layout_03:office_rubble2:second_floor|scene_layout_03:office_rubble2:second_floorShape.message" "|spill_light|spill_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:second_floor_grp|scene_layout_03:office_rubble2:second_floor|scene_layout_03:office_rubble2:second_floorShape.message" ":defaultLightSet.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:second_floor_grp|scene_layout_03:office_rubble2:floor_one|scene_layout_03:office_rubble2:floor_oneShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:second_floor_grp|scene_layout_03:office_rubble2:floor_one|scene_layout_03:office_rubble2:floor_oneShape.message" "|main_light|main_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:second_floor_grp|scene_layout_03:office_rubble2:floor_one|scene_layout_03:office_rubble2:floor_oneShape.message" "|spill_light|spill_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:second_floor_grp|scene_layout_03:office_rubble2:floor_one|scene_layout_03:office_rubble2:floor_oneShape.message" ":defaultLightSet.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:second_floor_grp|scene_layout_03:office_rubble2:panel_6|scene_layout_03:office_rubble2:panel_Shape6.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:second_floor_grp|scene_layout_03:office_rubble2:panel_6|scene_layout_03:office_rubble2:panel_Shape6.message" "|main_light|main_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:second_floor_grp|scene_layout_03:office_rubble2:panel_6|scene_layout_03:office_rubble2:panel_Shape6.message" "|spill_light|spill_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:second_floor_grp|scene_layout_03:office_rubble2:panel_6|scene_layout_03:office_rubble2:panel_Shape6.message" ":defaultLightSet.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:second_floor_grp|scene_layout_03:office_rubble2:panel_7|scene_layout_03:office_rubble2:panel_Shape7.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:second_floor_grp|scene_layout_03:office_rubble2:panel_7|scene_layout_03:office_rubble2:panel_Shape7.message" "|main_light|main_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:second_floor_grp|scene_layout_03:office_rubble2:panel_7|scene_layout_03:office_rubble2:panel_Shape7.message" "|spill_light|spill_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:second_floor_grp|scene_layout_03:office_rubble2:panel_7|scene_layout_03:office_rubble2:panel_Shape7.message" ":defaultLightSet.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:second_floor_grp|scene_layout_03:office_rubble2:panel_2|scene_layout_03:office_rubble2:panel_Shape2.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:second_floor_grp|scene_layout_03:office_rubble2:panel_2|scene_layout_03:office_rubble2:panel_Shape2.message" "|main_light|main_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:second_floor_grp|scene_layout_03:office_rubble2:panel_2|scene_layout_03:office_rubble2:panel_Shape2.message" "|spill_light|spill_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:second_floor_grp|scene_layout_03:office_rubble2:panel_2|scene_layout_03:office_rubble2:panel_Shape2.message" ":defaultLightSet.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:third_floor_grp|scene_layout_03:office_rubble2:third_floor|scene_layout_03:office_rubble2:third_floorShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:third_floor_grp|scene_layout_03:office_rubble2:third_floor|scene_layout_03:office_rubble2:third_floorShape.message" "|main_light|main_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:third_floor_grp|scene_layout_03:office_rubble2:third_floor|scene_layout_03:office_rubble2:third_floorShape.message" "|spill_light|spill_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:third_floor_grp|scene_layout_03:office_rubble2:third_floor|scene_layout_03:office_rubble2:third_floorShape.message" ":defaultLightSet.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:third_floor_grp|scene_layout_03:office_rubble2:panel_4|scene_layout_03:office_rubble2:panel_Shape4.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:third_floor_grp|scene_layout_03:office_rubble2:panel_4|scene_layout_03:office_rubble2:panel_Shape4.message" "|main_light|main_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:third_floor_grp|scene_layout_03:office_rubble2:panel_4|scene_layout_03:office_rubble2:panel_Shape4.message" "|spill_light|spill_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:third_floor_grp|scene_layout_03:office_rubble2:panel_4|scene_layout_03:office_rubble2:panel_Shape4.message" ":defaultLightSet.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:third_floor_grp|scene_layout_03:office_rubble2:panel_3|scene_layout_03:office_rubble2:panel_Shape3.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:third_floor_grp|scene_layout_03:office_rubble2:panel_3|scene_layout_03:office_rubble2:panel_Shape3.message" "|main_light|main_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:third_floor_grp|scene_layout_03:office_rubble2:panel_3|scene_layout_03:office_rubble2:panel_Shape3.message" "|spill_light|spill_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:third_floor_grp|scene_layout_03:office_rubble2:panel_3|scene_layout_03:office_rubble2:panel_Shape3.message" ":defaultLightSet.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:fourth_floor_grp|scene_layout_03:office_rubble2:forth_floor|scene_layout_03:office_rubble2:forth_floorShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:fourth_floor_grp|scene_layout_03:office_rubble2:forth_floor|scene_layout_03:office_rubble2:forth_floorShape.message" "|main_light|main_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:fourth_floor_grp|scene_layout_03:office_rubble2:forth_floor|scene_layout_03:office_rubble2:forth_floorShape.message" "|spill_light|spill_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:fourth_floor_grp|scene_layout_03:office_rubble2:forth_floor|scene_layout_03:office_rubble2:forth_floorShape.message" ":defaultLightSet.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:fourth_floor_grp|scene_layout_03:office_rubble2:panel_8|scene_layout_03:office_rubble2:panel_Shape8.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:fourth_floor_grp|scene_layout_03:office_rubble2:panel_8|scene_layout_03:office_rubble2:panel_Shape8.message" "|main_light|main_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:fourth_floor_grp|scene_layout_03:office_rubble2:panel_8|scene_layout_03:office_rubble2:panel_Shape8.message" "|spill_light|spill_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:fourth_floor_grp|scene_layout_03:office_rubble2:panel_8|scene_layout_03:office_rubble2:panel_Shape8.message" ":defaultLightSet.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:fourth_floor_grp|scene_layout_03:office_rubble2:panel_5|scene_layout_03:office_rubble2:panel_Shape5.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:fourth_floor_grp|scene_layout_03:office_rubble2:panel_5|scene_layout_03:office_rubble2:panel_Shape5.message" "|main_light|main_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:fourth_floor_grp|scene_layout_03:office_rubble2:panel_5|scene_layout_03:office_rubble2:panel_Shape5.message" "|spill_light|spill_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:fourth_floor_grp|scene_layout_03:office_rubble2:panel_5|scene_layout_03:office_rubble2:panel_Shape5.message" ":defaultLightSet.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:fifth_floor_grp|scene_layout_03:office_rubble2:roof|scene_layout_03:office_rubble2:roofShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:fifth_floor_grp|scene_layout_03:office_rubble2:roof|scene_layout_03:office_rubble2:roofShape.message" "|main_light|main_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:fifth_floor_grp|scene_layout_03:office_rubble2:roof|scene_layout_03:office_rubble2:roofShape.message" "|spill_light|spill_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:fifth_floor_grp|scene_layout_03:office_rubble2:roof|scene_layout_03:office_rubble2:roofShape.message" ":defaultLightSet.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:fifth_floor_grp|scene_layout_03:office_rubble2:fifth_floor|scene_layout_03:office_rubble2:fifth_floorShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:fifth_floor_grp|scene_layout_03:office_rubble2:fifth_floor|scene_layout_03:office_rubble2:fifth_floorShape.message" "|main_light|main_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:fifth_floor_grp|scene_layout_03:office_rubble2:fifth_floor|scene_layout_03:office_rubble2:fifth_floorShape.message" "|spill_light|spill_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble2:building_rubble_grp|scene_layout_03:office_rubble2:fifth_floor_grp|scene_layout_03:office_rubble2:fifth_floor|scene_layout_03:office_rubble2:fifth_floorShape.message" ":defaultLightSet.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble2:hero_room_phongeSG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble2:hero_room_phongeSG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "scene_layout_03:office_rubble2:hero_room_phongeSG.message" ":defaultLightSet.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble2:first_floor_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble2:first_floor_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "scene_layout_03:office_rubble2:first_floor_phongESG.message" ":defaultLightSet.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble2:second_floor_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "scene_layout_03:office_rubble2:second_floor_phongESG.message" ":defaultLightSet.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble2:third_floor_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble2:third_floor_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "scene_layout_03:office_rubble2:third_floor_phongESG.message" ":defaultLightSet.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble2:fourth_floor_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble2:fourth_floor_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "scene_layout_03:office_rubble2:fourth_floor_phongESG.message" ":defaultLightSet.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble2:fifth_floor_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble2:fifth_floor_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "scene_layout_03:office_rubble2:fifth_floor_phongESG.message" ":defaultLightSet.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble2:roof_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble2:roof_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "scene_layout_03:office_rubble2:roof_phongESG.message" ":defaultLightSet.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble2:building_ground_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble2:building_ground_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "scene_layout_03:office_rubble2:building_ground_phongESG.message" ":defaultLightSet.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble2:panel_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble2:panel_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "link" ":lightLinker1" 2 "scene_layout_03:office_rubble2:panel_phongESG.message" ":defaultLightSet.message" 
+		0
+		"scene_layout_03:desk_01RN" 10
+		2 "scene_layout_03:desk_01:desk_top_phong" "reflectivity" " 0"
+		2 "scene_layout_03:desk_01:desk_top_phong" "whiteness" " -type \"float3\" 0.027603570000000001 0.027603570000000001 0.027603570000000001"
+		
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:desk_01:pCube1|scene_layout_03:desk_01:pCubeShape1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:desk_01:pCube1|scene_layout_03:desk_01:pCubeShape1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:desk_01:desk_phongSG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:desk_01:desk_phongSG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:desk_01:desk_top_phongSG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:desk_01:desk_top_phongSG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:desk_01:desk_SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:desk_01:desk_SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		"scene_layout_03:office_rubbleRN" 79
+		2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:fourth_floor_grp|scene_layout_03:office_rubble:panel_5" 
 		"visibility" " 0"
-		2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_test_3:fluid1|scene_layout_03:fire_rubble_2:fire_test_3:fluidShape1" 
-		"startFrame" " -263"
-		2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_test_3:fluid1|scene_layout_03:fire_rubble_2:fire_test_3:fluidShape1" 
-		"dynamicOffsetX" " 0"
-		2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_test_3:fluid1|scene_layout_03:fire_rubble_2:fire_test_3:fluidShape1" 
-		"dynamicOffsetY" " 0"
-		2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_test_3:fluid1|scene_layout_03:fire_rubble_2:fire_test_3:fluidShape1" 
-		"dynamicOffsetZ" " 0"
-		2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_test_4:fluid1" 
-		"visibility" " 0"
-		2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_test_4:fluid1|scene_layout_03:fire_rubble_2:fire_test_4:fluidShape1" 
-		"startFrame" " -263"
-		2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_test_4:fluid1|scene_layout_03:fire_rubble_2:fire_test_4:fluidShape1" 
-		"dynamicOffsetX" " 0"
-		2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_test_4:fluid1|scene_layout_03:fire_rubble_2:fire_test_4:fluidShape1" 
-		"dynamicOffsetY" " 0"
-		2 "|scene_layout_03:fire_rubble_2:fire_rubble_grp|scene_layout_03:fire_rubble_2:fire_test_4:fluid1|scene_layout_03:fire_rubble_2:fire_test_4:fluidShape1" 
-		"dynamicOffsetZ" " 0"
-		"scene_layout_03RN" 1
-		2 "scene_layout_03:scene" "displayType" " 2"
-		"scene_layout_03:rubble_01RN3" 6
-		5 3 "scene_layout_03RN" "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_corner|scene_layout_03:rubble_09:rubble_cornerShape.outMesh" 
-		"scene_layout_03RN.placeHolderList[1]" ""
-		5 3 "scene_layout_03RN" "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_corner|scene_layout_03:rubble_09:rubble_cornerShape.outMesh" 
-		"scene_layout_03RN.placeHolderList[2]" ""
-		5 3 "scene_layout_03RN" "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_corner|scene_layout_03:rubble_09:rubble_cornerShape.message" 
-		"scene_layout_03RN.placeHolderList[3]" ""
-		5 3 "scene_layout_03RN" "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_corner|scene_layout_03:rubble_09:rubble_cornerShape.message" 
-		"scene_layout_03RN.placeHolderList[4]" ""
-		5 3 "scene_layout_03RN" "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_corner|scene_layout_03:rubble_09:rubble_cornerShape.worldMatrix" 
-		"scene_layout_03RN.placeHolderList[5]" ""
-		5 3 "scene_layout_03RN" "|scene_layout_03:rubble_09:rubble_01|scene_layout_03:rubble_09:rubble_corner|scene_layout_03:rubble_09:rubble_cornerShape.worldMatrix" 
-		"scene_layout_03RN.placeHolderList[6]" "";
+		2 "scene_layout_03:office_rubble:hero_room_phonge" "reflectivity" " 0"
+		2 "scene_layout_03:office_rubble:hero_room_phonge" "whiteness" " -type \"float3\" 0 0 0"
+		
+		2 "scene_layout_03:office_rubble:first_floor_phongE" "reflectivity" " 0"
+		2 "scene_layout_03:office_rubble:first_floor_phongE" "whiteness" " -type \"float3\" 0 0 0"
+		
+		2 "scene_layout_03:office_rubble:second_floor_phongE" "reflectivity" " 0"
+		
+		2 "scene_layout_03:office_rubble:second_floor_phongE" "whiteness" " -type \"float3\" 0 0 0"
+		
+		2 "scene_layout_03:office_rubble:third_floor_phongE" "reflectivity" " 0"
+		2 "scene_layout_03:office_rubble:third_floor_phongE" "whiteness" " -type \"float3\" 0 0 0"
+		
+		2 "scene_layout_03:office_rubble:fourth_floor_phongE" "reflectivity" " 0"
+		
+		2 "scene_layout_03:office_rubble:fourth_floor_phongE" "whiteness" " -type \"float3\" 0 0 0"
+		
+		2 "scene_layout_03:office_rubble:fifth_floor_phongE" "reflectivity" " 0"
+		2 "scene_layout_03:office_rubble:fifth_floor_phongE" "whiteness" " -type \"float3\" 0 0 0"
+		
+		2 "scene_layout_03:office_rubble:roof_phongE" "reflectivity" " 0"
+		2 "scene_layout_03:office_rubble:roof_phongE" "whiteness" " -type \"float3\" 0 0 0"
+		
+		2 "scene_layout_03:office_rubble:panel_phongE" "reflectivity" " 0"
+		2 "scene_layout_03:office_rubble:panel_phongE" "whiteness" " -type \"float3\" 0.042938888000000001 0.042938888000000001 0.042938888000000001"
+		
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:first_floor_grp|scene_layout_03:office_rubble:hero_room|scene_layout_03:office_rubble:hero_roomShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:first_floor_grp|scene_layout_03:office_rubble:hero_room|scene_layout_03:office_rubble:hero_roomShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:first_floor_grp|scene_layout_03:office_rubble:hero_room|scene_layout_03:office_rubble:door_frame_3|scene_layout_03:office_rubble:door_frame_3Shape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:first_floor_grp|scene_layout_03:office_rubble:hero_room|scene_layout_03:office_rubble:door_frame_3|scene_layout_03:office_rubble:door_frame_3Shape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:first_floor_grp|scene_layout_03:office_rubble:hero_room|scene_layout_03:office_rubble:window_frame|scene_layout_03:office_rubble:window_frameShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:first_floor_grp|scene_layout_03:office_rubble:hero_room|scene_layout_03:office_rubble:window_frame|scene_layout_03:office_rubble:window_frameShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:first_floor_grp|scene_layout_03:office_rubble:first_floor|scene_layout_03:office_rubble:first_floorShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:first_floor_grp|scene_layout_03:office_rubble:first_floor|scene_layout_03:office_rubble:first_floorShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:first_floor_grp|scene_layout_03:office_rubble:building_ground|scene_layout_03:office_rubble:building_groundShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:first_floor_grp|scene_layout_03:office_rubble:building_ground|scene_layout_03:office_rubble:building_groundShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:first_floor_grp|scene_layout_03:office_rubble:panel_1|scene_layout_03:office_rubble:panel_Shape1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:first_floor_grp|scene_layout_03:office_rubble:panel_1|scene_layout_03:office_rubble:panel_Shape1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:first_floor_grp|scene_layout_03:office_rubble:panel_9|scene_layout_03:office_rubble:panel_Shape9.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:first_floor_grp|scene_layout_03:office_rubble:panel_9|scene_layout_03:office_rubble:panel_Shape9.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:first_floor_grp|scene_layout_03:office_rubble:panel_10|scene_layout_03:office_rubble:panel_Shape10.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:first_floor_grp|scene_layout_03:office_rubble:panel_10|scene_layout_03:office_rubble:panel_Shape10.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:first_floor_grp|scene_layout_03:office_rubble:panel_11|scene_layout_03:office_rubble:panel_Shape11.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:first_floor_grp|scene_layout_03:office_rubble:panel_11|scene_layout_03:office_rubble:panel_Shape11.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:second_floor_grp|scene_layout_03:office_rubble:second_floor|scene_layout_03:office_rubble:second_floorShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:second_floor_grp|scene_layout_03:office_rubble:second_floor|scene_layout_03:office_rubble:second_floorShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:second_floor_grp|scene_layout_03:office_rubble:floor_one|scene_layout_03:office_rubble:floor_oneShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:second_floor_grp|scene_layout_03:office_rubble:floor_one|scene_layout_03:office_rubble:floor_oneShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:second_floor_grp|scene_layout_03:office_rubble:panel_6|scene_layout_03:office_rubble:panel_Shape6.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:second_floor_grp|scene_layout_03:office_rubble:panel_6|scene_layout_03:office_rubble:panel_Shape6.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:second_floor_grp|scene_layout_03:office_rubble:panel_7|scene_layout_03:office_rubble:panel_Shape7.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:second_floor_grp|scene_layout_03:office_rubble:panel_7|scene_layout_03:office_rubble:panel_Shape7.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:second_floor_grp|scene_layout_03:office_rubble:panel_2|scene_layout_03:office_rubble:panel_Shape2.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:second_floor_grp|scene_layout_03:office_rubble:panel_2|scene_layout_03:office_rubble:panel_Shape2.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:third_floor_grp|scene_layout_03:office_rubble:third_floor|scene_layout_03:office_rubble:third_floorShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:third_floor_grp|scene_layout_03:office_rubble:third_floor|scene_layout_03:office_rubble:third_floorShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:third_floor_grp|scene_layout_03:office_rubble:panel_4|scene_layout_03:office_rubble:panel_Shape4.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:third_floor_grp|scene_layout_03:office_rubble:panel_4|scene_layout_03:office_rubble:panel_Shape4.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:third_floor_grp|scene_layout_03:office_rubble:panel_3|scene_layout_03:office_rubble:panel_Shape3.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:third_floor_grp|scene_layout_03:office_rubble:panel_3|scene_layout_03:office_rubble:panel_Shape3.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:fourth_floor_grp|scene_layout_03:office_rubble:forth_floor|scene_layout_03:office_rubble:forth_floorShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:fourth_floor_grp|scene_layout_03:office_rubble:forth_floor|scene_layout_03:office_rubble:forth_floorShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:fourth_floor_grp|scene_layout_03:office_rubble:panel_8|scene_layout_03:office_rubble:panel_Shape8.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:fourth_floor_grp|scene_layout_03:office_rubble:panel_8|scene_layout_03:office_rubble:panel_Shape8.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:fourth_floor_grp|scene_layout_03:office_rubble:panel_5|scene_layout_03:office_rubble:panel_Shape5.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:fourth_floor_grp|scene_layout_03:office_rubble:panel_5|scene_layout_03:office_rubble:panel_Shape5.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:fifth_floor_grp|scene_layout_03:office_rubble:roof|scene_layout_03:office_rubble:roofShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:fifth_floor_grp|scene_layout_03:office_rubble:roof|scene_layout_03:office_rubble:roofShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:fifth_floor_grp|scene_layout_03:office_rubble:fifth_floor|scene_layout_03:office_rubble:fifth_floorShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:office_rubble:building_rubble_grp|scene_layout_03:office_rubble:fifth_floor_grp|scene_layout_03:office_rubble:fifth_floor|scene_layout_03:office_rubble:fifth_floorShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble:hero_room_phongeSG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble:hero_room_phongeSG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble:first_floor_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble:first_floor_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble:second_floor_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble:second_floor_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble:third_floor_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble:third_floor_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble:fourth_floor_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble:fourth_floor_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble:fifth_floor_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble:fifth_floor_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble:roof_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble:roof_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble:building_ground_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble:building_ground_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble:panel_phongESG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:office_rubble:panel_phongESG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		"scene_layout_03:rubble_01RN1" 212
+		2 "|scene_layout_03:rubble_07:rubble_01" "translate" " -type \"double3\" -151.7940101627774 -0.33896403591786495 222.23534812572873"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"uvPivot" " -type \"double2\" 0.47873976826667786 0.0175215695053339"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts" " -s 123"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[0]" " -type \"float3\" -2.546629 -0.068452879999999994 0.79605585000000001"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[1]" " -type \"float3\" -1.4499282 0 1.219133"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[2]" " -type \"float3\" -0.61219513000000003 0.013889693 2.1380148000000001"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[3]" " -type \"float3\" 0.54194611000000004 0.064847186000000001 2.6342905000000001"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[4]" " -type \"float3\" 1.9676655999999999 -0.021845037000000001 2.200696"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[5]" " -type \"float3\" 3.3933947 -0.22567365 1.7293259000000001"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[6]" " -type \"float3\" 4.8191842999999999 0.035489839000000002 2.200696"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[7]" " -type \"float3\" 6.1168652000000003 0.0038415304999999999 2.2913736999999998"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[8]" " -type \"float3\" 7.400547 -0.0047710230999999997 1.9160634000000001"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[9]" " -type \"float3\" 8.5621834000000003 0.081295028000000005 1.5469942999999999"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[10]" " -type \"float3\" 9.7387046999999995 0.20863393999999999 1.211307"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[11]" " -type \"float3\" -2.7255349 -0.10724752 -0.29514365999999997"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[12]" " -type \"float3\" -1.5939753999999999 0.26704967000000002 0.016897867"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[13]" " -type \"float3\" -0.59769088000000004 0.15123779000000001 0.68295687000000005"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[14]" " -type \"float3\" 0.54194516000000004 0.11909624000000001 1.2081094999999999"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[15]" " -type \"float3\" 1.9676686999999999 0.20294661999999999 1.0433471000000001"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[16]" " -type \"float3\" 3.3934088 0.26401543999999999 0.76931833999999999"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[17]" " -type \"float3\" 4.8191876000000002 0.33187032 1.0511349000000001"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[18]" " -type \"float3\" 6.199306 0.10722932 1.0861981999999999"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[19]" " -type \"float3\" 7.539887 0.047971847999999997 0.86436002999999995"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[20]" " -type \"float3\" 8.8150215000000003 0.10912482 0.72212076000000003"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[21]" " -type \"float3\" 10.076291 0.10441517 0.43617716000000001"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[22]" " -type \"float3\" -3.0647557000000001 0.064494006000000006 -0.96099787999999997"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[23]" " -type \"float3\" -1.8819109000000001 0.57131058000000001 -0.78621483000000003"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[24]" " -type \"float3\" -0.76213503000000005 0.33690684999999998 -0.44022557000000001"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[25]" " -type \"float3\" 0.54194814000000002 0.13407864999999999 -0.21634081999999999"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[26]" " -type \"float3\" 1.9676952000000001 0.32723208999999998 -0.22157693000000001"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[27]" " -type \"float3\" 3.3934416999999999 0.43865897999999998 -0.22715664999999999"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[28]" " -type \"float3\" 4.8192152999999998 0.63277876 -0.22097233999999999"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[29]" " -type \"float3\" 6.2449840999999999 0.36297053000000001 -0.21634081999999999"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[30]" " -type \"float3\" 7.6707435000000004 0.27662086000000002 -0.21634081999999999"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[31]" " -type \"float3\" 9.0493202000000004 0.32170241999999999 -0.27925204999999997"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[32]" " -type \"float3\" 10.45856 0.10396942000000001 -0.30127767"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[33]" " -type \"float3\" -3.2643349000000002 -0.061547216000000002 -2.0233816999999998"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[34]" " -type \"float3\" -2.0900425999999999 0.19340110999999999 -1.8198131"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[35]" " -type \"float3\" -0.88381124 0.10556806000000001 -1.6421003000000001"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[36]" " -type \"float3\" 0.54194814000000002 0.25660363000000003 -1.6421003000000001"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[37]" " -type \"float3\" 1.968303 0.54273771999999998 -1.6583451"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[38]" " -type \"float3\" 3.3834841 0.52901142999999995 -1.6324631999999999"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[39]" " -type \"float3\" 4.8192257999999999 0.32566785999999998 -1.6421003000000001"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[40]" " -type \"float3\" 6.2449840999999999 0.28436369 -1.6421003000000001"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[41]" " -type \"float3\" 7.6707435000000004 0.31776687999999997 -1.6421003000000001"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[42]" " -type \"float3\" 8.936861 0.28809794999999999 -1.6421003000000001"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[43]" " -type \"float3\" 10.070969 0.067207314000000004 -1.6421003000000001"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[44]" " -type \"float3\" -3.5126008999999998 -0.015190479 -3.2481632"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[45]" " -type \"float3\" -2.2298765 -0.015497558 -3.1323732999999998"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[46]" " -type \"float3\" -0.88381124 0 -3.0678592"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[47]" " -type \"float3\" 0.54194814000000002 0.11902448 -3.0678592"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[48]" " -type \"float3\" 1.9776895000000001 0.46277924999999998 -3.0774965000000001"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[49]" " -type \"float3\" 3.3928707 0.42540485 -3.0516144999999999"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[50]" " -type \"float3\" 4.8192257999999999 0.012285762 -3.0678592"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[51]" " -type \"float3\" 6.2449840999999999 0.072821683999999998 -3.0678592"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[52]" " -type \"float3\" 7.6707435000000004 0.11954579999999999 -3.0678592"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[53]" " -type \"float3\" 8.6445846999999993 0.069762519999999995 -3.0678592"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[54]" " -type \"float3\" 9.5728807000000007 0.010785932999999999 -3.0678592"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[55]" " -type \"float3\" -3.6597841 -0.088123396000000007 -4.7174978000000003"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[56]" " -type \"float3\" -2.0991105999999999 0.028953494999999999 -5.1173181999999997"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[57]" " -type \"float3\" -0.80826575000000001 0.049933970000000001 -4.7174978000000003"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[58]" " -type \"float3\" 0.54194814000000002 0.055902361999999997 -4.4936185000000002"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[59]" " -type \"float3\" 1.9677073 0.11743847 -4.4936185000000002"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[60]" " -type \"float3\" 3.3934665000000002 0.16903119 -4.4936185000000002"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[61]" " -type \"float3\" 4.8192257999999999 0.33959571 -4.4936185000000002"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[62]" " -type \"float3\" 6.2449840999999999 0.24369505 -4.4936185000000002"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[63]" " -type \"float3\" 7.6707435000000004 0.17371622 -4.4936185000000002"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[64]" " -type \"float3\" 8.8487282 0.052545178999999997 -4.5683775000000004"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[65]" " -type \"float3\" 9.7668619000000003 0 -4.7579416999999999"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[66]" " -type \"float3\" -3.5248697 -0.18580161000000001 -6.5430779000000001"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[67]" " -type \"float3\" -1.8674402000000001 0.15099186000000001 -7.2296332999999997"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[68]" " -type \"float3\" -0.67335146999999995 0.12296029999999999 -6.5430779000000001"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[69]" " -type \"float3\" 0.54194814000000002 0.020066339999999998 -5.9193783"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[70]" " -type \"float3\" 1.9677073 0.055902361999999997 -5.9193783"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[71]" " -type \"float3\" 3.3934665000000002 0.33074647000000001 -5.9193783"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[72]" " -type \"float3\" 4.8192257999999999 0.72688847999999995 -5.9193783"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[73]" " -type \"float3\" 6.2449840999999999 0.62358581999999996 -5.9193783"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[74]" " -type \"float3\" 7.6707435000000004 0.38832754000000003 -5.9193783"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[75]" " -type \"float3\" 8.7684955999999996 0.14869663 -6.2050618999999996"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[76]" " -type \"float3\" 9.8073835000000003 0 -6.5420942000000002"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[77]" " -type \"float3\" -3.6573194999999998 -0.27559774999999997 -7.5665506999999996"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[78]" " -type \"float3\" -2.0657187000000001 0.097899146000000006 -7.9297627999999998"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[79]" " -type \"float3\" -0.81244558 0.38646113999999998 -7.550189"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[80]" " -type \"float3\" 0.54194814000000002 0.12783827 -7.3451366"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[81]" " -type \"float3\" 1.9677073 0 -7.3451366"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[82]" " -type \"float3\" 3.3934665000000002 0.11361545000000001 -7.3451366"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[83]" " -type \"float3\" 4.8192257999999999 0.41742363999999998 -7.3451366"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[84]" " -type \"float3\" 6.2449840999999999 0.46054012 -7.3451366"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[85]" " -type \"float3\" 7.6707435000000004 0.25279977999999997 -7.3451366"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[86]" " -type \"float3\" 8.9193802000000009 0.045783825 -7.4996404999999999"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[87]" " -type \"float3\" 9.9718046000000005 -0.018868592 -7.8254533000000004"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[88]" " -type \"float3\" -3.5402168999999999 -0.32587904000000001 -8.5759858999999992"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[89]" " -type \"float3\" -2.1191713999999999 0.20958384999999999 -8.5804968000000006"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[90]" " -type \"float3\" -0.69633144000000002 0.85868299000000003 -8.583416"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[91]" " -type \"float3\" 0.60881037000000005 0.40220951999999999 -8.7040339000000007"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[92]" " -type \"float3\" 1.9677073 0 -8.770896"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[93]" " -type \"float3\" 3.3934665000000002 -0.042078460999999998 -8.770896"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[94]" " -type \"float3\" 4.8192257999999999 0.10422859 -8.770896"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[95]" " -type \"float3\" 6.2449840999999999 0.42565398999999998 -8.770896"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[96]" " -type \"float3\" 7.6707435000000004 0.22092914999999999 -8.770896"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[97]" " -type \"float3\" 8.9034376000000002 -0.018868592 -8.8825502000000007"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[98]" " -type \"float3\" 10.053459 -0.03963875 -8.8970604000000009"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[99]" " -type \"float3\" -3.0220094 -0.25108624000000002 -9.5046882999999998"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[100]" " -type \"float3\" -1.7990991000000001 0.15204269000000001 -9.6935471999999994"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[101]" " -type \"float3\" -0.48010143999999999 0.62575442000000003 -9.7929458999999994"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[102]" " -type \"float3\" 0.72319257000000003 0.25340256 -10.015411"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[103]" " -type \"float3\" 1.9677073 0 -10.196655"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[104]" " -type \"float3\" 3.3934665000000002 -0.1173751 -10.196655"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[105]" " -type \"float3\" 4.8192257999999999 -0.16792493999999999 -10.196655"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[106]" " -type \"float3\" 6.2449840999999999 0.10422859 -10.196655"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[107]" " -type \"float3\" 7.5218677999999999 0.079303211999999998 -9.9828854000000007"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[108]" " -type \"float3\" 8.5124663999999992 -0.0067613474000000002 -9.4777173999999995"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[109]" " -type \"float3\" 9.7337665999999992 -0.018868592 -9.356926"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[110]" " -type \"float3\" -2.6811991000000002 -0.083909399999999995 -10.61314"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[111]" " -type \"float3\" -1.5962504 0.036509502999999999 -10.930447"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[112]" " -type \"float3\" -0.48010143999999999 0.12165304 -11.218704"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[113]" " -type \"float3\" 0.73361730999999997 0.042528274999999997 -11.430745"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[114]" " -type \"float3\" 1.9677073 0 -11.622415"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[115]" " -type \"float3\" 3.3934665000000002 -0.042078460999999998 -11.622415"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[116]" " -type \"float3\" 4.8192257999999999 -0.1173751 -11.622415"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[117]" " -type \"float3\" 6.2449840999999999 -0.042078460999999998 -11.622415"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[118]" " -type \"float3\" 7.2543715999999998 0 -11.024547"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[119]" " -type \"float3\" 8.1250371999999995 0 -10.201127"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[120]" " -type \"float3\" 9.5676117000000005 0 -10.104986"
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[121]" " -type \"float3\" 6.2848597000000002 0.48070431000000002 -1.7615358000000001"
+		
+		2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape" 
+		"pnts[122]" " -type \"float3\" 6.2848597000000002 0.31539655 -2.9484235999999999"
+		
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_corner|scene_layout_03:rubble_07:rubble_cornerShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_corner|scene_layout_03:rubble_07:rubble_cornerShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_pillar|scene_layout_03:rubble_07:rubble_pillarShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_pillar|scene_layout_03:rubble_07:rubble_pillarShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:cinder_block_1|scene_layout_03:rubble_07:cinder_block_Shape1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:cinder_block_1|scene_layout_03:rubble_07:cinder_block_Shape1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:cinder_block_2|scene_layout_03:rubble_07:cinder_block_Shape2.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:cinder_block_2|scene_layout_03:rubble_07:cinder_block_Shape2.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_1|scene_layout_03:rubble_07:rebar_Shape1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_1|scene_layout_03:rubble_07:rebar_Shape1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_2|scene_layout_03:rubble_07:rebar_Shape2.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_2|scene_layout_03:rubble_07:rebar_Shape2.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_3|scene_layout_03:rubble_07:rebar_Shape3.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_3|scene_layout_03:rubble_07:rebar_Shape3.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_4|scene_layout_03:rubble_07:rebar_Shape4.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_4|scene_layout_03:rubble_07:rebar_Shape4.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_5|scene_layout_03:rubble_07:rebar_Shape5.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_5|scene_layout_03:rubble_07:rebar_Shape5.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_6|scene_layout_03:rubble_07:rebar_Shape6.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_6|scene_layout_03:rubble_07:rebar_Shape6.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_7|scene_layout_03:rubble_07:rebar_Shape7.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_7|scene_layout_03:rubble_07:rebar_Shape7.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_8|scene_layout_03:rubble_07:rebar_Shape8.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_8|scene_layout_03:rubble_07:rebar_Shape8.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_9|scene_layout_03:rubble_07:rebar_Shape9.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_9|scene_layout_03:rubble_07:rebar_Shape9.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_10|scene_layout_03:rubble_07:rebar_Shape10.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_10|scene_layout_03:rubble_07:rebar_Shape10.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_11|scene_layout_03:rubble_07:rebar_Shape11.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_11|scene_layout_03:rubble_07:rebar_Shape11.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_12|scene_layout_03:rubble_07:rebar_Shape12.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_12|scene_layout_03:rubble_07:rebar_Shape12.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_13|scene_layout_03:rubble_07:rebar_Shape13.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_13|scene_layout_03:rubble_07:rebar_Shape13.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_14|scene_layout_03:rubble_07:rebar_Shape14.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_14|scene_layout_03:rubble_07:rebar_Shape14.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_15|scene_layout_03:rubble_07:rebar_Shape15.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_15|scene_layout_03:rubble_07:rebar_Shape15.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_16|scene_layout_03:rubble_07:rebar_Shape16.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_16|scene_layout_03:rubble_07:rebar_Shape16.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_17|scene_layout_03:rubble_07:rebar_Shape17.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_17|scene_layout_03:rubble_07:rebar_Shape17.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_18|scene_layout_03:rubble_07:rebar_Shape18.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_18|scene_layout_03:rubble_07:rebar_Shape18.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_19|scene_layout_03:rubble_07:rebar_19Shape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_19|scene_layout_03:rubble_07:rebar_19Shape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_20|scene_layout_03:rubble_07:rebar_Shape20.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_20|scene_layout_03:rubble_07:rebar_Shape20.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_21|scene_layout_03:rubble_07:rebar_Shape21.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_21|scene_layout_03:rubble_07:rebar_Shape21.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_22|scene_layout_03:rubble_07:rebar_Shape22.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_22|scene_layout_03:rubble_07:rebar_Shape22.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_23|scene_layout_03:rubble_07:rebar_Shape23.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_23|scene_layout_03:rubble_07:rebar_Shape23.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_24|scene_layout_03:rubble_07:rebar_Shape24.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_24|scene_layout_03:rubble_07:rebar_Shape24.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_25|scene_layout_03:rubble_07:rebar_25Shape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_25|scene_layout_03:rubble_07:rebar_25Shape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_26|scene_layout_03:rubble_07:rebar_Shape26.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_26|scene_layout_03:rubble_07:rebar_Shape26.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rubble_1_ground|scene_layout_03:rubble_07:rubble_1_groundShape.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_27|scene_layout_03:rubble_07:rebar_Shape27.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_27|scene_layout_03:rubble_07:rebar_Shape27.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_28|scene_layout_03:rubble_07:rebar_Shape28.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_28|scene_layout_03:rubble_07:rebar_Shape28.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_29|scene_layout_03:rubble_07:rebar_Shape29.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_29|scene_layout_03:rubble_07:rebar_Shape29.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_30|scene_layout_03:rubble_07:rebar_Shape30.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|scene_layout_03:rubble_07:rubble_01|scene_layout_03:rubble_07:rebar_30|scene_layout_03:rubble_07:rebar_Shape30.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_07:mia_material_x1SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_07:mia_material_x1SG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_07:rubble_1_phongSG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_07:rubble_1_phongSG.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_07:leaning_wall.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_07:leaning_wall.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_07:main_wall.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_07:main_wall.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_07:blocks1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_07:blocks1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_07:ground_rublle_1.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_07:ground_rublle_1.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_07:rubble_1_2:defaultMat.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_07:rubble_1_2:defaultMat.message" "|back_building_light|back_building_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_07:phongE2SG.message" "|main_lightfor_the_shirt|main_lightfor_the_shirtShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "scene_layout_03:rubble_07:phongE2SG.message" "|back_building_light|back_building_lightShape.message" 
+		0;
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode geoConnector -n "geoConnector1";
@@ -2195,8 +5897,8 @@ createNode deleteComponent -n "smoke_test1:deleteComponent1";
 createNode geoConnector -n "smoke_test1:geoConnector1";
 	rename -uid "41ABA975-4B58-B10D-51DC-BE81585CA540";
 select -ne :time1;
-	setAttr ".o" -170;
-	setAttr ".unw" -170;
+	setAttr ".o" 100;
+	setAttr ".unw" 100;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -2214,6 +5916,8 @@ select -ne :defaultRenderUtilityList1;
 	setAttr -s 474 ".u";
 select -ne :defaultRenderingList1;
 	setAttr -s 27 ".r";
+select -ne :lightList1;
+	setAttr -s 13 ".l";
 select -ne :defaultTextureList1;
 	setAttr -s 358 ".tx";
 select -ne :initialShadingGroup;
@@ -2226,6 +5930,8 @@ select -ne :defaultRenderGlobals;
 	setAttr ".ren" -type "string" "mentalRay";
 select -ne :defaultResolution;
 	setAttr ".pa" 1;
+select -ne :defaultLightSet;
+	setAttr -s 13 ".dsm";
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
@@ -2314,18 +6020,18 @@ connectAttr "bullet_root_translateZ.o" "cal_bullet_rigRN.phl[4]";
 connectAttr "bullet_root_rotateX.o" "cal_bullet_rigRN.phl[5]";
 connectAttr "bullet_root_rotateY.o" "cal_bullet_rigRN.phl[6]";
 connectAttr "bullet_root_rotateZ.o" "cal_bullet_rigRN.phl[7]";
+connectAttr "scene_layout_03RN.phl[1]" "geoConnector1.lge";
+connectAttr "scene_layout_03RN.phl[2]" "geoConnector2.lge";
+connectAttr "scene_layout_03RN.phl[3]" "geoConnector1.own";
+connectAttr "scene_layout_03RN.phl[4]" "geoConnector2.own";
+connectAttr "scene_layout_03RN.phl[5]" "geoConnector1.wm";
+connectAttr "scene_layout_03RN.phl[6]" "geoConnector2.wm";
 connectAttr "geoConnector2.res" "scene_layout_03RN.phl[7]";
 connectAttr "geoConnector2.fri" "scene_layout_03RN.phl[8]";
 connectAttr "geoConnector2.swg" "scene_layout_03RN.phl[9]";
 connectAttr "geoConnector1.res" "scene_layout_03RN.phl[10]";
 connectAttr "geoConnector1.fri" "scene_layout_03RN.phl[11]";
 connectAttr "geoConnector1.swg" "scene_layout_03RN.phl[12]";
-connectAttr "scene_layout_03RN.phl[1]" "geoConnector2.lge";
-connectAttr "scene_layout_03RN.phl[2]" "geoConnector1.lge";
-connectAttr "scene_layout_03RN.phl[3]" "geoConnector2.own";
-connectAttr "scene_layout_03RN.phl[4]" "geoConnector1.own";
-connectAttr "scene_layout_03RN.phl[5]" "geoConnector2.wm";
-connectAttr "scene_layout_03RN.phl[6]" "geoConnector1.wm";
 connectAttr "camera1_translateX.o" "camera1.tx";
 connectAttr "camera1_translateY.o" "camera1.ty";
 connectAttr "camera1_translateZ.o" "camera1.tz";
@@ -2371,6 +6077,20 @@ relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defau
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "smoke_test:fluidShape1SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "smoke_test1:fluidShape1SG.message" ":defaultLightSet.message";
+relationship "ignore" ":lightLinker1" "smoke_test:pSphereShape1.message" "main_lightfor_the_shirtShape.message";
+relationship "ignore" ":lightLinker1" "smoke_test1:pSphereShape1.message" "main_lightfor_the_shirtShape.message";
+relationship "ignore" ":lightLinker1" ":initialParticleSE.message" "main_lightfor_the_shirtShape.message";
+relationship "ignore" ":lightLinker1" ":initialShadingGroup.message" "main_lightfor_the_shirtShape.message";
+relationship "ignore" ":lightLinker1" "smoke_test1:pSphereShape1.message" "spotLightShape6.message";
+relationship "ignore" ":lightLinker1" "smoke_test1:fluidShape1SG.message" "main_lightfor_the_shirtShape.message";
+relationship "ignore" ":lightLinker1" "smoke_test:fluidShape1SG.message" "main_lightfor_the_shirtShape.message";
+relationship "ignore" ":lightLinker1" "smoke_test:pSphereShape1.message" "back_building_lightShape.message";
+relationship "ignore" ":lightLinker1" "smoke_test1:pSphereShape1.message" "back_building_lightShape.message";
+relationship "ignore" ":lightLinker1" ":initialParticleSE.message" "back_building_lightShape.message";
+relationship "ignore" ":lightLinker1" ":initialShadingGroup.message" "back_building_lightShape.message";
+relationship "ignore" ":lightLinker1" "smoke_test1:fluidShape1SG.message" "back_building_lightShape.message";
+relationship "ignore" ":lightLinker1" "smoke_test:fluidShape1SG.message" "back_building_lightShape.message";
+relationship "ignore" ":lightLinker1" "smoke_test:pSphereShape1.message" "spotLightShape6.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr ":time1.o" "geoConnector1.ct";
@@ -2396,6 +6116,32 @@ connectAttr "smoke_test1:fluidShape1SG.pa" ":renderPartition.st" -na;
 connectAttr "smoke_test:fluidShape1.msg" ":defaultShaderList1.s" -na;
 connectAttr "smoke_test1:fluidShape1.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
+connectAttr "main_lightShape.ltd" ":lightList1.l" -na;
+connectAttr "spill_lightShape.ltd" ":lightList1.l" -na;
+connectAttr "ambientLightShape1.ltd" ":lightList1.l" -na;
+connectAttr "pointLightShape1.ltd" ":lightList1.l" -na;
+connectAttr "pointLightShape2.ltd" ":lightList1.l" -na;
+connectAttr "spotLightShape1.ltd" ":lightList1.l" -na;
+connectAttr "spotLightShape2.ltd" ":lightList1.l" -na;
+connectAttr "spotLightShape3.ltd" ":lightList1.l" -na;
+connectAttr "spotLightShape4.ltd" ":lightList1.l" -na;
+connectAttr "spotLightShape5.ltd" ":lightList1.l" -na;
+connectAttr "main_lightfor_the_shirtShape.ltd" ":lightList1.l" -na;
+connectAttr "back_building_lightShape.ltd" ":lightList1.l" -na;
+connectAttr "spotLightShape6.ltd" ":lightList1.l" -na;
 connectAttr "smoke_test:pSphereShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "smoke_test1:pSphereShape1.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "main_light.iog" ":defaultLightSet.dsm" -na;
+connectAttr "spill_light.iog" ":defaultLightSet.dsm" -na;
+connectAttr "ambientLight1.iog" ":defaultLightSet.dsm" -na;
+connectAttr "pointLight1.iog" ":defaultLightSet.dsm" -na;
+connectAttr "pointLight2.iog" ":defaultLightSet.dsm" -na;
+connectAttr "spotLight1.iog" ":defaultLightSet.dsm" -na;
+connectAttr "spotLight2.iog" ":defaultLightSet.dsm" -na;
+connectAttr "spotLight3.iog" ":defaultLightSet.dsm" -na;
+connectAttr "spotLight4.iog" ":defaultLightSet.dsm" -na;
+connectAttr "spotLight5.iog" ":defaultLightSet.dsm" -na;
+connectAttr "main_lightfor_the_shirt.iog" ":defaultLightSet.dsm" -na;
+connectAttr "back_building_light.iog" ":defaultLightSet.dsm" -na;
+connectAttr "spotLight6.iog" ":defaultLightSet.dsm" -na;
 // End of shot_4_c.ma
